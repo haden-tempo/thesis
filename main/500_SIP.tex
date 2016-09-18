@@ -159,8 +159,7 @@ We then present hardness results by showing that $k$-IR-Invitation is W[1]-hard 
 \begin{theorem} \label{SIP:thm:IR_invitation_alpha2}
 	$k$-IR-Invitation is W[1]-complete if $\alpha \geq 2$.
 \end{theorem}
-\begin{proof}[Proof Sketch]
-	We reduce from the $k$-Clique problem.
+\begin{proof}	We reduce from the $k$-Clique problem.
 	Given an arbitrary graph $G = (V, E)$ and a parameter $k$, we create a set of agents $N$ as follows. 
 	For each node $v_i\in V$, we create $k^2$ node-agents that are labeled as $w_{i,x}$ where $x \in [k^2]$. 
 	For each node-agent $w_{i,x}$ we define $F_{w_{i,x}} = \{w_{i,x+1}\}$ (where $w_{i,k^2+1}$ is understood as $w_{i,1}$) and $E_{w_{i,x}} = \emptyset$. 
@@ -171,9 +170,22 @@ We then present hardness results by showing that $k$-IR-Invitation is W[1]-hard 
 	Finally, define $k' = k^3 + \binom{k}{2}$ to be the parameter for the $k$-IR-Invitations we created, and define approval sets of all agents to contain $k'$. 
 	Clearly the instance we created satisfies $\alpha = 2$ and $\beta = 0$. 
 	The number of agents we created is $k^2|V| + |E|$, polynomial in the size of the original instance.
-	It remains to show that a clique of size $k$ exists if and only if an IR invitation of size $k' = k^3 + \binom{k}{2}$ exists; due to space, details of the proof can be found in Appendix. 
+	It remains to show that a clique of size $k$ exists if and only if an IR invitation of size $k' = k^3 + \binom{k}{2}$ exists.
+
+	If $C$ is a clique of size $k$ in the original graph, define $I = \{w_{i, x}: v_i\in C, x\in[k^2]\} \cup \{e_{i,j} : v_i, v_j \in C\}$. Clearly, $|I| = k^3 + \binom{k}{2}$ because $|C| = k$. To see that $I$ is individually rational, every agent in $I$ approves size $k^3 + \binom{k}{2}$, every agent included in $I$ has their friends included in $I$.  
+
+	Conversely, suppose that $I$ is an IR invitation of size $k^3 + \binom{k}{2}$ in the instance we created.
+	Let us define $G_i = \{w_{i,x} : x\in [k^2]\}$ to be the set of node-agents corresponding to $v_i$ in the original instance (informally, $G_i$ is a cycle of length $k^2$ representing node $v_i$). Recall that $I$ must contain all node-agents or none in $G_i$ for each $i$ if $I$ is individually rational. If $I$ contains more than $k$ such sets, then $|I| \geq (k+1)k^2 > k^3 + \binom{k}{2}$, and therefore $I$ can contain at most $k$ such sets, which means that $I$ must contain at least $\binom{k}{2}$ edge-agents (because $|I| = k^3 + \binom{k}{2}$). 
+	Now suppose that $I$ contains more than $\binom{k}{2}$ edge-agents. Then $I$ must include at least $k+1$ of $G_i$'s because each edge-agent $e_{i,j}$ in $I$ requires both $G_i$ and $G_j$ to be included in $I$, and containing more than $\binom{k}{2}$ edge-agents in $I$ implies that at least $k+1$ sets of node-agents are included in $I$ which we argued leads to a contradiction. That is, $I$ can contain at most $\binom{k}{2}$ edge-agents. Together with the previous argument, this means that $I$ contains exactly $\binom{k}{2}$ edge-agents and exactly $k$ sets of node-agents. Because $e_{i,j} \in I$ implies that there is an edge $(v_i, v_j)$ in the original instance, this implies that a clique of size $k$ exists in the original instance. 
+
+	
 	Note that W[1]-completenes follows from Theorem~\ref{SIP:thm:IR_invitation_W1}.
 \end{proof}
+
+
+
+
+
 
 
 
@@ -206,11 +218,21 @@ This is not surprising because a stable invitation requires that everyone (wheth
 \begin{theorem} \label{SIP:thm:stable_FPT}
 	$k$-Stable-Invitation is in FPT when $\alpha = 0$ and $\beta \leq f(k)$ where $f(k)$ can be an arbitrary function of $k$.
 \end{theorem}
-\begin{proof}[Proof Sketch]
-	The main idea is similar to that of our proof of Theorem~\ref{SIP:thm:IR_invitation_FPT}. However, finding a stable invitation is considerably more difficult, because we must take uninvited agents into account. 
-	We first color all agents using two colors $\{0,1\}$ uniformly and independently at random; let $c$ be this coloring such that $c(i)$ is the color of agent $a_i$.
-	If there is some $a_i$ with $c(i)=1$ such that $k\not\in S_i$ or $\exists a_j\in R_i$, then we re-color $a_i$ to $c(i) = 0$. We repeat this until no such agent remains.
-	Now we will find $k$ agents of color $1$ that form a stable invitation. Agents of color $0$ will be uninvited for sure, but we need to ensure stability -- we must invite at least one enemy of every agent of color $0$. This can be done in a brute-force manner in FPT time: The depth of search tree is at most $k$ (as we can invite up to $k$ agents) and the branching factor is $f(k)$ (because each agent has at most $f(k)$ enemies), and thus search space is bounded above by $O((f(k))^k)$. After choosing (at most) $k$ agents to be included in our solution, the rest of the algorithm is similar to what we did in proof of Theorem~\ref{SIP:thm:IR_invitation_FPT}; details can be found in Appendix.
+\begin{proof}
+	The main idea is similar to that of our proof of Theorem~\ref{thm:IR_invitation_FPT}. 
+
+	Consider any coloring $c$ which colors agents using two colors $\{0, 1\}$; let $c(i)\in \{0,1\}$ be the color of agent $a_i$. Let $I$ be a stable invitation of size $k$. We say that $c$ and $I$ are {\em compatible} if the following holds: For every agent $a_i\in I$, $c(i) = 1$ and for every agent $a_j\in \cup_{i: a_i\in I} R_i$, $c(j) = 0$; other agents can be of any color. 
+	Given an arbitrary coloring $c$, we can find a stable invitation of size $k$ that is compatible with $c$ or determine that no compatible invitation exists in FPT time. 
+
+	Given $c$, we first re-color some of the agents if necessary as follows. If there is some agent $a_i$ with $c(i) = 1$ and $k\not\in S_i$, then we re-color agent $i$ as $c(i) = 0$ as no stable invitation can include $i$. If there is some agent $i$ with $c(i) = 1$ and $\exists j\in R_i$ such that $c(j) = 1$, then we re-color agent $i$ as $c(i) = 0$ as no compatible invitation $I$ can include $i$ in it. We repeat these re-coloring steps until no such agents exist (which happens at most $O(|N|)$ times). 
+	
+	After all re-coloring steps are completed, we partition the set of agents into four subsets as follows. Define $X_d = \{a_i\in N : c(i) = d \land k+1\in S_i\}$ and $Y_d = \{a_i\in N : c(i) = d \land k+1\not\in S_i\}$ where $d\in \{1, 2\}$.
+	For any $I$ compatible with $c$, it must hold that $X_1 \subseteq I$ (because $I$ is stable) and that $I \subseteq X_1 \cup Y_1$ (because $c$ and $I$ are compatible). 
+	Therefore if $|X_1| > k$ or $|X_1| + |Y_1| < k$, then we conclude that no stable invitation of size $k$ is compatible with $c$ and terminate. Because $X_1 \subseteq I$ for all $I\in \mathcal{I}_c$, let us assume that $X_1 = \emptyset$ without loss of generality.
+	
+	Then, $I \subseteq Y_1$ for every stable invitation $I$ that is compatible with $c$. We cannot do a naive exhaustive search on $Y_1$ to find compatible $I$ because the search space can be as large as $O(n^k)$. Yet we can reduce the search space to $O(\beta^k)$. Let $I'$ be any subset of $Y_1$ of size $k$; $I'$ is individually rational due to the proper coloring constraint. Therefore its stability only depends on the existence of some agent $a_i \in X_0$ such that $R_i \cap I' = \emptyset$. Let $J = \emptyset$, and let us construct an invitation of size $k$. If there is some agent $a_i\in X_0$ such that $R_i \cap J = \emptyset$, then we try adding one agent from $R_i \cap Y_1$ to $J$, thereby increasing the size of $J$ by one. We repeat this process in an exhaustive manner until $J$ contains $k$ agents or there is no such agent $i \in X_0$ such that $R_i \cap J = \emptyset$. If the former occurs, we check whether $J$ is a stable invitation of size $k$ in poly-time; if $J$ is stable, then we output $J$, otherwise we continue exhaustive search. If the latter occurs, we can choose an arbitrary invitation $I$ with $J\subseteq I \subseteq Y_1$ because any such $I$ is guaranteed to be stable. Note that the search space is $O(\beta^k)$ because we choose up to $k$ agents (as $|J| \leq k$ at all times) and at each step we have at most $\beta$ agnets to choose from (i.e., $|R_i \cap J| \leq |R_i| \leq \beta$). 
+
+	Therefore, this algorithm finds a stable invitation of size $k$ if it is given a proper coloring of any stable invitation of size $k$ in time $O(\beta^k n^O(1))$. We can de-randomize this algorithm by de-randomizing the coloring step (for instance, one can use $k$-perfect family of hash functions as in the work by \cite{ColorCoding}).
 \end{proof}
 
 
