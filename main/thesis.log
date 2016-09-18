@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 10:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 10:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -636,13 +636,13 @@ T1/ptm/m/n/12 -Stable-Invitation.
  []
 
 [65] [66] [67]
-Overfull \hbox (7.63548pt too wide) in paragraph at lines 151--156
+Overfull \hbox (7.63548pt too wide) in paragraph at lines 152--157
 []\OT1/ptm/m/n/12 We re-duce from the $\OML/ztmcm/m/it/12 k$\OT1/ptm/m/n/12 -In
 dependent-Set prob-lem which is known to be W[1]-complete.
  []
 
 
-Overfull \hbox (23.58434pt too wide) in paragraph at lines 151--156
+Overfull \hbox (23.58434pt too wide) in paragraph at lines 152--157
 \OT1/ptm/m/n/12 Given an ar-bi-trary graph $\OML/ztmcm/m/it/12 G \OT1/ztmcm/m/n
 /12 = (\OML/ztmcm/m/it/12 V; E\OT1/ztmcm/m/n/12 )$ \OT1/ptm/m/n/12 and a pa-ram
 -e-ter $\OML/ztmcm/m/it/12 k$\OT1/ptm/m/n/12 , we cre-ate agents $\OML/ztmcm/m/
@@ -652,7 +652,7 @@ it/12 N \OT1/ztmcm/m/n/12 = \OML/ztmcm/m/it/12 V \OT1/ztmcm/m/n/12 = \OMS/ztmcm
  []
 
 [68]
-Overfull \hbox (4.64845pt too wide) in paragraph at lines 191--192
+Overfull \hbox (4.64845pt too wide) in paragraph at lines 192--193
 []\OT1/ptm/m/n/12 Given an in-stance of the $\OML/ztmcm/m/it/12 k$\OT1/ptm/m/n/
 12 -Stable-Invitation prob-lem with $\OML/ztmcm/m/it/12 n$ \OT1/ptm/m/n/12 agen
 ts ($\OML/ztmcm/m/it/12 N \OT1/ztmcm/m/n/12 = \OMS/ztmcm/m/n/12 f\OML/ztmcm/m/i
@@ -660,7 +660,7 @@ t/12 a[]; a[]; [] ; a[]\OMS/ztmcm/m/n/12 g$\OT1/ptm/m/n/12 ),
  []
 
 [69] [70] [71]
-Overfull \hbox (120.63504pt too wide) in paragraph at lines 272--282
+Overfull \hbox (120.63504pt too wide) in paragraph at lines 273--283
  [][] 
  []
 
