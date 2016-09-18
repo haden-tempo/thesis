@@ -51,7 +51,7 @@ The Batched Doodle generalizes Doodle by allowing columns-by-columns inspections
  If $\pi$ is a permutation of the entries of $A$, we write $C(\pi)$ to denote the number of inspections performed by $\pi$. $C(\pi)$ is a random variable whose probability distribution is determined by $P_A$. We are interested in finding an optimal policy which minimizes the expected number of inspections, $\mathbf{E}[C(\pi)]$.
  Note that there are $(nm)!$ permutations of the entries of $A$, and therefore exhaustive search for an optimal permutation will not produce an efficient algorithm. 
 
- \subsection{Example} \label{sec:example}
+ \subsection{Example} \label{matrix:sec:example}
 
  Consider a 2-by-2 matrix $A$ of Bernoulli random variables whose probability of success is given by $P_A$ as follows. In group scheduling, this corresponds to two agents and a set of two date/time options being considered.
  \begin{equation*}
@@ -93,7 +93,7 @@ The Batched Doodle generalizes Doodle by allowing columns-by-columns inspections
  Let us first consider the case where an input matrix $A$ has only one row (i.e., $n = 1$).
  In this case it is natural to inspect entries with largest probability first because we can stop as soon as we find an entry whose value is $1$ -- which makes its column and $A$ feasible. This intuition is exactly what an optimal policy should do in the single row case.
 
- \begin{lemma}[1-Row Matrix]\label{lemma:single_row_opt}
+ \begin{lemma}[1-Row Matrix]\label{matrix:lemma:single_row_opt}
  When $n = 1$, an inspection policy $\pi$ is optimal if and only if it inspects the entries in non-increasing order of their associated probabilities.
  \end{lemma}
  \begin{proof}
@@ -101,7 +101,7 @@ The Batched Doodle generalizes Doodle by allowing columns-by-columns inspections
  	Recall that $C(\pi)$ is a random variable that denotes the number of inspections $\pi$ incurs. 
  	We can express the expectation of $C(\pi)$ in terms of $p_{1,c}$'s as follows:
  	\small
- 	\begin{equation} \label{eqn:exp_cost_pi_1row}
+ 	\begin{equation} \label{matrix:eqn:exp_cost_pi_1row}
  		\mathbf{E}\left[C(\pi)\right] = 
  		m \left(\prod_{k=1}^{m-1}(1 - p_{1,k})\right) + 
  		\sum_{j=1}^{m-1} j \left(p_j \prod_{k=1}^{j-1} (1-p_{1,k}) \right).
@@ -119,8 +119,8 @@ The Batched Doodle generalizes Doodle by allowing columns-by-columns inspections
  			\pi'(j) = \pi(j)  &  \mbox{if~} j \neq c^* \land j \neq c^*+1
  		\end{cases}
  	\end{equation*}	
- 	After expressing $\mathbf{E}[C(\pi)]$ and $\mathbf{E}[C(\pi')]$ as in Equation~\ref{eqn:exp_cost_pi_1row}, one can re-arrange the terms to obtain the following:
- 	\begin{equation} \label{eqn:proof_pi_1row}
+ 	After expressing $\mathbf{E}[C(\pi)]$ and $\mathbf{E}[C(\pi')]$ as in Equation~\ref{matrix:eqn:exp_cost_pi_1row}, one can re-arrange the terms to obtain the following:
+ 	\begin{equation} \label{matrix:eqn:proof_pi_1row}
  	\mathbf{E}\left[C(\pi)\right] - \mathbf{E}\left[C(\pi')\right] = 
  	\left(\prod_{j=1}^{c^*-1} (1-p_{1,j})\right) (p_{1,c^*+1} - p_{1,c^*}).
  	\end{equation}
@@ -128,19 +128,19 @@ The Batched Doodle generalizes Doodle by allowing columns-by-columns inspections
 	
  	This proves the lemma because any policy that inspects an entry with smaller probability before another entry with higher probability is suboptimal, and therefore an optimal policy must inspect entries in non-increasing order of their associated probabilities. 
  \end{proof}
- Although the proof of Lemma~\ref{lemma:single_row_opt} is simple, it confirms correctness of our intuition. Equation~\ref{eqn:proof_pi_1row} illustrates this intuition; conditioning on the event that the first $c^*-1$ inspections fail (whose probability is the product term in Equation~\ref{eqn:proof_pi_1row}), the difference $\mathbf{E}[C(\pi)] - \mathbf{E}[C(\pi')]$ depends on the difference in the probabilities of success between the next-entry-to-be-inspected by $\pi$ and $\pi'$.
+ Although the proof of Lemma~\ref{matrix:lemma:single_row_opt} is simple, it confirms correctness of our intuition. Equation~\ref{matrix:eqn:proof_pi_1row} illustrates this intuition; conditioning on the event that the first $c^*-1$ inspections fail (whose probability is the product term in Equation~\ref{matrix:eqn:proof_pi_1row}), the difference $\mathbf{E}[C(\pi)] - \mathbf{E}[C(\pi')]$ depends on the difference in the probabilities of success between the next-entry-to-be-inspected by $\pi$ and $\pi'$.
 
  We can also consider the case where an input matrix $A$ has only one column.
  Intuitively, if we wish to minimize the expected number of inspections, we must inspect entries with smallest probability first because we can stop as soon as we determine that $A$ is infeasible.
- Lemma~\ref{lemma:single_column_opt} formally states this intuition about optimal policy, and we omit a proof of it as it can be easily done by following the proof of Lemma~\ref{lemma:single_row_opt}.
- \begin{lemma}[1-Column Matrix] \label{lemma:single_column_opt}
+ Lemma~\ref{matrix:lemma:single_column_opt} formally states this intuition about optimal policy, and we omit a proof of it as it can be easily done by following the proof of Lemma~\ref{matrix:lemma:single_row_opt}.
+ \begin{lemma}[1-Column Matrix] \label{matrix:lemma:single_column_opt}
  When $m = 1$, an inspection policy $\pi$ is optimal if and only if it inspects the entries in non-decreasing order of their associated probabilities.
  \end{lemma}
 
 
  \subsection{Inspection of Entire Column}
  Another interesting property of an optimal inspection policy is that once it inspects the first entry of a column, then it must commit to it and continue inspecting the remaining entries of the column until feasibility of the column is determined. Otherwise, if the policy switches to another column too soon, then it is not optimal. 
- \begin{theorem}[Optimality of inspecting entire column] \label{theorem:col_by_col_opt}
+ \begin{theorem}[Optimality of inspecting entire column] \label{matrix:theorem:col_by_col_opt}
  Consider any inspection policy $\pi$.
  Without loss of generality, let us assume that for each column $c$, $\pi$ inspects $a_{n,c}$ the last among $n$ entries of the column. 
  Let $b_c$ be the index of $\pi$ such that $\pi(b_c) = a_{n,c}$. 
@@ -157,15 +157,15 @@ The Batched Doodle generalizes Doodle by allowing columns-by-columns inspections
  In particular, $\pi'$ inspects all entries of a column before inspecting another column, while preserving the original ordering of the entries within each column that is given by $\pi$. 
  We will show that $\mathbf{E}[C(\pi')] < \mathbf{E}[C(\pi)]$.
 
- Let us define a set of new random variables which can be used to express $C(\cdot)$, as we did in Section~\ref{sec:example} when analyzing an example.
+ Let us define a set of new random variables which can be used to express $C(\cdot)$, as we did in Section~\ref{matrix:sec:example} when analyzing an example.
  Recall that $s_c = \prod_{r=1}^{n} a_{r,c}$ is the probability of success for column $c$.
  Let $N(\pi, c)$ ($N(\pi', c)$, respectively) be a random variable that denotes the number of entries of column $c$ that is inspected by $\pi$ (by $\pi'$, respectively), conditioning on the event that column $c$ is inspected (i.e., when the previous $c-1$ columns are infeasible).
  We can then express $\mathbf{E}[C(\pi)]$ and $\mathbf{E}[C(\pi')]$ as follows:
- \begin{equation} \label{eqn:exp_c_pi_decoupled}
+ \begin{equation} \label{matrix:eqn:exp_c_pi_decoupled}
  	\mathbf{E}[C(\pi)] = \sum_{c=1}^{m} \mathbf{E}[N(\pi, c)]\left( \prod_{k=1}^{c-1} (1 - s_c) \right)
  \end{equation}
  and
- \begin{equation} \label{eqn:exp_c_pi2_decoupled}
+ \begin{equation} \label{matrix:eqn:exp_c_pi2_decoupled}
  	\mathbf{E}[C(\pi')] = \sum_{c=1}^{m} \mathbf{E}[N(\pi', c)]\left( \prod_{k=1}^{c-1} (1 - s_c) \right).
  \end{equation}
 
@@ -192,22 +192,22 @@ The Batched Doodle generalizes Doodle by allowing columns-by-columns inspections
 
  This proves the theorem: Any policy that does not inspect all entries of a column consecutively is suboptimal.
  \end{proof}
- By Theorem~\ref{theorem:col_by_col_opt}, when seeking an optimal policy, it is sufficient to consider the set of policies that inspect an entire column before committing to another column. Lemma~\ref{lemma:single_column_opt} hints that one should inspect the entries of each column in increasing order of probabilities, and this is what we prove next.
+ By Theorem~\ref{matrix:theorem:col_by_col_opt}, when seeking an optimal policy, it is sufficient to consider the set of policies that inspect an entire column before committing to another column. Lemma~\ref{matrix:lemma:single_column_opt} hints that one should inspect the entries of each column in increasing order of probabilities, and this is what we prove next.
 
 
  \subsection{Optimal Ordering within Column} 
 
- Lemma~\ref{lemma:single_column_opt} states that
+ Lemma~\ref{matrix:lemma:single_column_opt} states that
  an optimal policy must inspect the entries in increasing order of their probability of success, if $A$ is a 1-column matrix.
  This argument can be generalized to the case where there is more than one column: If an optimal policy is to inspect an entry of some column $c$, it must inspect the entry with smallest probability of success first. 
- \begin{theorem}[Optimal ordering within column] \label{theorem:within_column_opt}
+ \begin{theorem}[Optimal ordering within column] \label{matrix:theorem:within_column_opt}
  	Consider any inspection policy $\pi$.
  	If there exist two entries $a_{r_1,c}$ and $a_{r_2,c}$ from the same column such that $a_{r_1,c}$ appears before $a_{r_2,c}$ in $\pi$ and $p_{r_1,c} > p_{r_2,c}$, then $\pi$ is not optimal. 
  	In other words, when restricted to each column, an optimal policy must inspect the entries of the column in non-decreasing order of probabilities.
  \end{theorem}
  \begin{proof}
  	Let $\pi$ be an inspection policy being considered in the theorem.
- 	Because of Theorem~\ref{theorem:col_by_col_opt} we can assume, without loss of generality, that $\pi$ inspects all entries of column 1, followed by column 2, and so on.
+ 	Because of Theorem~\ref{matrix:theorem:col_by_col_opt} we can assume, without loss of generality, that $\pi$ inspects all entries of column 1, followed by column 2, and so on.
  	Further let us assume that $\pi$ inspects the entries of each column in increasing order of their row index (we can do so by re-labeling the indices of entries). Precisely, $\pi(r + n (c-1)) = a_{r,c}$ defines $\pi$. Let $p_{r,c^*}$ and $p_{r+1,c^*}$ be the entries with $p_{r,c^*} > p_{r+1, c^*}$.
  	Let us consider a different inspection policy $\pi'$ that is the same as $\pi$ except that $\pi'$ inspects $p_{r+1,c^*}$ before $p_{r,c^*}$, by swapping the ordering of them.
  	\begin{equation*}
@@ -221,14 +221,14 @@ The Batched Doodle generalizes Doodle by allowing columns-by-columns inspections
 	
  	We claim that $\mathbf{E}[C(\pi')] < \mathbf{E}[C(\pi)]$, which implies that $\pi$ is not optimal.
 	
- 	Let us define new random variables $N(\pi, c)$ and $N(\pi', c)$ as we did in our proof of Theorem~\ref{theorem:col_by_col_opt} (i.e., the number of inspections performed by the respective policy on column $c$, conditioning on the event that the column is inspected).
- 	Then we can express $\mathbf{E}[C(\pi)]$ and $\mathbf{E}[C(\pi')]$ in terms of the new random variables and $s_c$'s as we did in Equations~\ref{eqn:exp_c_pi_decoupled} and \ref{eqn:exp_c_pi2_decoupled}.
+ 	Let us define new random variables $N(\pi, c)$ and $N(\pi', c)$ as we did in our proof of Theorem~\ref{matrix:theorem:col_by_col_opt} (i.e., the number of inspections performed by the respective policy on column $c$, conditioning on the event that the column is inspected).
+ 	Then we can express $\mathbf{E}[C(\pi)]$ and $\mathbf{E}[C(\pi')]$ in terms of the new random variables and $s_c$'s as we did in Equations~\ref{matrix:eqn:exp_c_pi_decoupled} and \ref{matrix:eqn:exp_c_pi2_decoupled}.
 	
  	Observe that $N(\pi, c) = N(\pi', c)$ for any realization of $A$ if $c \neq c^*$.
  	To see this, first note that column $c$ would not be inspected by $\pi$ or by $\pi'$ if any of the previous columns (that is, columns $1$ through $c-1$) is found to be feasible, in which case $N(\pi, c) = N(\pi', c) = 0$. Otherwise, if column $c$ is inspected, both policies would inspect the entries of $c$ in the very same order, so $N(\pi, c) = N(\pi', c)$ must hold. Therefore we conclude that $\mathbf{E}[N(\pi, c)] = \mathbf{E}[N(\pi', c)]$ when $c \neq c^*$. 
 	
  	We will now show that $\mathbf{E}[N(\pi, c^*)] > \mathbf{E}[N(\pi', c^*)]$ holds. 
- 	This immediately implies $\mathbf{E}[C(\pi)] > \mathbf{E}[C(\pi')]$ due to Equations~\ref{eqn:exp_c_pi_decoupled} and \ref{eqn:exp_c_pi2_decoupled}.
+ 	This immediately implies $\mathbf{E}[C(\pi)] > \mathbf{E}[C(\pi')]$ due to Equations~\ref{matrix:eqn:exp_c_pi_decoupled} and \ref{matrix:eqn:exp_c_pi2_decoupled}.
  	Let us express $\mathbf{E}[N(\pi, c^*)]$ in terms of $p_{r,c^*}$'s.
  	\begin{equation*}
  		\mathbf{E}[N(\pi, c^*)] = n\left( \prod_{k=1}^{n-1} p_{k,c^*}\right) + 
@@ -248,10 +248,10 @@ The Batched Doodle generalizes Doodle by allowing columns-by-columns inspections
  \end{proof}
 
 
- Theorems~\ref{theorem:col_by_col_opt} and \ref{theorem:within_column_opt} together tell us that 
+ Theorems~\ref{matrix:theorem:col_by_col_opt} and \ref{matrix:theorem:within_column_opt} together tell us that 
  in order to find an optimal policy we only need to decide the ordering of the columns. 
  There are still $m!$ orderings of columns, and an exhaustive search algorithm would not be efficient.
- As we were able to generalize Lemma~\ref{lemma:single_column_opt} to Theorem~\ref{theorem:within_column_opt} by generalizing the optimal solution for 1-column case, it would be natural to consider generalizing Lemma~\ref{lemma:single_row_opt} in a similar manner.
+ As we were able to generalize Lemma~\ref{matrix:lemma:single_column_opt} to Theorem~\ref{matrix:theorem:within_column_opt} by generalizing the optimal solution for 1-column case, it would be natural to consider generalizing Lemma~\ref{matrix:lemma:single_row_opt} in a similar manner.
 
  This idea leads to the following greedy algorithm: First we sort columns by their probability of success ($s_c = \prod_{r=1}^{n} p_{r,c}$) in decreasing order, and inspect the entries of each column in increasing order of their associated probabilities. However, as the following example shows, this algorithm is suboptimal. 
  \begin{equation*}
@@ -273,17 +273,17 @@ The Batched Doodle generalizes Doodle by allowing columns-by-columns inspections
  \subsection{Main Result and Algorithm}
  Let us present the main result that leads to an efficient algorithm for finding an optimal inspection policy. 
 
- \begin{theorem} \label{thm:main_result}
+ \begin{theorem} \label{matrix:thm:main_result}
  	Let $s_c$ be the probability of success for column $c$ as before. 
  	Let $\mu_c$ be the expected number of inspections that column $c$ incurs if its entries are inspected in increasing order of their probability of success, conditioning on the event that column $c$ is inspected and infeasible.
- 	An optimal policy must be a column-by-column policy (due to Theorem~\ref{theorem:col_by_col_opt}), must inspect the entries of each column in non-decreasing order of probabilities (due to Theorem~\ref{theorem:within_column_opt}), and must inspect the columns in non-decreasing order of $\mu_c(1 - s_c)/s_c$.
+ 	An optimal policy must be a column-by-column policy (due to Theorem~\ref{matrix:theorem:col_by_col_opt}), must inspect the entries of each column in non-decreasing order of probabilities (due to Theorem~\ref{matrix:theorem:within_column_opt}), and must inspect the columns in non-decreasing order of $\mu_c(1 - s_c)/s_c$.
  \end{theorem}
  \begin{proof}
  	Consider a column-by-column inspection policy $\pi$ which inspects the column 1 through $m$ in increasing order of their index (we can assume this without loss of generality by re-labeling columns).
 	
  	As before, let $N(\pi,c)$ be a random variable that denotes the number of inspections performed by $\pi$ on column $c$, conditioning on the event that column $c$ is inspected.
  	Then we can express $\mathbf{E}[N(\pi, c)]$ in terms of $s_c$ and $\mu_c$ as follows.
- 	\begin{equation}\label{eqn:exp_cost_column_by_condition}
+ 	\begin{equation}\label{matrix:eqn:exp_cost_column_by_condition}
  		\mathbf{E}[N(\pi, c)] = s_c \cdot n  + (1-s_c) \cdot \mu_c
  	\end{equation}
  	This equation holds because if the column is feasible (with probability $s_c$), it would require $n$ inspections, but if it is not (with probability $1-s_c$), it would require $\mu_c$ inspections in expectation. The equation above simply considers these two events, and calculates the expected value of $N(\pi, c)$. 
@@ -300,16 +300,16 @@ The Batched Doodle generalizes Doodle by allowing columns-by-columns inspections
  		\end{cases}
  	\end{equation*}
 	
- 	As we did in proofs of Theorems~\ref{theorem:col_by_col_opt} and \ref{theorem:within_column_opt}, we can use Equations~\ref{eqn:exp_c_pi_decoupled} and \ref{eqn:exp_c_pi2_decoupled}, and simplify $\mathbf{E}[C(\pi)] - \mathbf{E}[C(\pi')]$ as follows.
+ 	As we did in proofs of Theorems~\ref{matrix:theorem:col_by_col_opt} and \ref{matrix:theorem:within_column_opt}, we can use Equations~\ref{matrix:eqn:exp_c_pi_decoupled} and \ref{matrix:eqn:exp_c_pi2_decoupled}, and simplify $\mathbf{E}[C(\pi)] - \mathbf{E}[C(\pi')]$ as follows.
 	\small
- 	\begin{equation} \label{eqn:main_result_diff}
+ 	\begin{equation} \label{matrix:eqn:main_result_diff}
  		\begin{aligned}
  		\mathbf{E}[C(\pi)] - \mathbf{E}[C(\pi')] ={} & \left(\frac{\mathbf{E}[N(\pi, c^*)]}{s_{c^*}}  - \frac{\mathbf{E}[N(\pi, c^*+1)]}{s_{c^*+1}} \right) \\
  		& \cdot \left( \prod_{j=1}^{c^*-1} (1 - s_j)\right) s_{c^*} s_{c^*+1}
  		 \end{aligned}
  	\end{equation}	
 	\normalsize
- 	The quantity in Equation~\ref{eqn:main_result_diff} is positive if the difference of the weighted expected values (in the first parentheses) are positive. Using Equation~\ref{eqn:exp_cost_column_by_condition} we obtain the following inequality.
+ 	The quantity in Equation~\ref{matrix:eqn:main_result_diff} is positive if the difference of the weighted expected values (in the first parentheses) are positive. Using Equation~\ref{matrix:eqn:exp_cost_column_by_condition} we obtain the following inequality.
  	\begin{equation*}
  		\begin{aligned}
  			{} &
@@ -321,7 +321,7 @@ The Batched Doodle generalizes Doodle by allowing columns-by-columns inspections
  	By definition of $c^*$, the second inequality above holds, which implies $\mathbf{E}[C(\pi)] > \mathbf{E}[C(\pi')]$.
  	Therefore, an optimal inspection policy must inspect the columns in non-decreasing order of $\mu_c(1 - s_c)/s_c$. 
  \end{proof}
- Because there is a unique ordering of columns if we sort them by $\mu_c(1-s_c)/s_c$ (up to ties), Theorem~\ref{thm:main_result} leads to the following algorithm: We inspect the columns in increasing order of $\mu_c(1-s_c)/s_c$, and in each column, we inspect the entries of it in increasing order of probabilities. 
+ Because there is a unique ordering of columns if we sort them by $\mu_c(1-s_c)/s_c$ (up to ties), Theorem~\ref{matrix:thm:main_result} leads to the following algorithm: We inspect the columns in increasing order of $\mu_c(1-s_c)/s_c$, and in each column, we inspect the entries of it in increasing order of probabilities. 
  This algorithm can easily be implemented to run in polynomial time. 
 
 

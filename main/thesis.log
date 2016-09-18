@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 09:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 09:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -616,7 +616,7 @@ Missing character: There is no ½ in font ptmr7t!
  [41] [42] [43]) [44] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
  4348 strings out of 493014
- 63614 string characters out of 6133351
+ 63698 string characters out of 6133351
  129520 words of memory out of 5000000
  7701 multiletter control sequences out of 15000+600000
  69892 words of font info for 154 fonts, out of 8000000 for 9000
