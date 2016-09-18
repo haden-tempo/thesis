@@ -1,0 +1,264 @@
+\begin{thebibliography}{10}
+
+\bibitem{abelson-et-al:scheme}
+Harold Abelson, Gerald~Jay Sussman, and Julie Sussman.
+\newblock {\em Structure and Interpretation of Computer Programs}.
+\newblock MIT Press, Cambridge, Massachusetts, 1985.
+
+\bibitem{ColorCoding}
+Noga Alon, Raphael Yuster, and Uri Zwick.
+\newblock Color-coding.
+\newblock {\em Journal of the ACM (JACM)}, 42(4):844--856, 1995.
+
+\bibitem{andrews90}
+George~E. Andrews.
+\newblock Euler's 'exemplum memorabile inductionis fallacis' and q-trinomial.
+\newblock {\em Journal of the American Mathematical Society}, 3(3):653--669,
+  1990.
+
+\bibitem{AzizBrandl}
+Haris Aziz and Florian Brandl.
+\newblock Existence of stability in hedonic coalition formation games.
+\newblock In {\em Proceedings of the 11th International Conference on
+  Autonomous Agents and Multiagent Systems}, pages 763--770, 2012.
+
+\bibitem{NP_hedonic}
+Coralio Ballester.
+\newblock Np-completeness in hedonic games.
+\newblock {\em Games and Economic Behavior}, 49(1):1--30, 2004.
+
+\bibitem{bgf:Lixto}
+Robert Baumgartner, Georg Gottlob, and Sergio Flesca.
+\newblock Visual information extraction with {Lixto}.
+\newblock In {\em Proceedings of the 27th International Conference on Very
+  Large Databases}, pages 119--128, Rome, Italy, September 2001. Morgan
+  Kaufmann.
+
+\bibitem{berry2006deploying}
+P.~Berry, B.~Peintner, K.~Conley, M.~Gervasio, T.~Uribe, and N.~Yorke-Smith.
+\newblock Deploying a personalized time management agent.
+\newblock In {\em Proceedings of the fifth international joint conference on
+  Autonomous agents and multiagent systems}, pages 1564--1571. ACM, 2006.
+
+\bibitem{BogomolnaiaJackson}
+Anna Bogomolnaia and Matthew~O. Jackson.
+\newblock The stability of hedonic coalition structures.
+\newblock {\em Games and Economic Behavior}, 38(2):201--230, 2002.
+
+\bibitem{brachman-schmolze:kl-one}
+Ronald~J. Brachman and James~G. Schmolze.
+\newblock An overview of the {KL-ONE} knowledge representation system.
+\newblock {\em Cognitive Science}, 9(2):171--216, April--June 1985.
+
+\bibitem{chia1998coordinating}
+M.H. Chia, D.E. Neiman, and V.R. Lesser.
+\newblock Coordinating asynchronous agent activities in a distributed
+  scheduling system.
+\newblock In {\em Proceedings of the Third International Conference on
+  Multi-Agent Systems (ICMAS'98)}, 1998.
+
+\bibitem{Cowling-hyperheuristic}
+Peter Cowling, Graham Kendall, and Eric Soubeiga.
+\newblock A hyperheuristic approach to scheduling a sales summit.
+\newblock In Edmund Burke and Wilhelm Erben, editors, {\em Practice and Theory
+  of Automated Timetabling III}, volume 2079 of {\em Lecture Notes in Computer
+  Science}, pages 176--190. Springer Berlin Heidelberg, 2001.
+
+\bibitem{crawford2005learning}
+E.~Crawford and M.~Veloso.
+\newblock Learning to select negotiation strategies in multi-agent meeting
+  scheduling.
+\newblock {\em Progress in Artificial Intelligence}, pages 584--595, 2005.
+
+\bibitem{DARMANN15ADT}
+Andreas Darmann.
+\newblock Group activity selection from ordinal preferences.
+\newblock In Toby Walsh, editor, {\em Algorithmic Decision Theory}, volume 9346
+  of {\em Lecture Notes in Computer Science}, pages 35--51. Springer
+  International Publishing, 2015.
+
+\bibitem{GASP12WINE}
+Andreas Darmann, Edith Elkind, Sascha Kurz, JÃ©rÃŽme Lang, Joachim Schauer,
+  and Gerhard Woeginger.
+\newblock Group activity selection problem.
+\newblock In PaulW. Goldberg, editor, {\em Internet and Network Economics},
+  volume 7695 of {\em Lecture Notes in Computer Science}, pages 156--169.
+  Springer Berlin Heidelberg, 2012.
+
+\bibitem{Borda}
+J.C. de~Borda.
+\newblock M{\'e}moire sur les {\'e}lections au scrutin.
+\newblock 1781.
+
+\bibitem{decker1998coordinated}
+K.~Decker and J.~Li.
+\newblock Coordinated hospital patient scheduling.
+\newblock In {\em Multi Agent Systems, 1998. Proceedings. International
+  Conference on}, pages 104--111. IEEE, 1998.
+
+\bibitem{downey2012}
+Rodney~G Downey and Michael~Ralph Fellows.
+\newblock {\em Parameterized complexity}.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem{DrezeGreenberg}
+Jacques~H. Dreze and Joseph Greenberg.
+\newblock Hedonic coalitions: Optimality and stability.
+\newblock {\em Journal of the Econometric Society}, pages 987--1003, 1980.
+
+\bibitem{ephrati1994non}
+E.~Ephrati, G.~Zlotkin, and J.S. Rosenschein.
+\newblock A non-manipulable meeting scheduling system.
+\newblock In {\em Proceedings of the 13th international workshop on distributed
+  artificial intelligence}, pages 105--125, 1994.
+
+\bibitem{franzin-preferences}
+M.~S. Franzin, F.~Rossi, E.~C. Freuder, and R.~Wallace.
+\newblock Multi-agent constraint systems with preferences: Efficiency, solution
+  quality, and privacy loss.
+\newblock {\em Computational Intelligence}, 20(2):264--286, 2004.
+
+\bibitem{freuder2001privacy}
+E.C. Freuder, M.~Minca, and R.J. Wallace.
+\newblock Privacy/efficiency tradeoffs in distributed meeting scheduling by
+  constraint-based agents.
+\newblock In {\em Proc. IJCAI DCR}, pages 63--72, 2001.
+
+\bibitem{garrido1996multi}
+L.~Garrido and K.~Sycara.
+\newblock Multi-agent meeting scheduling: Preliminary experimental results.
+\newblock In {\em Proceedings of the Second International Conference on
+  Multiagent Systems}, pages 95--102, 1996.
+
+\bibitem{gottlob:nonmon}
+Georg Gottlob.
+\newblock Complexity results for nonmonotonic logics.
+\newblock {\em Journal of Logic and Computation}, 2(3):397--425, June 1992.
+
+\bibitem{gls:hypertrees}
+Georg Gottlob, Nicola Leone, and Francesco Scarcello.
+\newblock Hypertree decompositions and tractable queries.
+\newblock {\em Journal of Computer and System Sciences}, 64(3):579--627, May
+  2002.
+
+\bibitem{hannebauer2001distributed}
+M.~Hannebauer and S.~M{\"u}ller.
+\newblock Distributed constraint optimization for medical appointment
+  scheduling.
+\newblock In {\em Proceedings of the fifth international conference on
+  Autonomous agents}, pages 139--140. ACM, 2001.
+
+\bibitem{hassine2004agent}
+A.B. Hassine, X.~Defago, and T.B. Ho.
+\newblock Agent-based approach to dynamic meeting scheduling problems.
+\newblock In {\em Proceedings of the Third International Joint Conference on
+  Autonomous Agents and Multiagent Systems-Volume 3}, pages 1132--1139. IEEE
+  Computer Society, 2004.
+
+\bibitem{impagl}
+Russell Impagliazzo and Ramamohan Paturi.
+\newblock Complexity of k-sat.
+\newblock In {\em Computational Complexity, 1999. Proceedings. Fourteenth
+  Annual IEEE Conference on}, pages 237--240. IEEE, 1999.
+
+\bibitem{Jennings95agent-basedmeeting}
+N.~R. Jennings, A.~J. Jackson, and London~E Ns.
+\newblock Agent-based meeting scheduling: A design and implementation, 1995.
+
+\bibitem{lee14doodle}
+Hooyeon Lee and Yoav Shoham.
+\newblock Optimizing time and convenience in group scheduling.
+\newblock In {\em Proceedings of the 2014 international conference on
+  Autonomous agents and multi-agent systems}, pages 1345--1346. International
+  Foundation for Autonomous Agents and Multiagent Systems, 2014.
+
+\bibitem{LEE15AAAI}
+Hooyeon Lee and Yoav Shoham.
+\newblock Stable invitations.
+\newblock In {\em Proceedings of the Twenty-Ninth {AAAI} Conference on
+  Artificial Intelligence, January 25-30, 2015, Austin, Texas, {USA.}}, pages
+  965--971, 2015.
+
+\bibitem{levesque:functional-foundations}
+Hector~J. Levesque.
+\newblock Foundations of a functional approach to knowledge representation.
+\newblock {\em Artificial Intelligence}, 23(2):155--212, July 1984.
+
+\bibitem{levesque:belief}
+Hector~J. Levesque.
+\newblock A logic of implicit and explicit belief.
+\newblock In {\em Proceedings of the Fourth National Conference on Artificial
+  Intelligence}, pages 198--202, Austin, Texas, August 1984. American
+  Association for Artificial Intelligence.
+
+\bibitem{maes1994agents}
+P.~Maes.
+\newblock Agents that reduce work and information overload.
+\newblock {\em Communications of the ACM}, 37(7):30--40, 1994.
+
+\bibitem{mann1998cross}
+Leon Mann, Mark Radford, Paul Burnett, Steve Ford, Michael Bond, Kwok Leung,
+  Hiyoshi Nakamura, Graham Vaughan, and Kuo-Shu Yang.
+\newblock Cross-cultural differences in self-reported decision-making style and
+  confidence.
+\newblock {\em International Journal of Psychology}, 33(5):325--335, 1998.
+
+\bibitem{mitchell1994experience}
+T.M. Mitchell, R.~Caruana, D.~Freitag, J.~McDermott, D.~Zabowski, et~al.
+\newblock Experience with a learning personal assistant.
+\newblock {\em Communications of the ACM}, 37(7):80--91, 1994.
+
+\bibitem{nebel:jair-2000}
+Bernhard Nebel.
+\newblock On the compilability and expressive power of propositional planning
+  formalisms.
+\newblock {\em Journal of Artificial Intelligence Research}, 12:271--315, 2000.
+
+\bibitem{neiman1994exploiting}
+D.E. Neiman, D.W. Hildum, V.R. Lesser, T.~Sandholm, et~al.
+\newblock Exploiting meta-level information in a distributed scheduling system.
+\newblock In {\em PROCEEDINGS OF THE NATIONAL CONFERENCE ON ARTIFICIAL
+  INTELLIGENCE}, pages 394--394. JOHN WILEY \& SONS LTD, 1994.
+
+\bibitem{reinecke2013doodle}
+Katharina Reinecke, Minh~Khoa Nguyen, Abraham Bernstein, Michael N{\"a}f, and
+  Krzysztof~Z Gajos.
+\newblock Doodle around the world: Online scheduling behavior reflects cultural
+  differences in time perception and group decision-making.
+\newblock In {\em Proceedings of the 2013 conference on Computer supported
+  cooperative work}, pages 45--54. ACM, 2013.
+
+\bibitem{sen1998formal}
+S.~Sen and E.H. Durfee.
+\newblock A formal study of distributed meeting scheduling.
+\newblock {\em Group Decision and Negotiation}, 7(3):265--289, 1998.
+
+\bibitem{st1997satisfying}
+S.T.F. St.
+\newblock Satisfying user preferences while negotiating meetings.
+\newblock 1997.
+
+\bibitem{sycara1991distributed}
+K.~Sycara, S.F. Roth, N.~Sadeh, and M.S. Fox.
+\newblock Distributed constrained heuristic search.
+\newblock {\em Systems, Man and Cybernetics, IEEE Transactions on},
+  21(6):1446--1461, 1991.
+
+\bibitem{tsuruta2000scheduling}
+T.~Tsuruta and T.~Shintani.
+\newblock Scheduling meetings using distributed valued constraint satisfaction
+  algorithm.
+\newblock In {\em ECAI}, pages 383--387, 2000.
+
+\bibitem{wainer2007scheduling}
+J.~Wainer, P.R. Ferreira, and E.R. Constantino.
+\newblock Scheduling meetings through multi-agent negotiations.
+\newblock {\em Decision Support Systems}, 44(1):285--297, 2007.
+
+\bibitem{zou2015strategic}
+James Zou, Reshef Meir, and David Parkes.
+\newblock Strategic voting behavior in doodle polls.
+\newblock In {\em Proceedings of the 18th ACM Conference on Computer Supported
+  Cooperative Work \& Social Computing}, pages 464--472. ACM, 2015.
+
+\end{thebibliography}

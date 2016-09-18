@@ -1,9 +1,56 @@
 \contentsline {chapter}{Abstract}{iv}
 \contentsline {chapter}{Acknowledgments}{vi}
 \contentsline {chapter}{\numberline {1}Introduction: {\itshape }}{1}
+\contentsline {section}{\numberline {1.1}Organization of the Thesis}{1}
+\contentsline {section}{\numberline {1.2}Preliminaries and Notation}{1}
 \contentsline {chapter}{\numberline {2}Complexity of Group Scheduling Problem I: {\itshape }}{2}
-\contentsline {chapter}{\numberline {3}Complexity of Group Scheduling Problem II: {\itshape }}{3}
-\contentsline {chapter}{\numberline {4}Complexity of Group Activity Selection Problem: {\itshape }}{4}
-\contentsline {chapter}{\numberline {5}Complexity of Stable Invitations Problem: {\itshape }}{5}
-\contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems: {\itshape }}{6}
-\contentsline {chapter}{\numberline {7}Open Problems}{7}
+\contentsline {section}{\numberline {2.1}Notation and Definitions}{6}
+\contentsline {section}{\numberline {2.2}Efficient Algorithm for Finding Optimal B-Doodle}{9}
+\contentsline {subsection}{\numberline {2.2.1}Preliminaries}{9}
+\contentsline {subsection}{\numberline {2.2.2}Optimal Algorithm}{12}
+\contentsline {section}{\numberline {2.3}Experimental Results with Synthetic Data}{16}
+\contentsline {subsection}{\numberline {2.3.1}Case of Linear Cost Function}{17}
+\contentsline {subsection}{\numberline {2.3.2}Case of Other Cost Functions}{19}
+\contentsline {subsection}{\numberline {2.3.3}Summary of Experiments}{20}
+\contentsline {section}{\numberline {2.4}Discussion}{21}
+\contentsline {chapter}{\numberline {3}Complexity of Group Scheduling Problem II: {\itshape }}{22}
+\contentsline {section}{\numberline {3.1}Notation and Definitions}{23}
+\contentsline {subsection}{\numberline {3.1.1}Example}{24}
+\contentsline {section}{\numberline {3.2}Technical Results and Algorithm}{26}
+\contentsline {subsection}{\numberline {3.2.1}1-Row Matrix and 1-Column Matrix}{26}
+\contentsline {subsection}{\numberline {3.2.2}Inspection of Entire Column}{27}
+\contentsline {subsection}{\numberline {3.2.3}Optimal Ordering within Column}{30}
+\contentsline {subsection}{\numberline {3.2.4}Main Result and Algorithm}{32}
+\contentsline {section}{\numberline {3.3}Discussion and Future Work}{34}
+\contentsline {chapter}{\numberline {4}Complexity of Group Activity Selection Problem: {\itshape }}{36}
+\contentsline {section}{\numberline {4.1}Introduction and Related Work}{36}
+\contentsline {paragraph}{Related Work.}{38}
+\contentsline {section}{\numberline {4.2}Definitions and Known Results}{39}
+\contentsline {section}{\numberline {4.3}Parameterized Complexity}{43}
+\contentsline {subsection}{\numberline {4.3.1}$k$-IR-GASP: Finding Individually Rational Assignments in GASP}{44}
+\contentsline {subsection}{\numberline {4.3.2}$k$-Stable-GASP: Finding Stable Assignments}{46}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{46}
+\contentsline {paragraph}{Proof of equivalence between instances.}{47}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{49}
+\contentsline {paragraph}{Proof of equivalence between instances.}{49}
+\contentsline {paragraph}{Preliminaries.}{50}
+\contentsline {paragraph}{FPT Algorithm.}{51}
+\contentsline {paragraph}{Preliminaries.}{54}
+\contentsline {paragraph}{FPT Algorithm.}{54}
+\contentsline {subsection}{\numberline {4.3.3}$k$-EF-GASP: Finding Envy-free Assignments}{56}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{56}
+\contentsline {paragraph}{Proof of equivalence between instances.}{57}
+\contentsline {paragraph}{Preliminaries.}{59}
+\contentsline {paragraph}{FPT algorithm.}{59}
+\contentsline {subsection}{\numberline {4.3.4}$k$-Perfect-GASP: Finding Perfect Assignments}{61}
+\contentsline {section}{\numberline {4.4}Discussion and Future Work}{62}
+\contentsline {chapter}{\numberline {5}Complexity of Stable Invitations Problem: {\itshape }}{63}
+\contentsline {section}{\numberline {5.1}Introduction and Related Work}{63}
+\contentsline {paragraph}{Related Work.}{64}
+\contentsline {section}{\numberline {5.2}Definitions and Notation}{64}
+\contentsline {section}{\numberline {5.3}Complexity of SIP with Asymmetric Relation}{66}
+\contentsline {section}{\numberline {5.4}Complexity of SIP with Symmetric Relation}{67}
+\contentsline {section}{\numberline {5.5}Discussion and Future Work}{67}
+\contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems: {\itshape }}{68}
+\contentsline {chapter}{\numberline {7}Open Problems}{69}
+\contentsline {chapter}{Bibliography}{70}
