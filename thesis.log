@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 08:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 08:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -659,16 +659,7 @@ Overfull \hbox (120.63504pt too wide) in paragraph at lines 256--266
 
 [70] [71] [72] [73] [74] [75]) [76]
 Chapter 6.
-(./60Strategic.tex
-
-LaTeX Warning: Reference `GT:eg:multiple_stable' on page 77 undefined on input 
-line 12.
-
-
-LaTeX Warning: Reference `GT:eg:multiple_stable' on page 77 undefined on input 
-line 18.
-
-[77
+(./60Strategic.tex [77
 
 ]
 Overfull \hbox (15.01791pt too wide) has occurred while \output is active
@@ -679,7 +670,7 @@ MS:  \OT1/ptm/m/n/12 78
 [78]
 
 LaTeX Warning: Reference `GT:def:preferenceTypes' on page 79 undefined on input
- line 78.
+ line 85.
 
 
 Overfull \hbox (15.01791pt too wide) has occurred while \output is active
@@ -690,10 +681,10 @@ MS:  \OT1/ptm/m/n/12 79
 [79]
 
 LaTeX Warning: Reference `GT:thm:asip_algo' on page 80 undefined on input line 
-88.
+95.
 
 )
-Overfull \hbox (9.36426pt too wide) in paragraph at lines 87--109
+Overfull \hbox (9.36426pt too wide) in paragraph at lines 94--109
 []\OT1/ptm/m/n/12 We can ex-tend our re-sults in a dif-fer-ent di-rec-tion by c
 on-sid-er-ing mul-ti-ple time-alternatives
  []
@@ -725,10 +716,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4433 strings out of 493014
- 64936 string characters out of 6133351
+ 4432 strings out of 493014
+ 64913 string characters out of 6133351
  130957 words of memory out of 5000000
- 7757 multiletter control sequences out of 15000+600000
+ 7756 multiletter control sequences out of 15000+600000
  77034 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1781b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -747,7 +738,7 @@ fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
 /urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times
 /utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (97 pages, 399170 bytes).
+Output written on thesis.pdf (97 pages, 399429 bytes).
 PDF statistics:
  391 PDF objects out of 1000 (max. 8388607)
  270 compressed objects within 3 object streams

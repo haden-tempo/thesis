@@ -8,14 +8,21 @@
 In the strategic case of \ASIP, we assume that agents may act strategically in reporting their preferences to the event organizer. 
 Example~\ref{GT:eg:strategicAgents} shows how agents may have an incentive to act strategically. 
 
+
 \begin{example}[An agent may act strategically.] \label{GT:eg:strategicAgents}
-	Let us revisit Example~\ref{GT:eg:multiple_stable} with two agents with identical preferences:
+	
+	Let us consider an example with two agents with identical preferences:
 	\begin{equation*}
 		\begin{aligned}
 				P_1: 1 \succ 0 \succ 2,~~~& P_2: 1 \succ 0 \succ 2
 		\end{aligned}
 	\end{equation*}
-	Recall from Example~\ref{GT:eg:multiple_stable} that $S_1 = \{a_1\}$ and $S_2 =\{a_2\}$ are the only two stable invitations provided that both agents are truthful. If $S_1$ were to be chosen by the organizer, $a_2$ would have an incentive to act strategically, by reporting $\hat{P}_2 (1 \succ 2 \succ 0)$ instead of $P_2$. 
+	Note that both agents have \DEC-preferences (with $h_1 = h_2 = 1$).
+	The two stable invitations are $S_1 = \{a_1\}$ and $S_2 = \{a_2\}$. 
+	The empty invitation ($\emptyset$) is not EF while the full invitation ($N$) is not IR. 
+
+	Hence $S_1 = \{a_1\}$ and $S_2 =\{a_2\}$ are the only two stable invitations provided that both agents are truthful. 
+	If $S_1$ were to be chosen by the organizer, $a_2$ would have an incentive to act strategically, by reporting $\hat{P}_2 (1 \succ 2 \succ 0)$ instead of $P_2$. 
 	Given $(P_1, \hat{P}_2)$, the only stable invitation is $S_2$ ($S_1$ is no longer EF due to $a_2$).
 	Notice that $a_2$ strictly prefers $S_2$ over $S_1$ (because $1 \succ_2 0$) and has an incentive to misreport in this example. By symmetry, $a_1$ may act strategically if $S_2$ were to be chosen. 
 \end{example}
