@@ -56,5 +56,9 @@
 \contentsline {subsection}{\numberline {5.4.2}Symmetric $k$-Stable-Invitations}{74}
 \contentsline {section}{\numberline {5.5}Discussion and Future Work}{75}
 \contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems: {\itshape }}{77}
-\contentsline {chapter}{\numberline {7}Open Problems}{78}
-\contentsline {chapter}{Bibliography}{79}
+\contentsline {section}{\numberline {6.1}Introduction and Related Work}{77}
+\contentsline {section}{\numberline {6.2}Definitions and Known Results}{77}
+\contentsline {subsection}{\numberline {6.2.1}Main Results}{77}
+\contentsline {subsection}{\numberline {6.2.2}Extensions}{80}
+\contentsline {chapter}{\numberline {7}Open Problems}{81}
+\contentsline {chapter}{Bibliography}{82}
