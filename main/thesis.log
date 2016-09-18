@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 10:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 10:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -664,23 +664,51 @@ Overfull \hbox (120.63504pt too wide) in paragraph at lines 312--322
  [][] 
  []
 
-[75] [76] [77] [78] [79]) [80]
+[75] [76] [77] [78] [79] [80]
+
+LaTeX Warning: Reference `thm:symmetric_IR_p_npc' on page 81 undefined on input
+ line 446.
+
+
+LaTeX Warning: Reference `thm:symmetric_IR_FPT' on page 81 undefined on input l
+ine 456.
+
+[81]
+
+LaTeX Warning: Reference `thm:symmetric_IR_FPT' on page 82 undefined on input l
+ine 470.
+
+
+./500_SIP.tex:472: LaTeX Error: \begin{proof} on input line 455 ended by \end{t
+heorem}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.472 \end{theorem}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[82]) [83]
 Chapter 6.
-(./600_GT.tex [81
+(./600_GT.tex [84
 
 ]
 Overfull \hbox (15.01791pt too wide) has occurred while \output is active
 \OT1/ptm/m/sl/12 CHAPTER 6.  INCENTIVE COMPATIBILITY IN GROUP ASSIGNMENT PROBLE
-MS:  \OT1/ptm/m/n/12 82
+MS:  \OT1/ptm/m/n/12 85
  []
 
-[82]
+[85]
 Overfull \hbox (15.01791pt too wide) has occurred while \output is active
 \OT1/ptm/m/sl/12 CHAPTER 6.  INCENTIVE COMPATIBILITY IN GROUP ASSIGNMENT PROBLE
-MS:  \OT1/ptm/m/n/12 83
+MS:  \OT1/ptm/m/n/12 86
  []
 
-[83])
+[86])
 Overfull \hbox (9.36426pt too wide) in paragraph at lines 96--111
 []\OT1/ptm/m/n/12 We can ex-tend our re-sults in a dif-fer-ent di-rec-tion by c
 on-sid-er-ing mul-ti-ple time-alternatives
@@ -689,14 +717,14 @@ on-sid-er-ing mul-ti-ple time-alternatives
 
 Overfull \hbox (15.01791pt too wide) has occurred while \output is active
 \OT1/ptm/m/sl/12 CHAPTER 6.  INCENTIVE COMPATIBILITY IN GROUP ASSIGNMENT PROBLE
-MS:  \OT1/ptm/m/n/12 84
+MS:  \OT1/ptm/m/n/12 87
  []
 
-[84]
+[87]
 Chapter 7.
-(./700_Discussion.tex) (./thesis.bbl [85
+(./700_Discussion.tex) (./thesis.bbl [88
 
-] [86
+] [89
 
 ]
 Missing character: There is no Ã in font ptmr7t!
@@ -707,36 +735,42 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ƒ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
- [87] [88] [89]) [90]
-(./thesis.aux) ) 
+ [90] [91] [92]) [93]
+(./thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4435 strings out of 493014
- 65242 string characters out of 6133351
+ 4437 strings out of 493014
+ 65288 string characters out of 6133351
  130035 words of memory out of 5000000
- 7762 multiletter control sequences out of 15000+600000
+ 7764 multiletter control sequences out of 15000+600000
  77034 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1783b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc
-}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-di
-st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
-ype1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/t
-imes/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri
-8a.pfb>
-Output written on thesis.pdf (101 pages, 415736 bytes).
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
+/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times
+/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pf
+b></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (104 pages, 423835 bytes).
 PDF statistics:
- 403 PDF objects out of 1000 (max. 8388607)
- 278 compressed objects within 3 object streams
+ 413 PDF objects out of 1000 (max. 8388607)
+ 285 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

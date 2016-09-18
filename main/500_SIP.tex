@@ -339,12 +339,20 @@ We first present classical complexity results for $k$-IR-Invitations under symme
 	When agents have symmetric social relationships, 
 	$k$-IR-Invitations can be solved in polynomial time if (i) $\beta = 0$, (ii) $\beta = 1$ and $\alpha \leq 1$, or (iii) $\beta = 2$ and $\alpha = 0$. Otherwise, the problem is NP-hard. 
 \end{theorem}
-\begin{proof}[Proof sketch]
+\begin{proof}
 	Let us consider case (ii) in the statement. 
-	As before, without loss of generality assume that all agents accept the size $k$ (i.e., $k\in S_i$ for all $a_i\in N$). 	
+	As before, without loss of generality assume that all agents accept the size $k$ (i.e., $k\in S_i$ for all $a_i\in N$). 
+	
 	We first construct an {\em enemy graph} in which nodes represent agents, and we create an edge between two nodes if their corresponding agents are enemies of each other. For every pair of friends, we merge their nodes in this graph into a meta-node of weight $2$ (if they are also enemies of each other, then we simply remove them from the graph); let us call the resulting graph a {\em friend graph}. 
-	Now finding an IR invitation of size $k$ is equivalent to finding an independent set of total weight $k$ in the friend graph. Although finding an independent set (of given size) is NP-hard, all nodes in the friend graph have at most two edges, and thus each connected component in the friend graph is either a path or a cycle. A dynamic programming algorithm can solve this problem in polytime, which can be found in Appendix. 
-	Polytime algorithms for cases (i) and (iii) can also be found in Appendix.
+	Now finding an IR invitation of size $k$ is equivalent to finding an independent set of total weight $k$ in the friend graph. Although finding an independent set (of an arbitrary size) is NP-hard, all nodes in the friend graph have at most two edges, and thus each connected component in the friend graph is either a path or a cycle. 
+	A dynamic programming algorithm can solve this problem.
+	For each connected component (which is either a path or a cycle), we can check for every integer $x$ between $0$ and $k$, inclusive, whether it is possible to choose exactly $k$ nodes (agents) from the component, while satisfying individual rationality (provided that we will choose $k-x$ agents from other components, thereby making the invitation's size equal to $k$). This check can be done trivially: If a path contains $y$ nodes in total, we can choose up to $\lceil y/2 \rceil$ agents from the component (which should be an independent set in the enemy graph) and if a cycle contains $z \geq 3$ nodes in total, we can choose up to $\lfloor z/2 \rfloor$ nodes. After this check for each component and each integer, we can solve the main problem using a knapsack-like algorithm to find an IR invitation of size $k$.
+
+ 	Case (i) can be solved in polytime as follows (again, assume $k \in S_i$ for every agent $a_i$). Because $\beta = 0$, agents only have friends. Again we construct a friendship graph in which nodes are agents and there is an edge between two nodes if they are friends of each other in \SIP. Now we find all connected components in this graph; everyone in the same component must all be invited or all be uninvited. This reduces to a knapsack problem where we seek a subset of components whose total weight (the number of nodes in them) is equal to $k$. 
+
+	Lastly, Case (iii) can be solved in polytime as follows (again, assume $k \in S_i$ for every agent $a_i$).
+	Since $\alpha = 0$, no agent has friends. If we construct an enemy graph in which nodes are agents and there is an edge between two nodes if the corresponding agents are enemies, then finding an IR invitation of size $k$ is equivalent to finding an independent set of size $k$ in the enemy graph we constructed. Furthermore, each node in this graph has at most two edges (because $\beta = 2$), and therefore every connected component in this graph is either a path or a cycle. Again, we can use a dynamic programming algorithm (similar to the one we used for Case (i) above) to solve this problem in polytime.
+
 		
 	Let us now prove that the problem is NP-hard if none of the three conditions in the statement holds. 
 	It is known that the Independent Set problem is NP-hard even if every node has degree at most 3~\cite{Garey_Max_Is_Cubic}. 
@@ -352,8 +360,19 @@ We first present classical complexity results for $k$-IR-Invitations under symme
 	For each node, we create an agent $a_i$ with $S_i =\{k\}$ (agent only approves size $k$). 
 	If there is an edge between two nodes, we make their corresponding agents enemies of each other. 
 	The resulting instance is a valid instance (with symmetric social relationships) of $k$-IR-Invitations with $\alpha = 0$ and $\beta = 3$ (because each node in the original instance as at most three neighbors). 
-	This shows NP-hardness of $k$-IR-Invitations with symmetric social relationships when $\alpha = 0$ and $\beta \geq 3$. 
-	Other cases -- namely, $(\alpha \geq 2 \land \beta = 1)$ and $(\alpha \geq 1 \land \beta = 2)$ -- require modifications to our reduction, and details can be found in Appendix.
+	This shows NP-hardness of $k$-IR-Invitations with symmetric social relationships when $\alpha = 0$ and $\beta \geq 3$.	
+	
+	We can modify our reduction to show that the problem is NP-hard when $\alpha = 2$ and $\beta = 1$.
+	First, given an instance of the Independent Set problem with max-degree 3, we create three agents for each vertex and make the three agents friends with one another; these three agents together represent a vertex in the original instance.
+	For each edge in the original instance, pick one agent from each component representing the either end-point of the edge, and make them enemies of each other; because each node has at most three edges in the original instance, we can manage to keep each agent's enemy set to contain at most one agent. Lastly, we set approval sets of agents such that everyone approves of size $k$. The resulting instance is a valid instance of \SIPs with symmetric social relationships with $\alpha = 2$ and $\beta = 1$. 
+	
+	Lastly, we need a similar modification to our reduction for the case when $\alpha = 1$ and $\beta = 2$. 
+	First, given an instance of the Independent Set problem with max-degree 3, we create two agents for each vertex and make the two agents friends with each other; these two agents together represent a vertex in the original instance.
+	For each edge in the original instance, pick one agent from each component representing the either end-point of the edge, and make them enemies of each other; because each node has at most three edges in the original instance, we can manage to keep each agent's enemy set to contain at most two agents (and each component can have at most four edges). Lastly, we set approval sets of agents such that everyone approves of size $k$. The resulting instance is a valid instance of \SIPs with symmetric social relationships with $\alpha = 1$ and $\beta = 2$. 
+ 	
+	Note that NP-hardness for $\alpha = a$ and $\beta = b$ implies NP-hardness for $\alpha \geq a$ and $\beta \geq b$.
+	Hence, our proofs provide a complete analysis as stated in the theorem.
+	
 \end{proof}
 
 
@@ -403,7 +422,7 @@ We first present classical complexity results for $k$-Stable-Invitations under s
 	When agents have symmetric social relationships, 	
 	$k$-Stable-Invitations can be solved in polynomial time if (i) $\beta = 0$, (ii) $\beta = 1$ and $\alpha \leq 1$, or (iii) $\beta = 2$ and $\alpha = 0$. Otherwise, the problem is NP-hard. 
 \end{theorem}
-\begin{proof}[Proof sketch]
+\begin{proof}
 	Let us first consider the case (i) when $\beta = 0$.
 	We construct a friend graph as before, and find connected components in this graph. 
 	Any stable invitation must contain all or none of nodes in each connected component.
@@ -411,24 +430,45 @@ We first present classical complexity results for $k$-Stable-Invitations under s
 	To check the first, we simply check if the component is of size $k$ or less and if everyone in the component approves size $k$. 
 	To check the second, we check if the component contains two or more nodes (then we can leave them out) or if it is a singleton component but the only agent in it does not approve size $k$ (then we can leave the agent out). All of these checks can be done in linear time.
 	Now we can use a dynamic programming algorithm to determine whether a subset of connected components that contains $k$ nodes over all such that every component (whether selected or not) does not violate the stability conditions (which can be easily checked by the two conditions we processed earlier).
-	Algorithms for cases (ii) and (iii) can be found in Appendix. 
-		
+	
+	Let us now consider case (ii) where $\alpha \leq 1$ and $\beta = 1$.
+	We first construct a friend graph, and merge any connected component into a meta-node with weight 2.
+	The resulting graph would only have nodes but no edges, and each node is either of weight 1 or 2.
+	Now we construct an enemy graph on top of this by creating an edge between nodes if their corresponding agents are enemies of each other; if we create self-loops, then it means two agents are both friends and enemies at the same time, and we just remove them from our graph (and input instance) with no harm.
+	Now, after all edges are created, each node of weight 1 has at most one edge and each node of weight 2 has at most two edges. This implies that all connected components in this graph are either a path or a cycle.
+	We can use the same algorithm for case (iii) below to solve this problem. 
+
+	Finally let us consider case (iii) where $\alpha = 0$ and $\beta = 2$.
+	Let us construct an enemy graph by creating nodes for agents and an edge between nodes if the agents are enemies of each other. Each node can have at most two edges because $\beta = 2$.
+	Therefore, every connected component in the enemy graph is either a path or a cycle.
+	For each connected component and every integer $x$ between $0$ and $k$, we check if it is possible to choose exactly $x$ nodes from the component such that inviting their corresponding agents and not inviting other agents (in the same component) do not violate stability conditions. This is similar to finding an independent set on a path or a cycle, but with extra conditions: the nodes not being chosen must still satisfy the stability requirements (by not approving size $k+1$ or by having one of its neighbors included in the set). We omit the details, but mention that this can be solved by a dynamic programming algorithm in polytime. After this step, we can solve the main problem using a knapsack algorithm in a straightforward manner. 
+	
 	Our reductions for $k$-IR-Invitations in proof of Theorem~\ref{SIP:thm:symmetric_IR_p_npc} show NP-hardness for $k$-Stable-Invitations as well, because agents only approve invitations of size $k$ in our reduction; it ensures that any uninvited agent would be unwilling to attend due to the size of an invitation.
+	
 \end{proof}
+
+
 
 \begin{theorem} \label{SIP:thm:symmetric_stable_FPT}
 	When agents have symmetric social relationships, $k$-Stable-Invitations is in FPT if $\beta \leq f(k)$ where $f(k)$ can be an arbitrary function of $k$. 
 \end{theorem}
-\begin{proof}[Proof sketch]
-	The main idea is similar to that of our proof of Theorem~\ref{SIP:thm:symmetric_IR_FPT}, but we need an original idea to deal with stability conditions. As before, we proceed by creating a {\em friend graph}, removing certain connected components, creating an {\em enemy graph}, coloring components using two colors $\{0,1\}$, and re-coloring any adjacent nodes of color $1$ to color $0$, as before (details are in Appendix). After the re-coloring step, any subset of nodes of color 1 forms an independent set in the enemy graph (and yields an IR invitation).
+\begin{proof}
+	The main is similar to that of our proof of Theorem~\ref{thm:symmetric_IR_FPT}, but details entail more complicated processes due to stability conditions on uninvited agents.
 
-	Hence we only need to worry about stability conditions while choosing a subset of nodes of color $1$ to find a stable invitation. Doing so will exclude all nodes of color $0$, but only the singleton nodes (i.e., agents with no friends) may violate stability condition. To avoid this, we are going to choose at least one enemy (of color $1$) of each singleton node of color $0$ who approves size $k+1$ in brute-force manner; the search space is bounded because we can only choose up to $k$ agents and each agent has at most $f(k)$ enemies (i.e., the search space is $O((f(k))^k)$). This pre-selection process is the crucial step in our algorithm (and where we need the condition that $\beta$ is bounded). The rest of the algorithm is straightforward, and can be found in Appendix. 
-\end{proof}
+	We first create a {\em friend graph} in which nodes represent agents, and we create an edge between two nodes if they are friends of each other. 
+	Any stable invitation must contain all or none of agents in the same connected component; if a connected component contains more than $k$ agents or it contains enemies within itself, then we can safely remove the components (or agents in them) from input instance. 
+	Also, if a connected component of size at least $2$ contains an agent who does not approve size $k$, then we remove the entire connected component; if it is just one agent who does not approve size $k$, then we remove it only if it does not approve size $k+1$ as well (this is because of stability conditions). 
+	After the removal process, we create an {\em enemy graph} by treating each connected component as a weighted node whose weight is equal to the size of the component, and creating an edge between nodes if they contain enemies (one in each).
+	
+	Again, we use color coding approach by coloring nodes using two colors $\{0,1\}$ uniformly and independently at random. 
+	If two adjacent nodes in the enemy graph are both colored as 1, then we re-color both of them to 0. 
+	We repeat the re-coloring step until no such nodes remain; at this point, all nodes of color 1 form an independent set, and any subset of them form an IR invitation.
+	We will try to find a subset of nodes of color $1$ whose weight is equal to $k$ that forms a stable invitation. We can disregard any node of color 0 and weight greater than 1, because the agents contained in those nodes would not block stability (because we only consider single-agent deviation).
+	On the other hand, singleton nodes of color $0$ may block an invitation when excluded, if those node approve size $k+1$ and no enemy of them are invited. 
+	To avoid this, we are going to choose at least one enemy (of color $1$) of each singleton node of color $0$ who approves size $k+1$ in brute-force manner; the search space is bounded because we can only choose up to $k$ agents and each agent has at most $f(k)$ enemies (i.e., the search space is $O((f(k))^k)$). After we pre-select a subset of agents of color $1$ in this manner, we no longer need to worry about stability condition being violated by any agent of color $0$. Next, we check if there is any singleton node of color $1$ who approves size $k+1$ and is not pre-selected in the previous step; those nodes must also be included so as not to violate stability condition. Suppose that we have so far selected $x$ agents in this manner; if $x > k$, then our algorithm will (possibly incorrectly) report that no stable invitation of size $k$ exists. Otherwise, among the remaining nodes of color $1$, we will check if an independent set of weight $k - x$ exists (via a knapsack algorithm), to solve the main problem.
 
-Lastly we show that $k$-Stable-Invitations remains to be W[2]-complete, even under symmetric social relationships, when $\beta$ is not bounded. Proof of W[2]-hardness is similar to that of Theorem~\ref{SIP:thm:stable_W2hard_beta}, and completeness follows from Theorem~\ref{SIP:thm:stable_W2}. We omit proof of Theorem~\ref{SIP:thm:symmetric_stable_W2C}.
-\begin{theorem} \label{SIP:thm:symmetric_stable_W2C}
-	When agents have symmetric social relationships, 	
-		$k$-Stable-Invitations is W[2]-complete if $\beta$ is not bounded above by any function of $k$. 
+		Overall, this randomized algorithm runs in FPT time ($O((f(k))^k \cdot (f(k)n))$), and its probability of success is at least $(1/2^k)\cdot (1/2^{k\beta}) \geq 1/2^{k(1+f(k))}$ (similar to the algorithm shown in Theorem~\ref{thm:symmetric_IR_FPT}).
+		
 \end{theorem}
 
 
@@ -440,6 +480,4 @@ Our results indicate that the computational complexity of \SIPs varies when its 
 Our work leaves a few interesting open problems for future work. 
 Lee and Shoham~\cite{LEE15AAAI} considered another solution concept in which agents who are not invited are not envious of those who are invited (motivated by `envy-freeness'). It would be interesting to analyze the parameterized complexity of finding an envy-free invitation of size $k$, and compare the results with what we have in this work. In addition, analyzing the parameterized complexity of the Group Activity Selection Problem~\cite{GASP12WINE} is another interesting direction for future work. 
 
-\subsubsection*{Appendix}
-Missing details in ``proof sketches'' can be found in Appendix (submitted as supplemental material).
 
