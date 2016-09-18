@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 09:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 09:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -406,23 +406,23 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 ] (./thesis.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 3.
-)
+ [6
+
+])
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- [6
-
-] (./thesis.lot)
+ [7] (./thesis.lot)
 \tf@lot=\write4
 \openout4 = `thesis.lot'.
 
- [7
+ [8
 
 ] (./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [8
+ [9
 
 ]
 Chapter 1.
@@ -435,29 +435,150 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17.28> not available
 
 ]
 Chapter 2.
+(./200_BDoodle.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[][]\OT1/ptm/m/n/10 http://en.blog.doodle.com/2012/07/26/new-findings-a-small-n
+umber-of-initiators-organize-most-of-the-
+ []
+
 [2
 
 ]
+
+LaTeX Warning: File `plots/pareto_scatter_fin.eps' not found on input line 54.
+
+Package epstopdf Info: Source file: <plots/pareto_scatter_fin.eps>
+(epstopdf)             Output file: <plots/pareto_scatter_fin-eps-converted-to.
+pdf>
+(epstopdf)             Command: <repstopdf --outfile=plots/pareto_scatter_fin-e
+ps-converted-to.pdf plots/pareto_scatter_fin.eps>
+(epstopdf)             \includegraphics on input line 54.
+Package epstopdf Info: Output file is already uptodate.
+
+./200_BDoodle.tex:54: Package pdftex.def Error: File `plots/pareto_scatter_fin-
+eps-converted-to.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 ...[scale=0.45]{plots/pareto_scatter_fin.eps}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3]
+
+LaTeX Warning: File `plots/pareto_objective_fin.eps' not found on input line 72
+.
+
+Package epstopdf Info: Source file: <plots/pareto_objective_fin.eps>
+(epstopdf)             Output file: <plots/pareto_objective_fin-eps-converted-t
+o.pdf>
+(epstopdf)             Command: <repstopdf --outfile=plots/pareto_objective_fin
+-eps-converted-to.pdf plots/pareto_objective_fin.eps>
+(epstopdf)             \includegraphics on input line 72.
+Package epstopdf Info: Output file is already uptodate.
+
+./200_BDoodle.tex:72: Package pdftex.def Error: File `plots/pareto_objective_fi
+n-eps-converted-to.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 ...cale=0.45]{plots/pareto_objective_fin.eps}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[4] [5] [6] [7]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
+ [8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
+
+ []
+
+[10] [11]
+Overfull \hbox (7.3109pt too wide) in paragraph at lines 241--242
+[]\OT1/ptm/m/n/12 Given an in-stance $\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 A; 
+P[]; f; c\OT1/ztmcm/m/n/12 )$\OT1/ptm/m/n/12 , con-sider some B-Doodle mech-a-n
+ism $\OML/ztmcm/m/it/12 B[] \OT1/ztmcm/m/n/12 = \OMS/ztmcm/m/n/12 h\OML/ztmcm/m
+/it/12 b[]; b[]; [] ; b[]\OMS/ztmcm/m/n/12 i$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
+
+ []
+
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
+
+ []
+
+[15] [16] [17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 413--414
+
+ []
+
+[19]
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 454.
+ [20]) [21]
 Chapter 3.
-[3
+[22
 
 ]
 Chapter 4.
-[4
+[23
 
 ]
 Chapter 5.
-[5
+[24
 
 ]
 Chapter 6.
-[6
+[25
 
 ]
 Chapter 7.
-(./thesis.bbl [7
+(./thesis.bbl [26
 
-] [8
+] [27
 
 ]
 Missing character: There is no Ã in font ptmr7t!
@@ -468,25 +589,33 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ƒ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
- [9] [10] [11]) [12] (./thesis.aux) ) 
+ [28] [29] [30]) [31] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 4134 strings out of 493014
- 59823 string characters out of 6133351
- 123063 words of memory out of 5000000
- 7551 multiletter control sequences out of 15000+600000
- 24322 words of font info for 54 fonts, out of 8000000 for 9000
+ 4275 strings out of 493014
+ 62199 string characters out of 6133351
+ 127354 words of memory out of 5000000
+ 7654 multiletter control sequences out of 15000+600000
+ 52121 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,24p,264b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/
-enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/
-utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (20 pages, 79458 bytes).
+ 38i,10n,24p,1309b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts
+/enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmss12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/
+usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (40 pages, 196540 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 188 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

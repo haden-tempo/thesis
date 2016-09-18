@@ -4,25 +4,86 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction: {\itshape  }}{1}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\citation{zou2015strategic}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}Complexity of Group Scheduling Problem I: {\itshape  }}{2}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Complexity of Group Scheduling Problem II: {\itshape  }}{3}}
+\newlabel{bdoodle:ch:bdoodle}{{2}{2}}
+\citation{mann1998cross}
+\citation{reinecke2013doodle}
+\citation{zou2015strategic}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces A scatter plot of B-Doodle Mechanisms.}}{4}}
+\newlabel{bdoodle:fig:Pareto_scatter}{{2.1}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Pareto-frontier and objective function.}}{4}}
+\newlabel{bdoodle:fig:Pareto_objective}{{2.2}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Notation and Definitions}{5}}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {definition}{\numberline {1}Definition\thmtformatoptarg {Feasibility}}{6}}
+\@writefile{loe}{\contentsline {definition}{\numberline {2}Definition\thmtformatoptarg {B-Doodle Mechanism}}{6}}
+\newlabel{bdoodle:def:BDoodleMechanism}{{2}{6}}
+\@writefile{loe}{\contentsline {definition}{\numberline {3}Definition\thmtformatoptarg {Cost function}}{6}}
+\newlabel{bdoodle:def:CostFunction}{{3}{6}}
+\@writefile{loe}{\contentsline {example}{\numberline {1}Example\thmtformatoptarg {Examples of simple cost functions}}{7}}
+\newlabel{bdoodle:exmp:CostFunctions}{{1}{7}}
+\newlabel{bdoodle:eqn:linear_cost_function}{{2.1}{7}}
+\newlabel{bdoodle:eqn:time_averse_cost_function}{{2.1}{8}}
+\newlabel{bdoodle:eqn:inconvenience_averse_cost_function}{{2.1}{8}}
+\@writefile{loe}{\contentsline {definition}{\numberline {4}Definition\thmtformatoptarg {Batched Doodle Problem}}{8}}
+\newlabel{bdoodle:def:Problem}{{4}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Efficient Algorithm for Finding Optimal B-Doodle}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Preliminaries}{9}}
+\@writefile{loe}{\contentsline {lemma}{\numberline {1}Lemma}{9}}
+\newlabel{bdoodle:lemma:q_t_polytime}{{1}{9}}
+\newlabel{bdoodle:eqn:vt_precompute}{{2.1}{9}}
+\@writefile{loe}{\contentsline {theorem}{\numberline {1}Theorem}{10}}
+\newlabel{bdoodle:thm:exchange_argument}{{1}{10}}
+\@writefile{loe}{\contentsline {definition}{\numberline {5}Definition\thmtformatoptarg {Simplified B-Doodle Mechanism}}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Optimal Algorithm}{12}}
+\newlabel{bdoodle:sec:Algorithm}{{2.2.2}{12}}
+\newlabel{bdoodle:eqn:expCost}{{2.2}{12}}
+\@writefile{loe}{\contentsline {lemma}{\numberline {2}Lemma}{12}}
+\newlabel{bdoodle:lemma:recurrence}{{2}{12}}
+\newlabel{bdoodle:eqn:recurrence}{{2.3}{12}}
+\newlabel{bdoodle:eqn:r_j}{{2.4}{13}}
+\newlabel{bdoodle:eqn:Pr_j}{{2.5}{13}}
+\newlabel{bdoodle:eqn:pr_hat_b}{{2.6}{13}}
+\newlabel{bdoodle:eqn:ExpCost_Bhat}{{2.7}{14}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Recursive Algorithm: $Rec(x)$}}{15}}
+\newlabel{bdoodle:alg:recursive}{{1}{15}}
+\@writefile{loe}{\contentsline {theorem}{\numberline {2}Theorem}{15}}
+\newlabel{bdoodle:thm:recursive_algo}{{2}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Experimental Results with Synthetic Data}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Case of Linear Cost Function}{17}}
+\newlabel{bdoodle:sec:result_linear_cost}{{2.3.1}{17}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Critical point $S^*$ for various $(n, p)$ when $f = 1, \alpha = 2$. Entries in boldface emphasize that $S^* \leq 15$. }}{17}}
+\newlabel{bdoodle:table:DoodleSuboptimal}{{2.1}{17}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces Efficiency of Doodle $e_{D}$ for various $(n, p)$ when $f = 1, \alpha =2, s = 15$. Entries in boldface emphasize that $e_{D} < .750$. }}{18}}
+\newlabel{bdoodle:table:DoodleEfficiency}{{2.2}{18}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Efficiency of Doodle $e_{D}$ for various $(n, p)$ when $f = .7, \alpha =2, s = 15$. Entries in boldface emphasize that $e_{D} < .750$. }}{18}}
+\newlabel{bdoodle:table:DoodleEfficiency-lower-attendance}{{2.3}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Case of Other Cost Functions}{19}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.4}{\ignorespaces Efficiency of Doodle $e_{D}$ for various $(n, p)$ when $f = .7, \beta =2, s = 15$. Entries in boldface emphasize that $e_{D} < .750$. }}{19}}
+\newlabel{bdoodle:table:DoodleEfficiency-lower-attendance_time_averse}{{2.4}{19}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.5}{\ignorespaces Efficiency of Doodle $e_{D}$ for various $(n, p)$ when $f = .7, \gamma =1.1, s = 15$. Entries in boldface emphasize that $e_{D} < .750$. }}{20}}
+\newlabel{bdoodle:table:DoodleEfficiency-lower-attendance_inconvenience_averse}{{2.5}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Summary of Experiments}{20}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Discussion}{21}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Complexity of Group Scheduling Problem II: {\itshape  }}{22}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Complexity of Group Activity Selection Problem: {\itshape  }}{4}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Complexity of Group Activity Selection Problem: {\itshape  }}{23}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Complexity of Stable Invitations Problem: {\itshape  }}{5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Complexity of Stable Invitations Problem: {\itshape  }}{24}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems: {\itshape  }}{6}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems: {\itshape  }}{25}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \citation{*}
 \bibstyle{plain}
 \bibdata{thesis}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Open Problems}{7}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Open Problems}{26}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \bibcite{abelson-et-al:scheme}{1}
@@ -34,7 +95,7 @@
 \bibcite{berry2006deploying}{7}
 \bibcite{BogomolnaiaJackson}{8}
 \bibcite{brachman-schmolze:kl-one}{9}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{8}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{27}}
 \bibcite{chia1998coordinating}{10}
 \bibcite{Cowling-hyperheuristic}{11}
 \bibcite{crawford2005learning}{12}

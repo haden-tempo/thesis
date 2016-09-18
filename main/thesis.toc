@@ -2,9 +2,18 @@
 \contentsline {chapter}{Acknowledgments}{v}
 \contentsline {chapter}{\numberline {1}Introduction: {\itshape }}{1}
 \contentsline {chapter}{\numberline {2}Complexity of Group Scheduling Problem I: {\itshape }}{2}
-\contentsline {chapter}{\numberline {3}Complexity of Group Scheduling Problem II: {\itshape }}{3}
-\contentsline {chapter}{\numberline {4}Complexity of Group Activity Selection Problem: {\itshape }}{4}
-\contentsline {chapter}{\numberline {5}Complexity of Stable Invitations Problem: {\itshape }}{5}
-\contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems: {\itshape }}{6}
-\contentsline {chapter}{\numberline {7}Open Problems}{7}
-\contentsline {chapter}{Bibliography}{8}
+\contentsline {section}{\numberline {2.1}Notation and Definitions}{5}
+\contentsline {section}{\numberline {2.2}Efficient Algorithm for Finding Optimal B-Doodle}{9}
+\contentsline {subsection}{\numberline {2.2.1}Preliminaries}{9}
+\contentsline {subsection}{\numberline {2.2.2}Optimal Algorithm}{12}
+\contentsline {section}{\numberline {2.3}Experimental Results with Synthetic Data}{16}
+\contentsline {subsection}{\numberline {2.3.1}Case of Linear Cost Function}{17}
+\contentsline {subsection}{\numberline {2.3.2}Case of Other Cost Functions}{19}
+\contentsline {subsection}{\numberline {2.3.3}Summary of Experiments}{20}
+\contentsline {section}{\numberline {2.4}Discussion}{21}
+\contentsline {chapter}{\numberline {3}Complexity of Group Scheduling Problem II: {\itshape }}{22}
+\contentsline {chapter}{\numberline {4}Complexity of Group Activity Selection Problem: {\itshape }}{23}
+\contentsline {chapter}{\numberline {5}Complexity of Stable Invitations Problem: {\itshape }}{24}
+\contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems: {\itshape }}{25}
+\contentsline {chapter}{\numberline {7}Open Problems}{26}
+\contentsline {chapter}{Bibliography}{27}
