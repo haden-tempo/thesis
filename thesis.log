@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 08:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 08:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -695,9 +695,6 @@ MS:  \OT1/ptm/m/n/12 79
 LaTeX Warning: Reference `GT:thm:asip_algo' on page 80 undefined on input line 
 88.
 
-
-LaTeX Warning: Citation `GASP2012WINE' on page 80 undefined on input line 90.
-
 )
 Overfull \hbox (9.36426pt too wide) in paragraph at lines 87--109
 []\OT1/ptm/m/n/12 We can ex-tend our re-sults in a dif-fer-ent di-rec-tion by c
@@ -729,12 +726,15 @@ Missing character: There is no ½ in font ptmr7t!
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 4434 strings out of 493014
- 64950 string characters out of 6133351
+ 4433 strings out of 493014
+ 64936 string characters out of 6133351
  130953 words of memory out of 5000000
- 7758 multiletter control sequences out of 15000+600000
+ 7757 multiletter control sequences out of 15000+600000
  77034 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1781b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -753,7 +753,7 @@ fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
 /urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times
 /utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (97 pages, 399043 bytes).
+Output written on thesis.pdf (97 pages, 399179 bytes).
 PDF statistics:
  391 PDF objects out of 1000 (max. 8388607)
  270 compressed objects within 3 object streams
