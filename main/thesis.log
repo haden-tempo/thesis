@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 10:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 10:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -9,8 +9,8 @@ LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -356,71 +356,68 @@ e
 [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 78.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 79.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 79.
  [2]
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 78
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 79
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 78
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 79
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 78
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 79
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 78
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 79
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
  [3]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 80.
 
 (./000_abstract.tex [4
 
 
 ]) [5] [6
 
-] (./thesis.toc
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 3.
- [7
+] (./thesis.toc [7
 
-] [8])
+])
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- [9] (./thesis.lot
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
+ [8] (./thesis.lot
+Overfull \hbox (12.59836pt too wide) in paragraph at lines 12--12
+ \OT1/ptm/m/n/10.95 func-tion of $\OML/ztmcm/m/it/10.95 k$ \OT1/ptm/m/n/10.95 t
+hat only de-pends on $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/n/10.95 . All en-tries
+ other than ``P'' im-ply NP-completeness. 
+ []
 
-Overfull \hbox (19.26591pt too wide) in paragraph at lines 12--12
+
+Overfull \hbox (12.59836pt too wide) in paragraph at lines 13--13
  \OT1/ptm/m/n/10.95 func-tion of $\OML/ztmcm/m/it/10.95 k$ \OT1/ptm/m/n/10.95 t
 hat only de-pends on $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/n/10.95 . All en-tries
  other than ``P'' im-ply NP-completeness. 
@@ -430,37 +427,34 @@ hat only de-pends on $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/n/10.95 . All en-tries
 \tf@lot=\write4
 \openout4 = `thesis.lot'.
 
- [10
+ [9
 
 ] (./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [11
+ [10
 
 ]
 Chapter 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 88.
-(./100_Intro.tex) [1
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 89.
+(./100_Intro.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+) [1
 
 
 ]
 Chapter 2.
 (./200_BDoodle.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
-[][]\OT1/ptm/m/n/10 http://en.blog.doodle.com/2012/07/26/new-findings-a-small-n
-umber-of-initiators-organize-most-of-the-
- []
-
-[2
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
+ [2
 
 ]
 Package epstopdf Info: Source file: <plots/pareto_scatter_fin.eps>
@@ -475,18 +469,14 @@ ps-converted-to.pdf plots/pareto_scatter_fin.eps>
 (epstopdf)             \includegraphics on input line 54.
 Package epstopdf Info: Output file is already uptodate.
 
-<plots/pareto_scatter_fin-eps-converted-to.pdf, id=53, 718.685pt x 331.2375pt>
+<plots/pareto_scatter_fin-eps-converted-to.pdf, id=48, 718.685pt x 331.2375pt>
 File: plots/pareto_scatter_fin-eps-converted-to.pdf Graphic file (type pdf)
 
 <use plots/pareto_scatter_fin-eps-converted-to.pdf>
 Package pdftex.def Info: plots/pareto_scatter_fin-eps-converted-to.pdf used on 
 input line 54.
 (pdftex.def)             Requested size: 323.40526pt x 149.05548pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3]
+ [3 <./plots/pareto_scatter_fin-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <plots/pareto_objective_fin.eps>
 (epstopdf)                    date: 2013-10-10 17:45:23
 (epstopdf)                    size: 21574 bytes
@@ -499,18 +489,17 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 72.
 Package epstopdf Info: Output file is already uptodate.
 
-<plots/pareto_objective_fin-eps-converted-to.pdf, id=58, 718.685pt x 331.2375pt
+<plots/pareto_objective_fin-eps-converted-to.pdf, id=59, 718.685pt x 331.2375pt
 >
 File: plots/pareto_objective_fin-eps-converted-to.pdf Graphic file (type pdf)
  <use plots/pareto_objective_fin-eps-converted-to.pdf>
 Package pdftex.def Info: plots/pareto_objective_fin-eps-converted-to.pdf used o
 n input line 72.
 (pdftex.def)             Requested size: 323.40526pt x 149.05548pt.
- [4 <./plots/pareto_scatter_fin-eps-converted-to.pdf> <./plots/pareto_objective
-_fin-eps-converted-to.pdf>] [5] [6] [7] [8]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+ [4 <./plots/pareto_objective_fin-eps-converted-to.pdf>] [5] [6] [7]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
- [9]
+ [8]
 Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
@@ -520,183 +509,133 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
-[10] [11]
-Overfull \hbox (7.3109pt too wide) in paragraph at lines 241--242
-[]\OT1/ptm/m/n/12 Given an in-stance $\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 A; 
-P[]; f; c\OT1/ztmcm/m/n/12 )$\OT1/ptm/m/n/12 , con-sider some B-Doodle mech-a-n
-ism $\OML/ztmcm/m/it/12 B[] \OT1/ztmcm/m/n/12 = \OMS/ztmcm/m/n/12 h\OML/ztmcm/m
-/it/12 b[]; b[]; [] ; b[]\OMS/ztmcm/m/n/12 i$
- []
-
-
+[9] [10]
 Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
-[12]
+
 Underfull \hbox (badness 10000) in paragraph at lines 266--268
 
  []
 
 
+Overfull \hbox (15.11455pt too wide) in paragraph at lines 269--271
+[]\OT1/ptm/m/n/10.95 Recall that $[] \OT1/ztmcm/m/n/10.95 = \OMS/ztmcm/m/n/10.9
+5 h\OML/ztmcm/m/it/10.95 b[]; b[]; [] ; b[]\OMS/ztmcm/m/n/10.95 i$\OT1/ptm/m/n/
+10.95 . Not to be con-fused, let us ex-press it as $[] \OT1/ztmcm/m/n/10.95 = \
+OMS/ztmcm/m/n/10.95 h[]\OML/ztmcm/m/it/10.95 ; []; [] ; []\OMS/ztmcm/m/n/10.95 
+i$
+ []
+
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 282--284
 
  []
 
-[13] [14]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
  []
 
-
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 330--331
 
  []
 
-[15] [16]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[17]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
+[14] [15]
 Underfull \hbox (badness 10000) in paragraph at lines 413--414
 
  []
 
-[18] [19]
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+[16]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17]
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 454.
- [20]) [21]
+) [18]
 Chapter 3.
-(./300_Matrix.tex [22
+(./300_Matrix.tex [19
 
-] [23] [24] [25] [26] [27] [28] [29] [30]
-Overfull \hbox (1.92119pt too wide) in paragraph at lines 239--241
-[]\OT1/ptm/m/n/12 We can ex-press $\OT1/ptm/b/n/12 E\OT1/ztmcm/m/n/12 [\OML/ztm
-cm/m/it/12 N\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 ^^Y[]; c[]\OT1/ztmcm/m/n/12 )
-]$ \OT1/ptm/m/n/12 in a sim-i-lar man-ner, and sim-plify $\OT1/ptm/b/n/12 E\OT1
-/ztmcm/m/n/12 [\OML/ztmcm/m/it/12 N\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 ^^Y; c
-[]\OT1/ztmcm/m/n/12 )] \OMS/ztmcm/m/n/12 ^^@ \OT1/ptm/b/n/12 E\OT1/ztmcm/m/n/12
- [\OML/ztmcm/m/it/12 N\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 ^^Y[]; c[]\OT1/ztmc
-m/m/n/12 )]$
+] [20] [21]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+ [22] [23] [24] [25] [26]
+Overfull \hbox (53.95978pt too wide) in paragraph at lines 268--271
+\OT1/ptm/m/n/10.95 Here we have $\OML/ztmcm/m/it/10.95 s[] [] \OT1/ztmcm/m/n/10
+.95 = 0\OML/ztmcm/m/it/10.95 :\OT1/ztmcm/m/n/10.95 199$ \OT1/ptm/m/n/10.95 and 
+$\OML/ztmcm/m/it/10.95 s[] [] \OT1/ztmcm/m/n/10.95 = 0\OML/ztmcm/m/it/10.95 :\O
+T1/ztmcm/m/n/10.95 184$\OT1/ptm/m/n/10.95 , and the greedy al-go-rithm would pr
+o-duce $\OML/ztmcm/m/it/10.95 ^^Y \OT1/ztmcm/m/n/10.95 = []$\OT1/ptm/m/n/10.95 
+.
  []
 
-[31] [32]
-Overfull \hbox (6.9832pt too wide) in paragraph at lines 291--294
-[]\OT1/ptm/m/n/12 Suppose that there is some col-umn $\OML/ztmcm/m/it/12 c[]$ \
-OT1/ptm/m/n/12 such that $\OML/ztmcm/m/it/12 ^^V[]\OT1/ztmcm/m/n/12 (1 \OMS/ztm
-cm/m/n/12 ^^@ \OML/ztmcm/m/it/12 s[]\OT1/ztmcm/m/n/12 )\OML/ztmcm/m/it/12 =s[] 
-> ^^V[]\OT1/ztmcm/m/n/12 (1 \OMS/ztmcm/m/n/12 ^^@ \OML/ztmcm/m/it/12 s[]\OT1/zt
-mcm/m/n/12 )\OML/ztmcm/m/it/12 =s[]$\OT1/ptm/m/n/12 .
- []
-
-[33] [34]) [35]
+[27] [28] [29]) [30]
 Chapter 4.
-(./400_GASP.tex [36
+(./400_GASP.tex [31
 
-] [37] [38] [39] [40] [41] [42]
-Overfull \hbox (18.7271pt too wide) in paragraph at lines 149--156
- [][] 
+] [32] [33]
+Overfull \hbox (32.06836pt too wide) in paragraph at lines 65--67
+\OT1/ztmcm/m/n/10.95 [3]$\OT1/ptm/m/n/10.95 . Sup-pose $\OML/ztmcm/m/it/10.95 S
+[] \OT1/ztmcm/m/n/10.95 = \OMS/ztmcm/m/n/10.95 f\OT1/ztmcm/m/n/10.95 (\OML/ztmc
+m/m/it/10.95 a[]; \OT1/ztmcm/m/n/10.95 1)\OML/ztmcm/m/it/10.95 ; \OT1/ztmcm/m/n
+/10.95 (\OML/ztmcm/m/it/10.95 a[]; \OT1/ztmcm/m/n/10.95 2)\OML/ztmcm/m/it/10.95
+ ; \OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.95 a[]; \OT1/ztmcm/m/n/10.95 3)\OMS
+/ztmcm/m/n/10.95 g$\OT1/ptm/m/n/10.95 , $\OML/ztmcm/m/it/10.95 S[] \OT1/ztmcm/m
+/n/10.95 = \OMS/ztmcm/m/n/10.95 f\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.95 a[
+]; \OT1/ztmcm/m/n/10.95 2)\OML/ztmcm/m/it/10.95 ; \OT1/ztmcm/m/n/10.95 (\OML/zt
+mcm/m/it/10.95 a[]; \OT1/ztmcm/m/n/10.95 2)\OML/ztmcm/m/it/10.95 ; \OT1/ztmcm/m
+/n/10.95 (\OML/ztmcm/m/it/10.95 a[]; \OT1/ztmcm/m/n/10.95 3)\OMS/ztmcm/m/n/10.9
+5 g$\OT1/ptm/m/n/10.95 , and $\OML/ztmcm/m/it/10.95 S[] \OT1/ztmcm/m/n/10.95 = 
+\OMS/ztmcm/m/n/10.95 f\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.95 a[]; \OT1/ztm
+cm/m/n/10.95 1)\OML/ztmcm/m/it/10.95 ; \OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10
+.95 a[]; \OT1/ztmcm/m/n/10.95 1)\OML/ztmcm/m/it/10.95 ; \OT1/ztmcm/m/n/10.95 (\
+OML/ztmcm/m/it/10.95 a[]; \OT1/ztmcm/m/n/10.95 2)\OMS/ztmcm/m/n/10.95 g$\OT1/pt
+m/m/n/10.95 .
  []
 
-
-Overfull \hbox (5.35925pt too wide) in paragraph at lines 160--160
-[]$\OML/ztmcm/m/it/14.4 k$\OT1/ptm/b/n/14.4 -IR-GASP: Find-ing In-di-vid-u-ally
- Ra-tio-nal As-sign-ments in GASP 
- []
-
-[43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57]
-[58] [59] [60]
-Overfull \hbox (14.0442pt too wide) in paragraph at lines 471--472
-[]\OT1/ptm/m/n/12 Let us cre-ate an in-stance of \OT1/cmtt/m/n/12 GASP \OT1/ptm
-/m/n/12 as fol-lows: Let $\OML/ztmcm/m/it/12 N \OT1/ztmcm/m/n/12 = \OMS/ztmcm/m
-/n/12 f\OT1/ztmcm/m/n/12 1\OML/ztmcm/m/it/12 ; \OT1/ztmcm/m/n/12 2\OML/ztmcm/m/
-it/12 ; [] ; n\OMS/ztmcm/m/n/12 g$ \OT1/ptm/m/n/12 and $\OML/ztmcm/m/it/12 A[] 
-\OT1/ztmcm/m/n/12 = \OMS/ztmcm/m/n/12 f\OML/ztmcm/m/it/12 a[]; a[]; [] ; a[]\OM
-S/ztmcm/m/n/12 g$
- []
-
-[61]) [62]
+[34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48]
+[49] [50] [51] [52]) [53] [54]
 Chapter 5.
-(./500_SIP.tex [63
+(./500_SIP.tex [55
 
-] [64]
-Overfull \hbox (75.60419pt too wide) in paragraph at lines 92--102
+] [56]
+Overfull \hbox (6.27542pt too wide) in paragraph at lines 75--77
+[]\OT1/ptm/m/n/10.95 Theorem 17[] sum-ma-rizes the most rel-e-vant re-sults of 
+Dar-mann et al. [[]] and Lee and Shoham [[]]
+ []
+
+
+Overfull \hbox (40.96858pt too wide) in paragraph at lines 92--102
  [][] 
  []
 
-
-Overfull \hbox (7.1833pt too wide) in paragraph at lines 107--109
-\OT1/ptm/m/n/12 In this sec-tion, we study pa-ram-e-ter-ized com-plex-ity of $\
-OML/ztmcm/m/it/12 k$\OT1/ptm/m/n/12 -IR-Invitation and $\OML/ztmcm/m/it/12 k$\O
-T1/ptm/m/n/12 -Stable-Invitation.
+[57] [58] [59]
+Overfull \hbox (5.42677pt too wide) in paragraph at lines 202--203
+[]\OT1/ptm/m/n/10.95 Assume un-bounded $\OML/ztmcm/m/it/10.95 $ \OT1/ptm/m/n/1
+0.95 and $\OML/ztmcm/m/it/10.95 ^^L$\OT1/ptm/m/n/10.95 , and let us re-duce the
+ $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/n/10.95 -Stable-Invitation prob-lem to the
+ weighted
  []
 
-[65] [66] [67]
-Overfull \hbox (7.63548pt too wide) in paragraph at lines 152--157
-[]\OT1/ptm/m/n/12 We re-duce from the $\OML/ztmcm/m/it/12 k$\OT1/ptm/m/n/12 -In
-dependent-Set prob-lem which is known to be W[1]-complete.
- []
-
-
-Overfull \hbox (23.58434pt too wide) in paragraph at lines 152--157
-\OT1/ptm/m/n/12 Given an ar-bi-trary graph $\OML/ztmcm/m/it/12 G \OT1/ztmcm/m/n
-/12 = (\OML/ztmcm/m/it/12 V; E\OT1/ztmcm/m/n/12 )$ \OT1/ptm/m/n/12 and a pa-ram
--e-ter $\OML/ztmcm/m/it/12 k$\OT1/ptm/m/n/12 , we cre-ate agents $\OML/ztmcm/m/
-it/12 N \OT1/ztmcm/m/n/12 = \OML/ztmcm/m/it/12 V \OT1/ztmcm/m/n/12 = \OMS/ztmcm
-/m/n/12 f\OML/ztmcm/m/it/12 v[]; v[]; [] ; v[]\OMS/ztmcm/m/n/12 g$\OT1/ptm/m/n/
-12 .
- []
-
-[68]
-Overfull \hbox (4.64845pt too wide) in paragraph at lines 204--205
-[]\OT1/ptm/m/n/12 Given an in-stance of the $\OML/ztmcm/m/it/12 k$\OT1/ptm/m/n/
-12 -Stable-Invitation prob-lem with $\OML/ztmcm/m/it/12 n$ \OT1/ptm/m/n/12 agen
-ts ($\OML/ztmcm/m/it/12 N \OT1/ztmcm/m/n/12 = \OMS/ztmcm/m/n/12 f\OML/ztmcm/m/i
-t/12 a[]; a[]; [] ; a[]\OMS/ztmcm/m/n/12 g$\OT1/ptm/m/n/12 ),
- []
-
-[69] [70] [71] [72] [73] [74]
-Overfull \hbox (120.63504pt too wide) in paragraph at lines 312--322
+[60] [61] [62] [63] [64]
+Overfull \hbox (84.17479pt too wide) in paragraph at lines 312--322
  [][] 
  []
 
-[75] [76] [77] [78] [79] [80] [81] [82]) [83]
+[65] [66] [67] [68] [69] [70] [71]) [72]
 Chapter 6.
-(./600_GT.tex [84
+(./600_GT.tex [73
 
-]
-Overfull \hbox (15.01791pt too wide) has occurred while \output is active
-\OT1/ptm/m/sl/12 CHAPTER 6.  INCENTIVE COMPATIBILITY IN GROUP ASSIGNMENT PROBLE
-MS:  \OT1/ptm/m/n/12 85
- []
-
-[85]
-Overfull \hbox (15.01791pt too wide) has occurred while \output is active
-\OT1/ptm/m/sl/12 CHAPTER 6.  INCENTIVE COMPATIBILITY IN GROUP ASSIGNMENT PROBLE
-MS:  \OT1/ptm/m/n/12 86
- []
-
-[86])
-Overfull \hbox (9.36426pt too wide) in paragraph at lines 96--111
-[]\OT1/ptm/m/n/12 We can ex-tend our re-sults in a dif-fer-ent di-rec-tion by c
-on-sid-er-ing mul-ti-ple time-alternatives
- []
-
-
-Overfull \hbox (15.01791pt too wide) has occurred while \output is active
-\OT1/ptm/m/sl/12 CHAPTER 6.  INCENTIVE COMPATIBILITY IN GROUP ASSIGNMENT PROBLE
-MS:  \OT1/ptm/m/n/12 87
- []
-
-[87]
+] [74]) [75] [76]
 Chapter 7.
-(./700_Discussion.tex) (./thesis.bbl [88
+(./700_Discussion.tex) (./thesis.bbl [77
 
-] [89
+] [78
 
 ]
 Missing character: There is no Ã in font ptmr7t!
@@ -707,36 +646,38 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ƒ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
- [90] [91] [92]) [93]
-(./thesis.aux) ) 
+ [79] [80] [81]) [82]
+(./thesis.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4434 strings out of 493014
- 65212 string characters out of 6133351
- 130025 words of memory out of 5000000
- 7761 multiletter control sequences out of 15000+600000
- 77034 words of font info for 170 fonts, out of 8000000 for 9000
+ 4423 strings out of 493014
+ 65114 string characters out of 6133351
+ 129993 words of memory out of 5000000
+ 7759 multiletter control sequences out of 15000+600000
+ 75489 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1783b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc
-}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-di
-st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
-ype1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/t
-imes/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri
-8a.pfb>
-Output written on thesis.pdf (104 pages, 423342 bytes).
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
+1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
+s/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (92 pages, 409700 bytes).
 PDF statistics:
- 413 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
+ 371 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
