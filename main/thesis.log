@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 09:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 SEP 2016 09:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -437,13 +437,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17.28> not available
 Chapter 2.
 (./200_BDoodle.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
 [][]\OT1/ptm/m/n/10 http://en.blog.doodle.com/2012/07/26/new-findings-a-small-n
 umber-of-initiators-organize-most-of-the-
  []
@@ -451,74 +451,65 @@ umber-of-initiators-organize-most-of-the-
 [2
 
 ]
-
-LaTeX Warning: File `plots/pareto_scatter_fin.eps' not found on input line 54.
-
 Package epstopdf Info: Source file: <plots/pareto_scatter_fin.eps>
+(epstopdf)                    date: 2013-10-10 18:36:02
+(epstopdf)                    size: 20167 bytes
 (epstopdf)             Output file: <plots/pareto_scatter_fin-eps-converted-to.
 pdf>
+(epstopdf)                    date: 2013-10-10 18:36:20
+(epstopdf)                    size: 7324 bytes
 (epstopdf)             Command: <repstopdf --outfile=plots/pareto_scatter_fin-e
 ps-converted-to.pdf plots/pareto_scatter_fin.eps>
-(epstopdf)             \includegraphics on input line 54.
+(epstopdf)             \includegraphics on input line 53.
 Package epstopdf Info: Output file is already uptodate.
 
-./200_BDoodle.tex:54: Package pdftex.def Error: File `plots/pareto_scatter_fin-
-eps-converted-to.pdf' not found.
+<plots/pareto_scatter_fin-eps-converted-to.pdf, id=44, 718.685pt x 331.2375pt>
+File: plots/pareto_scatter_fin-eps-converted-to.pdf Graphic file (type pdf)
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.54 ...[scale=0.45]{plots/pareto_scatter_fin.eps}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<use plots/pareto_scatter_fin-eps-converted-to.pdf>
+Package pdftex.def Info: plots/pareto_scatter_fin-eps-converted-to.pdf used on 
+input line 53.
+(pdftex.def)             Requested size: 323.40526pt x 149.05548pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3]
-
-LaTeX Warning: File `plots/pareto_objective_fin.eps' not found on input line 72
-.
-
 Package epstopdf Info: Source file: <plots/pareto_objective_fin.eps>
+(epstopdf)                    date: 2013-10-10 17:45:23
+(epstopdf)                    size: 21574 bytes
 (epstopdf)             Output file: <plots/pareto_objective_fin-eps-converted-t
 o.pdf>
+(epstopdf)                    date: 2013-10-10 17:48:31
+(epstopdf)                    size: 8098 bytes
 (epstopdf)             Command: <repstopdf --outfile=plots/pareto_objective_fin
 -eps-converted-to.pdf plots/pareto_objective_fin.eps>
-(epstopdf)             \includegraphics on input line 72.
+(epstopdf)             \includegraphics on input line 71.
 Package epstopdf Info: Output file is already uptodate.
 
-./200_BDoodle.tex:72: Package pdftex.def Error: File `plots/pareto_objective_fi
-n-eps-converted-to.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.72 ...cale=0.45]{plots/pareto_objective_fin.eps}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[4] [5] [6] [7]
+<plots/pareto_objective_fin-eps-converted-to.pdf, id=49, 718.685pt x 331.2375pt
+>
+File: plots/pareto_objective_fin-eps-converted-to.pdf Graphic file (type pdf)
+ <use plots/pareto_objective_fin-eps-converted-to.pdf>
+Package pdftex.def Info: plots/pareto_objective_fin-eps-converted-to.pdf used o
+n input line 71.
+(pdftex.def)             Requested size: 323.40526pt x 149.05548pt.
+ [4 <./plots/pareto_scatter_fin-eps-converted-to.pdf> <./plots/pareto_objective
+_fin-eps-converted-to.pdf>] [5] [6] [7] [8]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
- [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 177.
+ [9]
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
 [10] [11]
-Overfull \hbox (7.3109pt too wide) in paragraph at lines 241--242
+Overfull \hbox (7.3109pt too wide) in paragraph at lines 240--241
 []\OT1/ptm/m/n/12 Given an in-stance $\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 A; 
 P[]; f; c\OT1/ztmcm/m/n/12 )$\OT1/ptm/m/n/12 , con-sider some B-Doodle mech-a-n
 ism $\OML/ztmcm/m/it/12 B[] \OT1/ztmcm/m/n/12 = \OMS/ztmcm/m/n/12 h\OML/ztmcm/m
@@ -526,38 +517,46 @@ ism $\OML/ztmcm/m/it/12 B[] \OT1/ztmcm/m/n/12 = \OMS/ztmcm/m/n/12 h\OML/ztmcm/m
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--257
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 266--268
+Underfull \hbox (badness 10000) in paragraph at lines 265--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--284
+Underfull \hbox (badness 10000) in paragraph at lines 281--283
 
  []
 
 [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Underfull \hbox (badness 10000) in paragraph at lines 327--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
 
  []
 
-[15] [16] [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+[15] [16]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
-[19]
+[18] [19]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 454.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 453.
  [20]) [21]
 Chapter 3.
 [22
@@ -591,11 +590,11 @@ Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
  [28] [29] [30]) [31] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 4275 strings out of 493014
- 62199 string characters out of 6133351
- 127354 words of memory out of 5000000
- 7654 multiletter control sequences out of 15000+600000
- 52121 words of font info for 115 fonts, out of 8000000 for 9000
+ 4280 strings out of 493014
+ 62569 string characters out of 6133351
+ 129346 words of memory out of 5000000
+ 7660 multiletter control sequences out of 15000+600000
+ 51953 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1309b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts
@@ -605,17 +604,16 @@ sfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmss12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/
-usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (40 pages, 196540 bytes).
+s/symbols/msbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol
+/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (40 pages, 194481 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
+ 196 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

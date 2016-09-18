@@ -2,7 +2,7 @@
 \contentsline {chapter}{Acknowledgments}{v}
 \contentsline {chapter}{\numberline {1}Introduction: {\itshape }}{1}
 \contentsline {chapter}{\numberline {2}Complexity of Group Scheduling Problem I: {\itshape }}{2}
-\contentsline {section}{\numberline {2.1}Notation and Definitions}{5}
+\contentsline {section}{\numberline {2.1}Notation and Definitions}{6}
 \contentsline {section}{\numberline {2.2}Efficient Algorithm for Finding Optimal B-Doodle}{9}
 \contentsline {subsection}{\numberline {2.2.1}Preliminaries}{9}
 \contentsline {subsection}{\numberline {2.2.2}Optimal Algorithm}{12}
