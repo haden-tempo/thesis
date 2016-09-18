@@ -219,7 +219,7 @@ This is not surprising because a stable invitation requires that everyone (wheth
 	$k$-Stable-Invitation is in FPT when $\alpha = 0$ and $\beta \leq f(k)$ where $f(k)$ can be an arbitrary function of $k$.
 \end{theorem}
 \begin{proof}
-	The main idea is similar to that of our proof of Theorem~\ref{thm:IR_invitation_FPT}. 
+	The main idea is similar to that of our proof of Theorem~\ref{SIP:thm:IR_invitation_FPT}. 
 
 	Consider any coloring $c$ which colors agents using two colors $\{0, 1\}$; let $c(i)\in \{0,1\}$ be the color of agent $a_i$. Let $I$ be a stable invitation of size $k$. We say that $c$ and $I$ are {\em compatible} if the following holds: For every agent $a_i\in I$, $c(i) = 1$ and for every agent $a_j\in \cup_{i: a_i\in I} R_i$, $c(j) = 0$; other agents can be of any color. 
 	Given an arbitrary coloring $c$, we can find a stable invitation of size $k$ that is compatible with $c$ or determine that no compatible invitation exists in FPT time. 
@@ -256,7 +256,7 @@ This is not surprising because a stable invitation requires that everyone (wheth
 	 
 	 Conversely, suppose that $I$ is a stable invitation of size $k'$. Because $I$ must contain all or none of $G_i$ for each $i$, $I$ can contain at most $k$ such groups of node-agents (otherwise, if it contains more than $k$ such groups, the size of the invitation would exceed $k'$). Because $I$ is stable, it cannot contain any of the edge-agents $f_{i,j}$ or $f'_{i,j}$ as they do not approve the size $k'$. Finally, for every pair of edge-agents $e_{i,j}$ and $e'_{i,j}$, $I$ must contain both or neither of them; if only one of them is included in $I$, then either $f_{i,j}$ or $f'_{i,j}$ would wish to join $I$ which contradicts the stability of $I$. Therefore, because we earlier argued that $I$ can contain at most $k$ groups of node-agents, we conclude that $I$ must contain at least $2\binom{k}{2}$ edge-agents of the form $e_{i,j}$ and $e'_{i,j}$. Furthermore, because $e_{i,j},e'_{i,j} \in I$ implies that $G_i\subset I$ and $G_j\subset I$, if $I$ contains more than $2\binom{k}{2}$ edge-agents, it must also contain at least $k+1$ groups of node-agents (which we argued earlier leads to a contradiction). In summary, if $I$ is a stable invitation of size $k'$, it must contain exactly $k$ groups of node-agents (without loss of generality, assume that $I$ contains $G_1, G_2, \dots, G_k$) and exactly $2\binom{k}{2}$ edge-agents that are precisely $\{e_{i,j}, e'_{i,j}: 1\leq i<j\leq k\}$. Then, $C = \{v_1, v_2, \dots, v_k\}$ is a clique in the original instance because there exists an edge between $v_i$ and $v_j$ for every pair $v_i,v_j\in C$ (the fact that edge-agents $e_{i,j}$ exist implies this). 
 	
-	This shows W[1]-hardness, and W[1]-completenes follows from Theorem~\ref{thm:stable_W2}. 
+	This shows W[1]-hardness, and W[1]-completenes follows from Theorem~\ref{SIP:thm:stable_W2}. 
 
 \end{proof}
 
@@ -274,7 +274,7 @@ This is not surprising because a stable invitation requires that everyone (wheth
 	
 	Conversely, suppose that $I$ is a stable invitation of size $k$. Then $I$ cannot contain any edge-agent because every edge-agent only approves the size $k+1$. Let $S = I$ and we claim that $S$ is an independent set. If there is a pair of nodes $v,w \in S$ with $(v, w)\in E$, then there must exist an edge-agent $e_{v,w}$. However, $F_{e_{v,w}} = \{v, w\}$ and $e_{v,w}\not\in I$, which implies that $I$ is not stable. This is a contradiction, and therefore $S$ is an independent set of size $k$. 
 
-	This shows W[1]-hardness, and W[1]-completenes follows from Theorem~\ref{thm:stable_W2}.
+	This shows W[1]-hardness, and W[1]-completenes follows from Theorem~\ref{SIP:thm:stable_W2}.
 \end{proof}
 
 
@@ -295,7 +295,7 @@ This is not surprising because a stable invitation requires that everyone (wheth
 	Clearly $I$ can only contains node-agents of the form $x_i$'s (due to approval sets of $y_i$'s), and we claim that $D = \{v_i : x_i \in I\}$ is a dominating set. 
 	Pick any node-agent $x_i\not \in I$. Since $I$ is stable and $x_i\not\in I$, we know that there exists some node-agent $x_j\in I$ such that $x_j\in E_{y_i}$. This implies that $(v_i, v_j) \in E$, and therefore $D$ is a dominating set. 
 	
-	This shows W[2]-hardness, and W[2]-completenes follows from Theorem~\ref{thm:stable_W2}.
+	This shows W[2]-hardness, and W[2]-completenes follows from Theorem~\ref{SIP:thm:stable_W2}.
 \end{proof}
 
 
