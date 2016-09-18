@@ -132,7 +132,7 @@ The Batched Doodle generalizes Doodle by allowing columns-by-columns inspections
 
  We can also consider the case where an input matrix $A$ has only one column.
  Intuitively, if we wish to minimize the expected number of inspections, we must inspect entries with smallest probability first because we can stop as soon as we determine that $A$ is infeasible.
- Lemma~\ref{matrix:lemma:single_column_opt} formally states this intuition about optimal policy, and we omit a proof of it as it can be easily done by following the proof of Lemma~\ref{matrix:lemma:single_row_opt}.
+ Lemma~\ref{matrix:lemma:single_column_opt} formally states this intuition about optimal policy, and we omit a proof of it as it can be easily done by following the proof of Lemma~\ref{matrix:lemma:single_row_opt}. %TODO: do not omit?
  \begin{lemma}[1-Column Matrix] \label{matrix:lemma:single_column_opt}
  When $m = 1$, an inspection policy $\pi$ is optimal if and only if it inspects the entries in non-decreasing order of their associated probabilities.
  \end{lemma}
