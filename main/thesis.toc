@@ -1,6 +1,8 @@
 \contentsline {chapter}{Abstract}{iv}
-\contentsline {chapter}{Acknowledgments}{v}
+\contentsline {chapter}{Acknowledgments}{vi}
 \contentsline {chapter}{\numberline {1}Introduction: {\itshape }}{1}
+\contentsline {section}{\numberline {1.1}Organization of the Thesis}{1}
+\contentsline {section}{\numberline {1.2}Preliminaries and Notation}{1}
 \contentsline {chapter}{\numberline {2}Complexity of Group Scheduling Problem I: {\itshape }}{2}
 \contentsline {section}{\numberline {2.1}Notation and Definitions}{6}
 \contentsline {section}{\numberline {2.2}Efficient Algorithm for Finding Optimal B-Doodle}{9}
