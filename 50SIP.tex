@@ -32,7 +32,7 @@ The rest of this chapter is organized as follows.
 \section{Definitions and Known Results} \label{sec:SIP:prelim}
 
 To make this work self-contained, we begin by introducing the formal definitions proposed by 
-Lee and Shoham~\shortcite{LEE15AAAI}, yet we make slight modifications to notation for readability and consistency in this paper.
+Lee and Shoham~\cite{LEE15AAAI}, yet we make slight modifications to notation for readability and consistency in this paper.
 
 \begin{definition}
 An instance of the Stable Invitations Problem (\SIP) is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$, and an {\em approval set} $S_i \subseteq [1,n]$, a {\em friend set} $F_i \subseteq N$, and an {\em enemy set} $E_i \subseteq N$ for each agent $a_i\in N$.
@@ -58,18 +58,19 @@ We consider the following two problems of finding invitations of size $k$:
 
 We first consider restrictions on inputs by limiting the size of largest friend-sets and enemy-sets, respectively. 
 For integer constants $\alpha$ and $\beta$, if an instance of \SIPs satisfies $|F_i| \leq \alpha$ and $|E_i| \leq \beta$ for all $a_i\in N$, we call it an $(\alpha,\beta)$-instance of \SIP. 
-Lee and Shoham~\shortcite{LEE15AAAI} showed that \SIPs can be solved in polytime only if $\alpha$ and $\beta$ are small enough, but the problems are NP-hard in general. We will consider the same restrictions in this work, and provide our complete analysis of parameterized complexity of \SIP.
+Lee and Shoham~\cite{LEE15AAAI} showed that \SIPs can be solved in polytime only if $\alpha$ and $\beta$ are small enough, but the problems are NP-hard in general. We will consider the same restrictions in this work, and provide our complete analysis of parameterized complexity of \SIP.
 
 In addition to these restrictions, we consider the special case where agents have symmetric social relationships.
 \begin{definition} \label{def:symmetric_social}
 	Given an instance of \SIP, we say that agents have {\em symmetric social relationships} if $a_j\in F_i$ if and only if $a_i\in F_j$ and $a_l \in E_i$ if and only if $a_i \in E_l$ for every $a_i$. 
 \end{definition}
 
-Theorem~\ref{thm:nphard} summarizes the most relevant results of Darmann et al.~\shortcite{GASP12WINE} and Lee and Shoham~\shortcite{LEE15AAAI} on complexity of \SIPs.\footnote{
-Darmann et al.~\shortcite{GASP12WINE} showed easiness when $\alpha=\beta=0$, while Lee and Shoham~\shortcite{LEE15AAAI} proved easiness and hardness in all other cases.}
+Theorem~\ref{thm:nphard} summarizes the most relevant results of Darmann et al.~\cite{GASP12WINE} and Lee and Shoham~\cite{LEE15AAAI} on complexity of \SIPs.\footnote{
+Darmann et al.~\cite{GASP12WINE} showed easiness when $\alpha=\beta=0$, while Lee and Shoham~\cite{LEE15AAAI} proved easiness and hardness in all other cases.}
 \begin{theorem} \label{thm:nphard} [\cite{LEE15AAAI,GASP12WINE}]
 	$k$-IR-Invitation and $k$-Stable-Invitation can be solved in polynomial time if $(\max_{a_i \in N} |F_i|) + (\max_{a_i \in N} |E_i|) \leq 1$ (i.e., $\alpha + \beta \leq 1$). In other cases, both problems are NP-hard.
 \end{theorem}
-Note that $k$-IR-Invitation and $k$-Stable-Invitation are of the same classical complexity, even though stability is a stronger solution concept. Under parameterization, however, these two problems are contained in different complexity classes in the W-hierarchy (see Table~\ref{tbl:summary}).
+Note that $k$-IR-Invitation and $k$-Stable-Invitation are of the same classical complexity, even though stability is a stronger solution concept. Under parameterization, however, these two problems are contained in different complexity classes in the W-hierarchy (see Table~\ref{tbl:SIP:summary}).
 In what follows, we show that the parameterized complexity of these problems varies with different solution concepts and under different restrictions on inputs to \SIP.
+
 

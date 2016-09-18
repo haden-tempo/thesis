@@ -47,10 +47,7 @@
 \contentsline {chapter}{\numberline {5}Complexity of Stable Invitations Problem: {\itshape }}{63}
 \contentsline {section}{\numberline {5.1}Introduction and Related Work}{63}
 \contentsline {paragraph}{Related Work.}{64}
-\contentsline {section}{\numberline {5.2}Definitions and Notation}{64}
-\contentsline {section}{\numberline {5.3}Complexity of SIP with Asymmetric Relation}{66}
-\contentsline {section}{\numberline {5.4}Complexity of SIP with Symmetric Relation}{67}
-\contentsline {section}{\numberline {5.5}Discussion and Future Work}{67}
-\contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems: {\itshape }}{68}
-\contentsline {chapter}{\numberline {7}Open Problems}{69}
-\contentsline {chapter}{Bibliography}{70}
+\contentsline {section}{\numberline {5.2}Definitions and Known Results}{64}
+\contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems: {\itshape }}{66}
+\contentsline {chapter}{\numberline {7}Open Problems}{67}
+\contentsline {chapter}{Bibliography}{68}
