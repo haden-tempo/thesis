@@ -1,0 +1,99 @@
+\label{GT:chapter}
+
+\section{Introduction and Related Work}  \label{GT:sec:intro}
+
+
+\section{Definitions and Known Results} \label{GT:sec:prelim}
+
+
+\subsection{Main Results}\label{GT:sec:Mechanism}
+In the strategic case of \ASIP, we assume that agents may act strategically in reporting their preferences to the event organizer. 
+Example~\ref{GT:eg:strategicAgents} shows how agents may have an incentive to act strategically. 
+
+
+\begin{example}[An agent may act strategically.] \label{GT:eg:strategicAgents}
+	
+	Let us consider an example with two agents with identical preferences:
+	\begin{equation*}
+		\begin{aligned}
+				P_1: 1 \succ 0 \succ 2,~~~& P_2: 1 \succ 0 \succ 2
+		\end{aligned}
+	\end{equation*}
+	Note that both agents have \DEC-preferences (with $h_1 = h_2 = 1$).
+	The two stable invitations are $S_1 = \{a_1\}$ and $S_2 = \{a_2\}$. 
+	The empty invitation ($\emptyset$) is not EF while the full invitation ($N$) is not IR. 
+
+	Hence $S_1 = \{a_1\}$ and $S_2 =\{a_2\}$ are the only two stable invitations provided that both agents are truthful. 
+	If $S_1$ were to be chosen by the organizer, $a_2$ would have an incentive to act strategically, by reporting $\hat{P}_2 (1 \succ 2 \succ 0)$ instead of $P_2$. 
+	Given $(P_1, \hat{P}_2)$, the only stable invitation is $S_2$ ($S_1$ is no longer EF due to $a_2$).
+	Notice that $a_2$ strictly prefers $S_2$ over $S_1$ (because $1 \succ_2 0$) and has an incentive to misreport in this example. By symmetry, $a_1$ may act strategically if $S_2$ were to be chosen. 
+\end{example}
+
+We first provide a formal definition of a mechanism in the context of \ASIP\ with strategic agents. 
+We then state several impossibility results for general cases of \ASIP, and also provide a strategy-proof mechanism for special cases of \ASIP.  Although we only consider deterministic mechanisms here, we discuss how one can generalize to randomized mechanisms at the end of this section.
+
+\begin{definition} \label{GT:def:mechanism}
+Given an instance $(N, P)$ of \ASIP, we define $V_i$ (the set of available actions to $a_i$) to be the set of all preferences over $X$ where $X = \{0, 1, 2, \dots, n\}$ is the set of outcomes. 
+A (deterministic) \emph{mechanism} is a pair $(V, Z)$ where $V = (V_1 \times \cdots \times V_n)$ is the set of action profiles of all agents (i.e., $V_i$ is a subset of total preorder on $X$) and $Z: V \mapsto U$ is a mapping from each action profile to an invitation in $U$ where $U = 2^{N}$. 
+Let $V_{-i} = (V_1 \times \cdots \times V_{i-1} \times V_{i+1} \times \cdots \times V_{n})$ be the set of action profiles available to all agents but agent $a_i$. A mechanism $(V, Z)$ is said to be \emph{strategy-proof} if for all $a_i\in N$ it holds that $Z(P_i, v_{-i}) \succeq_i Z(v_i, v_{-i})$ for all $v_i \in V_i$ and $v_{-i} \in V_{-i}$.
+\end{definition}
+%%%% ========== Impossibility Results
+We now formally state our first impossibility result.
+\begin{theorem} \label{GT:thm:impossibility}
+No strategy-proof mechanism can find a stable invitation, even if it exists, for arbitrary instances of \ASIP.
+\end{theorem}
+\begin{proof}
+Example~\ref{GT:eg:strategicAgents} can serve as a proof; no strategy-proof mechanism can find a stable invitation for this instance.  
+%\qed
+\end{proof}
+Intuitively this result is due to the conflicting interests of the organizer and agents -- the organizer is trying to maximize attendance while the agents (with \DEC-preferences) to minimize. 
+Since no strategy-proof mechanisms can find a stable invitation, 
+one can instead seek to design a strategy-proof mechanism that can find a non-empty IR invitation 
+by dropping the requirement of envy-freeness.
+We show that this is also impossible as Theorem~\ref{GT:thm:impossibility_IR} states.
+
+\begin{theorem} \label{GT:thm:impossibility_IR}
+	No strategy-proof mechanism can find a non-empty individually rational (IR) invitation, even if it exists, for arbitrary instances of \ASIP. 
+\end{theorem}
+\begin{proof}
+Consider three agents with preferences as follows:
+\begin{equation*}
+	\begin{aligned}
+			P_1: 3\succ 0 \succ 2 \sim 1,~ P_2: 2 \succ 3 \succ 2 \succ 1, ~ P_3: 3 \succ 2 \succ 0 \succ 1
+	\end{aligned}
+\end{equation*}
+There are two non-empty IR invitations: $S_1 = \{a_1, a_2, a_3\}$ and $S_2 = \{a_2, a_3\}$. 
+If a mechanism chooses $S_1$ given $(P_1, P_2, P_3)$, $a_2$ can report $(2 \succ 0 \succ 3 \sim 1)$ and make $S_2$ the only non-empty IR invitation. Similarly, if a mechanism chooses $S_2$ given $(P_1, P_2, P_3)$, $a_3$ can report $(3 \succ 0 \succ 2 \sim 1)$ so as to make $S_3$ the only non-empty IR invitation. The rest of the proof is similar to that of Theorem~\ref{GT:thm:impossibility}.
+%\qed
+\end{proof}
+
+% TODO: proof sketch, at least.
+% To strengthen our impossibility results even further, we show that manipulation is computationally easy provided that preferences of other agents are known to a manipulator. We provide an informal lemma and omit its proof.
+% \begin{lemma}[Informal] \label{GT:lemma:gsip_manipulation}
+% There exists a polynomial time algorithm, given an instance $(N, P)$ of \GSIP\ and a mechanism $(V, Z)$, that decides in polynomial time whether there exists a certain preference ordering $v_i \in V_i$ of $a_i$ such that $a_i$ (strictly) prefers $Z(v_i, v_{-i})$ to $Z(P_i, v_{-i})$ where $v_{-i} \in V_{-i}$.
+% \end{lemma}  
+
+Earlier we emphasized that the conflict between agent(s) and the organizer is the main factor that leads to an impossibility result. 
+Indeed, in the example we used in the proof of Theorem~\ref{GT:thm:impossibility}, both agents have \DEC-preferences while the organizer's goal is to maximize attendance.
+
+We now consider a special case of \ASIP\ in which all agents have \INC-preferences.
+We obtain a positive result in this case as Theorem~\ref{GT:thm:mechanism} states. 
+
+\begin{theorem} \label{GT:thm:mechanism}
+	There is a strategy-proof mechanism for \INC-instances of \ASIP, which can also find a maximum stable invitation in linear time (after sorting). 
+% A mechanism described in Algorithm~\ref{GT:alg:mechanism} is strategy-proof, and finds a maximum stable invitation in linear time (after sorting), given \INC-instances of \ASIP. 
+\end{theorem}
+\begin{proof}[Proof sketch]
+For simplicity let us assume that each agent reports her threshold value (i.e., $l_i$ as defined in Definition (to be added)) as $L_i$ ($L_i$ may differ from $l_i$). 
+Our mechanism then chooses the largest $k$ such that $L_k \leq k$ holds and chooses the set of $k$ agents with largest threshold values (if no such $k$ exists, mechanism chooses the empty invitation). 
+\end{proof}
+	Although our mechanism is simple, proof of Theorem~\ref{GT:thm:mechanism} is not trivial. First, even though all agents have \INC-preferences, a full invitation is not necessarily stable (if at least one agent is unwilling to attend at all). Second, an agent may have an incentive to under-report that results in having the organizer to invite more agents than when the agent had truthfully reported. It is indeed possible for an agent to under-report ($L_i < l_i$) and lead to a larger invitation, but we show that the size of the larger invitation would still be less than $l_i$ (see Appendix for a proof). 
+
+
+\subsection{Extensions}\label{GT:sec:asip_extension}
+Although we have so far only discussed deterministic mechanisms, our impossibility results can be extended to randomized mechanisms. First we define $Z$ to be a mapping from $V$ to $\Pi(U)$ where $\Pi(U)$ denotes the set of all probability distributions over $U$. The definition of a strategy-proof mechanism must change accordingly -- we do this by adopting the axioms in the von Neumann-Morgenstern utility theorem~\cite{von1947theory}. We introduce lotteries over invitations and define preferences of agents over lotteries. Given a probability distribution over invitations, one can compute the expected cardinal utility of lotteries. We then define a strategy-proof mechanism analogously to Definition~\ref{GT:def:mechanism}: for each $a_i$, it must hold that the expected utility of $Z(P_i, v_{-i})$ is no less than the expected utility of $Z(v_i, v_{-i})$ for all $v_i\in V_i$ and for all $v_{-i} \in V_{-i}$. The impossibility result given by Theorem~\ref{GT:thm:impossibility} still holds: If $(V, Z)$ is a strategy-proof mechanism, then $Z(P_1, P_2)$ must assign zero probability to both $\{a_1\}$ and $\{a_2\}$, yet these are the only two stable invitations.  All other impossibility results we mention in this work can be extended in this manner.
+
+We can extend our results in a different direction by considering multiple time-alternatives for the event. In such settings, agents may have preferences over time-alternatives for the event, in addition to size of invitations.   
+In the non-strategic case, our easiness result is still applicable: One can run the algorithm used in Theorem~(to be added  GT:thm:asip:algo) iteratively for each time-alternative, and choose the maximum stable invitation among all.
+In the strategic case, our impossibility results immediately imply the same negative results. 
+For \INC-instances of \ASIP, we obtain a similar impossibility result even if there is only two time-alternatives. The intuition is that over-reporting ($L_i > l_i$) can give the veto power to an agent, which prevents us from designing a strategy-proof mechanism even for \INC-instances of \ASIP. Note that all of our impossibility results can be naturally extended to the Group Activity Selection Problem by Darmann et al.~\cite{GASP12WINE} since \ASIPs is a sub-class of \GASPs with a single activity.
