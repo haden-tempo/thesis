@@ -82,7 +82,7 @@ We obtain a positive result in this case as Theorem~\ref{GT:thm:mechanism} state
 % A mechanism described in Algorithm~\ref{GT:alg:mechanism} is strategy-proof, and finds a maximum stable invitation in linear time (after sorting), given \INC-instances of \ASIP. 
 \end{theorem}
 \begin{proof}[Proof sketch]
-For simplicity let us assume that each agent reports her threshold value (i.e., $l_i$ as defined in Definition~\ref{GT:def:preferenceTypes}) as $L_i$ ($L_i$ may differ from $l_i$). 
+For simplicity let us assume that each agent reports her threshold value (i.e., $l_i$ as defined in Definition (to be added)) as $L_i$ ($L_i$ may differ from $l_i$). 
 Our mechanism then chooses the largest $k$ such that $L_k \leq k$ holds and chooses the set of $k$ agents with largest threshold values (if no such $k$ exists, mechanism chooses the empty invitation). 
 \end{proof}
 	Although our mechanism is simple, proof of Theorem~\ref{GT:thm:mechanism} is not trivial. First, even though all agents have \INC-preferences, a full invitation is not necessarily stable (if at least one agent is unwilling to attend at all). Second, an agent may have an incentive to under-report that results in having the organizer to invite more agents than when the agent had truthfully reported. It is indeed possible for an agent to under-report ($L_i < l_i$) and lead to a larger invitation, but we show that the size of the larger invitation would still be less than $l_i$ (see Appendix for a proof). 
