@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: plain.bst
+Database file #1: thesis.bib
+Warning--empty journal in Borda
+Warning--empty journal in st1997satisfying
+You've used 46 entries,
+            2118 wiz_defined-function locations,
+            790 strings with 12310 characters,
+and the built_in function-call counts, 18494 in all, are:
+= -- 1896
+> -- 764
+< -- 25
++ -- 305
+- -- 252
+* -- 1250
+:= -- 2849
+add.period$ -- 151
+call.type$ -- 46
+change.case$ -- 257
+chr.to.int$ -- 0
+cite$ -- 48
+duplicate$ -- 768
+empty$ -- 1489
+format.name$ -- 252
+if$ -- 4047
+int.to.chr$ -- 0
+int.to.str$ -- 46
+missing$ -- 48
+newline$ -- 232
+num.names$ -- 98
+pop$ -- 305
+preamble$ -- 1
+purify$ -- 214
+quote$ -- 0
+skip$ -- 590
+stack$ -- 0
+substring$ -- 1337
+swap$ -- 262
+text.length$ -- 25
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 178
+warning$ -- 2
+while$ -- 192
+width$ -- 48
+write$ -- 517
+(There were 2 warnings)

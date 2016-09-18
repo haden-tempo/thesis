@@ -1,0 +1,122 @@
+\documentclass[12pt]{report}
+\usepackage{suthesis-2e}
+
+% \usepackage{hyperref}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{multirow}
+\usepackage{thmtools}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{mathptmx}
+% \usepackage{showframe}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\input{code}
+
+\newcommand\Chapter[2]{
+  \chapter[#1: {\itshape#2}]{#1\\[2ex]\Large\itshape#2}
+}
+% ====================================================================
+% \newcommand{\Pr}{\mathbf{Pr}}
+\newcommand{\Exp}{\mathbb{E}}
+
+% ====================================================================
+\newcommand{\BDP}{{\normalfont \textsf{BDP}}}
+\newcommand{\PMIP}{{\normalfont \textsf{PMIP}}}
+
+\newcommand{\Time}{{\normalfont \textsf{Time}}}
+\newcommand{\Inconvenience}{{\normalfont \textsf{Inconvenience}}}
+
+\newcommand{\feasible}{\emph{feasible}}
+% ====================================================================
+\newcommand{\GASP}{{\normalfont \texttt{GASP}}} 
+\newcommand{\GASPs}{{\normalfont \texttt{GASP}}~} 
+
+\newcommand{\ASIP}{{\normalfont \texttt{ASIP}}} 
+\newcommand{\ASIPs}{{\normalfont \texttt{ASIPs}}~} 
+
+\newcommand{\SIP}{{\normalfont \texttt{SIP}}} 
+\newcommand{\SIPs}{{\normalfont \texttt{SIP}}~} 
+
+\newcommand{\void}{a_{\emptyset}}
+
+\newcommand{\true}{\normalfont \textsf{true}}
+\newcommand{\false}{\normalfont \textsf{false}}
+
+\newcommand{\INC}{{\normalfont \textsf{INC}}} 
+\newcommand{\DEC}{{\normalfont \textsf{DEC}}} 
+% ====================================================================
+
+
+% ====================================================================
+\theoremstyle{plain}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+% ==================================================================
+
+\dept{Computer Science}
+
+\begin{document}
+\title{GROUP SCHEDULING AND ASSIGNMENT: \\
+COMPLEXITY AND ALGORITHMS}
+\author{Hooyeon Lee}
+\submitdate{December 2016}
+\principaladviser{Virginia V. Williams}
+\firstreader{Ashish Goel}
+\secondreader{Yoav Shoham}
+ 
+\beforepreface
+\prefacesection{Abstract}
+
+% \input{00abstract}
+
+\prefacesection{Acknowledgments}
+% \input{00acknowledgements}
+\afterpreface
+
+
+\Chapter{Introduction}{}
+
+% \input{10Intro}
+
+\Chapter{Complexity of Group Scheduling Problem I}{}
+
+% \input{20BDoodle}
+
+\Chapter{Complexity of Group Scheduling Problem II}{}
+
+% \input{30Matrix}
+
+\Chapter{Complexity of Group Activity Selection Problem}{}
+
+% \input{40GASP}
+
+\Chapter{Complexity of Stable Invitations Problem}{}
+
+% \input{50SIP}
+
+\Chapter{Incentive Compatibility in Group Assignment Problems}{}
+
+% \input{60Strategic}
+
+\chapter{Open Problems}{}
+
+% \input{70Open}
+
+\nocite{*}
+
+\bibliographystyle{plain}
+
+\bibliography{thesis}
+
+\end{document}
+
+
