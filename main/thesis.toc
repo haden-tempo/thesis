@@ -21,7 +21,28 @@
 \contentsline {subsection}{\numberline {3.2.4}Main Result and Algorithm}{32}
 \contentsline {section}{\numberline {3.3}Discussion and Future Work}{34}
 \contentsline {chapter}{\numberline {4}Complexity of Group Activity Selection Problem: {\itshape }}{36}
-\contentsline {chapter}{\numberline {5}Complexity of Stable Invitations Problem: {\itshape }}{37}
-\contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems: {\itshape }}{38}
-\contentsline {chapter}{\numberline {7}Open Problems}{39}
-\contentsline {chapter}{Bibliography}{40}
+\contentsline {section}{\numberline {4.1}Introduction and Related Work}{36}
+\contentsline {paragraph}{Related Work.}{38}
+\contentsline {section}{\numberline {4.2}Definitions and Known Results}{39}
+\contentsline {section}{\numberline {4.3}Parameterized Complexity}{43}
+\contentsline {subsection}{\numberline {4.3.1}$k$-IR-GASP: Finding Individually Rational Assignments in GASP}{44}
+\contentsline {subsection}{\numberline {4.3.2}$k$-Stable-GASP: Finding Stable Assignments}{46}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{46}
+\contentsline {paragraph}{Proof of equivalence between instances.}{47}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{49}
+\contentsline {paragraph}{Proof of equivalence between instances.}{49}
+\contentsline {paragraph}{Preliminaries.}{50}
+\contentsline {paragraph}{FPT Algorithm.}{51}
+\contentsline {paragraph}{Preliminaries.}{54}
+\contentsline {paragraph}{FPT Algorithm.}{54}
+\contentsline {subsection}{\numberline {4.3.3}$k$-EF-GASP: Finding Envy-free Assignments}{56}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{56}
+\contentsline {paragraph}{Proof of equivalence between instances.}{57}
+\contentsline {paragraph}{Preliminaries.}{59}
+\contentsline {paragraph}{FPT algorithm.}{59}
+\contentsline {subsection}{\numberline {4.3.4}$k$-Perfect-GASP: Finding Perfect Assignments}{61}
+\contentsline {section}{\numberline {4.4}Discussion and Future Work}{62}
+\contentsline {chapter}{\numberline {5}Complexity of Stable Invitations Problem: {\itshape }}{63}
+\contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems: {\itshape }}{64}
+\contentsline {chapter}{\numberline {7}Open Problems}{65}
+\contentsline {chapter}{Bibliography}{66}

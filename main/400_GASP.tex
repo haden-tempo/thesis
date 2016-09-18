@@ -1,0 +1,491 @@
+\label{GASP:chapter}
+
+\section{Introduction and Related Work}   \label{GASP:sec:Intro}
+
+Imagine an event in which several activities are to take place concurrently. A group of agents are willing to participate and announce their activity preferences to the event organizer who is to assign agents to activities. In many settings, the agent preferences include not only which activities the agent is willing to participate in, but also the number(s) of participants in each activity that are acceptable to the agent.
+For example, agents may wish to have enough participants in certain activities (such as group bus tour) to split the cost associated with it, whereas they may wish to have just few participants in activities with limited resources (such as a demo booth with a limited number of devices). 
+We assume that an agent can be assigned to at most one activity (which naturally occurs when activities are run concurrently).
+
+Given the preferences of agents, the organizer wishes to find a ``good'' assignment subject to certain rationality and/or stability conditions. 
+The first condition is {\em individual rationality}: everyone who is assigned to some activity is willing to participate. In addition to individual rationality, the organizer may want to ensure that agents who are not assigned to any activity 
+do not prefer to deviate from their assignment by joining an activity ({\em Nash stability}). Other concepts include {\em envy-freeness} that asserts that no unassigned agent would prefer to take the place of an assigned agent, and {\em perfection} in which all agents must be assigned.
+
+To model this setting, in WINE'12, Darmann et al.~\cite{GASP12WINE} proposed the Group Activity Selection Problem (\GASP) and defined three solution concepts (individual rationality, stability, and perfection). 
+In addition, they also provided many computational complexity results, including NP-hardness results for \GASP, even under various restrictions on agent preferences.
+
+These hardness results essentially argue that it is hard to find an assignment that maximizes the number of participants in activities. Suppose, however, that we are satisfied if we can assign a small number $k$ out of the $n$ participants to some (up to $k$) of the $p$ activities while satisfying our rationality criteria. There is a brute-force solution: try all possible $O(p^k)$ ordered choices of up to $k$ activities, all $O(k^k)$ choices for the number of participants in each activity, and all $O(n^k)$ ordered choices of $k$ participants; then check whether the desired criterion is satisfied by the induced assignment. This brute-force solution runs in $O((pnk)^k)$ time. While this running time is polynomial for any fixed $k$, it is not very desirable. A much better running time would be one of the form $O(f(k)\cdot (p+n))$ - such a runtime would be {\em linear}, regardless of the constant $k$, and the function $f$. More generally, on input size $N$, one would like an algorithm with runtime $f(k)\cdot N^c$, where $c$ is independent of $k$. Such an algorithm is known as fixed parameter tractable (FPT), and the problems that admit such algorithms are said to be in the class FPT. Developing FPT algorithms, especially linear time ones, greatly mitigates the NP-hardness of problems as it shows that these problems are actually quite tractable for many instances.
+
+The field of parameterized complexity strives to classify NP-hard problems on a finer scale by analyzing time complexity in terms of both the input size and an additional parameter. The FPT problems are viewed as the most tractable problems in NP (of course, all polytime problems are naturally in FPT).
+There is a hierarchy of complexity classes under parameterization (called the W-hierarchy), including FPT, W[1], W[2], etc. Hierarchy theorems show that FPT is contained in W[1] which is contained in W[2], and so on (see \cite{downey2012} for more details). It is believed that FPT $\neq$ W[1] and W[2] $\neq$ W[1], so that the NP-hard parameterized problems in W[2] are believed to be harder than those in W[1] that are themselves believed to be harder than the FPT problems. Furthermore, popular hardness assumptions such as the Exponential Time Hypothesis (ETH) of Impagliazzo and Paturi~\cite{impagl} can often be used to show that particular W[1]-hard problems cannot be solved in $N^{o(k)}$ time, giving concrete runtime lower bounds.
+
+The goal of this work is to investigate how different solution concepts and different restrictions on agent preferences influence the difficulty of \GASP.
+We focus on \GASPs with the size of the solution as our parameter, i.e. the number of assigned agents, or in the case of perfection, the number of used activities. 
+We place different NP-hard versions of \GASPs under this parameterization into different parts of the W-hierarchy.
+Our classification is nearly complete, as seen in Table~\ref{GASP:tbl:summary} (in Section~\ref{GASP:sec:results}). We show that \GASPs for individual rationality is in FPT, whereas for the other solution concepts the problem is W[1]-complete or W[2]-hard even for restricted types of agent preferences. 
+
+The restrictions on preferences that we consider are quite natural -- we consider the cases where agents have thresholds for each activity such that they are willing to participate if the number of participants is above or below the thresholds. In the case of {\em increasing} preferences, every agent $i$ approves an activity $a_j$ as long as at least $l_i(a_j)$ participants are assigned to it (hence the threshold is a lower-bound on the number of participants). In the case of {\em decreasing} preferences, agent $i$ approves an activity $a_j$ if at most $u_{i}(a_j)$ agents are assigned to it. Surprisingly to us, the case of decreasing preferences is actually easier than that of increasing preferences as it is FPT even when a stable assignment is to be found, whereas \GASPs for increasing preferences is W[1]-complete for all concepts except for individual rationality.
+
+We also consider the special case of \GASPs in which all activities are equivalent. Here the preferences of the agents can vary but for each particular agent the preferences are the same for all copies of the activity. This special case is natural and captures many applications. We show that even though the problem is still NP-hard in this case~\cite{GASP12WINE}, all parameterized versions of it (except possibly perfection) are FPT. 
+
+\paragraph{Related Work.}
+Darmann et al.~\cite{GASP12WINE} defined \GASP, and provided a number of computational complexity results -- mostly, NP-completeness results. In this work, we adopt their definitions of the problem and solution concepts, but we also consider the new solution concept of envy-freeness, while we analyze the parameterized complexity of the problem. 
+As Darmann et al. point out, it is worth noting that \GASPs is closely related to Hedonic Games (see Section 2.2 of \cite{GASP12WINE} and Section 2 of \cite{LEE15AAAI} for more details); in fact, \GASPs can be viewed as a class of hedonic coalition games with concise representation of preferences of agents (linear in the number of activities and players as opposed to all subsets of players in the general setting). 
+Much work has been devoted to analyzing solution concepts in hedonic coalition games such as stability and Pareto-optimality~\cite{BogomolnaiaJackson,DrezeGreenberg,AzizBrandl}.
+Ballester~\cite{NP_hedonic} provides a number of computational complexity 
+results (in fact, hardness results) for finding a core-stable, Nash-stable, or 
+individually rational outcome in hedonic games and anonymous hedonic games.  
+These hardness results do not imply similar hardness results for \GASP, however, because of the concise representation of an input to \GASP. 
+Lastly, Darmann~\cite{DARMANN15ADT} considered a different setting of \GASPs where agents are assumed to have strict, ordinal preferences over the outcomes, whereas both our work and \cite{GASP12WINE} assumes that agents have a dichotomic preference over outcomes in the sense that each agent is indifferent among all outcomes that she approves of. It is an interesting future problem to consider how our results in this work can be extended to the ordinal setting that Darmann~\cite{DARMANN15ADT} considered. 
+
+The rest of this chapter is structured as follows.  
+In Section~\ref{GASP:sec:prelim} we formally define \GASP, and summarize the known complexity results. 
+In Section~\ref{GASP:sec:results} we provide our main technical results.
+In Section~\ref{GASP:sec:discussion} we summarize our findings, and describe several open problems. 
+ 
+ 
+ 
+ 
+ 
+ 
+\section{Definitions and Known Results} \label{GASP:sec:prelim}
+
+To make this work self-contained, we begin by introducing the formal definitions proposed by Darmann et al. in their work~\cite{GASP12WINE}, yet we make slight modifications to notation for readability and consistency in this chapter.
+
+
+\begin{definition}
+	In the Group Activity Selection Problem (\GASP), we are given a set of agents $N = \{1, 2, \dots, n\}$, a set of non-void activities $A^* =  \{a_1, a_2, \dots, a_p\}$, and the {\em void activity} ($\void$) which refers to the case when an agent does not participate in any of the activities in $A^*$.
+An {\em outcome} is a pair $(a_j, x) \in A^* \times [n]$ which is interpreted as $x$ agents participating in non-void activity $a_j$. 
+For each agent $i$ we are given a set $S_i$ of outcomes (called {\em approval set}) such that the outcomes in $S_i$ are equally liked and strictly preferred to $\void$, where $S_i \subseteq A^* \times [1,n]$.
+We write $S_i(a_j) = \{x: (a_j, x)\in S_i\}$ to refer to the set of sizes which agent $i$ approves for activity $a_j$. 
+\end{definition}
+
+Similarly to the work of \cite{GASP12WINE}, in this work we assume that each agent is indifferent among the outcomes in $S_i$; that is, the void-activity ($\void$) draws the line between which outcomes are approved and which ones are not by the agent. While this is a simplifying assumption, note that hardness results immediately imply the same hardness for the general case without this assumption. By abusing notation, we also use $\void$ to refer to the outcome in which an agent is not assigned to any non-void activity. 
+
+\begin{example} \label{GASP:eg:notation}
+	Consider $N = \{1, 2, 3\}$ and $A^* = \{a_1, a_2\}$. There are six outcomes (besides $\void$) in $A^* \times [3]$. 
+	Suppose $S_1 = \{(a_1, 1), (a_1, 2), (a_1, 3)\}$, $S_2 = \{(a_1,2), (a_2,2), (a_2, 3)\}$, and $S_3 = \{(a_1,1), (a_2, 1), (a_2, 2)\}$. In particular, agent $1$ approves $a_1$ for any size (i.e., unconditional approval) while does not approve $a_2$ for any size (i.e., unconditional refusal). Using our notation, $S_1(a_1) = \{1,2,3\}$ and $S_1(a_1) = \emptyset$. If we assign all agents to $a_1$, then $(a_1,3)$ is the outcome realized by all agents -- notice that only agent 1 approves it (and thus is willing to participate) while agents 2 and 3 do not (and thus are unwilling to participate). Naturally, this assignment induces instability. 
+\end{example}
+
+
+Let us define what constitutes a solution to \GASP, and define four solution concepts. 
+
+\begin{definition}
+	Let $A = A^* \cup \{\void\}$.
+An assignment in \GASPs is a mapping $\pi: N \rightarrow A$ where $\pi(i) = \void$ means that agent $i$ is not assigned to any non-void activity. 
+Each assignment naturally partitions the agents into at most $|A|$ groups. We define $\pi^0 = \{i : \pi(i) = \void \}$ and $\pi^j = \{i : \pi(i) = a_j\}$ for $j = 1, \dots p$, so that $|\pi^j|$ refers to the number of agents assigned by $\pi$ to a specific activity (including the void activity).
+Let us define the size of an assignment, denoted by $|\pi|$, as the number of agents that are assigned to non-void activities; that is, $|\pi| = \sum_{j=1}^{p} |\pi^j|$.
+\end{definition}
+
+Note that $\pi$ induces an outcome for each agent: If $\pi(i) = \void$, then agent $i$ does not participate in any non-void activity (and thus outcome $\void$ is induced), and if $\pi(i) = a_j \in A^*$, then $(a_j, |\pi^j|)$ is the induced outcome for agent $i$.
+
+The objective in \GASPs is to find a ``good'' assignment of maximum size thereby assigning as many agents to activities as possible. We define four solution concepts which require different levels of rationality/stability in an assignment.
+
+\begin{definition}
+	An assignment $\pi : N \rightarrow A$ is said to be {\em individually rational} (IR) if for every $j \in [p]$ and every agent $i \in \pi^j$ it holds that $(a_j, |\pi^j|) \in S_i$. 
+	
+	An assignment $\pi : N \rightarrow A$ is said to be {\em (Nash) stable} if it is individually rational and for every agent $i \in N$ such that $\pi(i) = \void$ and every $a_j \in A^*$ it holds that $(a_j, |\pi^j| + 1) \not\in S_i$. 
+	
+	An assignment $\pi : N \rightarrow A$ is said to be {\em envy-free} (EF) if it is individually rational and for every agent $i \in N$ such that $\pi(i) = \void$ and every agent agent $i' \in N$ such that $\pi(i') = a_j\in A^*$, it holds that $(\pi(i'), |\pi^j|) \not\in S_i$.
+	
+	An assignment $\pi : N \rightarrow A$ is said to be {\em perfect} if it is individually rational and $\pi(i) \neq \void$ for all $i\in N$.
+\end{definition}
+Individual rationality requires that every agent who's assigned to a non-void activity is willing to participate because participation is preferred to non-participation. Therefore everyone who is assigned has no incentive to deviate from the assignment. 
+Stability further requires that every agent who is assigned to the void activity is also unwilling to deviate (unilaterally, without permission of other agents) from the given assignment. 
+Envy-freeness requires that every agent who is assigned to the void activity is not envious of someone else who is assigned to a non-void activity.\footnote{While one can naturally define another solution concept which requires both stability and envy-freeness, it is not considered in this work.}
+Lastly, a perfect assignment is the strongest solution concept which implies individual rationality, stability and envy-free by definition. 
+
+As Darmann et al. showed in their work~\cite{GASP12WINE}, finding a solution in \GASPs is NP-hard even under various restrictions on inputs. Yet we shall see that some of such restrictions make the problem less complex under parameterization. First we define two natural restricted domains of preferences of agents, called {\em increasing} and {\em decreasing} preferences. 
+\begin{definition}
+	We say that agent $i$ has an {\em increasing} preference for activity $a_j$ if there exists a threshold $l_i(a_j) \in \{1, 2, \dots, n+1\}$ such that $S_i(a_j) = [l_i(a_j), n]$ (where $[n+1,n] = \emptyset$).
+	Similarly, we say that agent $i$ has a {\em decreasing} preference for activity $a_j$ if there exists a threshold $u_i(a_j) \in \{0, 1, \dots, n\}$ such that $S_i(a_j) = [1, u_i(a_j)]$ (where $[1,0] = \emptyset$).
+\end{definition}
+A natural example that accounts for an increasing preference is when an activity is associated with a cost that is to be split by the participants (e.g., group bus tourism in the city). For decreasing preferences, participants in some activity may need to share limited resources (e.g., a trial-demo of new wearable devices).  
+
+Next, we consider a restriction on the activities when there may exist multiple ``copies'' of the same activity (e.g., chess matches with multiple chessboards). We define equivalence of activities, and consider a special case of the problem in which all activities are equivalent. 
+\begin{definition}
+	We say that two activities $a_j$ and $a_{j'}$ are equivalent if for every agent $i \in N$, $S_i(a_j) = S_i(a_{j'})$. 
+\end{definition}
+
+Let us re-visit the problem instance from Example~\ref{GASP:eg:notation}, and relate it to various definitions and concepts we have defined in this section. 
+\begin{example}
+In Example~\ref{GASP:eg:notation}, note that agent $2$ has an increasing preference for $a_2$ with $l_2(a_2) = 2$ while agent $3$ has a decreasing preference for $a_2$ with $u_3(a_2) = 2$. Agent $1$ has (degenerate) increasing/decreasing preferences for both $a_1$ and $a_2$ with $l_1(a_1)=1, u_1(a_2) = 3$ and $l_1(a_2)=4,u_1(a_2)=0$.
+
+Consider an assignment $\pi$ with $\pi(1) = \pi(2) = a_1$ and $\pi(3) = a_2$; under the assignment $\pi$, agents $1,2$ realize the outcome $(a_1, 2)$ and agent $3$ realizes $(a_2, 1)$. It is easy to check that $\pi$ is prefect (and thus IR, stable, and EF). Consider another assignment $\pi'$ with $\pi'(1) = a_1$ and $\pi'(2)=\pi'(3)=\void$; under $\pi'$, agent $1$ realizes the outcome $(a_1, 1)$ and agents $2,3$ realize $\void$. $\pi'$ is individually rational (as $(a_1,1)\in S_1$), but it is not stable (as $(a_1,2)\in S_2$) or envy-free (as $(a_1,1) \in S_3$).
+\end{example}
+
+Darmann et al. proved many hardness results of the Group Activity Selection Problem even under restrictions on inputs of \GASPs ~\cite{GASP12WINE}. 
+Here we mention the most relevant results of theirs to this work.
+
+\begin{theorem} \label{GASP:thm:nphard}
+	Finding a perfect assignment is NP-hard.
+	It remains to be NP-hard even if all agents have increasing preferences for all activities,
+	even if all agents have decreasing preferences for all activities,
+	or even if all activities are equivalent (Theorems 4.1, 4.2, 4.3, and 4.4 of \cite{GASP12WINE}).
+\end{theorem}
+As corollaries, the following four problems are also NP-hard even under any of the three restrictions mentioned in Theorem~\ref{GASP:thm:nphard}. Note that the first three problems parameterize the size of an assignment while the last problem parameterizes the number of used activities in a perfect assignment.
+\begin{itemize}
+	\item $k$-IR-GASP: Does there exist an individually rational assignment of size $k$?
+	\item $k$-Stable-GASP: Does there exist a stable assignment of size $k$?
+	\item $k$-EF-GASP: Does there exist an envy-free assignment of size $k$?
+	\item $k$-Perfect-GASP: Does there exist a perfect assignment using $k$ non-void activities?
+\end{itemize}
+In what follows, we show that the parameterized complexity of $k$-GASP varies with different solution concepts and under different restrictions on inputs to \GASP.
+
+
+
+
+
+\section{Parameterized Complexity} \label{GASP:sec:results}
+
+In this section, we provide parameterized complexity of the four problems mentioned in previous section: $k$-IR-GASP, $k$-Stable-GASP, $k$-EF-GASP, and $k$-Perfect-GASP.
+Our main contributions are summarized in Table~\ref{GASP:tbl:summary}.
+Note that all problems considered in this work are known to be NP-hard (and NP-complete) due to Darmann et al.~\cite{GASP12WINE}.
+The ``general case'' refers to the case where approval set of each agent can be any set of outcomes (i.e., no restrictions on preferences of agents). 
+``Increasing (decreasing) preferences'' refer to the case where all agents have increasing (decreasing) preferences for all activities. 
+``Equivalent activities'' refer to the case where all activities are (pairwise) equivalent (i.e., they are copies of one kind of an activity). 
+
+\begin{table}[h!]
+	\centering
+\begin{tabular}{|*{5}{c|}}\hline
+	 					& $k$-IR-GASP & $k$-Stable-GASP & $k$-EF-GASP & $k$-Perfect-GASP \\ \hline
+General case 			& FPT 		  & $W[1]$-hard 	& $W[1]$-complete & $W[2]$-hard \\ \hline
+Increasing preferences 	& FPT 		  & $W[1]$-complete & $W[1]$-complete & $W[2]$-hard \\ \hline
+Decreasing 	preferences	& FPT		  & FPT				& $W[1]$-complete & $W[2]$-hard \\ \hline
+Equivalent activities 	& FPT		  & FPT				& FPT 		  & Unknown \\ \hline
+\end{tabular}
+\caption{Summary of results on parameterized complexity of \GASP.} 
+\label{GASP:tbl:summary}
+\end{table}
+
+\subsection{$k$-IR-GASP: Finding Individually Rational Assignments in GASP}
+
+Recall that $k$-IR-GASP is the problem of finding an IR assignment of size $k$. 
+We show that $k$-IR-GASP is in FPT. As seen below, our algorithm runs in $\exp{k} np\log n$ time, where $n$ is the number of agents and $p$ the number of activities. The input size to \GASPs is $\Theta(n^2p)$ as the
+number of possible outcomes is $np$ and each of the $n$ agents needs to specify a subset of approved ones. As we only care about solutions of size $k$, we are only interested in those preferences of the agents for numbers of activity participants that are at most $k$. We can hence prune the input to size $\Theta(nkp)$ (in about that much time, assuming random access to preferences). In general, we cannot prune the input more, and for any constant $k$, our FPT algorithm below runs in near linear time in the input size!
+
+\begin{theorem} \label{GASP:thm:k_IR_GASP_FPT}
+$k$-IR-GASP is in FPT, and can be solved in time $2^{O(k)}(np \log n)$ where $n= |N|$ and $p = |A^*|$.
+%\footnote{Note that the size of an input is $O(n^2p)$ as there are $n$ agents and $O(np)$ outcomes of which each agent approves a subset, and thus this algorithm runs in sub-linear time in size of input for every fixed $k$.}
+\end{theorem}
+\begin{proof}
+	We use ``Color Coding'' to design a randomized (Monte Carlo) algorithm, which can easily be de-randomized using a family of $k$-perfect hash functions as shown in the work~\cite{ColorCoding}.
+
+	Recall that $N = \{1, 2, \dots, n\}$ is the set of agents, $A^* = \{a_1, a_2, \dots, a_p\}$ is the set of non-void activities, and $S_i$ is the set of approved outcomes for agent $i$. We first color each agent using $k$ colors independently and uniformly at random. We seek to assign exactly one agent of each color to some activity such that the resulting assignment is IR and of size $k$. 
+	
+	Let $c(i)$ denote the color of agent $i$ where $c(i) \in [k]$. 
+	For each activity $a_j \in A^*$ and every subset $C$ of colors (i.e., $C \subseteq [k]$), we will first determine whether it is possible to assign to activity $a_j$ exactly $|C|$ agents with distinct colors specified by $C$ while satisfying the IR constraint for each agent; we refer to this subproblem by $T(C, j)$ for every set of colors $C$ and activity $a_j$. 
+	For any fixed $a_j$ and $C$, we can check for every color $d\in C$ whether there exists an agent $i$ with $c(i) = d$ and $(a_j, |C|) \in S_i$ in time $O(n)$ by iterating over the set of agents and look up her approval set, $S_i$. If the test is affirmative, we conclude that we can assign exactly $|C|$ agents with distinct colors specified by $C$ to activity $a_j$. We perform this sub-routine for every activity $a_j\in A^*$ and every subset of colors, which can be done in time $O(n\cdot p \cdot 2^k)$ overall.
+	
+	Next, we solve another type of sub-problems (which we call $R(C, j)$) to check if it is possible to assign $|C|$ agents of distinct colors in $C$ to activities in $A_j = \{a_1, a_2, \dots, a_j\}$ for every $j\leq p$ and $C\subseteq [k]$. When $j = 1$, the sub-problems $R(C, j)$ and $T(R, j)$ are equivalent, and thus we simply use the result of $T(R, j)$ to solve $R(C, j)$. To solve $R(C, j)$ when $j>1$, we enumerate over every subset $C' \subseteq C$, and solve $R(C', j-1)$ and lookup the result of $T(C\setminus C', j)$. If both subproblems $R(C', j-1)$ and $T(C \setminus C', j)$ are affirmative for some $C' \subset C$, then we conclude that $R(C, j)$ is also affirmative.
+	
+	If $R([k], p)$ is affirmative, then we can find an IR assignment of size $k$ where those $k$ agents are distinctly colored. 
+		There are at most $O(2^k \cdot p)$ subproblems in the form of $R(C, j)$ to be solved, and each subproblem can be solved in time $O(2^k)$ (as we enumerate over all subsets of $C$).
+		
+		Therefore the overall running time of this algorithm is bounded by $O(4^k \cdot p + 2^k \cdot (np)) = 2^{O(k)}(np)$; in particular, it is exponential only in $k$. It is easy to confirm that this algorithm is a Monte Carlo algorithm (i.e., if it finds a solution, it is guaranteed to be IR).  On the other hand, if there exists an IR assignment of size $k$ in the original instance, there is a chance that this algorithm does not find it when the $k$ agents are not colored properly. The probability of a proper coloring (i.e., the $k$ agents in the assumed assignment are colored distinctly) is at least $k!/k^k > 1/e^k$, and this is only exponentially small in $k$. Therefore one can repeat this randomized algorithm $e^k\ln n$ times to increase the probability of success to $1-1/n$ (with overall runtime $2^{O(k)}(np \log n)$).
+
+	To de-randomize this algorithm, one can use a $k$-perfect family of hash functions from $N$ to $[k]$.
+	Specifically, if we have a list of colorings of agents $N$ such that for every subset $N' \subseteq N$ of size $|N'| = k$ there exists a coloring in the list that gives each agent in $N'$ a distinct color, then we can simply enumerate over this list of colorings. This is precisely what a $k$-perfect family of hash functions from $N$ to $[k]$ is, and it is known that the size of the family can be specified using $2^{O(k)}\log n$ bits (for details please see~\cite{ColorCoding}). Therefore we can obtain a deterministic algorithm whose runtime is bounded by $2^{O(k)}(np \log n)$, and conclude that $k$-IR-GASP is in FPT. 
+\end{proof}
+
+Individual rationality is the weakest solution concept among the four we consider, and naturally $k$-IR-GASP is the least complex problem. On the other hand, we will show that other problems are $W[1]$- or $W[2]$-hard unless additional restrictions are assumed. Note that Theorem~\ref{GASP:thm:k_IR_GASP_FPT} proves an easiness result, and therefore it is implied that $k$-IR-GASP is in FPT under any of the three restrictions on inputs we consider (see the $k$-IR-GASP column in Table~\ref{GASP:tbl:summary}).
+
+
+%%% =============================================================== Stable
+\subsection{$k$-Stable-GASP: Finding Stable Assignments}
+
+Recall that $k$-Stable-GASP is the problem of finding a stable assignment of size $k$. 
+Stability is a stronger solution concept than individual rationality, and the problem of finding a stable assignment is harder than that of finding an IR assignment. This relationship is not apparent under the classic complexity hierarchy as both problems are NP-complete. However, under parameterization, $k$-IR-GASP is FPT whereas $k$-Stable-GASP is $W[1]$-hard.
+
+\begin{theorem}
+$k$-Stable-GASP is $W[1]$-hard.
+The problem remains to be $W[1]$-hard even if each agent approves at most one size per activity (i.e., $|S_i(a_j)| \leq 1$ for all $i\in N$ and $a_j\in A^*$).
+\end{theorem}
+\begin{proof} 
+	The $k$-Clique problem is known to be $W[1]$-hard, and we reduce the $k$-clique problem to $k$-Stable-GASP. 
+	
+	\paragraph{Construction of \GASPs instance.}
+	Consider an instance of the $k$-Clique problem, $G = (V, E)$ and a parameter $k$ where $V = \{v_1, v_2, \dots, v_n\}$.
+	Let us create an instance of \GASPs as follows: Let $N = V \cup \{w_{i, x} : (1 \leq i \leq n) \land (1 \leq x \leq k-1)\}$; that is, we create $n$ node-agents $v_i$'s (by abusing notation) and $(k-1)$ copies of neighbor-agents ($w_{i,x}$'s) for each $v_i$. The neighbor-agents will be used to ``select'' the $k-1$ edges incident to each node if the node is to be included in a clique we are seeking.
+	Let $A^* = \{a_1, \dots, a_k \} \cup \{ e_{i,j} : 1 \leq i < j \leq n \}$; we create $k$ clique-activities (which are used to determine membership of a node in a clique) and $\binom{n}{2}$ edge-activities $e_{i,j}$ (where $i<j$).
+ 	For each node-agent $v_i$, we set its approval set $S_{v_i} = \{(a_j, 1) : 1 \leq j \leq k\} \cup \{(e_{i,j}, 3) : i \neq j\}$. 
+ 	For each neighbor-agent $w_{i, x}$, we set its approval set $S_{w_{i,x}} = \{(e_{i,j}, 2) : (v_i, v_j) \in E\}$.
+ 	Finally	we set the parameter $k'$ of \GASPs (to distinguish from $k$ in the Clique problem) to $k'=k+2\binom{k}{2}$.
+	This is a valid fpt-reduction as $k'$ depends only on $k$ but not on $n$, and the size of our instance of \GASPs is bounded by $O(nk^3)$ as there are $O(nk)$ agents and $O(k^2)$ activities in the instance.
+
+	Let us first describe how a clique in the original instance and a stable assiggnment in the \GASPs instance we created are related. A node-agent is assigned to a clique-activity if and only if its corresponding node belongs to a (corresponding) clique. For each node-agent, there exists $k-1$ neighbor-agents, and these neighbor-agents must be assigned properly to edge-activities in order to ensure that the resulting set of nodes is indeed a clique. 		 
+	We claim that there exists a clique of size $k$ in the original instance if and only if there exists a stable assignment of size $k'$ in the \GASPs instance we constructed. 
+ 	
+	\paragraph{Proof of equivalence between instances.}	
+	First suppose there exists a clique $C$ of size $k$ in $G$, and without loss of generality assume $C = \{v_1, v_2, \dots, v_k\}$. Consider the following assignment $\pi$:
+	\begin{equation*}
+	\pi(v_i) = \begin{cases} a_i & i \leq k \\ \void & i > k \end{cases} 
+	\mbox{~~~~and~~~~~} 
+	\pi(w_{i,x}) = \begin{cases} e_{i, x+1} & i \leq k \land i \leq x \\ e_{x, i} & i \leq k \land i > x \\  \void & i > k \end{cases}.
+	\end{equation*}
+
+	That is, node-agents are assigned to the clique-activities and their associated neighbor-agents are assigned to the edge-activities; all other agents are assigned to the void activity. Clearly $\pi$ assigns exactly $k + 2\binom{k}{2} = k'$ agents to non-avoid activities. While the details are omitted, it is easy to verify that $\pi$ is indeed a stable assignment.
+	
+	Conversely, suppose there is a stable assignment $\pi$ of size $k'=k+2\binom{k}{2}$, and we want to show that a clique of size $k$ exists in $G$. 
+	First notice that for each edge-activity $e_{i,j}$ there are precisely two agents who approve the outcome $(e_{i,j}, 3)$ -- namely, $v_i$ and $v_j$. Therefore if $\pi$ is stable, it cannot assign any node-agents (of the form $v_i$) to any edge-activity (of the form $e_{i,j}$). In other words, for each $v_i$, $\pi(v_i) \in \{\void\}\cup\{a_1, \dots, a_k\}$. Let $C = \{v_i : \pi(v_i) \neq \void \}$; since there are $k$ clique-activities, $|C| \leq k$. We claim that $|C| = k$ if $\pi$ is stable; if $|C| < k$, then there exists some $a_j$ such that no agent is assigned to it; since $k \leq n$, there must be some $v_i$ such that $\pi(v_i) = \void$. This implies that $\pi$ is not stable because $(a_j, 1) \in S_{v_i}$ while $\pi(v_i) = \void$; hence $|C| = k$ must hold. Without loss of generality, we now assume that $\pi(v_i) = a_i$ if $i \leq k$ and $\pi(v_i) = \void$ if $i > k$ (by re-labeling), and we claim that $C = \{v_1, v_2, \dots, v_k\}$ is a $k$-clique in the original instance.
+	
+	We argued earlier that $\pi$ never assigns node-agents to any edge-activities if it is stable. This implies that, if $\pi$ assigns any agent to an edge-activity, it must be the case that $\pi$ assigns exactly two neighbor-agents (of the form $w_{i,x}$) to it (due to the construction of $S_{w_{i,x}}$'s). If $\pi$ is stable, then $\pi$ must assign no neighbor-agents to $e_{i,j}$ if $i>k$ or $j>k$ and exactly two neighbor-agents to $e_{i,j}$ if $i\leq k$ and $j\leq k$. To prove the first claim, suppose that $\pi$ assigns two neighbor-agents to $e_{i,j}$ where $i>k$ (and recall that $\pi(v_i) = \void$ when $i>k$). Then $\pi$ is not stable because $(e_{i,j}, 3) \in S_{v_i}$, and thus $v_i$ wishes to join $e_{i,j}$, and this is a contradiction. Similarly one can prove the claim in the case where $j>k$. To prove the second part, recall that $|\pi| = k' = k + 2\binom{k}{2}$. Since $\pi$ assigns exactly $k$ node-agents to non-void activities, it must assign $k(k-1) = 2\binom{k}{2}$ neighbor-agents to $\binom{k}{2}$ edge-activities from $\{e_{i,j}: i, j \leq k\}$. By the Pigeon Hole principle, $\pi$ must assign two agents to each of the edge-activities in $\{e_{i,j} : i,j \leq k\}$. This implies that there is an edge between $v_i$ and $v_j$ in the original instance if $i,j \leq k$. Otherwise, if $(v_i,v_j) \not\in E$ where $i,j \leq k$, then there is no neighbor-agents who can be assigned to $e_{i,j}$, which contradicts the assumption that $\pi$ is of size $k'$. This completes the proof of the claim that if a stable assignment of size $k'$ exists, then a clique of size $k$ exists, and one can construct a clique by choosing the corresponding nodes to the node-agents that are assigned to one of the clique-activities. 
+	
+	Note that in our reduction each agent approves at most one size per activity, proving the second statement in the theorem.
+\end{proof}
+
+Because our reduction increases the parameter quadratically (i.e., $k' = k + 2\binom{k}{2} = k^2$), the following corollary follows immediately. 
+\begin{corollary}
+Unless the Exponential Time Hypothesis (ETH) fails, $k$-Stable-GASP cannot be solved in time $(np)^{o(\sqrt{k})}$.
+\end{corollary}
+
+We now consider $k$-Stable-GASP with the restriction that all agents have increasing preferences for all activities. 
+\begin{theorem}
+$k$-Stable-GASP is $W[1]$-complete when all agents have increasing preferences for all activities.
+\end{theorem}
+\begin{proof} 
+	We show $W[1]$-hardness of the problem by reducing from the $k$-Clique problem, but we omit the proof of completeness which can be shown by reducing $k$-Stable-GASP to the $k$-Clique problem. %TODO
+
+	\paragraph{Construction of \GASPs instance.}
+	Let $G = (V, E)$ be a graph instance of the $k$-Clique problem.
+	For each vertex $v_i \in V$, we create $k^2$ copies of $v_i$ as agents (call them copies of $v_i$) and create an activity $a_i$; this creates $k^2|V|$ agents and $|V|$ activities.
+	For each edge $e_{i,j} = (v_i, v_j) \in E$, we create two copies of $e_{i,j}$ as agents (call them copies of $e_{i,j}$) and create an activity $w_{i,j}$; this creates $2|E|$ agents and $|E|$ activities. 
+	Let $k' = k^3 + k^2 - k$, and we create $k'+1$ copies of dummy agents (call them copies of $z$).
+	For each of the $k^2$ copies of $v_i$ agents, we set its approval set such that $l_{v_i}(a_i) = k^2$ (i.e., approves any outcome with $a_i$ and size $k^2$ or larger) and $l_{v_i}(w_{i,j}) = 3$ if $(v_i, v_j) \in E$ and $l_{v_i}(\cdot) = n+1$ for all other activities (where $n = k^2|V| + 2|E| + k' + 1$ is the total number of agents we create).
+	For each of the two copies of $e_{i,j}$ agents, we set its approval set such that $l_{e_{i,j}}(w_{i,j}) = 2$.
+	For each of the $k'+1$ copies of $z$ agents, we set its approval set such that $l_{z}(w_{i,j}) = 4$ for all $(i,j)$ where $(v_i, v_j) \in E$.
+	We claim that a clique of size $k$ exists in $G$ if and only if a stable assignment of size $k'$ exists in the \GASPs instance we created. 
+
+	\paragraph{Proof of equivalence between instances.}	
+	First, suppose that $C = \{v_1, v_2, \dots, v_k\}$ is a clique of size $k$ in $G$. We can construct a stable assignment of size $k'$ as follows: (a) For $k^2$ copies of $v_i$, we assign them to $a_i$ if $v_i\in C$ and to $\void$ otherwise, (b) for two copies of $e_{i,j}$, we assign them to $w_{i,j}$ if $v_i\in C$ and $v_j\in C$ and to $\void$ otherwise, and (c) copies of $z$ are assigned to $\void$. Note that this assignment assigns exactly $k^3 + 2\binom{k}{2} = k^3 + k(k-1) = k'$ agents to non-void activities. It is easy to verify that $\pi$ is IR and stable, proof of which is created to due space. 
+	
+	Conversely, now suppose that $\pi$ is a stable assignment of size $k'$, and we show that there exists a clique of size $k$ in $G$. 
+	If $\pi$ assigns three or more agents to any $w_{i,j}$, then $\pi$ must assign all copies of $z$ to some activity (possibly $w_{i,j}$) or $\pi$ would not be stable; yet we know that $\pi$ is of size $k'$ and there are $k'+1$ copies of $z$, and therefore $\pi$ can only assign two or fewer agents to each $w_{i,j}$. 
+	If $\pi$ assigns two agents to some $w_{i,j}$, then those two agents must be the two copies of $e_{i,j}$ because no other agent approves the outcome $(w_{i,j}, 2)$. 
+	Furthermore, if $\pi$ assigns the two copies of $e_{i,j}$ to $w_{i,j}$, then $\pi$ must assign all $k^2$ copies of $v_i$ to $a_i$ and all $k^2$ copies of $v_j$ to $a_j$ -- otherwise, $\pi$ would not be stable. Let $W$ be the set of activities of the form $w_{i,j}$ such that $\pi$ assigns exactly two agents to $w_{i,j}$; if $|W| > \binom{k}{2}$, then there must be at least $k+1$ indices that appear in elements of $W$, which implies that $\pi$ must assign agents to at least $k+1$ activities of the form $a_i$. 
+	This is a contradiction because $\pi$ is of size $k'$ but $(k+1)k^2 > k'$. 
+	Therefore, $|W| \leq \binom{k}{2}$. 
+	Now suppose $|W| < \binom{k}{2}$ instead. 
+	As argued earlier, $\pi$ can assign to at most $k$ activities of the form $a_i$, but $k^3 + 2|W| < k'$, which implies that $\pi$ cannot be of size $k'$ if $|W| < \binom{k}{2}$. 
+	Lastly, suppose $|W| = \binom{k}{2}$ (and from previous arguments, it is clear that the number of the indices that appear in the elements of $W$ must be exactly $k$); without loss of generality, assume $W = \{w_{i,j} : 1 \leq i < j \leq k\}$ (by re-labeling) -- this implies that $\pi$ assigns $k^2$ copies of $v_l$ to $a_l$ if $1 \leq l \leq k$, but more importantly, it implies that $(v_i, v_j) \in E$ because we create $w_{i,j}$ if and only if there is an edge between $v_i$ and $v_j$. 
+	That is, $C = \{v_1, v_2, \dots, v_k\}$ is a clique in the original instance. 
+	This completes the proof of W[1]-hardness of the problem.
+\end{proof}
+
+Unlike the case of increasing preferences, if all agents have decreasing preferences the problem admits an FPT algorithm. 
+
+\begin{theorem}
+$k$-Stable-GASP is in FPT when all agents have decreasing preferences for all activities.
+\end{theorem}
+\begin{proof}
+We use Color Coding to reduce the $k$-Stable-GASP with decreasing preferences to a variant of the Vertex Cover problem.
+With probability which is exponentially small only in $k$, we color agents and activities ``properly'', and given a proper coloring we can find a stable assignment of size $k$ in polynomial time in $n,p$ yet exponential only in $k$. 
+
+\paragraph{Preliminaries.}
+Suppose that a stable assignment of size $k$ exists, and without loss of generality we know that it assigns $k$ agents to $l$ distinct activities (where $l \in [1, k]$), which can be done by checking every value in $[1,k]$. 
+We first color agents and activities using $l$ colors $1$ through $l$, uniformly and independently at random (let $c(i)$ denote the color of agent $i$ and $c(a_j)$ the color of activity $a_j$), and then fix the value of $k_d$ for each $d\in[1, l]$ such that $\sum_{d\in[1,l]} k_d = k$. We say that the coloring $c$ (together with $l$ and $k_d$'s) is compatible with a stable assignment $\pi$ of size $k$ (using $l$ activities) if $\pi$ assigns exactly $k_d$ agents to an activity of color $d$ for every $d\in [1, l]$. Given some coloring $c$, our algorithm will find a stable assignment compatible with $c$ or determine that no such stable assignment exists. 
+It is clear that any stable assignment (of size $k$) has at least one compatible coloring. 
+With probability at least $(1/l)^{l+k}$ (which is exponentially small only in $k$), our randomized coloring is a compatible coloring of a stable assignment of size $k$ (provided that it exists); the algorithm can be  easily be de-randomized using a family of $k$-perfect hash functions as shown in the work~\cite{ColorCoding}. 
+
+\paragraph{FPT Algorithm.}
+We now proceed with fixed values of $l$ and $k_d$'s as well as some coloring $c$ as described earlier. 
+We will use the special color $l+1$ to mark the agents and activities that cannot be assigned/used in any stable assignment that is compatible with the given coloring $c$. 
+Define $N_d = \{i\in N: c(i) = d\}$ and $A^*_d = \{a_j \in A^* : c(a_j) = d\}$ where $d\in [1, l+1]$; these subsets naturally partition $N$ and $A^*$ into $l+1$ subsets by their colors (at first $N_{l+1}$ and $A^*_{l+1}$ are empty, but we may re-color some agents and activities during the course of the algorithm).
+Let $N(a_j) = \{i \in N_{c(a_j)} : u_i(a_j) \geq k_{c(a_j)}\}$, which is the set of agents who have the same color as $a_j$ and approve the size $k_{c(a_j)}$ for activity $a_j$ (recall that agents have decreasing preferences, so we only need to check their upper-bound $u_i(a_j)$ for a given activity $a_j$).
+If $|N(a_j)| > k_{c(a_j)}$, then we label the activity $a_j$ as ``popular'' because any compatible assignment must assign $k_{c(a_j)}$ agents of the same color to $a_j$, but more than $k_{c(a_j)}$ agents approve $a_j$ for size $k_{c(a_j)}$.
+If any color $d\in [1, l]$ contains two or more popular activities, we reject the coloring because there is no stable assignment compatible with this coloring. To see why, if no agents are assigned to a popular activity of some color $d$, then due to compatibility there must exist at least one agent of the same color who is assigned to the void activity but approves the popular activity for size $1$. Therefore, any stable, compatible assignment must assign $k_d$ agents to a popular activity for color $d$ (if any), but if there exist multiple popular activities of the same color, then no compatible assignment is stable. 
+Without loss of generality (by re-coloring) let us assume that colors $[1,q]$ contain exactly one popular activity and colors $[q+1, l]$ contain non-popular activities (it is possible that $q = 0$ or $q = l$). To emphasize, we shall refer to colors in $[1, q]$ as ``popular'' colors and in $[q+1, l]$ as ``unpopular'' colors. 
+
+Let us now examine each color to decide whether we should reject the coloring or whether we can exclude some agents and/or activities from consideration (by re-coloring them as the special color, $l+1$).
+First, for each popular color $d\in [1, q]$ with a popular activity $a_{j_d}$ (recall that there is exactly one popular activity for each popular color), we re-color all agents in $(N_d \setminus N(a_{j_d}))$ and all activities in $(A^*_d \setminus \{a_{j_d}\})$ as the special color $(l+1)$ because they cannot be assigned/used in any stable assignment compatible with $c$ as we argued earlier. 
+Next, for each unpopular color $d\in [q+1, l]$, if there exist two distinct activities $a_j, a_{j'} \in A^*(d)$ such that $N(a_j) \neq N(a_{j'})$, then we reject the coloring; any compatible assignment must assign no agents to at least one of these two activities (assume that $a_j$ is such activity), but at least one agent in $N(a_j)$ approves $(a_j, 1)$ (due to decreasing preferences) while she must be assigned to the void activity, which implies instability of the assignment. If the coloring is not rejected after these conditions are checked, then we have $N(a_j) = N(a_{j'})$ for all $a_j, a_{j'}\in A^*(d)$ where $d\in [q+1, l]$. Let us re-color all agents in $N(d) \setminus N(a_j)$ as $l+1$ where $a_j$ is any activity in $A^*(d)$ for all $d\in [q+1, l]$.
+We then check for another condition for each unpopular color $d\in [q+1,l]$. Let $A'(d) = \{a_j \in A^*(d) : \exists i \in N_{l+1}, u_i(a_j) \geq 1\}$. If $A'(d)$ contains two or more activities, it is clear that the coloring must be rejected because agent $i$ (who cannot be assigned to any activity under the given coloring) approves size $1$ for the activities in $A'(d)$ but the assignment can only choose one activity from $A^*(d)$. Therefore, if $|A'(d)| \geq 2$ then we reject the coloring; otherwise, if $|A'(d)| = 1$, then we re-color all activities in $A^*(d) \setminus A'(d)$ as $l+1$ (as the only one in $A'(d)$ must be used for color $d$). If $|A'(d)| = 0$, this step has no effect for this color. 
+Lastly, we now consider the agents of color $l+1$ (who must be assigned to the void activity by any stable assignment compatible with the given coloring).
+Let us define $k_{l+1} = 0$ for convenience (i.e., we do not assign any agents of color $l+1$ to any activities).
+For each color $d \in [1, l+1]$, if there exists some activity $a_j\in A^*(d)$ and some agent $i\in N(l+1)$ with $u_i(a_j) \geq k_{d} + 1$, then we reject the coloring because agent $i$ is to be assigned to the void-activity, but she approves the outcome $(a_j, k_d+1)$ as well as $(a_j, 1)$ (due to decreasing preferences), which means that regardless of whether $a_j$ is used or not, no assignment would not be stable and compatible at the same time due to agent $i$. 
+If the coloring has not been rejected, then we can now safely ignore all agents in $N(l+1)$ (as if they are non-existent) because stability constraint would not be violated by those agents. 
+
+We now proceed with the assumption that the coloring has not been rejected by our algorithm. 
+Recall that we need to choose $k_d$ agents among $N_d$ where $d\in [1, q]$ to be assigned to the popular activity $a_{j_d}$ while we know exactly which $k_{d'}$ agents must be assigned to one of the activities in $A^*_{d'}$ where $d'\in [q+1, l]$.
+For each popular color $d\in [1, q]$ define $N'_d = 
+\{i \in N_d : \exists d'\in [1, l+1], u_i(a_j) \geq k_{d'}+1 \text{~where~} a_j\in A_{d'} \} \cup
+\{i \in N_d : \exists d' \in [q+1, l], |\{a_j \in A_{d'} : u_i(a_j) \geq 1\}  | \geq 2\}$.
+Any stable assignment compatible with $c$ must assign all agents in $N'_d$ to the popular activity $a_{j_d}$.
+Otherwise, if some agent $i$ in $N'_d$ is assigned to the void-activity instead, then the resulting assignment cannot be stable;
+if $i$ is contained in the first set (on the right-hand-side of definition of $N'_d$) above, then $i$ approves sizes of both $k_{d'}+1$ and $1$ for some activity $a_j$, which implies that regardless of whether $a_j$ is used or not, $i$ would wish to join $a_j$ instead of $\void$, while if $i$ is contained in the second set (on the right-hand-side of definition of $N'_d$), then $i$ approves size $1$ for at least two non-popular activities of the same color which implies that $i$ would wish to join one of them that is not used. Therefore, if $|N'_d| > k_d$ for some $d \in [1, q]$ we must reject the coloring, and otherwise we must assign all agents in $N'_d$ to $a_{j_d}$.
+Without loss of generality we can assume that $N'_d = \emptyset$ for all $d\in [1, q]$ (provided that the coloring is not rejected by this point) by assigning all such agents to the appropriate popular activity and then decreasing $k_d$ by $|N'_d|$ before we proceed to the next step. 
+
+Now suppose that for some color $d\in [1,q]$ and agent $i\in N_d$ and some color $d'\in [q+1, l]$ and some activity $a_j\in A^*_{d'}$, we have $u_i(a_j) \geq 1$. If $i$ is assigned to $\void$ (instead of $a_{d_j}$) and $a_j$ is not used (no agents is assigned to it), then the assignment cannot be stable as $i$ approves $(a_j, 1)$. That is, any compatible, stable assignment must assign $i$ to $a_{d_j}$ and/or use activity $a_j$. If we consider agents in $X = \cup_{d\in [1,q]} N_d$ and activities in $Y = \cup_{d'\in [q+1,l]} A^*_{d'}$ as vertices and there is an edge between $(i, a_j)$ if and only if $u_i(a_j) \geq 1$ where $i\in X$ and $a_j \in Y$ (as a bipartite graph), finding a compatible assignment is equivalent to finding a vertex cover such that it chooses exactly $k_d$ vertices from each $N_d$ with $d\in [1, q]$ and exactly $1$ vertex from each $A^*_{d'}$ with $d'\in [q+1, l]$. Because the total number of vertices to be selected is bounded above by $k+l$, one can use a bounded search tree to determine whether a vertex cover of a small size exists or not in FPT time (i.e., exponential only in $k$ but polynomial in $n,p$). If vertex $i$ from $X$ is chosen then we assign $i$ to the popular activity of the same color and if vertex $a_j$ from $Y$ is chosen then we assign the agents of the same color to it. It is easy to verify that a compatible, stable assignment exists if and only if a vertex cover (with the aforementioned constraints) exists in this bipartite graph. 
+
+While we omit the details, it is straightforward to verify that our algorithm would not reject any coloring $c$ which is compatible with at least one stable assignment.
+\end{proof}
+
+Lastly, we consider another special case of \GASPs when all activities are (pairwise) equivalent.
+In this case, the problem of finding a stable assignment becomes the problem of partitioning agents into groups where only group sizes matter (as all of the activities are identical to every agent). This restriction allows the problem for an FPT algorithm
+\begin{theorem}
+$k$-Stable-GASP is in FPT if all (non-void) activities are equivalent.
+%
+%only one $p$-copyable activity in $A^*$ (where $p = |A^*|$).
+\end{theorem}
+\begin{proof}
+Let $p = |A^*|$ be the number of non-void activities which we assume are all equivalent.
+We use Color Coding to design a randomized FPT algorithm, which can easily be de-randomized using a family of $k$-perfect hash functions as shown in the work~\cite{ColorCoding}. 
+
+We can assume that $p \leq k+1$ because $k$ agents can be assigned to at most $k$ copies and having more than one extra copy to which no agents is assigned does not change the problem (this is because we are seeking a solution of size exactly $k$). For brevity, we only prove the claim when $p = k+1$ in this work, but it can be easily extended to the cases when $p < k+1$. 
+
+\paragraph{Preliminaries.}
+Let $N = \{1, 2, \dots, n\}$ be the set of $n$ agents and $A^* = \{a_1, a_2, \dots, a_p\}$ be the set of $p$ copies of the only activity when $p = k+1$. Recall that by definition of equivalent activities, every agent $i$ has $S_i(a_j) = S_i(a_{j'})$ for all $j,j'$.
+We first fix $l$ (the number of copies of the activity to be used by a stable assignment) which must be between $1$ and $k$, and $k_1, k_2, \dots, k_l$ which is the number of agents assigned to each of the $l$ copies; for convenience we define $k_{l+1} = 0$ as there is at least one extra copy that would not be used by the assignment.
+The total number of possible values for $l$ and $k_d$'s are bounded above by $O(k^k)$, which is exponential only in $k$.
+After we fix $l$, we color all agents uniformly and independently at random using colors $1$ through $l$; let $c(\cdot)$ be this coloring scheme and $c(i)$ denote the color of agent $i$. 
+We say that coloring $c$ (together with $l$ and $k_d$'s) and a stable assignment $\pi$ of size $k$ are {\em compatible} if $\pi$ assigns exactly $k_d$ agents of color $d$ to activity $a_d$ for $d\in [1, l]$.
+
+\paragraph{FPT Algorithm.}
+Our algorithm will find a stable assignment compatible with $c$ or determine that no such stable assignment exists. 
+Note that any stable assignment of size $k$ has at least one compatible coloring, and the probability that a random coloring we choose is compatible with some fixed stable assignment of size $k$ is at least $(1/l)^k$ (as we must color those $k$ agents correctly) which is exponentially small only in $k$. 
+
+Our algorithm first partitions agents of each color into several subsets, and check several necessary conditions for the coloring to be compatible with at least one stable assignment; if any of the conditions is not met, the coloring will be rejected by the algorithm (as there is no stable assignment compatible with the given coloring). 
+For each color $d\in [1, l]$, the algorithm computes three subsets: $N_d = \{i \in N : c(i) = d\}$,
+ $N^{\text{IR}}_d = \{i \in N_d : (a_d, k_d) \in S_i \}$, and
+ $N^{\text{IN}}_d = \{i \in N_d : \exists d'\in[1, l+1] \text{~s.t.~} (a_{d'}, k_{d'}+1) \in S_i\}$ (recall $k_{l+1} = 0$).
+If $|N^{\text{IR}}_d| < k_d$ for any $d\in [1, l]$, no stable assignment is compatible with $c$ because assigning $k_d$ agents to $a_d$ would not be individually rational (i.e., not enough agents approve the outcome), so the coloring should be rejected in this case.
+If for some $d \in [1, l]$ the set $N^{\text{IN}}_d - N^{\text{IR}}_d$ is not empty but contains some agent $i$, then no stable assignment is compatible with $c$ because a stable assignment cannot assign $i$ to $a_d$ (because $i\not\in N^{\text{IR}}_d$) but $i$ would wish to join $a_{d'}$ for some $d'\in [1, l+1]$ which would make the assignment not stable; hence the coloring should be rejected in this case. 
+If $|N^{\text{IN}}_d| > k_d$, then at least one agent $i$ in $N^{\text{IN}}_d$ should be assigned to the void activity, but $i$ would wish to join $a_{d'}$ for some $d'\in[1, l+1]$ which would make the assignment not stable; hence the coloring should be rejected.
+If the coloring is not rejected by any of the cases mentioned earlier, then we have the following three conditions for every color $d\in [1, l]$: (a) $|N^{\text{IR}}_d| \geq k_d$, (b) $|N^{\text{IN}}_d| \leq k_d$, and (c) $N^{\text{IR}}_d \subseteq N^{\text{IN}}_d$.
+Let us define $X_d$ for each $d\in [1, l]$ as follows: $X_d$ contains an arbitrary set of $k_d$ agents from $N^{\text{IR}}_d$ such that every agent in $N^{\text{IN}}_d$ is contained in $X_d$. Note that this is always possible due to the three conditions mentioned above. 
+We claim that an assignment $\pi$ which assigns agents in $X_d$ to $a_d$ and all other agents to $\void$ is a stable assignment compatible with $c$. To prove compatibility, all agents in $X_d$ are by definition of color $d$ and $|X_d| = k_d$ for all $d\in [1, l]$.
+To prove stability, first consider any agent $i$ who is assigned to the void activity and suppose $d = c(i)$. Since $i\not\in X_d$, we know that $i\not\in N^{\text{IN}}_d$ by definition, and therefore there is no $d'\in[1,l+1]$ such that $(a_{d'}, k_{d'}+1)\in S_i$. Now consider any agent $i$ who is assigned to $a_d$ by $\pi$ (thus $c(i) = d$). By definition $i\in X_d$ and thus $i\in N^{\text{IR}}_d$, which implies that $(a_d, k_d)\in S_i$. Therefore $\pi$ is a stable assignment of size $k$, compatible with $c$. 
+
+Let us now prove that if there is at least one stable assignment that is compatible with $c$, then the algorithm does not reject the coloring. 
+Let $\pi$ be one such assignment and let $X_d$ be the set of agents assigned to $a_d$ by $\pi$. Due to compatibility we have $|X_d| = k_d$ and $c(i) = d$ for all $i \in X_d$ for all $d\in [1, l]$; in particular, by definition $X_d \subseteq N^{\text{IR}_d}$ and thus the first condition (a) above holds for all $d\in [1, l]$. Due to stability of $\pi$, every agent $i$ with $\pi(i) = \void$ satisfies that $\not\exists d'\in [1, l+1]$ such that $(a_{d'}, k_{d'}+1) \in S_i$. Therefore the conditions (b) and (c) above hold for all $d\in [1, l]$, which proves that the coloring $c$ would not be rejected by the algorithm.
+
+We have shown that if we begin with a coloring $c$ (together with $l$ and $k_d$'s) that is compatible with at least one stable assignment, then our algorithm would find a stable assignment compatible with the coloring and that if no such assignment exists the coloring would be rejected. This is a Monte Carlo algorithm with probability of success at least $(1/k)^k$ and runtime bounded by $O((k^k)nk)$ (as our algorithm must enumerate all possible values of $l$ and $k_d$'s), which is polynomial in $n$ but exponential only in $k$. 
+\end{proof}
+
+
+%%% =============================================================== Envy-free
+\subsection{$k$-EF-GASP: Finding Envy-free Assignments}
+Recall that $k$-EF-GASP is the problem of finding an envy-free assignment of size $k$. 
+Similarly to how we showed that finding a stable assignment is computationally harder than finding an IR assignment under parameterization, we can show that finding an envy-free (EF) assignment is also computationally harder than finding an IR assignment under parameterization; again, this relationship is not apparent under the classic complexity classes (i.e., NP-hardness).
+
+\begin{theorem} \label{GASP:thm:ef_gasp_w1}
+$k$-EF-GASP is $W[1]$-complete. 
+The problem remains to be $W[1]$-complete even if each agent approves at most one size per activity.
+\end{theorem}
+\begin{proof} % k-EF-GASP is W[1]-hard.
+	We reduce from the $k$-Clique problem. Let $G = (V, E)$ be an undirected graph and $k$ be a parameter of the $k$-Clique instance.
+
+	\paragraph{Construction of \GASPs instance.}
+	Let $V = \{v_1, v_2, \dots, v_n\}$, and for each vertex $v_i\in V$, we create activity $a_i$ and $k^2$ copies of $v_i$ as agents.
+	For each edge $(v_i, v_j)\in E$, we create an activity $e_{i,j}$ and an agent $w_{i,j}$.
+	This creates $|V| + |E|$ activities and $k^2|V| + |E|$ agents overall.
+	For each copy of $v_i$, we set its approval set as $S_{v_i} = \{(a_i, k^2)\} \cup \{(e_{i,j}, 1) : (v_i, v_j)\in E\}$ and for each agent $w_{i,j}$ we set its approval set as $S_{w_{i,j}} = (e_{i,j}, 1)$.
+	Let $k' = k^3 + \binom{k}{2} = k^3 + k(k-1)/2$.
+	We claim that a clique of size $k$ exists in $G$ if and only if an envy-free assignment of size $k'$ exists in the \GASPs instance we created.
+	
+	\paragraph{Proof of equivalence between instances.}	
+	Suppose that $\pi$ is an envy-free assignment of size $k'$. If $\pi$ assigns any copy of $v_i$ to some activity $e_{i,j}$, then $\pi$ cannot be envy-free because $w_{i,j}$ wishes to be assigned to $e_{i,j}$ in place of the copy of $v_i$; furthermore, $\pi$ cannot assign more than one agent to any $e_{i,j}$ as no other agent approves the activity with any other size than $1$. If $\pi$ assigns any copy of $v_i$ to $a_i$, then it must assign all $k^2$ copies of $v_i$ to $a_i$ as those agents only approve $a_i$ with size $k^2$. Because $\pi$ is of size $k'$, it is clear that $\pi$ can only assign agents to at most $k$ different activities of the form $a_i$. 
+	Now suppose $\pi$ assigns some $w_{i,j}$ to $e_{i,j}$; due to envy-freeness, all $k^2$ copies of $v_i$ must be assigned to $a_i$ and all $k^2$ copies of $v_j$ must be assigned to $a_j$; this implies that $\pi$ can assign at most $\binom{k}{2}$ agents of the form $w_{i,j}$ to activities of the form $e_{i,j}$ (otherwise, $\pi$ cannot be of size $k'$ because $k^2(k+1) > k'$). Therefore, we conclude that $\pi$ assigns $k^3$ agents of the form $v_i$ to $k$ activities of the form $a_i$ (without loss of generality, assume those activities are $\{a_1, a_2, \dots, a_k\}$) and that $\pi$ assigns $w_{i,j}$ to $e_{i,j}$ if and only if $1 \leq i, j \leq k$ (all other agents are assigned to the void activity). This implies that the original instance contains a clique $C = \{v_1, v_2, \dots, v_k\}$ as there is an edge $(v_i,v_j)$ if $1 \leq i,j \leq k$. 
+	
+	To prove the converse, suppose that $C = \{v_1, v_2, \dots, v_k\}$ is a clique in the original instance. 
+	Let $\pi$ be an assignment such that $\pi$ assigns $k^2$ copies of $v_i$ to $a_i$ if $i \leq k$ and $w_{i,j}$ to $e_{i,j}$ if $1 \leq i,j \leq k$ and assigns all other agents to the void activity. Clearly $\pi$ is individually rational by the construction of approval sets; $\pi$ is also envy-free because no copy of $v_i$ with $i > k$ or $w_{i,j}$ with $i>k$ or $j>k$ wishes to replace any other agent who is assigned to a non-void activity. This completes the proof of $W[1]$-hardness.
+	
+	Note that in our reduction each agent approves at most one size per activity, proving the second statement in the theorem.
+	
+	To show completeness, one can reduce $k$-EF-GASP to the colored $k$-clique problem which is known to be W[1]-complete (we omit the details).%TODO
+\end{proof}
+
+Although $k$-EF-GASP is $W[1]$-complete, the problem may admit FPT algorithms if we assume that preferences of agents are restricted to increasing preferences or decreasing preferences. 
+Unlike the case of stable assignments, we show that $k$-EF-GASP remains to be $W[1]$-complete even if all agents have increasing preferences or all agents have decreasing preferences. 
+
+\begin{theorem}
+$k$-EF-GASP is $W[1]$-complete even if all agents have increasing preferences.
+\end{theorem}
+\begin{proof}[sketch]
+	A slight modification to the reduction we used in proof of Theorem~\ref{GASP:thm:ef_gasp_w1} shows that $k$-EF-GASP is $W[1]$-hard even if all agents have increasing preferences. 
+	We construct the same instance, but we change the approval set of each agent such that if agent $i$ approves an outcome $(a, x)$ for some activity $a$ and size $x$, then we let the agent approve all outcomes $(a, x')$ with $x < x' \leq |N|$, which ensures that all agents have increasing preferences.
+	In addition we create $k'+1$ copies of a dummy agent $z$ such that $z$ approves all outcomes $(e_{i,j}, x)$ with $2 \leq x \leq |N|$ for all activities $e_{i,j}$ we create. 
+	
+	It is easy to see that if $\pi$ is an envy-free assignment of size $k'$, then $\pi$ cannot assign any copy of $z$ to any activity because if $\pi$ assigns any copy of $z$ to some $e_{i,j}$, then $\pi$ must assign all copies of $z$ to some activity (to avoid envy-freeness with respect to those copies) which results in the size of $\pi$ being at least $k'+1$. 
+	This in turn implies that $\pi$ cannot assign more than one agent to any $e_{i,j}$; if two or more agents are assigned to $e_{i,j}$, then all copies of $z$ must be assigned to some activity (or they would be envious) due to increasing preferences. Lastly, this implies that $\pi$ cannot assign any $v_i$ to any $e_{i,j}$ because such assignment implies $w_{i,j}$ must also be assigned to $e_{i,j}$ (due to envy-freeness and increasing preferences), resulting in more than one agent being assigned to $e_{i,j}$. With this observation, the rest of the proof follows in a straightforward manner, and we omit details. Note that completeness follows from the fact that $k$-EF-GASP is in $W[1]$. 
+\end{proof}
+
+
+\begin{theorem}
+$k$-EF-GASP is $W[1]$-complete even if all agents have decreasing preferences.
+\end{theorem}
+\begin{proof}[sketch]
+	A slight modification to the reduction we used in proof of Theorem~\ref{GASP:thm:ef_gasp_w1} shows that $k$-EF-GASP is $W[1]$-hard even if all agents have decreasing preferences. We construct the same instance, but we change the approval set of each agent such that if agent $i$ approves an outcome $(a, x)$ for some activity $a$ and size $x$, then we let the agent approve all outcomes $(a, x')$ with $1 \leq x' < x$, which ensures that all agents have decreasing preferences. The rest of the proof follows in a straightforward manner, and we omit details.
+	Note that completeness follows from the fact that $k$-EF-GASP is in $W[1]$.
+\end{proof}
+
+\begin{theorem}
+$k$-Stable-GASP is in FPT if all (non-void) activities are equivalent.
+%
+%there is only one $p$-copyable activity in $A^*$ (where $p = |A^*|$).
+\end{theorem}
+\begin{proof}
+Let $p=|A^*|$ and let all non-void activities be equivalent.
+We use Color Coding to design a randomized FPT algorithm, which can easily be de-randomized using a family of $k$-perfect hash functions as shown in the work~\cite{ColorCoding}. 
+Because there are only $n$ agents we can assume that $p \leq k$ because $k$ agents can be assigned to at most $k$ copies (unlike the case of stability, extra copies have no effect in envy-freeness as agents are only envious of others who participate in some activity).
+For simplicity we only prove the claim when $p = k$ but it can be easily extended to the cases when $p < k$. 
+
+\paragraph{Preliminaries.}
+Let $N = \{1, 2, \dots, n\}$ be the set of $n$ agents and $A^* = \{a_1, a_2, \dots, a_p\}$ be the set of $p$ copies of the only activity when $p = k$. Recall that by definition of equivalent activities, every agent $i$ has $S_i(a_j) = S_i(a_{j'})$ for all $j,j'$.
+We first fix $l$ (the number of copies of the activity to be used by an EF assignment) which must be between $1$ and $k$, and $k_1, k_2, \dots, k_l$ which is the number of agents assigned to each of the $l$ copies.
+The total number of possible values for $l$ and $k_d$'s are bounded above by $O(k^k)$, which is exponential only in $k$.
+After we fix $l$, we color all agents uniformly and independently at random using colors $1$ through $l$; let $c()$ be this coloring scheme and $c(i)$ denote the color of agent $i$. 
+We say that coloring $c$ (together with $l$ and $k_d$'s) and an EF assignment $\pi$ of size $k$ are {\em compatible} if $\pi$ assigns exactly $k_d$ agents of color $d$ to activity $a_d$ for $d\in [1, l]$.
+
+Our algorithm will find an EF assignment compatible with $c$ or determine that no such EF assignment exists. 
+Note that any EF assignment of size $k$ has at least one compatible coloring, and the probability that a random coloring we choose is compatible with some fixed EF assignment of size $k$ is at least $(1/l)^k$ (as we must color those $k$ agents correctly) which is exponentially small only in $k$. 
+
+\paragraph{FPT algorithm.}
+Our algorithm first partitions agents of each color into several subsets, and check several necessary conditions for the coloring to be compatible with at least one EF assignment; if any of the conditions is not met, the coloring will be rejected by the algorithm (as there is no EF assignment compatible with the given coloring). 
+For each color $d\in [1, l]$, the algorithm computes three subsets: $N_d = \{i \in N : c(i) = d\}$,
+ $N^{\text{IR}}_d = \{i \in N_d : (a_d, k_d) \in S_i \}$, and
+ $N^{\text{IN}}_d = \{i \in N_d : \exists d'\in[1, l] \text{~s.t.~} (a_{d'}, k_{d'}) \in S_i\}$.
+If $|N^{\text{IR}}_d| < k_d$ for any $d\in [1, l]$, no EF assignment is compatible with $c$ because assigning $k_d$ agents to $a_d$ would not be individually rational (i.e., not enough agents approve the outcome), so the coloring should be rejected in this case.
+If for some $d \in [1, l]$ the set $N^{\text{IN}}_d - N^{\text{IR}}_d$ is not empty but contains some agent $i$, then no EF assignment is compatible with $c$ because an EF assignment cannot assign $i$ to $a_d$ (because $i\not\in N^{\text{IR}}_d$) but $i$ would wish to join $a_{d'}$ for some $d'\in [1, l]$ which would make the assignment not envy-free; hence the coloring should be rejected in this case. 
+If $|N^{\text{IN}}_d| > k_d$, then at least one agent $i$ in $N^{\text{IN}}_d$ should be assigned to the void activity, but $i$ would wish to join $a_{d'}$ for some $d'\in[1, l]$ which would make the assignment not envy-free; hence the coloring should be rejected.
+If the coloring is not rejected by any of the cases mentioned earlier, then we have the following three conditions for every color $d\in [1, l]$: (a) $|N^{\text{IR}}_d| \geq k_d$, (b) $|N^{\text{IN}}_d| \leq k_d$, and (c) $N^{\text{IR}}_d \subseteq N^{\text{IN}}_d$.
+Let us define $X_d$ for each $d\in [1, l]$ as follows: $X_d$ contains an arbitrary set of $k_d$ agents from $N^{\text{IR}}_d$ such that every agent in $N^{\text{IN}}_d$ is contained in $X_d$. Note that this is always possible due to the three conditions mentioned above. 
+We claim that an assignment $\pi$ which assigns agents in $X_d$ to $a_d$ and all other agents to $\void$ is an EF assignment compatible with $c$. To prove compatibility, all agents in $X_d$ are by definition of color $d$ and $|X_d| = k_d$ for all $d\in [1, l]$.
+To prove stability, first consider any agent $i$ who is assigned to the void activity and suppose $d = c(i)$. Since $i\not\in X_d$, we know that $i\not\in N^{\text{IN}}_d$ by definition, and therefore there is no $d'\in[1,l]$ such that $(a_{d'}, k_{d'})\in S_i$. Now consider any agent $i$ who is assigned to $a_d$ by $\pi$ (thus $c(i) = d$). By definition $i\in X_d$ and thus $i\in N^{\text{IR}}_d$, which implies that $(a_d, k_d)\in S_i$. Therefore $\pi$ is an EF assignment of size $k$, compatible with $c$. 
+
+Let us now prove that if there is at least one EF assignment that is compatible with $c$, then the algorithm does not reject the coloring. Let $\pi$ be one such assignment and let $X_d$ be the set of agents assigned to $a_d$ by $\pi$. Due to compatibility we have $|X_d| = k_d$ and $c(i) = d$ for all $i \in X_d$ for all $d\in [1, l]$; in particular, by definition $X_d \subseteq N^{\text{IR}_d}$ and thus the first condition (a) above holds for all $d\in [1, l]$. Due to stability of $\pi$, every agent $i$ with $\pi(i) = \void$ satisfies that $\not\exists d'\in [1, l]$ such that $(a_{d'}, k_{d'}) \in S_i$. Therefore the conditions (b) and (c) above hold for all $d\in [1, l]$, which proves that the coloring $c$ would not be rejected by the algorithm.
+
+We have shown that if we begin with a coloring $c$ (together with $l$ and $k_d$'s) that is compatible with at least one EF assignment, then our algorithm would find an EF assignment compatible with the coloring and that if no such assignment exists the coloring would be rejected. This is a Monte Carlo algorithm with probability of success at least $(1/k)^k$ and runtime bounded by $O((k^k)nk)$ (as our algorithm must enumerate all possible values of $l$ and $k_d$'s), which is polynomial in $n$ but exponential only in $k$. 
+\end{proof}
+
+%%% =============================================================== Perfect
+\subsection{$k$-Perfect-GASP: Finding Perfect Assignments}
+Recall that $k$-Perfect-GASP is the problem of finding a perfect assignment that uses $k$ activities out of $p$ activities. 
+Under this parameterization, \GASPs is W[2]-hard as the following theorem shows. 
+
+\begin{theorem} \label{GASP:thm:perfect_gasp_w2_hard}
+	$k$-Perfect-GASP is $W[2]$-hard. The problem remains to be $W[2]$-hard even if all agents have increasing preferences or all agents have decreasing preferences. 
+\end{theorem}
+\begin{proof}
+	Consider an instance of the parameterized Dominating Set problem which consists of a graph $G = (V, E)$ and a parameter $k$, and asks whether there exists a dominating set $D$ of size $k$ ($D \subseteq V$ is a dominating set if for every node $v\in V$ either $v \in D$ or $v$ has a neighbor in $D$). This problem is known to be $W[2]$-complete. 
+	
+	Let us create an instance of \GASPs as follows: Let $N = \{1, 2, \dots, n\}$ and $A^* = \{a_1, a_2, \dots, a_n\}$ where $n = |V|$. For each agent $i$, define $S_i = \{(a_j, x) : ((v_i, v_j) \in E) \land (1 \leq x \leq n) \} \cup \{(a_i, x) : 1 \leq x \leq n\}$. Note that in this instance agents do not care about the number of participants, but the activities only. Finally we set the parameter of \GASPs to be equal to the parameter of the Dominating Set instance. Note that the size of the \GASPs instance we create is polynomial in $n$ and $k$. 
+
+	Let $D$ be a dominating set of size $k$ in the original instance. 
+	Let us construct a perfect assignment $\pi$ as follows: 
+	For each agent $i$, if $v_i \in D$, then let $\pi(i) = a_i$; if $v_i \not\in D$, then there exists some $v_j \in D$ such that $(v_i, v_j) \in E$ because $D$ is a dominating set, and let $\pi(i) = a_j$. Clearly $\pi$ is a perfect assignment that uses only $k$ activities.
+	Conversely, suppose that a perfect assignment $\pi$ exists which uses exactly $k$ activities. Let $A'$ be the set of $k$ activities to which at least one agent is assigned under $\pi$ (note that $|A'| = k$). Let $D = \{v_i : a_i \in A'\}$, and we claim that $D$ is a dominating set in $G$. For any node $v_i \not\in D$, we know that $\pi$ assigns agent $i$ to some activity $a_j \in A'$ where $a_j \neq a_i$, and thus $v_j \in D$. Since $\pi$ is individually rational, it implies that $(v_i, v_j)\in E$, and therefore $D$ is a dominating set. 
+	
+	Note that in our reduction all agents have increasing preferences as well as decreasing preferences, proving the second statement of the theorem. 
+\end{proof}
+
+It is not surprising that $k$-Perfect-GASP is the most complex problem being considered, as it pertains to the strongest solution concept. We do not know the exact complexity of $k$-Perfect-GASP when all activities are equivalent, and it remains to be an open problem (yet the problem is known to be NP-complete by Darmann et al.~\cite{GASP12WINE}).
+
+
+\section{Discussion and Future Work} \label{GASP:sec:discussion}
+In this work we investigated the parameterized complexity of the Group Activity Selection Problem (\GASP) when parameterized by the size of the solution, for four different solution concepts and under various restrictions on inputs. 
+Despite the fact that all problems being considered are NP-hard, we showed that some special cases of the problem admit efficient FPT algorithms.
+Our results indicate that the computational complexity of \GASPs varies when its input is restricted (imposed by special preferences of agents or uniformity of activities) or the solution concept changes, which is not distinguishable under the classic complexity.
+Our work leaves a few interesting open problems for future work. 
+First, we do not know the exact complexity of $k$-Perfect-GASP with equivalent activities besides its NP-completeness. It would be intriguing if the problem is FPT.
+Second, the focus in this chapter is to exhibit any FPT algorithm; we have not tried hard to optimize the dependence on $k$. It would be interesting to do this and to show conditional lower bounds on how the runtime should depend on $k$, especially in the case of $k$-IR-GASP. 
+Lastly, one can consider a different setting where agents have a strict ordering over the set of outcomes, instead of having approved outcomes that are equally preferred. Darmann recently proved several easiness and hardness results under this setting~\cite{DARMANN15ADT}, but no parameterized complexity results are known yet.
