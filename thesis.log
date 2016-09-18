@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  17 SEP 2016 23:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  17 SEP 2016 23:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -397,32 +397,33 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
  [3]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
- [4
+
+(./00abstract.tex [4
 
 
-]
-[5
+]) [5] (./00acknowledgements.tex) [6
 
-]
-No file thesis.toc.
+] (./thesis.toc
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 3.
+)
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
-[6
-
-]
-No file thesis.lot.
-\tf@lot=\write4
-\openout4 = `thesis.lot'.
 
 [7
 
-]
-No file thesis.lof.
+] (./thesis.lot)
+\tf@lot=\write4
+\openout4 = `thesis.lot'.
+
+ [8
+
+] (./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
-[8
+ [9
 
 ]
 Chapter 1.
@@ -460,21 +461,21 @@ No file thesis.bbl.
 
 ] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 4068 strings out of 493014
- 58798 string characters out of 6133351
- 120862 words of memory out of 5000000
- 7497 multiletter control sequences out of 15000+600000
- 19904 words of font info for 49 fonts, out of 8000000 for 9000
+ 4083 strings out of 493014
+ 59005 string characters out of 6133351
+ 122862 words of memory out of 5000000
+ 7499 multiletter control sequences out of 15000+600000
+ 21544 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,24p,264b,229s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,24p,1264b,229s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.e
 nc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/lo
 cal/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on thesis.pdf (15 pages, 41329 bytes).
+Output written on thesis.pdf (16 pages, 45982 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 69 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

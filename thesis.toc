@@ -1,5 +1,5 @@
 \contentsline {chapter}{Abstract}{iv}
-\contentsline {chapter}{Acknowledgments}{v}
+\contentsline {chapter}{Acknowledgments}{vi}
 \contentsline {chapter}{\numberline {1}Introduction: {\itshape }}{1}
 \contentsline {chapter}{\numberline {2}Complexity of Group Scheduling Problem I: {\itshape }}{2}
 \contentsline {chapter}{\numberline {3}Complexity of Group Scheduling Problem II: {\itshape }}{3}
