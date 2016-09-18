@@ -468,26 +468,22 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ƒ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
- [9] [10] [11]) [12] (./thesis.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [9] [10] [11]) [12] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
  4134 strings out of 493014
  59823 string characters out of 6133351
- 122888 words of memory out of 5000000
+ 123063 words of memory out of 5000000
  7551 multiletter control sequences out of 15000+600000
  24322 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,8n,24p,264b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dis
-t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
-pe1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (20 pages, 79198 bytes).
+{/usr/local/texlive/2016/texmf-dist/fonts/
+enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/
+utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (20 pages, 79458 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream
