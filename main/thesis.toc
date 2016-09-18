@@ -12,8 +12,16 @@
 \contentsline {subsection}{\numberline {2.3.3}Summary of Experiments}{20}
 \contentsline {section}{\numberline {2.4}Discussion}{21}
 \contentsline {chapter}{\numberline {3}Complexity of Group Scheduling Problem II: {\itshape }}{22}
-\contentsline {chapter}{\numberline {4}Complexity of Group Activity Selection Problem: {\itshape }}{23}
-\contentsline {chapter}{\numberline {5}Complexity of Stable Invitations Problem: {\itshape }}{24}
-\contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems: {\itshape }}{25}
-\contentsline {chapter}{\numberline {7}Open Problems}{26}
-\contentsline {chapter}{Bibliography}{27}
+\contentsline {section}{\numberline {3.1}Notation and Definitions}{23}
+\contentsline {subsection}{\numberline {3.1.1}Example}{24}
+\contentsline {section}{\numberline {3.2}Technical Results and Algorithm}{26}
+\contentsline {subsection}{\numberline {3.2.1}1-Row Matrix and 1-Column Matrix}{26}
+\contentsline {subsection}{\numberline {3.2.2}Inspection of Entire Column}{27}
+\contentsline {subsection}{\numberline {3.2.3}Optimal Ordering within Column}{30}
+\contentsline {subsection}{\numberline {3.2.4}Main Result and Algorithm}{32}
+\contentsline {section}{\numberline {3.3}Discussion and Future Work}{34}
+\contentsline {chapter}{\numberline {4}Complexity of Group Activity Selection Problem: {\itshape }}{36}
+\contentsline {chapter}{\numberline {5}Complexity of Stable Invitations Problem: {\itshape }}{37}
+\contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems: {\itshape }}{38}
+\contentsline {chapter}{\numberline {7}Open Problems}{39}
+\contentsline {chapter}{Bibliography}{40}
