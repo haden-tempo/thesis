@@ -1,0 +1,440 @@
+\section{Introduction and Related Work}  \label{sec:SIP:intro}
+Imagine an event organizer trying to convene an event -- for example,
+a fundraiser. We assume that the time and venue for the event are fixed,
+and that the only remaining decision for the organizer to make is whom
+to invite among a set of agents.
+An \emph{invitation} is simply defined to be a subset of agents.
+The goal of the organizer is to maximize attendance (for example, 
+in order to maximize donations), but the potential invitees have 
+their own preferences over how many attendees there should be at the event 
+and possibly also who the potential attendees should be.
+For example, a given donor may not want to attend if too few attendees 
+show up, but she may not want the event to be overly crowded. 
+Another donor may want to attend the event only
+if her friends attend and her business competitor does not.
+
+To model this setting, we turn our attention to the restricted case of the Group Activity Selection Problem (\GASP) with just one activity, but we generalize preferences of agents. 
+Specifically, in the Stable Invitations Problem (\SIP), each agent 
+can specify a set of friends and a set of enemies (in addition to her preference over sizes).
+An agent is willing to attend only if all of her friends attend, none of her enemies attends, and 
+the number of attendees is acceptable to her. 
+Note that the Stable Invitations Problems is a generalization of the Group Activity Selection Problem with the restriction of one activity present. 
+
+Not surprisingly, complexity of \SIPs depends highly on the cardinality of friend-sets and enemy-sets, as friends-and-enemies relationship introduces combinatoric complexity in the problem of finding a good solution. 
+In this chapter we provide a complete analysis of complexity results on \SIPs; we consider individual rationality (IR) and Nash stability as we did for \GASP, and we also consider both asymmetric and symmetric friends-and-enemmies relation. 
+
+\paragraph{Related Work.} %TODO: To relate this to previous chapter.
+
+
+The rest of this chapter is organized as follows.
+%TODO
+
+\section{Definitions and Notation} \label{sec:SIP:prelim}
+
+Unlike the Group Activity Selection Problem (\GASP), the Stable Invitations Problem only has one activity (or an event), and therefore it does not need to be given as input.
+However, each agent specifies her friend-set and enemy-set in addition to her approval set (over the number of participants). 
+
+\begin{definition}
+	In the Stable Invitations Problem (\SIP), we are given a set of agents $N = \{1, 2, \dots, n\}$.
+	For each agent $i$ we are given three sets describing her preference: $F_i \subset N$ is called a friend-set, $R_i \subset N$ is called an enemy-set, and $S_i \subset [1,n]$ is called an approval set.
+	Agent $i$ is willing to participate (in the only activity), if all of her friends participate, none of her enemies participates, and the number of participants (including herself) is approved.
+\end{definition}
+
+Beacuse there is only one activity, a solution can be described as a subset of agents who are to be assigned to the only activity, instead of a mapping; to emphasize this, we call a solution an ``invitation'' instead of an assignment. 
+
+\begin{definition}
+	An invitation in \SIPs is a subset of agents, $I \subset N$, where agents in $I$ are to be assigned to the only activity. 
+\end{definition}
+
+The objective in \SIPs is to find a ``good'' assignment of maximum size subject to rationality/stability constraints which generalize the solution concepts in \GASP.
+
+\begin{definition}
+	An invitation $I$ is said to be {\em individually rational} (IR) if for every $i\in I$, 
+	it holds that $F_i \subset I$, $R_i \cap I = \emptyset$, and $|I| \in S_i$.
+
+	An invitation $I$ is said to be {\em (Nash) stable} if it is individually rational and for every agent $j \not\in I$ it holds that $F_j \not\subset I'$, $R_j \cap I' \neq \emptyset$, or $|I'| \not\in S_j$ where $I' = I \cup \{j\}$. 
+
+	% An invitation $I$ is said to be {\em envy-free} (EF) if it is individually rational and for every agent $j \not\in I$ and every agent $i\in I$ it holds that $F_j \not\subset I'$, $R_j \cap I' \neq \emptyset$, or $|I'| \not\in S_j$ where $I' = (I \setminus \{i\}) \cup \{j\}$.
+	%TODO: No results for EF yet.
+\end{definition}
+
+Individual rationality requires that every agent who's invited is willing to participate, and therefore everyone who is assigned has no incentive to deviate from the invitation.
+Stability further requires that every agent who is not invited is also unwilling to deviate (unilaterally, without permission of other agents) from the given invitation. 
+Note that we can naturally define an envy-free invitation or a perfect invitation, but we only focus on individual rationality and stability in this chapter.\footnote{Existence of a perfect invitation can be determined in poly-time by simply checking individual rationality conditions when $I = N$. Therefore, perfection is not an interesting solution concept in \SIP.}
+
+\begin{example} \label{eg:SIP:notation}
+	%TODO.
+	To be added.
+\end{example}
+
+In what follows, we attempt to classify computational copmlexity of the following two problems.
+We determine whether these problems are in P or NP-hard depending on the cardinality of largest friend and enemy sets, and then classify their membership in the W-hierarchy.
+We first consider the case when friends-and-enemies relation could be asymmetric, and then consider the case when the relation is necessarily symmetric. The latter case is proved to be a substantially easier problem, especically under parameterization.
+
+\begin{itemize}
+	\item $k$-IR-SIP: Does there exist an individually rational invitation of size $k$?
+	\item $k$-Stable-SIP: Does there exist a stable invitation of size $k$?
+\end{itemize}
+
+As we shall prove later, these two problems are NP-hard in general.
+We consider restrictions on inputs by assuming that the cardinality of friend sets and enemy sets are bounded by some constants, $\alpha$ and $\beta$, respectively.
+\begin{definition}
+	An input instance $(N, \{F_i\}, \{R_i\}, \{S_i\})$ of \SIPs is called an $(\alpha,\beta)$-instance of \SIPs if $\max_{i\in N} |F_i| \leq \alpha$ and $\max_{i\in N} |R_i| \leq \beta$. 
+\end{definition}
+In particular, note that $(0,0)$-instances of \SIPs coincide with instances of \GASPs with just one activity as no agent can have friends or enemies. $k$-IR-SIP and $k$-Stable-SIP are placed into different complexity classes depending on the values of $(\alpha,\beta)$. Not surprisingly, as $\alpha$ and $\beta$ get larger, the problems become (computationally) more complex.
+
+
+\section{Complexity of SIP with Asymmetric Relation} \label{sec:SIP:asymmetric}
+
+We first consider the Stable Invitations Problem with asymmetric friends-and-enemies relation.
+In Tables~\ref{tbl:SIP:summary_asymmetric_IR} and \ref{tbl:SIP:summary_asymmetric_stable}, we summarize our complexity results -- entries that are not equal to ``P'' imply that the corresponding problems are NP-hard. 
+Recall that $\alpha = \max_{i\in N} |F_i|$ and $\beta = \max_{i\in N} |R_i|$.
+In both tables, $f(k)$ is an arbitrary function of $k$. 
+That is, the third column corresponds to the case where $\beta$ is bounded above by some function of $k$, while the last column corresponds to the case where $\beta$ is not bounded by any function of $k$. 
+
+In both $k$-IR-SIP and $k$-Stable-SIP, the problems are NP-hard when $\alpha + \beta \geq 2$; in particular, the two problems have the same classical complexity results.
+However, their parameterized complexity differs very much, in cases where $\alpha = 1$ or where $\beta$ is not bounded by any function of $k$. 
+
+\begin{table}[h!]
+	\centering
+\begin{tabular}{|*{5}{c|}}\hline
+	 			& $\beta = 0$ 	& $\beta = 1$ 	& $ 2 \leq \beta = O(f(k))$ 	&$\beta = \omega(f(k))$ \\ \hline
+$\alpha = 0$ 	& P			  	& P				& FPT 				   	& $W[1]$-complete \\ \hline
+$\alpha = 1$ 	& P			  	& FPT			& FPT 				   	& $W[1]$-complete \\ \hline
+$\alpha \geq 2$ & $W[1]$-complete	& $W[1]$-complete & $W[1]$-complete 		& $W[1]$-complete \\ \hline
+\end{tabular}
+\caption{Summary of results on complexity of $k$-IR-SIP with asymmetric friends-and-enemies relation.}
+\label{tbl:SIP:summary_asymmetric_IR}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+\begin{tabular}{|*{5}{c|}}\hline
+	 			& $\beta = 0$ 	& $\beta = 1$ 	& $ 2 \leq \beta = O(f(k))$ 	&$\beta = \omega(f(k))$ \\ \hline
+$\alpha = 0$ 	& P			  	& P				& FPT 				   	& $W[2]$-complete \\ \hline
+$\alpha = 1$ 	& P			  	& $W[1]$-complete			& $W[1]$-complete				   	& $W[2]$-complete \\ \hline
+$\alpha \geq 2$ & $W[1]$-complete	& $W[1]$-complete & $W[1]$-complete 		& $W[2]$-complete \\ \hline
+\end{tabular}
+\caption{Summary of results on complexity of $k$-Stable-SIP with asymmetric friends-and-enemies relation.}
+\label{tbl:SIP:summary_asymmetric_stable}
+\end{table}
+
+%TODO
+
+
+\section{Complexity of SIP with Symmetric Relation} \label{sec:SIP:symmetric}
+%TODO
+
+
+\section{Discussion and Future Work} \label{sec:SIP:discussion}
+%TODO
+
+
+
+% In the strategic case, an impossibility for \ASIP\ directly implies
+% the same impossibility for \GSIP. We provide another impossibility result
+% for a different sub-class of \GSIP.
+
+
+
+% In this section we consider a special case of the group assignment problem in which there is only one activity, but agents no longer have anonymous preferences. That is, each agent has friends and enemies such that she wishes all her friends to be invited with her while no enemies be invited.
+%
+%
+% In previous section we studied three parameterizations of the Group Activity Selection Problem.
+% While the GASP is known to be NP-Complete, it is also known that the problem can be solved in polynomial time if there is only one activity. We generalize this special case by allowing agents to specify friends-and-enemies relationship, and provide a number of new complexity results.
+% We also investigate the parameterized complexity of the Stable Invitations Problem (SIP).
+% The computational complexity of the problem differs based on whether the friends-and-enemies relationship is asymmetric or symmetric, and we provide technical results for both settings.
+%
+% \section{Preliminaries}
+%
+% %TODO: Define IR, Stable, Perfect assignment.
+%
+% %TODO: Define DEC and INC preferences.
+%
+% Recall that instances of the Group Activity Selection Problem may contain multiple activities.
+% The Stable Invitations Problem, in contrast, contains only one activity, but it allows agents to specify friends-and-enemies relationship in addition to their preferences of the number of participants in the sole activity. Because there is only one activity, a solution is a subset of agents (instead of an assignment), which is called an ``invitation.'' Informally, each agent has a set of friends (denoted by $F$) and a set of enemies (denoted by $R$) such that the agent is willing to participate in the activity (if invited) only if all of her friends are invited and none of her enemies is invited.
+% \begin{definition}
+% An instance of the Stable Invitations Problem (SIP) is given by a set of agents $N = \{1, 2, \dots, n\}$, $S_i$ for each agent $i$ where $S_i \subseteq \{1, \dots, n\}$ is the set of outcomes (in size) that are acceptable to agent $i$ (analogous to the GASP instance), $F_i \subseteq N$ for each agent $i$ (called a friend set), and $R_i \subseteq N$ for each agent $i$ (called an enemy set).
+% \end{definition}
+%
+% Let us define a solution and solution concepts that are analogous to those of the Group Activity Selection Problem (\GASP), in the same manner as in the work of Lee and Shoham.
+%
+% \begin{definition}
+% An invitation $I$ in SIP is a subset of agents that are to be assigned to the sole activity.
+% The size of an invitation is simply the number of invited agents, $|I|$.
+% \end{definition}
+%
+% Individual rationality and stability concepts are defined analogously to the GASP.
+% \begin{definition}
+% 	We say that an invitation $I$ is individually rational (IR) if for every agent $i\in I$, $|I| \in S_i$, $F_i \subseteq I$, and $R_i \cap I = \emptyset$. In words, every invited agent must approve the size of the invitation, everyone in her friend set must also be invited, and no one in her enemy set should be invited.
+% \end{definition}
+%
+% \begin{definition}
+% 	We say that an invitation $I$ is stable if it is individually rational, and if for every agent $j \not\in I$, $|I'| \not\in S_j$, $F_j \not\subseteq I'$, or $R_j \cap I' \neq \emptyset$ where $I' = I \cup \{j\}$.
+% \end{definition}
+% Individual rationality requires that every invited agent is willing to participate.
+% Stability further requires that those who are not invited are not willing to participate (and thereby increasing the size of the invitation by one), because the resulting invitation would not satisfy one of the three conditions mentioned in the definition.
+%
+% % Lastly Lee and Shoham also considers a restricted domain of preferences where all agents approve any size of an invitation (called ``simple preferences'').
+% % \begin{definition}
+% % 	An instance of the Stable Invitations problem is said to have simple preferences if for every agent $i\in N$ it holds that $S_i = \{1, 2, \dots, n\}$.
+% % \end{definition}
+% % If all agents have simple preferences, then finding a stable invitation becomes only easier but not harder. Therefore any hardness result for the simple preferences case immediately implies the same hardness result for the general case. For finding an IR invitation, one can show that solving the case with simple preferences is equivalent to solving the general case with arbitrary preferences. (TODO: To include a proof in Appendix?)
+%
+% Let $\alpha = \max_{i\in N} |F_i|$ and $\beta = \max_{i\in N} |R_i|$ to denote the size of largest friend-sets and enemy-sets, respectively. In particular, when $\alpha = \beta = 0$, the Stable Invitations Problem coincides with the Group Activity Selection Problem with a single activity.
+% In the Stable Invitations problem, the goal is to find a maximum size individually rational invitation or stable invitation. Lee and Shoham provide a number of complexity results by considering the cases where the size of friend-sets and enemy-sets are bounded~\cite{LEE15AAAI}.
+% We summarize their results in Table~\ref{tbl:gsip_summary} for reference.
+% One interesting case is the problem of finding an IR invitation when $\alpha \geq 2$ and $\beta = 0$. In this case, finding a maximum IR invitation can be solved in polynomial time as Lee and Shoham showed, but it is NP-hard to decide whether an IR invitation of size exactly $k$ exists.\footnote{It is worth noting that 2-SAT is known to be solvable in polynomial time, but MAX-2-SAT is NP-complete. Indeed, most reductions in the work of Lee and Shoham used the MAX-2-SAT problem.} This is a new result that was not shown in the work of Lee and Shoham.
+%
+% \begin{table*}[h]
+% 	\centering
+% \begin{tabular}{|l|*{3}{c|}|*{3}{c|}}\hline
+% \multirow{2}*{} & \multicolumn{3}{c||}{Finding Max. Stable Invitations} & \multicolumn{3}{c|}{Finding Max. IR Invitations} \\ \cline{2-7}
+% & $\beta = 0$ & $\beta = 1$ & $\beta \geq 2$ & $\beta = 0$ & $\beta = 1$ & $\beta \geq 2$ \\ \hline
+% $\alpha = 0$ & {P} & {P} & NP-C & P & P & {NP-C} \\ \hline
+% $\alpha = 1$ & {P} & NP-C & NP-C  & P & {NP-C} & NP-C \\ \hline
+% $\alpha \geq 2$ & {NP-C} & NP-C & NP-C & P, NP-C & NP-C & NP-C \\ \hline
+% \end{tabular}
+% \caption{Computational complexity of finding maximum stable invitations (on left) and maximum IR invitations (on right). For IR invitations when $\alpha \geq 2$ and $\beta = 0$, finding a maximum solution is in P, but deciding existence of a solution of size $k$ is NP-Complete.}
+% \label{tbl:gsip_summary}
+% \end{table*}
+%
+%
+% \section{Computational Complexity of Stable Invitations Problem}
+% \subsection{Asymmetric Friend-and-Enemies Relationship}
+%
+% \subsection{Symmetric Friend-and-Enemies Relationship}
+%
+%
+% \section{Parameterized Complexity of Stable Invitations Problem}
+%
+% In what follows we will analyze parameterize complexity of the Stable Invitations Problem where the size of an invitation is parameterized. We first study the problem of finding an individually rational invitation of size exactly $k$.
+%
+% \subsection{Asymmetric Friend-and-Enemies Relationship}
+% \subsubsection{$k$-IR-Invitations} \label{sec:IR_SIP}
+%
+% Let us first define the parameterized problem of finding an IR invitation in the Stable Invitations Problem.
+% \begin{definition}
+% 	We call the following problem {\em $k$-IR-Invitation}: Given an instance of the Stable Invitations Problem and a parameter $k$, does there exist an IR invitation of size $k$?
+% \end{definition}
+%
+% Similarly to the work of Lee and Shoham, we will show easiness and hardness results for $k$-IR-Invitation by considering different combinations of $(\alpha, \beta)$, as shown in Table~\ref{tbl:IR_invitation_summary}.
+% We expanded the columns from Table~\ref{tbl:gsip_summary} by considering the cases where $\beta$ is bounded by an arbitrary function $f(k)$ of $k$ and where it is unbounded.
+% We first provide easiness results by showing that when $\alpha \leq 1$ and $\beta = O(1)$, the problem is in class FPT and that for the general case the problem is in class W[1]. We then provide $W[1]$-hardness results for the bottom row ($\alpha \geq 2$) and for the right-most column (unbounded $\beta$), which imply $W[1]$-completeness of the problem.
+%
+% \begin{table*}[h]
+% 	\centering
+% \begin{tabular}{|l|*{4}{c|}}\hline
+% \multirow{2}*{} & \multicolumn{4}{c|}{IR Invitations of size $k$} \\ \cline{2-5}
+%  & $\beta = 0$ & $\beta = 1$ & $2 \leq \beta \leq f(k)$ & unbounded $\beta$ \\ \hline
+% $\alpha = 0$ & P & P & FPT  & $W[1]$-C \\ \hline
+% $\alpha = 1$ & P & FPT  & FPT & $W[1]$-C \\ \hline
+% $\alpha \geq 2$ & $W[1]$-C & $W[1]$-C & $W[1]$-C & $W[1]$-C \\ \hline
+% \end{tabular}
+% \caption{Parameterized Complexity of finding an IR invitation of size $k$. $f(k)$ is an arbitrary function of $k$ that only depends on $k$.}
+% \label{tbl:IR_invitation_summary}
+% \end{table*}
+%
+% \textbf{$k$-IR-Invitations: Easiness Results}
+%
+% The $k$-IR-Invitation problem is in W[1] in general, but when $\alpha \leq 1$ and $\beta$ is bounded by $f(k)$, the problem is in FPT.
+% The proof of the first claim (Theorem~\ref{thm:IR_invitation_easiness}) can be found in Appendix.
+%
+% \begin{theorem} \label{thm:IR_invitation_easiness}
+% 	$k$-IR-Invitation is in W[1].
+% \end{theorem}
+% \begin{theorem} \label{thm:FPT_IR_invitation}
+% 	$k$-IR-Invitation is in FPT if $\alpha \leq 1$ and $\beta \leq f(k)$ where $f(k)$ is an arbitrary function of $k$.
+% \end{theorem}
+% \begin{proof}
+% 	Without loss of generality, let us assume that $k\in S(i)$ for every agent $i \in N$. Otherwise, an IR invitation of size $k$ cannot include $i$, so we can remove $i$; subsequently, if there is any agent $j$ whose friend set includes one of the removed agents, then we remove $j$ as well because $j$ cannot be included either. This removal process can be done in polynomial time in $n$ as a pre-processing step. From here on we assume that $k\in S(i)$ for all $i\in N$, and only worry about the friend and enemy constraints.
+%
+% 	Note that the $k$-IR-Invitation is in P if $\alpha \leq 1$ and $\beta = 0$ as Lee and Shoham proved in their work. We will use their algorithm (call it $\mathcal{A}$) as a sub-routine in our FPT algorithm for $k$-IR-Invitation when $\alpha \leq 1$ and $\beta \leq f(k)$.
+%
+% 	Consider any coloring $c$ which colors agents using two colors $\{0,1\}$; let $c(i) \in \{0,1\}$ be the color of agent $i$.
+% 	For any coloring $c$ and any IR invitation $I$ of size $k$, we say that $c$ and $I$ are compatible if the following holds: For every agent $i\in I$, $c(i) = 1$ and for every agent $j \in \cup_{i: i\in I}R_i$, $c(j) = 0$; other agents can be colored arbitrarily.
+% 	Note that coloring $c$ may be compatible with any number of IR invitations of size $k$ (possible none), and any IR invitation of size $k$ may be compatible with many colorings (but it is compatible with at least one coloring).
+%
+% 	Given an arbitrary coloring $c$, we can find an IR invitation of size $k$ that is compatible with $c$ or determine that no compatible invitation exists in FPT time.
+% 	Given $c$, we first re-color every agent $i$ with $c(i)=1$ such that $c(j)=1$ where $j\in F_i$ and/or such that $c(j)=1$ where $j\in R_i$; notice that this process does not re-color any agent $i\in I$ if $I$ is compatible with $c$. After the re-coloring step, let $N_1 = \{i\in N: c(i) = 1\}$, and we call the algorithm $\mathcal{A}$ on $N_1$. Suppose that $\mathcal{A}$ finds an IR invitation $I$ of size $k$ from $N_1$. $I$ is individually rational because its friend constraints are satisfied (due to correctness of $\mathcal{A}$) and its enemy constraints are satisfied because no agent with color $0$ is included (enforced by coloring). Now suppose that $\mathcal{A}$ reports that no IR invitation $I$ of size $k$ exists among the agents in $N_1$. Then there is no IR invitation of size $k$ that is compatible with $c$; if such invitation $I' \subseteq N_1$ exists, then $I'$ satisfies the friend constraints (because it is IR) and therefore $\mathcal{A}$ should find it, which is a contradiction. This completes the proof that we can find an IR invitation of size $k$ in polynomial time if we are given a coloring $c$ that is compatible with at least one IR invitation of size $k$.
+%
+% 	If we color agents using two colors uniformly and independent at random, with probability at least $1/2^{(k+1)\beta}$, it is a compatible coloring with some IR invitation of size $k$ (if IR invitation of size $k$ exists). This constitutes a randomized FPT algorithm exists whose expected running time is $n^{O(1)} 2^{O((k+1)\beta)}$. One can de-randomized the coloring process to obtain a deterministic FPT algorithm, but we omit details due to space limits.
+% \end{proof}
+%
+% \textbf{$k$-IR-Invitations: Hardness Results}
+%
+% When $\alpha \geq 2$ and/or $\beta$ is not bounded, we show that the problem is $W[1]$-hard, which implies $W[1]$-completeness of the problem due to Theorem~\ref{thm:IR_invitation_easiness}.
+% The following two theorems show that the $k$-IR-Invitation problem is $W[1]$-hard if $\beta$ is not bounded (Theorem~\ref{thm:IR_invitation_alpha0_beta}) or if $\alpha \geq 2$ (Theorem~\ref{thm:IR_invitation_alpha2_beta0}).
+%
+% \begin{theorem} \label{thm:IR_invitation_alpha0_beta}
+% 	$k$-IR-Invitation is $W[1]$-complete if $\beta$ is not bounded above by some function $f(k)$.
+% \end{theorem}
+% \begin{proof}
+% 	We reduce from the $k$-Independent-Set problem which is known to be $W[1]$-complete. Given an arbitrary instance of the $k$-Independent-Set problem $G = (V, E)$ and a parameter $k$, we create node-agents $N = V = \{v_1, v_2, \dots, v_n\}$. We define node-agent $v_i$'s enemies $R_i$ to include the neighbors of $v_i$ in the original instance (hence $\beta$ is equal to the max-degree of nodes in the original instance). For each agent $v_i$, define $F_i = \emptyset$ and $S_i = \{k\}$. It is easy to see that an independent set of size $k$ exists if and only if an IR invitation of size $k$ exists (we omit details due to space limit).
+%
+% 	Note that this shows $W[1]$-hardness when $\alpha = 0$ and $\beta$ is unbounded, which immediately implies $W[1]$-hardness for the case when $\alpha \geq 0$ and $\beta$ is unbounded since the former is a special case of the latter. $W[1]$-completenes follows due to Theorem~\ref{thm:IR_invitation_easiness}.
+% \end{proof}
+%
+% \begin{theorem} \label{thm:IR_invitation_alpha2_beta0}
+% 	$k$-IR-Invitation is $W[1]$-complete if $\alpha \geq 2$.
+% \end{theorem}
+% \begin{proof}[Proof Sketch]
+% 	We reduce from the $k$-Clique problem to the $k$-IR-Invitation problem with $\alpha = 2$ and $\beta = 0$.
+%
+% 	Given an arbitrary instance of the $k$-Clique problem $G = (V, E)$ and a parameter $k$, we create a set of agents $N$ as follows. For each node $v_i\in V$, we create $k^2$ node-agents that are labeled as $w_{i,x}$ where $x \in [k^2]$. For each node-agent $w_{i,x}$ we define her friend-set $F_{i,x}$ to include one agent $w_{i,x+1}$ (where $w_{i,k^2+1}$ is understood as $w_{i,1}$). Note that an IR invitation must include all or none of the $w_{i,x}$'s for each $i$ because of their friend-sets.
+% 	Next for each edge $(v_i, v_j) \in E$, we create an edge-agent $e_{i,j}$ with friend-set $F'_{i,j} = \{w_{i,1}, w_{j,1}\}$ (we use $F'$ to distinguish from the friend-sets of node-agents). Note that if an IR invitation includes the edge-agent $e_{i,j}$, then it must also include all $2k^2$ node-agents of the form $w_{i,x}$ and $w_{j,x}$ with $x\in[k^2]$.
+% 	Finally for every agent we set their approval sets to include size $k^3 + \binom{k}{2}$ (other sizes do not matter), and set the parameter of $k$-IR-Invitation to $k' = k^3 + \binom{k}{2}$.
+% 	Clearly the instance we created satisfies $\alpha = 2$ and $\beta = 0$. The number of agents we created is $k^2|V| + |E|$, polynomial in the size of the original instance.
+%
+% 	We claim that the original instance admits a clique of size $k$ if and only if the $k$-IR-Invitation instance we created admits an IR invitation of size $k' = k^3 + \binom{k}{2}$. 	We omit details due to space limit, which can be found in Appendix.
+%
+% 	Note that this shows $W[1]$-hardness when $\alpha = 2$ and $\beta =0$, which immediately implies $W[1]$-hardness for the case when $\alpha \geq 2$ and $\beta \geq 0$ since the former is a special case of the latter. $W[1]$-completenes follows due to Theorem~\ref{thm:IR_invitation_easiness}.
+% \end{proof}
+%
+% This completes the analysis of parameterized complexity of the $k$-IR-Invitation problem.
+% Note that easiness and hardness results for the $k$-IR-Invitation problem do not immediately imply the same results for the $k$-Stable-Invitation problem; for easiness, the former is no harder than the latter, and for hardness, the former is not necessarily a special case of the latter.
+%
+%
+%
+% \subsubsection{$k$-Stable-Invitations}
+%
+% Let us first define the parameterized problem of finding a stable invitation in the Stable Invitations Problem.
+% \begin{definition}
+% 	We call the following problem {\em $k$-Stable-Invitation}: Given an instance of the Stable Invitations Problem and a parameter $k$, does there exist a stable invitation of size $k$?
+% \end{definition}
+%
+% Parameterized complexity of the $k$-Stable-Invitation depends on $(\alpha,\beta)$ bounds, and we present a summary of the results in Table~\ref{tbl:stable_invitation_summary}.
+% \begin{table*}[h]
+% 	\centering
+% \begin{tabular}{|l|*{4}{c|}}\hline
+% \multirow{2}*{} & \multicolumn{4}{c|}{Stable Invitations of size $k$} \\ \cline{2-5}
+%  & $\beta = 0$ & $\beta = 1$ & $2 \leq \beta \leq f(k)$ & unbounded $\beta$ \\ \hline
+% $\alpha = 0$ & P & P & FPT & W[2]-C \\ \hline
+% $\alpha = 1$ & P & $W[1]$-C & $W[1]$-C & W[2]-C \\ \hline
+% $\alpha \geq 2$ & $W[1]$-C & $W[1]$-C & $W[1]$-C & W[2]-C \\ \hline
+% \end{tabular}
+% \caption{Parameterized Complexity of finding a stable invitation of size $k$.
+% $f(k)$ is an arbitrary function of $k$ that only depends on $k$.
+% }
+% \label{tbl:stable_invitation_summary}
+% \end{table*}
+%
+% \textbf{$k$-Stable-Invitations: Easiness Results}
+%
+% The $k$-Stable-Invitation problem is in W[2] when $\beta$ is unbounded, but it is in W[1] when $\beta$ is bounded by an arbitrary function $f(k)$ of $k$; proof of Theorem~\ref{thm:w12easy_stable} can be found in Appendix.
+% We then show that the problem is in FPT when $\alpha = 0$ and $\beta$ is bounded.
+%
+% \begin{theorem} \label{thm:w12easy_stable}
+% 	$k$-Stable-Invitation is in W[2]. When $\beta \leq f(k)$, the problem is in W[1].
+% \end{theorem}
+%
+% \begin{theorem} \label{thm:fpt_stable_alpha0_beta2}
+% 	$k$-Stable-Invitation is in FPT when $\alpha = 0$ and $\beta \leq f(k)$ where $f(k)$ is an arbitrary function of $k$ (not dependent on $n$).
+% \end{theorem}
+% \begin{proof}[Proof Sketch]
+% 	We design an FPT algorithm which finds a stable invitation of size $k$ using Color Coding, using a similar approach to what we did in proof of Theorem~\ref{thm:FPT_IR_invitation}.
+%
+% 	Consider any coloring $c$ which colors agents using two colors $\{0, 1\}$; let $c(i)\in \{0,1\}$ be the color of agent $i$. Let $I$ be a stable invitation of size $k$. We say that $c$ and $I$ are compatible if the following holds: For every agent $i\in I$, $c(i) = 1$ and for every agent $j\in \cup_{i: i\in I} R_i$, $c(j) = 0$; other agents can be of any color. Given an arbitrary coloring $c$, we can find a stable invitation of size $k$ that is compatible with $c$ or determine that no compatible invitation exists in FPT time.
+%
+% 	We omit details due to space limit, which can be found in Appendix.
+% \end{proof}
+%
+% \textbf{$k$-Stable-Invitations: Hardness Results}
+%
+% We now present hardness results. First, when $\beta$ is not bounded, the problem is W[2]-hard (Theorem~\ref{thm:w2_stable_beta}).
+% When $\beta$ is bounded by $f(k)$, we show that $\alpha, \beta \geq 1$ or $\alpha \geq 2$ implies $W[1]$-hardness (Theorems~\ref{thm:w1_stable_alpha1_beta1} and \ref{thm:w1_stable_alpha2_beta0}).
+%
+%
+% \begin{theorem} \label{thm:w2_stable_beta}
+% 	$k$-Stable-Invitation is W[2]-hard if $\beta$ is not bounded.
+% \end{theorem}
+% \begin{proof}[Proof sketch]
+% 	We reduce from the $k$-Dominating-Set problem which is known to be W[2]-hard.
+% 	Given an arbitrary instance $G = (V, E)$ and a parameter $k$, we create $2n$ node-agents $v_i$ and $w_i$ corresponding to each node $v_i \in V$, and we define their approval sets $S_{v_i} = \{k\}$ and $S_{w_i} = \{k+1\}$. Note that a stable invitation cannot contain any of the node agents $w_i$'s. Finally we set $R_{w_i} = \{v_i\} \cup \{v_j : (v_i, v_j)\in E\}$ and $R_{v_i} = \emptyset$. We will use the same parameter $k$. We claim that a dominating set of size $k$ exists if and only if a stable invitation of size $k$ exists.
+%
+% 	 We omit proof of correctness of the reduction, which can be found in Appendix.
+%
+% 	Note that this shows W[2]-hardness when $\alpha=0$ and $\beta$ is unbounded, which immediately implies W[2]-hardness for the case when $\alpha \geq 0$ and $\beta$ is unbounded since the former is a special case of the latter. W[2]-completenes follows due to Theorem~\ref{thm:w12easy_stable}.
+% \end{proof}
+%
+% \begin{theorem} \label{thm:w1_stable_alpha1_beta1}
+% 	$k$-Stable-Invitation is $W[1]$-hard if $\alpha \geq 1$ and $\beta \geq 1$.
+% \end{theorem}
+% \begin{proof}[Proof sketch]
+% 	We reduce from the $k$-Clique problem to the $k$-Stable-Invitation problem with $\alpha = 1$ and $\beta = 1$.
+%
+% 	We are given an arbitrary instance of the $k$-Clique problem $G = (V, E)$ and a parameter $k$.
+% 	Let us define $k' = 2(k^3 + \binom{k}{2})$ which is the parameter of the Stable-Invitation problem.
+% 	For each node $v_i \in V$, we first create a group of $2k^2$ node-agents (called $G_i$) denoted by $G_i = \{w_{i,x}: x \in [2k^2]\}$ and define $F_{w_{i,x}} = \{w_{i,x+1}\}$ where $w_{i,2k^2+1}$ is understood as $w_{i,1}$ and $S_{w_{i,x}} = \{k'\}$.
+% 	 For each edge $(v_i, v_j) \in E$, we create four edge-nodes $e_{i,j}, e'_{i,j}, f_{i,j}$, and $f'_{i,j}$.
+% 	 Define $F_{e_{i,j}} = \{w_{i,1}\}$, $F_{e'_{i,j}} = \{w_{j,1}\}$, and $S_{e_{i,j}} = S_{e'_{i,j}} = \{k'\}$.
+% 	 Define $F_{f_{i,j}} = \{e_{i,j}\}$, $R_{f_{i,j}} = \{e'_{i,j}\}$, and $S_{f_{i,j}} = \{k'+1\}$.
+% 	 Define $F_{f'_{i,j}} = \{e'_{i,j}\}$, $R_{f'_{i,j}} = \{e_{i,j}\}$, and $S_{f'_{i,j}} = \{k'+1\}$.
+% 	 We have created $2k^2n$ node-agents and $4|E|$ edge-agents, whose size is polynomial in $n,k$, and each agent we created has at most one friend and at most one enemy (thereby satisfying $\alpha=\beta=1$).
+% 	 We claim that a clique of size $k$ exists if and only if a stable invitation of size $k'$ exists.
+%
+% 	 We omit proof of correctness of the reduction, which can be found in Appendix.
+%
+% 	Note that this shows $W[1]$-hardness when $\alpha =\beta = 1$, which immediately implies $W[1]$-hardness for the case when $\alpha \geq 1$ and $\beta \geq 1$ since the former is a special case of the latter. $W[1]$-completenes follows due to Theorem~\ref{thm:w12easy_stable}.
+% \end{proof}
+%
+%
+% \begin{theorem} \label{thm:w1_stable_alpha2_beta0}
+% 	$k$-Stable-Invitation is $W[1]$-hard if $\alpha \geq 2$.
+% \end{theorem}
+% \begin{proof}[Proof sketch]
+% 	We can reduce from the $k$-Independent-Set problem. Let $G = (V, E)$ be an arbitrary instance of the $k$-Independent-Set problem with parameter $k$.
+% 	For each node $v\in V$ we create a node-agent $v$ with approval set $S_v = \{k\}$ and friend set $F_v = \emptyset$.
+% 	For each edge $(v, w) \in E$ we create an edge-agent $e_{v,w}$ with friend set $F_{e_{v,w}} = \{v, w\}$ and approval set $S_{e_{v,w}} = \{k+1\}$. We use the same parameter $k$ in both instances.
+% 	We claim that a stable invitation of size $k$ exists if and only if an independent set of size $k$ exists.
+%
+% 	 We omit proof of correctness of the reduction, which can be found in Appendix.
+% \end{proof}
+%
+%
+% \newpage
+%
+% \subsection{Symmetric Friend-and-Enemies Relationship}
+% \subsubsection{$k$-IR-Invitations}
+%
+% Summary of results are shown in Table below.
+% Details are to be added.
+%
+% \begin{table*}[h!]
+% 	\centering
+% \begin{tabular}{|l|*{5}{c|}}\hline
+% \multirow{2}*{} & \multicolumn{5}{c|}{IR Invitations of size $k$} \\ \cline{2-6}
+%  & $\beta = 0$ & $\beta = 1$ & $\beta = 2$ & $3 \leq \beta \leq f(k)$ & unbounded $\beta$ \\ \hline
+% $\alpha = 0$ & P & P & P & FPT & $W[1]$-C \\ \hline
+% $\alpha = 1$ & P & P & FPT & FPT & $W[1]$-C \\ \hline
+% $\alpha \geq 2$ & P & FPT & FPT & FPT & $W[1]$-C \\ \hline
+% \end{tabular}
+% \caption{Parameterized Complexity of finding an IR invitation of size $k$.
+% $f(k)$ is an arbitrary function of $k$ that only depends on $k$.
+% }
+% \label{tbl:IR_invitation_summary_symmetric}
+% \end{table*}
+%
+%
+%
+%
+% \subsubsection{$k$-Stable-Invitations}
+%
+% Summary of results are shown in Table below.
+% Details are to be added.
+%
+% \begin{table*}[h!]
+% 	\centering
+% \begin{tabular}{|l|*{5}{c|}}\hline
+% \multirow{2}*{} & \multicolumn{5}{c|}{Stable Invitations of size $k$} \\ \cline{2-6}
+%  & $\beta = 0$ & $\beta = 1$ & $\beta = 2$ & $3 \leq \beta \leq f(k)$ & unbounded $\beta$ \\ \hline
+% $\alpha = 0$ & P & P & P & FPT & W[2]-C \\ \hline
+% $\alpha = 1$ & P & P & FPT & FPT & W[2]-C \\ \hline
+% $\alpha \geq 2$ & P & FPT & FPT & FPT & W[2]-C \\ \hline
+% \end{tabular}
+% \caption{Parameterized Complexity of finding a stable invitation of size $k$.
+% $f(k)$ is an arbitrary function of $k$ that only depends on $k$.
+% }
+% \label{tbl:stable_invitation_summary_symmetric}
+% \end{table*}
+%
