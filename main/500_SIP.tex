@@ -183,8 +183,21 @@ This is not surprising because a stable invitation requires that everyone (wheth
 \begin{theorem} \label{SIP:thm:stable_W2}
 	$k$-Stable-Invitation is in W[2]. When $\beta$ is bounded above by some function $f(k)$, it is in W[1].
 \end{theorem}
-\begin{proof}[Proof sketch]
-	We reduce $k$-Stable-Invitation to the weighted circuit SAT (WCSAT) of constant depth and of weft at most 2; if $\beta$ is bounded, then weft can be reduced to $1$. Details of the proof can be found in Appendix.
+\begin{proof}
+	Assume unbounded $\alpha$ and $\beta$, and let us reduce the $k$-Stable-Invitation problem to the weighted circuit SAT (WCSAT) of constant depth and of weft at most 2. This shows that the problem is in W[2]; along the way, we prove the other statements as well.
+
+	Given an instance of the $k$-Stable-Invitation problem with $n$ agents ($N = \{a_1, a_2, \dots, a_n\}$), we create $n$ input nodes which represent each agent being invited or not; let $x_i$ be the input node for agent $a_i$ ($x_i = 1$ means that agent $a_i$ is included in an invitation). For convenience we also create a node $y_i$ for each $x_i$ where $y_i$ is the NOT gate attached to $x_i$. We create the output AND gate denoted by $x_o$. 
+	
+	For each agent $a_i$, if $k\not\in S_i$ and/or $|F_i| \geq k$, then agent $i$ cannot be included in a stable invitation of size $k$; for all such $a_i$, we create a path from the node $x_i$ to $y_i$ (recall that $y_i$ simply negates $x_i$) to the output node $x_o$.
+	For each agent $a_i$ with $k \in S_i$ and $|F_i| < k$, we wish to ensure that if agent $a_i$ is included, then everyone in $F_i$ is included and no one in $R_i$ is included. For each agent $j\in F_i$, we create a new node $f_{i,j}$ with the OR gate whose input is $y_i$ and $x_j$, and the output node $x_o$ takes $f_{i,j}$ as input. Note that a solution to the WCSAT instance must have $f_{i,j} = 1$ for all $i,j$ (if the node $f_{i,j}$ is created), which holds if and only if $(x_i, x_j) \in \{(0,0), (0,1), (1,1)\}$. This ensures that if $a_i$ is selected, all agents in $F_i$ are also selected. Note that each path containing $f_{i,j}$ to the output node has a constant depth and a weft of $1$ (due to the output node). Similarly, for each $j\in R_i$ with $k\in S_i$ and $|F_i| < k$, we create a new node $r_{i,j}$ with the OR gate whose input is $x_i$ and $y_j$, and the output node $x_o$ takes $r_{i,j}$ as input. 
+	So far we have implemented a circuit such that any solution to the WCSAT instance corresponds to an IR invitation of size $k$. Every path from any input node to the output node has constant depth and weft 1 (due to the output node), and this shows that $k$-IR-Invitation is in W[1]. 
+	
+	To ensure stability in addition to individual rationality, we need to add more gates and paths. 	
+	For each agent $a_i$ with $k+1 \in S_i$, if agent $a_i$ is not included in an invitation, then the invitation is stable only if at least one agent in $F_i$ is not included and/or at least one agent in $R_i$ is included.
+	Note that if $|F_i| > k$, then every solution to the WCSAT leaves out at least one agent from $F_i$, and therefore agent $a_i$ (even if excluded) would not be willing to join the invitation. Therefore, we only need to ensure stability for those agents with $k+1\in S_i$ and $|F_i| \leq k$. 
+	For each such agent $a_i$, let us create a new node $s_i$ with the OR gate whose input consists of all nodes $y_j$ where $j\in F_i$, all nodes $x_j$ where $j \in R_i$, and $x_i$ itself. Note that $s_i = 1$ if $x_i = 1$ (when agent $a_i$ is selected) or if $x_i = 0$ and at least one friend (enemy) of agent $a_i$ is not included (included). Notice that any path containing $s_i$ has a constant depth but a weft of size 2 due to $s_i$ and the output node. This shows that $k$-Stable-Invitation is in W[2].
+	
+	When $\beta$ is bounded by $f(k)$ (any constant not depending on $n$), we can create a chain of nodes to implement $s_i$. Specifically, instead of having $s_i$ to take $(|F_i| + |R_i| + 1)$ inputs, we create a chain of nodes with the OR gate, each of which takes only two inputs. Although this increases the depth of a path containing these nodes to $(|F_i| + |R_i| + 1)$, the depth is bounded by $(k + f(k) + 1)$ because $|F_i| \leq k$. Therefore, when $\beta$ is bounded, the $k$-Stable-Invitation is in W[1].	
 \end{proof}
 
 \begin{theorem} \label{SIP:thm:stable_FPT}
