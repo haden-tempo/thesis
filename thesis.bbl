@@ -255,6 +255,11 @@ T.~Tsuruta and T.~Shintani.
   algorithm.
 \newblock In {\em ECAI}, pages 383--387, 2000.
 
+\bibitem{von1947theory}
+John Von~Neumann and Oskar. Morgenstern.
+\newblock {\em The Theory of Games and Economic Behavior}.
+\newblock Princeton University Press, 1947.
+
 \bibitem{wainer2007scheduling}
 J.~Wainer, P.R. Ferreira, and E.R. Constantino.
 \newblock Scheduling meetings through multi-agent negotiations.

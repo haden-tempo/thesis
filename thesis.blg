@@ -3,47 +3,48 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: plain.bst
 Database file #1: thesis.bib
+Warning--I didn't find a database entry for "GASP2012WINE"
 Warning--empty journal in Borda
 Warning--empty journal in st1997satisfying
-You've used 45 entries,
+You've used 46 entries,
             2118 wiz_defined-function locations,
-            785 strings with 12185 characters,
-and the built_in function-call counts, 18241 in all, are:
-= -- 1874
-> -- 751
+            792 strings with 12334 characters,
+and the built_in function-call counts, 18494 in all, are:
+= -- 1896
+> -- 764
 < -- 25
-+ -- 299
-- -- 248
-* -- 1238
-:= -- 2805
-add.period$ -- 148
-call.type$ -- 45
-change.case$ -- 253
++ -- 305
+- -- 252
+* -- 1250
+:= -- 2849
+add.period$ -- 151
+call.type$ -- 46
+change.case$ -- 257
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 756
-empty$ -- 1467
-format.name$ -- 248
-if$ -- 3994
+cite$ -- 48
+duplicate$ -- 768
+empty$ -- 1489
+format.name$ -- 252
+if$ -- 4047
 int.to.chr$ -- 0
-int.to.str$ -- 45
-missing$ -- 46
-newline$ -- 227
-num.names$ -- 96
-pop$ -- 296
+int.to.str$ -- 46
+missing$ -- 48
+newline$ -- 232
+num.names$ -- 98
+pop$ -- 305
 preamble$ -- 1
-purify$ -- 210
+purify$ -- 214
 quote$ -- 0
-skip$ -- 583
+skip$ -- 590
 stack$ -- 0
-substring$ -- 1331
-swap$ -- 261
+substring$ -- 1337
+swap$ -- 262
 text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 176
+type$ -- 178
 warning$ -- 2
-while$ -- 190
-width$ -- 47
-write$ -- 507
-(There were 2 warnings)
+while$ -- 192
+width$ -- 48
+write$ -- 517
+(There were 3 warnings)
