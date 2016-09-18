@@ -58,5 +58,5 @@
 \contentsline {section}{\numberline {6.2}Definitions and Known Results}{77}
 \contentsline {subsection}{\numberline {6.2.1}Main Results}{77}
 \contentsline {subsection}{\numberline {6.2.2}Extensions}{80}
-\contentsline {chapter}{\numberline {7}Open Problems}{81}
+\contentsline {chapter}{\numberline {7}Discussion and Open Problems}{81}
 \contentsline {chapter}{Bibliography}{82}
