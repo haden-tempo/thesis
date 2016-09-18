@@ -165,10 +165,10 @@ We now formally define the Batched Doodle Problem.
 	$f$ is the feasibility threshold with $f \in [0,1]$,
 	and $c$ is a cost function.
 
-	The objective in \BDP\ is to find an optimal B-Doodle mechanism $B^*$ such that $B^*$ minimizes the expected cost of the scheduling process (expectation with respect to $P_A$), given $(A, P_A, f, c)$.
+	The objective in \BDPs is to find an optimal B-Doodle mechanism $B^*$ such that $B^*$ minimizes the expected cost of the scheduling process (expectation with respect to $P_A$), given $(A, P_A, f, c)$.
 \end{definition}
 
-Since there are exponentially many B-Doodle mechanisms, it is impractical to enumerate each B-Doodle and compute its expected cost in order to find an optimal one. In what follows we make some simplifying assumptions that are assumed throughout this paper, and we present an efficient algorithm to solve \BDP\ in next section.
+Since there are exponentially many B-Doodle mechanisms, it is impractical to enumerate each B-Doodle and compute its expected cost in order to find an optimal one. In what follows we make some simplifying assumptions that are assumed throughout this paper, and we present an efficient algorithm to solve \BDPs in next section.
 
 % TODO: To change 'invitees' to 'rows' and 'options' to 'columns' and 'availability' to 'entries in A'
 
@@ -322,7 +322,7 @@ Since there are exponentially many B-Doodle mechanisms, it is impractical to enu
 	\end{algorithm}
 
 	\begin{theorem} \label{bdoodle:thm:recursive_algo}
-	Algorithm~\ref{bdoodle:alg:recursive} runs in polynomial time, and returns an optimal B-Doodle mechanism that minimizes the expected cost, given an instance $(N, S, f, c, P)$ of \BDP\ when $c$ is $\theta$-simple.
+	Algorithm~\ref{bdoodle:alg:recursive} runs in polynomial time, and returns an optimal B-Doodle mechanism that minimizes the expected cost, given an instance $(N, S, f, c, P)$ of \BDPs when $c$ is $\theta$-simple.
 	\end{theorem}
 	\begin{proof}
 	Our recursive method is very simple: given options $\{x, x+1, \dots, s\}$, it iteratively considers the case of sending out $b$ options in the first iteration, and computes the expected cost $EC_b$ of doing so, for each $b$ with $1 \leq b \leq s-x+1$.  In line 1, our method checks for the trivial case when $b = s-x+1$ (i.e. all options are sent in a single batch); we store this mechanism in $B^*$ and its expected cost in $EC^*$. Then we iterate $b$ from $1$ to $s-x$ and compute the expected cost $EC_b$, and compare with the optimal expected cost found so far (lines 2-9). For each $b$, we first recursively compute the expected cost for the remaining options (namely, $\{x+b, x+b+1, \dots, s\}$) by calling our method $Rec(x+b)$, and store the expected cost in $EC$ (line 3). Using Lemma~\ref{bdoodle:lemma:recurrence} we can compute $EC_b$ as in line 4 (note that the first batch contains $b$ options from $x$ to $x+b-1$). In lines 5-8, we simply compare $EC_b$ with the current optimal, $EC^*$, and update if necessary; $\langle b, B \rangle$ should be interpreted as the concatenation of $b$ and $B$ into a single vector of integers. Finally in line 10, our method returns the optimal B-Doodle found, $B^*$ and its expected cost $EC^*$. \\
