@@ -453,7 +453,7 @@ We first present classical complexity results for $k$-Stable-Invitations under s
 	When agents have symmetric social relationships, $k$-Stable-Invitations is in FPT if $\beta \leq f(k)$ where $f(k)$ can be an arbitrary function of $k$. 
 \end{theorem}
 \begin{proof}
-	The main is similar to that of our proof of Theorem~\ref{thm:symmetric_IR_FPT}, but details entail more complicated processes due to stability conditions on uninvited agents.
+	The main is similar to that of our proof of Theorem~\ref{SIP:thm:symmetric_IR_FPT}, but details entail more complicated processes due to stability conditions on uninvited agents.
 
 	We first create a {\em friend graph} in which nodes represent agents, and we create an edge between two nodes if they are friends of each other. 
 	Any stable invitation must contain all or none of agents in the same connected component; if a connected component contains more than $k$ agents or it contains enemies within itself, then we can safely remove the components (or agents in them) from input instance. 
@@ -467,9 +467,10 @@ We first present classical complexity results for $k$-Stable-Invitations under s
 	On the other hand, singleton nodes of color $0$ may block an invitation when excluded, if those node approve size $k+1$ and no enemy of them are invited. 
 	To avoid this, we are going to choose at least one enemy (of color $1$) of each singleton node of color $0$ who approves size $k+1$ in brute-force manner; the search space is bounded because we can only choose up to $k$ agents and each agent has at most $f(k)$ enemies (i.e., the search space is $O((f(k))^k)$). After we pre-select a subset of agents of color $1$ in this manner, we no longer need to worry about stability condition being violated by any agent of color $0$. Next, we check if there is any singleton node of color $1$ who approves size $k+1$ and is not pre-selected in the previous step; those nodes must also be included so as not to violate stability condition. Suppose that we have so far selected $x$ agents in this manner; if $x > k$, then our algorithm will (possibly incorrectly) report that no stable invitation of size $k$ exists. Otherwise, among the remaining nodes of color $1$, we will check if an independent set of weight $k - x$ exists (via a knapsack algorithm), to solve the main problem.
 
-		Overall, this randomized algorithm runs in FPT time ($O((f(k))^k \cdot (f(k)n))$), and its probability of success is at least $(1/2^k)\cdot (1/2^{k\beta}) \geq 1/2^{k(1+f(k))}$ (similar to the algorithm shown in Theorem~\ref{thm:symmetric_IR_FPT}).
+		Overall, this randomized algorithm runs in FPT time ($O((f(k))^k \cdot (f(k)n))$), and its probability of success is at least $(1/2^k)\cdot (1/2^{k\beta}) \geq 1/2^{k(1+f(k))}$ (similar to the algorithm shown in Theorem~\ref{SIP:thm:symmetric_IR_FPT}).
 		
-\end{theorem}
+\end{proof}
+
 
 
 \section{Discussion and Future Work} \label{SIP:sec:discussion}
