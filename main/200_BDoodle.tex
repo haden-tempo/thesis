@@ -91,9 +91,83 @@ In addition we also  assume that the event organizer is given probability estima
 
 
 \section{Notation and Definitions}
+
 We mentioned two dimensions of optimality in the scheduling process: \Times and \Inconvenience.
-\Times captures the duration of the scheduling process and \Inconveniences measures how much inconvenience is caused for each invitee during the scheduling process.
-In this section we formally define the class of B-Doodle mechanisms and the Batched Doodle Problem (\BDP).
+\Times captures the duration of the scheduling process and \Inconveniences measures how much inconvenience is caused for each agent during the process.
+In this section we formally define the class of B-Doodle mechanisms, the Batched Doodle Problem (\BDP), and other technical terms and notations.
+
+
+\subsection{Problem Setting}
+Consider $n$ invitees denoted by $\{a_1, \dots, a_n\}$ and $s$ time slots denoted by $\{1, 2, \dots, s\}$.
+For each agent $a_i$ and each time slot $t$, there is a known prior probability, $p_{i, t}$, such that the agent is available at time $t$ with probability $p_{i, t}$ and unavailable with probability $(1-p_{i, t})$. 
+While the convener knows all such priors (i.e. all $p_{i,t}$'s), she does not know the realization of availability of agents -- it is private information of each agent.
+The convener is trying to find a \emph{feasible} time slot by asking invitees to reveal their availability; we assume that the convener has a \emph{feasibility threshold}, $f$, such that a feasible time slot requires at least $\lceil f \cdot n \rceil$ agents be available. The convener iteratively sends out a batch of time slots until a feasible time slot is found. In our setting \Time\ spent by the scheduling process is measured by the number of iterations and \Inconvenience\ caused is measured by the number of time slots that have been sent out by the convener.
+
+This setting is general enough to capture many realistic scenarios of group scheduling. For instance in a corporate setting, a busy manager may have low probability of being available for all time slots while other employees may be less busy and have high probability of being available. Or, if students are trying to decide on the meeting time for a group project, their availability is expected to be equally likely because the schedules of their classes are similar.
+
+Let us define a class of B-Doodle mechanisms that describe how the convener sends out time slots in each iteration.
+\begin{Def}[B-Doodle Mechanism]
+Let $S = \{1, 2, \dots, s\}$ be a set of $s$ time slots. We define a B-Doodle mechanism for $S$ as a partition of $S$.
+Let $B = \langle S_1, S_2, \dots, S_m \rangle$ be a partition of $S$ into $m$ subsets such that $S_j \neq\emptyset$, $S_j \cap S_k = \emptyset$ for $j \neq k$, and $\cup_{l=1}^{m} S_l = S$ where $1 \leq j,k \leq m$. We define $b_j = |S_j|$ for all $j \leq m$ and call $b_j$ the size of the $j$-th batch. 
+We write $B_m$ to emphasize that $B$ has $m$ batches.
+\end{Def}
+We interpret a B-Doodle mechanism $B$ as follows: the convener sends out time slots in $S_1$ during the first iteration. If a feasible time slot is found, the process ends. Otherwise she sends out the next batch, $S_2$, and so on.
+Note that there exist exponentially many B-Doodle mechanisms for any fixed $S$ (exponential in cardinality of $S$). 
+%Doodle is a special case of B-Doodle mechanism and can be described as $\langle S \rangle$.
+
+Our objective is to find a B-Doodle mechanism that minimizes the expected cost of scheduling process, given an objective function of \Time\ and \Inconvenience.  Earlier we considered a simple cost function that is a linear combination of the two.  While this cost function fits in many realistic situations, we want to explore a larger class of cost functions. We define a class of cost functions that depend on the number of iterations and batch sizes.
+\begin{Def}[Cost function] \label{Def:cost-function}
+A cost function $c$ takes two integers $j$ and $b$ as arguments, and $c(j, b) > 0$ describes the aggregate cost of \Time\ and \Inconvenience\ that is incurred by sending out a batch of $b$ time slots during the $j$-th iteration. We assume that cost is additive so that the overall cost of executing the first $j$ iterations of ${B}_m = \langle S_1, S_2, \dots, S_m \rangle$ is simply the sum, $\sum_{k=1}^{j} c(k, b_k)$, which we denote by $C(j, {B}_m)$; recall that $b_k = |S_k|$. 
+
+A cost function $c$ is said to be $\theta$-\emph{simple} if there exists some constant $\theta>0$ such that $c(j, b) = \theta \cdot c(j-1, b)$ for all $j > 1$ and for all $b \geq 1$. We often drop $\theta$ and just state that a cost function is \emph{simple}, for brevity.
+\end{Def}
+It is reasonable to assume that cost is additive (with respect to iterations) because an additional iteration adds the time spent and inconvenience caused for the agents.
+
+Note that $C(j, B_{m})$ is strictly increasing in $j$ for any fixed $B_{m}$ because $c(j, b) > 0$ for any $j$ and $b$. While the class of simple cost functions may seem too restrictive, we present a few natural choices of cost functions that belong to the class of simple cost functions. In this work we assume that the underlying cost function is simple; further we assume that $c(j, b)$ for all $1 \leq j, b \leq s$ can be computed in polynomial time with respect to $s$.
+\begin{Exmp}[Simple cost functions] \label{exmp:costFunctions}
+The simplest choice of a cost function is a linear combination of \Time\ and \Inconvenience, parameterized by some constant $\alpha > 0$; we call this a \emph{linear} cost function. This cost function is $1$-simple. Notice that the first term captures \Time\ and the second captures \Inconvenience\ in both expressions.  
+\begin{eqnarray*} \label{eqn:linear_cost_function}
+&&	c_{\alpha}(j, b_j) = \alpha + b_j \\
+&&	C_{\alpha}(j, {B}_m) = \left(\alpha \cdot j\right) + \left(\sum_{k=1}^{j} b_k\right)
+\end{eqnarray*}
+In some cases the convener may want to penalize the mechanism for executing too many iterations by making later iterations to cost more than earlier iterations. The following describes such cost function, parameterized by some constant $\beta > 1$; we call this a \emph{time-averse} cost function. Notice that the term $\beta^j$ is strictly increasing as $j$ increases (recall $\beta > 1$). This cost function is $\beta$-simple.
+\begin{eqnarray*} \label{eqn:time_averse_cost_function}
+&&	c_{\beta}(j, b_j) = \beta^j \cdot b_j \\
+&&	C_{\beta}(j, {B}_m) = \left(\sum_{k=1}^{j} \beta^k \cdot b_k \right)
+\end{eqnarray*}
+In contrast if the convener is interested in reducing the size of each batch because it may cause too much inconvenience, then the following cost function could be used, which is parameterized by some constant $\gamma > 1$; we call this an \emph{inconvenience-averse} cost function which is $1$-simple.
+\begin{eqnarray*} \label{eqn:inconvenience_averse_cost_function}
+&&	c_{\gamma}(j, b_j) = \gamma^{b_j} \\
+&&	C_{\gamma}(j, {B}_m) = \left(\sum_{k=1}^{j} \gamma^{b_k} \right)
+\end{eqnarray*}
+\end{Exmp}
+
+
+We now formally define the Group Scheduling Problem.
+\begin{Def}[Group Scheduling Problem] \label{Def:GSP}
+An instance of the Group Scheduling Problem (\GSP) is a tuple $(N, S, f, c, P)$ where $N = \{a_1, a_2, \dots, a_n\}$ is a set of $n$ agents , $S = \{1, 2, \dots, s\}$ is a set of time $s$ slots, $f$ is the feasibility threshold ($0 \leq f \leq 1$), $c$ is a cost function, and $P$ is a probability distribution matrix of availability ($P = \{p_{i, t}\}$ with $0 \leq p_{i,t}\leq 1$ for all $i, t$).
+
+The objective in \GSP\ is to find an optimal partition of $S$, $B^*$, among all B-Doodle mechanisms that partition $S$, such that $B^*$ minimizes the expected cost of the scheduling process (expectation with respect to $P$), given $(N, S, f, c, P)$.
+\end{Def}
+Since there are exponentially many B-Doodle mechanisms, it is impractical to enumerate each B-Doodle and compute its expected cost in order to find an optimal one. In what follows we make some simplifying assumptions that are assumed throughout this paper, and we present an efficient algorithm to solve \GSP\ in next section. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 We consider a setting where there are $n$ invitees and $s$ date/time options from which the organizer can choose to propose. The organizer wishes to find a {\em feasible} date/time option that works for at least $\lceil f \cdot n \rceil$ invitees (we call $f\in [0,1]$ the {\em feasibility threshold}) or determines that there is no feasible option.
 We model the uncertainty of availability of invitees as a random matrix as follows.
