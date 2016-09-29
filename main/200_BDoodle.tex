@@ -134,7 +134,7 @@ We often drop $\theta$ and just state that a cost function is \emph{simple}, for
 \end{definition}
 It is reasonable to assume that cost is additive (with respect to iterations) because an additional iteration adds the time spent and inconvenience caused for the invitees.
 $\theta$-simple cost functions are not as restrictive as they appear.
-For instance, when $\theta = 1$, it means that the cost of sending out a batch of a certain size is the same regardless of during which iteration it is being sent. 
+For instance, when $\theta = 1$, it means that the cost of sending out a batch of a certain size is the same regardless of during which iteration it is being sent. When $\theta > 1$, it means that,
 
 Note that $C(j, B_{m})$ is strictly increasing in $j$ for any fixed $B_{m}$ because $c(j, b) > 0$ for any $j$ and $b$. While the class of simple cost functions may seem too restrictive, we present a few natural choices of cost functions that belong to the class of simple cost functions. In this work we assume that the underlying cost function is simple; further we assume that $c(j, b)$ for all $1 \leq j, b \leq s$ can be computed in polynomial time with respect to $s$.
 \begin{example}[Examples of simple cost functions] \label{bdoodle:exmp:CostFunctions}
