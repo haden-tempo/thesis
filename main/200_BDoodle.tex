@@ -150,7 +150,7 @@ Since there are exponentially many B-Doodle mechanisms, it is impractical to enu
 
 
 \subsection{Assumptions}
-As we briefly mentioned in the intro, we assume that the availability of agents for each time slot is independent of their availability at other time slots, and of the availability of other agents.  We discuss the relaxation of this assumption in Section~\ref{sec:Discussion}. The independence assumption allows us to compute the likelihood of each time slot being feasible, as the following lemma states. 
+As we briefly mentioned in the intro, we assume that the availability of agents for each time slot is independent of their availability at other time slots, and of the availability of other agents.  We discuss the relaxation of this assumption in Section~\ref{bdoodle:sec:Discussion}. The independence assumption allows us to compute the likelihood of each time slot being feasible, as the following lemma states. 
 \begin{lemma} \label{bdoodle:lemma:q_t_polytime}
 Given $(N, S, f, P)$, let $q_t$ for each $t\in S$ be the probability that time slot $t$ is $f$-feasible. Under the independence assumption, $q_t$ can be computed in polynomial time.
 \end{lemma}
@@ -176,7 +176,7 @@ $q_t = \sum_{z = \lceil f \cdot n \rceil}^{n} V_t(n, z)$.
 
 % %%% HERE GOES THE THEOREM!! 
 
-Lemma~\ref{lemma:q_t_polytime} allows us to describe a B-Doodle mechanism in a simpler form, along with the following theorem. 
+Lemma~\ref{bdoodle:lemma:q_t_polytime} allows us to describe a B-Doodle mechanism in a simpler form, along with the following theorem. 
 \begin{theorem} \label{bdoodle:thm:swap_argument}
 Consider a B-Doodle mechanism $B$ described by $\langle S_1, S_2, \dots, S_m \rangle$. Suppose that there is some time slot $t \in S_l$ and $t'\in S_{l'}$ with $q_t < q_{t'}$ and $l < l'$. Then $B$ is not an optimal in the sense that we can find another mechanism $B^*$ whose expected cost is strictly less than the expected cost of $B$.
 \end{theorem}
@@ -194,8 +194,8 @@ Let $E_B$ be the expected cost of $B$ and $E_{B^*}$ of $B^*$. Since $b_j = b^*_j
 The first inequality holds by definition of the expected cost and canceling out some terms; the second inequality holds because $(w_l - w_l^*) + \sum_{j=l+1}^{l'} (w_j - w_j^*) = 0$ (as probabilities must add up to one). Since $w_j > w_j^*$ and $C(j, B) > C(l, B)$ for all $j$ (because $C(j, B)$ is an increasing function in $j$ for fixed $B$), we conclude that $E_{B} > E_{B^*}$.
 \qed
 \end{proof}
-Theorem~\ref{thm:swap_argument} implies that an optimal B-Doodle that minimizes the expected cost must have the following property: for any two batches $S_j$ and $S_k$ with $j < k$, it must hold that $q_t \geq q_{t'}$ for all $t\in S_j$ and $t' \in S_k$ (otherwise we can apply the theorem and swap the two time slots to obtain a mechanism with smaller expected cost).
-Therefore we can limit our attention to the sub-class of B-Doodle mechanisms that only describe batch sizes, but not explicitly which time slots in each batch. Due to Lemma~\ref{lemma:q_t_polytime} we can compute $q_t$ for each $t$ in polynomial time, and thus we can simply sort time slots by $q_t$ in non-increasing order as a pre-processing step.
+Theorem~\ref{bdoodle:thm:swap_argument} implies that an optimal B-Doodle that minimizes the expected cost must have the following property: for any two batches $S_j$ and $S_k$ with $j < k$, it must hold that $q_t \geq q_{t'}$ for all $t\in S_j$ and $t' \in S_k$ (otherwise we can apply the theorem and swap the two time slots to obtain a mechanism with smaller expected cost).
+Therefore we can limit our attention to the sub-class of B-Doodle mechanisms that only describe batch sizes, but not explicitly which time slots in each batch. Due to Lemma~\ref{bdoodle:lemma:q_t_polytime} we can compute $q_t$ for each $t$ in polynomial time, and thus we can simply sort time slots by $q_t$ in non-increasing order as a pre-processing step.
 
 Therefore we can focus on the following sub-class of \emph{simplified} B-Doodle mechanisms:
 \begin{definition}[Simplified B-Doodle Mechanism]
