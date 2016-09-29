@@ -101,23 +101,23 @@ In this section we formally define the class of B-Doodle mechanisms, the Batched
 Consider $n$ invitees denoted by $\{a_1, \dots, a_n\}$ and $s$ time slots denoted by $\{1, 2, \dots, s\}$.
 For each agent $a_i$ and each time slot $t$, there is a known prior probability, $p_{i, t}$, such that the agent is available at time $t$ with probability $p_{i, t}$ and unavailable with probability $(1-p_{i, t})$. 
 While the convener knows all such priors (i.e. all $p_{i,t}$'s), she does not know the realization of availability of agents -- it is private information of each agent.
-The convener is trying to find a \emph{feasible} time slot by asking invitees to reveal their availability; we assume that the convener has a \emph{feasibility threshold}, $f$, such that a feasible time slot requires at least $\lceil f \cdot n \rceil$ agents be available. The convener iteratively sends out a batch of time slots until a feasible time slot is found. In our setting \Time\ spent by the scheduling process is measured by the number of iterations and \Inconvenience\ caused is measured by the number of time slots that have been sent out by the convener.
+The convener is trying to find a \emph{feasible} time slot by asking invitees to reveal their availability; we assume that the convener has a \emph{feasibility threshold}, $f$, such that a feasible time slot requires at least $\lceil f \cdot n \rceil$ agents be available. The convener iteratively sends out a batch of time slots until a feasible time slot is found. In our setting \Times spent by the scheduling process is measured by the number of iterations and \Inconveniences caused is measured by the number of time slots that have been sent out by the convener.
 
 This setting is general enough to capture many realistic scenarios of group scheduling. For instance in a corporate setting, a busy manager may have low probability of being available for all time slots while other employees may be less busy and have high probability of being available. Or, if students are trying to decide on the meeting time for a group project, their availability is expected to be equally likely because the schedules of their classes are similar.
 
 Let us define a class of B-Doodle mechanisms that describe how the convener sends out time slots in each iteration.
-\begin{Def}[B-Doodle Mechanism]
+\begin{definition}[B-Doodle Mechanism]
 Let $S = \{1, 2, \dots, s\}$ be a set of $s$ time slots. We define a B-Doodle mechanism for $S$ as a partition of $S$.
 Let $B = \langle S_1, S_2, \dots, S_m \rangle$ be a partition of $S$ into $m$ subsets such that $S_j \neq\emptyset$, $S_j \cap S_k = \emptyset$ for $j \neq k$, and $\cup_{l=1}^{m} S_l = S$ where $1 \leq j,k \leq m$. We define $b_j = |S_j|$ for all $j \leq m$ and call $b_j$ the size of the $j$-th batch. 
 We write $B_m$ to emphasize that $B$ has $m$ batches.
-\end{Def}
+\end{definition}
 We interpret a B-Doodle mechanism $B$ as follows: the convener sends out time slots in $S_1$ during the first iteration. If a feasible time slot is found, the process ends. Otherwise she sends out the next batch, $S_2$, and so on.
 Note that there exist exponentially many B-Doodle mechanisms for any fixed $S$ (exponential in cardinality of $S$). 
-%Doodle is a special case of B-Doodle mechanism and can be described as $\langle S \rangle$.
+Doodle is a special case of B-Doodle mechanism and can be described as $\langle S \rangle$.
 
-Our objective is to find a B-Doodle mechanism that minimizes the expected cost of scheduling process, given an objective function of \Time\ and \Inconvenience.  Earlier we considered a simple cost function that is a linear combination of the two.  While this cost function fits in many realistic situations, we want to explore a larger class of cost functions. We define a class of cost functions that depend on the number of iterations and batch sizes.
-\begin{Def}[Cost function] \label{Def:cost-function}
-A cost function $c$ takes two integers $j$ and $b$ as arguments, and $c(j, b) > 0$ describes the aggregate cost of \Time\ and \Inconvenience\ that is incurred by sending out a batch of $b$ time slots during the $j$-th iteration. We assume that cost is additive so that the overall cost of executing the first $j$ iterations of ${B}_m = \langle S_1, S_2, \dots, S_m \rangle$ is simply the sum, $\sum_{k=1}^{j} c(k, b_k)$, which we denote by $C(j, {B}_m)$; recall that $b_k = |S_k|$. 
+Our objective is to find a B-Doodle mechanism that minimizes the expected cost of scheduling process, given an objective function of \Times and \Inconvenience.  Earlier we considered a simple cost function that is a linear combination of the two.  While this cost function fits in many realistic situations, we want to explore a larger class of cost functions. We define a class of cost functions that depend on the number of iterations and batch sizes.
+\begin{definition}[Cost function] \label{bdoodle:def:cost-function}
+A cost function $c$ takes two integers $j$ and $b$ as arguments, and $c(j, b) > 0$ describes the aggregate cost of \Time\ and \Inconveniences that is incurred by sending out a batch of $b$ time slots during the $j$-th iteration. We assume that cost is additive so that the overall cost of executing the first $j$ iterations of ${B}_m = \langle S_1, S_2, \dots, S_m \rangle$ is simply the sum, $\sum_{k=1}^{j} c(k, b_k)$, which we denote by $C(j, {B}_m)$; recall that $b_k = |S_k|$. 
 
 A cost function $c$ is said to be $\theta$-\emph{simple} if there exists some constant $\theta>0$ such that $c(j, b) = \theta \cdot c(j-1, b)$ for all $j > 1$ and for all $b \geq 1$. We often drop $\theta$ and just state that a cost function is \emph{simple}, for brevity.
 \end{Def}
