@@ -150,21 +150,19 @@ Note that $C(j, B_{m})$ is strictly increasing in $j$ for any fixed $B_{m}$ beca
 	~~ C_{\beta}(j, {B}_m) = \left(\sum_{k=1}^{j} \beta^k \cdot b_k \right).
 	\end{equation}
 	In contrast if the organizer is interested in reducing the size of each batch because it may cause too much inconvenience, then the following cost function could be used, which is parameterized by some constant $\gamma > 1$; we call this an \emph{inconvenience-averse} cost function which is $1$-simple.
-	\begin{eqnarray*} \label{bdoodle:eqn:inconvenience_averse_cost_function}
-	&&	c_{\gamma}(j, b_j) = \gamma^{b_j} \\
-	&&	C_{\gamma}(j, {B}_m) = \left(\sum_{k=1}^{j} \gamma^{b_k} \right)
-	\end{eqnarray*}
+	\begin{equation} \label{bdoodle:eqn:inconvenience_averse_cost_function}
+		c_{\gamma}(j, b_j) = \gamma^{b_j},
+	~~ C_{\gamma}(j, {B}_m) = \left(\sum_{k=1}^{j} \gamma^{b_k} \right).
+	\end{equation}
 \end{example}
 
-
-We now formally define the Batched Doodle Problem.
-\begin{definition}[Batched Doodle Problem] \label{bdoodle:def:Problem} % \label{bdoodle:Def:GSP}
+Let us now formally define the Batched Doodle Problem (\BDP).
+\begin{definition}[Batched Doodle Problem] \label{bdoodle:def:Problem}
 	An instance of the Batched Doodle Problem (\BDP) is a tuple $(A, P_A, f, c)$
 	where $A$ is a matrix of Bernoulli random variables,
 	$P_A$ is the probability matrix associated with it,
 	$f$ is the feasibility threshold with $f \in [0,1]$,
 	and $c$ is a cost function.
-
 	The objective in \BDPs is to find an optimal B-Doodle mechanism $B^*$ such that $B^*$ minimizes the expected cost of the scheduling process (expectation with respect to $P_A$), given $(A, P_A, f, c)$.
 \end{definition}
 
