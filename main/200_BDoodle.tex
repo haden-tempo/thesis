@@ -226,7 +226,7 @@ In this section, we discuss a series of useful lemmas, which eventually lead to 
 	Theorem~\ref{bdoodle:thm:exchange_argument} implies that an optimal B-Doodle that minimizes the expected cost must have the following property: for any two batches $S_j$ and $S_k$ with $j < k$, it must hold that $q_t \geq q_{t'}$ for all $t\in S_j$ and $t' \in S_k$ (otherwise we can apply the theorem and swap the two options to obtain a mechanism with smaller expected cost).
 	Therefore we can limit our attention to the sub-class of B-Doodle mechanisms that only describe batch sizes, but not explicitly which options in each batch. Due to Lemma~\ref{bdoodle:lemma:q_t_polytime} we can compute $q_t$ for each $t$ in polynomial time, and thus we can simply sort options by $q_t$ in non-increasing order as a pre-processing step.
 
-	Therefore we can focus on the following sub-class of \emph{simplified} B-Doodle mechanisms when we seek an optimal B-Doodle mechanism.
+	Therefore we can focus on the following sub-class of \emph{simplified} B-Doodle mechanisms when we seek an optimal B-Doodle mechanism in the rest of this chapter.
 	\begin{definition}[Simplified B-Doodle Mechanism]
 	Let $S = \{1, 2, \dots, s\}$ be a set of $s$ options.
 	A simplified B-Doodle mechanism $B$ for $S$ is a vector of integers, described as $B = \langle b_1, b_2, \dots, b_m\rangle$ where $(b_j \geq 1$ for all $j \leq m)$ and $(\sum_{k=1}^{m} b_k = s)$.
