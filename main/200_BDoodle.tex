@@ -215,29 +215,29 @@ From now on we use the definition of a simplified B-Doodle, and simply write a B
 In this section we present an algorithm that finds an optimal B-Doodle mechanism that minimizes the expected cost, given an instance of \BDP. Let us first describe how one can express the expected cost of a B-Doodle mechanism. 
 
 Given an instance $(N, S, f, c, P)$, consider some B-Doodle mechanism $B_{m} = \langle b_1, b_2, \dots, b_m \rangle$ with $\sum_{k=1}^{m} b_k = |S|$. Let $Pr(j)$ be the probability that the scheduling process ends after $j$-th iteration. Let us denote the expected cost of $B_{m}$ by $E_c[B_{m}]$, which can be expressed in terms of $Pr(\cdot)$ and the cost function $c$:
-\begin{equation} \label{eqn:expCost}
+\begin{equation} \label{bdoodle:eqn:expCost}
 	E_c[B_{m}] = \sum_{j=1}^{m} Pr(j) \cdot C(j, B_{m})  =  \sum_{j=1}^{m} Pr(j) \cdot \left(\sum_{k=1}^{j} c(k, b_k)\right)
 \end{equation}%
 
 While one can compute $Pr(j)$ in polynomial time, it is not necessary for our algorithm. Instead we present an important lemma that leads us to an efficient algorithm. The following lemma states that if $c$ is simple, then we can compute $E_c[B_{m}]$ in a recursive manner.
-\begin{lemma} \label{lemma:recurrence} 
+\begin{lemma} \label{bdoodle:lemma:recurrence} 
 	Consider any mechanism $B_m = \langle b_1, b_2, \dots, b_m \rangle$. Let us denote another mechanism that is obtained after removing the first batch ($b_1$) from $B_m$, as $\hat{B}_{m-1}$ (i.e. $\hat{B}_{m-1} = \langle b_2, b_3, \dots, b_m \rangle$). For each time slot $t \in S$, let $q_t$ be the probability that $t$ is $f$-feasible.
 
 If $c$ is a $\theta$-simple cost function with with $\theta > 0$, the following equality holds:
-\begin{equation} \label{eqn:recurrence}
+\begin{equation} \label{bdoodle:eqn:recurrence}
 E_c[B_{m}] = c(1, b_1) +  \left(\prod_{t=1}^{b_1} \left(1 - q_t\right)\right) \cdot \theta \cdot E_c[\hat{B}_{m-1}]
 \end{equation}
 \end{lemma}
 \begin{proof}
-Let us first provide an intuitive way to understand the recurrence relation given by Equation~\ref{eqn:recurrence}. The first term $c(1, b_1)$ captures the cost of sending out the first batch; regardless of when the scheduling process ends, this cost incurs with probability of $1$. If it turns out that the first batch does not contain a feasible time slot with probability of $(1 - Pr(1))$, then the convener must send out the remaining batches, which is precisely $\hat{B}_{m-1}$. It is easy to verify that the product term in the equation is equal to $(1 - Pr(1))$. The expected cost of $\hat{B}_{m-1}$ is adjusted by a factor of $\theta$ in the equation because the cost function is $\theta$-simple. \\
+Let us first provide an intuitive way to understand the recurrence relation given by Equation~\ref{bdoodle:eqn:recurrence}. The first term $c(1, b_1)$ captures the cost of sending out the first batch; regardless of when the scheduling process ends, this cost incurs with probability of $1$. If it turns out that the first batch does not contain a feasible time slot with probability of $(1 - Pr(1))$, then the convener must send out the remaining batches, which is precisely $\hat{B}_{m-1}$. It is easy to verify that the product term in the equation is equal to $(1 - Pr(1))$. The expected cost of $\hat{B}_{m-1}$ is adjusted by a factor of $\theta$ in the equation because the cost function is $\theta$-simple. \\
 
 We now formally prove the claim. Given $B_{m}$ as described above, for each batch $j \in \{1, 2, \dots, m\}$, let $r_j$ be the probability that the $j$-th batch has at least one $f$-feasible time slot. Let us define $v_0 = 0$ and $v_j = \sum_{k=1}^{j} b_k$ (i.e. $v_j$ is the number of time slots in batches $1$ through $j$).
 We can express $r_j$ as:
-\begin{equation} \label{eqn:r_j}
+\begin{equation} \label{bdoodle:eqn:r_j}
 r_j = 1 - \prod_{t=v_{j-1} + 1}^{v_j} (1 - q_t)
 \end{equation}
 $Pr(j)$ is the probability that the scheduling process ends after $j$-th iteration (with $Pr(m) = 1 - \sum_{k=1}^{m-1} Pr(k)$). For $1 \leq j < m$, $Pr(j)$ is given by:
-\begin{equation} \label{eqn:Pr_j}
+\begin{equation} \label{bdoodle:eqn:Pr_j}
 Pr(j) =  r_j  \prod_{k=1}^{j-1} (1 - r_k)   
 \end{equation}
 It is understood that $\prod_{k=x}^{y} (\cdot)$ is equal to $1$ when $x > y$. \\
@@ -247,7 +247,7 @@ Not to be confused, let us express it as $\hat{B}_{m-1} = \langle \hat{b}_1, \ha
 \begin{equation}
 	\hat{Pr}(j) 
 	= \hat{r}_j \prod_{k=1}^{j-1} (1 - \hat{r}_k)
-	= r_{j+1} \prod_{k=2}^{j} (1 - r_{k})  \label{eqn:pr_hat_b}
+	= r_{j+1} \prod_{k=2}^{j} (1 - r_{k})  \label{bdoodle:eqn:pr_hat_b}
 \end{equation}
 We can express $E_c[\hat{B}_{m-1}]$ as follows:
 \begin{eqnarray*}
@@ -256,10 +256,10 @@ E_c[\hat{B}_{m-1}]
 &=& \sum_{j=1}^{m-1} r_{j+1} \left(\prod_{k=2}^{j} (1 - r_{k})\right) \left(\sum_{k=2}^{j+1} c(k-1, b_{k+1})\right) \\
 &=& \sum_{j=2}^{m} r_{j} \left(\prod_{k=2}^{j-1} (1 - r_{k})\right) \left(\sum_{k=2}^{j} c(k-1, b_{k+1})\right)
 \end{eqnarray*}
-The first equality holds by definition. The second equality is due to Equation~\ref{eqn:pr_hat_b} and because $\hat{b}_k = b_{k+1}$. The third equality is by changing the range of $j$ in the summation. \\
+The first equality holds by definition. The second equality is due to Equation~\ref{bdoodle:eqn:pr_hat_b} and because $\hat{b}_k = b_{k+1}$. The third equality is by changing the range of $j$ in the summation. \\
 
 If we multiply $E_c[\hat{B}_{m-1}]$ by $(1 - r_1)\theta$, we get the following:
-\begin{equation} \label{eqn:ExpCost_Bhat}
+\begin{equation} \label{bdoodle:eqn:ExpCost_Bhat}
 (1-r_1)\theta E_c[\hat{B}_{m-1}] = \sum_{j=2}^{m} r_{j} \left(\prod_{k=1}^{j-1} (1 - r_{k})\right) \left(\sum_{k=2}^{j} c(k, b_{k+1})\right)
 \end{equation}
 Notice that the product term now runs from $k = 1$ to $j-1$ as we multiply by $(1-r_1)$ and the inner-most summation has $c(k, b_{k+1})$ as we multiply by $\theta$ (recall that $c$ is $\theta$-simple).
@@ -272,18 +272,18 @@ E_c[B_{m}]
 &=& c_1 + (1-r_1)\theta E_c[\hat{B}_{m-1}] \\
 &=& c(1, b_1) + \left(\prod_{t=1}^{b_1} (1-q_t) \right)\cdot \theta \cdot E_c[\hat{B}_{m-1}] 
 \end{eqnarray*}
-The first equality holds by definition of $E_c[B_{m}]$. The second equality is obtained by taking $c(1, b_1)$ out from the summation (and note that $Pr(j)$ adds up to 1) first and then applying Equation~\ref{eqn:Pr_j}. The last two inequalities hold due to Equation~\ref{eqn:ExpCost_Bhat} and \ref{eqn:r_j}, respectively. 
-The last expression exactly  matches Equation~\ref{eqn:recurrence} in the lemma.
+The first equality holds by definition of $E_c[B_{m}]$. The second equality is obtained by taking $c(1, b_1)$ out from the summation (and note that $Pr(j)$ adds up to 1) first and then applying Equation~\ref{bdoodle:eqn:Pr_j}. The last two inequalities hold due to Equation~\ref{bdoodle:eqn:ExpCost_Bhat} and \ref{bdoodle:eqn:r_j}, respectively. 
+The last expression exactly  matches Equation~\ref{bdoodle:eqn:recurrence} in the lemma.
 \qed
 \end{proof}
 
-Using the recurrence relation in Lemma~\ref{lemma:recurrence} and the computing method in Lemma~\ref{lemma:q_t_polytime}, we can now design an efficient recursive algorithm finds the optimal B-Doodle mechanism. Our algorithm is presented in Algorithm~\ref{alg:recursive} as a recursive method $Rec(x)$. We assume that the values of $q_t$ have been computed as a pre-processing step prior to running our algorithm, using the method in Lemma~\ref{lemma:q_t_polytime}. We further assume that time slots are sorted in decreasing order of $q_t$ (i.e. $q_1 \geq q_2 \geq \dots \geq q_{s}$); therefore we simply refer to the time slot by its index (i.e. $t = 3$ refers to the third time slot in the sorted list of time slots).
+Using the recurrence relation in Lemma~\ref{bdoodle:lemma:recurrence} and the computing method in Lemma~\ref{bdoodle:lemma:q_t_polytime}, we can now design an efficient recursive algorithm finds the optimal B-Doodle mechanism. Our algorithm is presented in Algorithm~\ref{bdoodle:alg:recursive} as a recursive method $Rec(x)$. We assume that the values of $q_t$ have been computed as a pre-processing step prior to running our algorithm, using the method in Lemma~\ref{bdoodle:lemma:q_t_polytime}. We further assume that time slots are sorted in decreasing order of $q_t$ (i.e. $q_1 \geq q_2 \geq \dots \geq q_{s}$); therefore we simply refer to the time slot by its index (i.e. $t = 3$ refers to the third time slot in the sorted list of time slots).
 
 Given $1 \leq x \leq s$, $Rec(x)$ returns optimal B-Doodle ($B^*$) that consists of time slots $\{x, x+1, \dots, s\}$ and its expected cost ($EC^*$). To solve for a given instance of the problem, we simply call the method $Rec(x)$ with $x = 1$.
 
 \begin{algorithm}
 \caption{Recursive Algorithm: $Rec(x)$}
-\label{alg:recursive}
+\label{bdoodle:alg:recursive}
 \begin{algorithmic}[1]
 	\State ${B}^* \gets \langle s-x+1 \rangle$, $EC^* \gets c(1, s-x+1)$
 	\For{$b := 1, 2, \dots, s-x$}
@@ -298,15 +298,15 @@ Given $1 \leq x \leq s$, $Rec(x)$ returns optimal B-Doodle ($B^*$) that consists
 \end{algorithmic}
 \end{algorithm}
 
-\begin{theorem} \label{thm:recursive_algo}
-Algorithm~\ref{alg:recursive} runs in polynomial time, and returns an optimal B-Doodle mechanism that minimizes the expected cost, given an instance $(N, S, f, c, P)$ of \BDP\ when $c$ is $\theta$-simple.
+\begin{theorem} \label{bdoodle:thm:recursive_algo}
+Algorithm~\ref{bdoodle:alg:recursive} runs in polynomial time, and returns an optimal B-Doodle mechanism that minimizes the expected cost, given an instance $(N, S, f, c, P)$ of \BDPs when $c$ is $\theta$-simple.
 \end{theorem}
 \begin{proof}
-Our recursive method is very simple: given time slots $\{x, x+1, \dots, s\}$, it iteratively considers the case of sending out $b$ time slots in the first iteration, and computes the expected cost $EC_b$ of doing so, for each $b$ with $1 \leq b \leq s-x+1$.  In line 1, our method checks for the trivial case when $b = s-x+1$ (i.e. all time slots are sent in a single batch); we store this mechanism in $B^*$ and its expected cost in $EC^*$. Then we iterate $b$ from $1$ to $s-x$ and compute the expected cost $EC_b$, and compare with the optimal expected cost found so far (lines 2-9). For each $b$, we first recursively compute the expected cost for the remaining time slots (namely, $\{x+b, x+b+1, \dots, s\}$) by calling our method $Rec(x+b)$, and store the expected cost in $EC$ (line 3). Using Lemma~\ref{lemma:recurrence} we can compute $EC_b$ as in line 4 (note that the first batch contains $b$ time slots from $x$ to $x+b-1$). In lines 5-8, we simply compare $EC_b$ with the current optimal, $EC^*$, and update if necessary; $\langle b, B \rangle$ should be interpreted as the concatenation of $b$ and $B$ into a single vector of integers. Finally in line 10, our method returns the optimal B-Doodle found, $B^*$ and its expected cost $EC^*$. \\
+Our recursive method is very simple: given time slots $\{x, x+1, \dots, s\}$, it iteratively considers the case of sending out $b$ time slots in the first iteration, and computes the expected cost $EC_b$ of doing so, for each $b$ with $1 \leq b \leq s-x+1$.  In line 1, our method checks for the trivial case when $b = s-x+1$ (i.e. all time slots are sent in a single batch); we store this mechanism in $B^*$ and its expected cost in $EC^*$. Then we iterate $b$ from $1$ to $s-x$ and compute the expected cost $EC_b$, and compare with the optimal expected cost found so far (lines 2-9). For each $b$, we first recursively compute the expected cost for the remaining time slots (namely, $\{x+b, x+b+1, \dots, s\}$) by calling our method $Rec(x+b)$, and store the expected cost in $EC$ (line 3). Using Lemma~\ref{bdoodle:lemma:recurrence} we can compute $EC_b$ as in line 4 (note that the first batch contains $b$ time slots from $x$ to $x+b-1$). In lines 5-8, we simply compare $EC_b$ with the current optimal, $EC^*$, and update if necessary; $\langle b, B \rangle$ should be interpreted as the concatenation of $b$ and $B$ into a single vector of integers. Finally in line 10, our method returns the optimal B-Doodle found, $B^*$ and its expected cost $EC^*$. \\
 
-We prove correctness of the algorithm by induction on $x$ (from $x = s$ to $x = 1$). The base case is trivial: if $x = s$ the only B-Doodle mechanism is $\langle 1 \rangle$ and our method finds it in line $1$ and returns it in line $10$. Suppose our method correctly returns the optimal B-Doodle mechanism (and its expected cost) for all $x > k$ for some $k$ (the inductive hypothesis), and we prove for the case of $x = k$. When $x = k$, there are precisely $(s-k+1)$ time slots that are to be sent, and the first batch can contain any number of time slots between $1$ and $(s-k+1)$, inclusive. In lines 1-9 our method considers all such cases, and for each case it computes the expected cost correctly (in line 4) due to our inductive hypothesis and Lemma~\ref{lemma:recurrence}. Therefore our method finds the optimal B-Doodle for all $x$ with $1 \leq x \leq s$; in particular when $x = 1$, it returns the desired optimal B-Doodle mechanism for the given problem instance.\\
+We prove correctness of the algorithm by induction on $x$ (from $x = s$ to $x = 1$). The base case is trivial: if $x = s$ the only B-Doodle mechanism is $\langle 1 \rangle$ and our method finds it in line $1$ and returns it in line $10$. Suppose our method correctly returns the optimal B-Doodle mechanism (and its expected cost) for all $x > k$ for some $k$ (the inductive hypothesis), and we prove for the case of $x = k$. When $x = k$, there are precisely $(s-k+1)$ time slots that are to be sent, and the first batch can contain any number of time slots between $1$ and $(s-k+1)$, inclusive. In lines 1-9 our method considers all such cases, and for each case it computes the expected cost correctly (in line 4) due to our inductive hypothesis and Lemma~\ref{bdoodle:lemma:recurrence}. Therefore our method finds the optimal B-Doodle for all $x$ with $1 \leq x \leq s$; in particular when $x = 1$, it returns the desired optimal B-Doodle mechanism for the given problem instance.\\
 
-Our recursive method runs in polynomial time when we use memoization on $Rec(x)$ with respect to $x$; that is, for each $x$ we cache what $Rec(x)$ returns for the first time, and for any subsequence calls to $Rec(x)$ we simply return the cached values. Therefore lines 1-9 are executed at most once for each $x$ with $1 \leq x \leq s$. Also note that $Rec(x)$ makes a call to $Rec(x + b)$ with $b \geq 1$ and $x+b \leq s$, which means there are no infinite loops. Once $Rec(x)$ is computed for all $x > k$, it takes $O(|S|^2)$ time to compute $Rec(k)$, and thus the overall running time of our algorithm is $O(|S|^3)$ when we start with $Rec(1)$. Pre-processing steps (of computing $q_t$) also run in polynomial time due to Lemma~\ref{lemma:q_t_polytime}.
+Our recursive method runs in polynomial time when we use memoization on $Rec(x)$ with respect to $x$; that is, for each $x$ we cache what $Rec(x)$ returns for the first time, and for any subsequence calls to $Rec(x)$ we simply return the cached values. Therefore lines 1-9 are executed at most once for each $x$ with $1 \leq x \leq s$. Also note that $Rec(x)$ makes a call to $Rec(x + b)$ with $b \geq 1$ and $x+b \leq s$, which means there are no infinite loops. Once $Rec(x)$ is computed for all $x > k$, it takes $O(|S|^2)$ time to compute $Rec(k)$, and thus the overall running time of our algorithm is $O(|S|^3)$ when we start with $Rec(1)$. Pre-processing steps (of computing $q_t$) also run in polynomial time due to Lemma~\ref{bdoodle:lemma:q_t_polytime}.
 \qed
 \end{proof}
 
@@ -319,20 +319,20 @@ Our recursive method runs in polynomial time when we use memoization on $Rec(x)$
 
 
 
-\section{Experimental Results} \label{sec:Results}
+\section{Experimental Results} \label{bdoodle:sec:Results}
 
 We showed that we can find an optimal B-Doodle mechanism that minimizes the expected cost. But a very important question remains: Is our optimal B-Doodle substantially better than Doodle in realistic settings? If the answer is no, we do not have much incentive to discard the simplest mechanism, Doodle, over using our sophisticated algorithm. Intuitively we expect Doodle to be inefficient if there are many time slots (i.e., $s$ is large) because it causes much inconvenience for agents to examine the options. Reasoning further, we can also see that inefficiency of Doodle depends on the probability of each time slot being feasible (i.e. $q_t$ values), which in turn depends on $p_{i, t}$ values. If agents are relatively free, then a small number of time slots would be sufficient for finding a feasible time slot, which makes Doodle inefficient. Last but not least, the underlying cost function plays an important role as well. These all sound plausible, and we validate our intuition with simulation results.
 
-In our setting there are many experimental choices one can choose from. In what follows we look at a representative example in which each agent is available for each time slot with the same probability of $p$; that is, $p_{i, t} = p$ for some constant $p$. (While in realistic situations the $p_{i, t}$'s may all differ, we  note that in our simulations  our results seem to carry over to these more general settings as well.) We present experimental results for each of the three cost functions discussed in Example~\ref{exmp:costFunctions}: The linear cost function, the time-averse cost function, and the inconvenience-averse function.
+In our setting there are many experimental choices one can choose from. In what follows we look at a representative example in which each agent is available for each time slot with the same probability of $p$; that is, $p_{i, t} = p$ for some constant $p$. (While in realistic situations the $p_{i, t}$'s may all differ, we  note that in our simulations  our results seem to carry over to these more general settings as well.) We present experimental results for each of the three cost functions discussed in Example~\ref{bdoodle:exmp:costFunctions}: The linear cost function, the time-averse cost function, and the inconvenience-averse function.
 
 % ===================== Linear Cost Function (Below) 
 
-\subsection{Case of Linear Cost Function} \label{sec:result_linear_cost}
+\subsection{Case of Linear Cost Function} \label{bdoodle:sec:result_linear_cost}
 Recall that the linear cost function is parameterized by some constant $\alpha>0$ and that $c_{\alpha}(j, b) = \alpha + b$. We used $\alpha = 2$ as an experimental choice, and we later discuss what we observed for different values of $\alpha$.
 
 We reasoned that Doodle becomes suboptimal if the number of time slots, $s$, is large. Therefore it is interesting to know for what ranges of $s$, Doodle is suboptimal. For some fixed $(n, s, p)$, let $C^D(n, s, p)$ be the cost of Doodle and $C^*(n, s, p)$ be the expected cost of $B^*$. We want to find the smallest critical point $S^*(n, p)$ such that for any $s \geq S^*(n, p)$ we have $C^D(n, s, p) > C^*(n, s, p)$. 
 
-In Table~\ref{table:DoodleSuboptimal}, we show $S^*$ for various $(n, p)$ when $f = 1$ (i.e. the convener requires everyone be available). For instance we find $S^*(6, .8) = 5$, which implies that Doodle is suboptimal for all $s \geq 5$ given that $n=6$ and $p=.8$. The smaller $S^*$ is, the less practical Doodle is for the corresponding $(n, p)$. 
+In Table~\ref{bdoodle:table:DoodleSuboptimal}, we show $S^*$ for various $(n, p)$ when $f = 1$ (i.e. the convener requires everyone be available). For instance we find $S^*(6, .8) = 5$, which implies that Doodle is suboptimal for all $s \geq 5$ given that $n=6$ and $p=.8$. The smaller $S^*$ is, the less practical Doodle is for the corresponding $(n, p)$. 
 Across the table we can observe that $S^*$ is small when $n$ is small and/or when $p$ is high -- this agrees with our intuition.  
 We highlighted $8$ entries in boldface to emphasize that $S^* \leq 15$; for the corresponding $(n, p)$ values, Doodle is suboptimal if there are $15$ or more time slots being considered.
 \begin{table}[h!]  % \small
@@ -346,12 +346,12 @@ We highlighted $8$ entries in boldface to emphasize that $S^* \leq 15$; for the 
 \end{tabular}
 \caption{Critical point $S^*$ for various $(n, p)$ when $f = 1, \alpha = 2$.
 Entries in boldface emphasize that $S^* \leq 15$.
-} \label{table:DoodleSuboptimal}
+} \label{bdoodle:table:DoodleSuboptimal}
 \end{table}
 
 Not only do we want to know when Doodle is suboptimal, but we also want to know how inefficient Doodle is in realistic situations. For some fixed $(n, s, p)$, we define the efficiency of Doodle, $e_{D}(n,s,p)$, as the ratio of the optimal expected cost to the cost of Doodle: $e_{D}(n,s,p) = C^*(n, s, p) / C^D(n, s, p)$. 
 
-In Table~\ref{table:DoodleEfficiency} we show $e_{D}$ for the same settings of $(n, p)$ we used in Table~\ref{table:DoodleSuboptimal}. For this experiment we used $s = 15$ and $f = 1$. If $e_{D} = 1$ Doodle is optimal, and if $e_{D}$ is close to zero then Doodle is very inefficient. We find that $e_{D}(2, .8) = .270$, which implies that Doodle is very inefficient in this case; on the other hand $e_{D}(10, .5) = 1$, in which case Doodle is optimal. Across the table we observe the same pattern we observed before -- for small $n$ and high $p$, Doodle is substantially inefficient.
+In Table~\ref{bdoodle:table:DoodleEfficiency} we show $e_{D}$ for the same settings of $(n, p)$ we used in Table~\ref{bdoodle:table:DoodleSuboptimal}. For this experiment we used $s = 15$ and $f = 1$. If $e_{D} = 1$ Doodle is optimal, and if $e_{D}$ is close to zero then Doodle is very inefficient. We find that $e_{D}(2, .8) = .270$, which implies that Doodle is very inefficient in this case; on the other hand $e_{D}(10, .5) = 1$, in which case Doodle is optimal. Across the table we observe the same pattern we observed before -- for small $n$ and high $p$, Doodle is substantially inefficient.
 \begin{table}[h]  % \small
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -363,15 +363,15 @@ In Table~\ref{table:DoodleEfficiency} we show $e_{D}$ for the same settings of $
 \end{tabular}
 \caption{Efficiency of Doodle $e_{D}$ for various $(n, p)$ when $f = 1, \alpha=2, s = 15$.
 Entries in boldface emphasize that $e_{D} < .750$.
-} \label{table:DoodleEfficiency}
+} \label{bdoodle:table:DoodleEfficiency}
 \end{table}
 
 Inefficiency of Doodle is more pronounced when the convener has a lower feasibility threshold such as $f = .7$; in such case, only a fraction of agents need to be available. 
-We can clearly observe the worsened inefficiency of Doodle in Table~\ref{table:DoodleEfficiency-lower-attendance}. 
-Here we show $e_{D}$ values for the same set of $(n, p)$ as in Table~\ref{table:DoodleEfficiency} but with $f = .7$. 
-Previously we highlighted four entries with $e_{D} < .750$ when $f = 1$ in Table~~\ref{table:DoodleEfficiency}; when $f = .7$ the number of entires with $e_{D} < .750$ doubled to eight. 
+We can clearly observe the worsened inefficiency of Doodle in Table~\ref{bdoodle:table:DoodleEfficiency-lower-attendance}. 
+Here we show $e_{D}$ values for the same set of $(n, p)$ as in Table~\ref{bdoodle:table:DoodleEfficiency} but with $f = .7$. 
+Previously we highlighted four entries with $e_{D} < .750$ when $f = 1$ in Table~~\ref{bdoodle:table:DoodleEfficiency}; when $f = .7$ the number of entires with $e_{D} < .750$ doubled to eight. 
 Note that the first column is identical between the two tables; this is because $f = .7$ still requires both agents to be available when $n = 2$. 
-Also notice that $e_{D}$ is surprisingly low in the first row of Table~\ref{table:DoodleEfficiency-lower-attendance} across all columns. This shows that regardless of the number of invitees, Doodle is significantly inefficient when the invitees are highly available ($p \geq .8$) and the convener has a relaxed feasibility threshold.
+Also notice that $e_{D}$ is surprisingly low in the first row of Table~\ref{bdoodle:table:DoodleEfficiency-lower-attendance} across all columns. This shows that regardless of the number of invitees, Doodle is significantly inefficient when the invitees are highly available ($p \geq .8$) and the convener has a relaxed feasibility threshold.
 \begin{table}[h]  % \small
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -383,7 +383,7 @@ Also notice that $e_{D}$ is surprisingly low in the first row of Table~\ref{tabl
 \end{tabular}
 \caption{Efficiency of Doodle $e_{D}$ for various $(n, p)$ when $f = .7, \alpha=2, s = 15$. 
 Entries in boldface emphasize that $e_{D} < .750$.
-} \label{table:DoodleEfficiency-lower-attendance}
+} \label{bdoodle:table:DoodleEfficiency-lower-attendance}
 \end{table}
 
 We ran experiments with different values of $(n, s, p, f, \alpha)$, and observed the same  trends that are presented here.
@@ -397,7 +397,7 @@ We present some of the experimental results we obtained with different cost func
 
 For the time-averse cost function (recall $c_{\beta}(j, b) = \beta^j \cdot b$), we chose $\beta = 2$ as an experimental choice. Notice that the cost increases exponentially for later iterations, which forces the convener to send out a small number of batches (as in Doodle). We ran the same set of experiments as before to measure efficient of Doodle, $e_{D}$. 
 
-The result is summarized in Table~\ref{table:DoodleEfficiency-lower-attendance_time_averse}, which shows the same trends as we observed in previous experiments. Notice that in the first row ($p = .8$), as $n$ increases we expect $e_{D}$ to decrease, but $e_{D}$ fluctuates while decreasing in general. The fluctuation is due to the rounding of attendance requirement ($\lceil a \cdot n \rceil$). For instance when $n = 4$, $\lceil a \cdot n \rceil$ = 3 which effectively requires 75\% of attendees be available. 
+The result is summarized in Table~\ref{bdoodle:table:DoodleEfficiency-lower-attendance_time_averse}, which shows the same trends as we observed in previous experiments. Notice that in the first row ($p = .8$), as $n$ increases we expect $e_{D}$ to decrease, but $e_{D}$ fluctuates while decreasing in general. The fluctuation is due to the rounding of attendance requirement ($\lceil a \cdot n \rceil$). For instance when $n = 4$, $\lceil a \cdot n \rceil$ = 3 which effectively requires 75\% of attendees be available. 
 \begin{table}[h]  % \small
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -409,12 +409,12 @@ The result is summarized in Table~\ref{table:DoodleEfficiency-lower-attendance_t
 \end{tabular}
 \caption{Efficiency of Doodle $e_{D}$ for various $(n, p)$ when $f = .7, \beta=2, s = 15$.
 Entries in boldface emphasize that $e_{D} < .750$.
-} \label{table:DoodleEfficiency-lower-attendance_time_averse}
+} \label{bdoodle:table:DoodleEfficiency-lower-attendance_time_averse}
 \end{table}
 
-For the inconvenience-averse cost function (recall $c_{\gamma}(j, b) = \gamma^{b}$), we chose $\gamma = 1.1$ as an experimental choice. While $\gamma$ is fairly small, because the cost function is an exponential function of $b$, an optimal B-Doodle must send out small-size batches. This cost function optimizes \Inconvenience\ primarily. We ran the same set of experiments as before to measure efficiency of Doodle, $e_{D}$. 
+For the inconvenience-averse cost function (recall $c_{\gamma}(j, b) = \gamma^{b}$), we chose $\gamma = 1.1$ as an experimental choice. While $\gamma$ is fairly small, because the cost function is an exponential function of $b$, an optimal B-Doodle must send out small-size batches. This cost function optimizes \Inconveniences primarily. We ran the same set of experiments as before to measure efficiency of Doodle, $e_{D}$. 
 
-The result is summarized in Table~\ref{table:DoodleEfficiency-lower-attendance_inconvenience_averse}. Notice that $e_{D}$ is not equal to $1$ even when $p = .2$ in this setting, which we did not observe with the other cost functions previously. Due to integer-rounding, we again observe some fluctuations in $e_{D}$ across columns within the same row, but the general trend is that $e_{D}$ decreases as $n$ increases.
+The result is summarized in Table~\ref{bdoodle:table:DoodleEfficiency-lower-attendance_inconvenience_averse}. Notice that $e_{D}$ is not equal to $1$ even when $p = .2$ in this setting, which we did not observe with the other cost functions previously. Due to integer-rounding, we again observe some fluctuations in $e_{D}$ across columns within the same row, but the general trend is that $e_{D}$ decreases as $n$ increases.
 \begin{table}[h]  % \small
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -426,7 +426,7 @@ The result is summarized in Table~\ref{table:DoodleEfficiency-lower-attendance_i
 \end{tabular}
 \caption{Efficiency of Doodle $e_{D}$ for various $(n, p)$ when $f = .7, \gamma=1.1, s = 15$.
 Entries in boldface emphasize that $e_{D} < .750$.
-} \label{table:DoodleEfficiency-lower-attendance_inconvenience_averse}
+} \label{bdoodle:table:DoodleEfficiency-lower-attendance_inconvenience_averse}
 \end{table}
 
 %\balancecolumns
@@ -438,12 +438,50 @@ While we only presented experimental results with specific values of $(n, s, p, 
 	\item There is a large number of time slots ($s \geq 15$).
 	\item Agents are relatively free ($p > .5$).
 	\item Feasibility threshold is relaxed ($f < .8$).
-	\item The cost function places more weight on \Inconvenience\ than \Time\ ($\alpha < 20$, $\beta < 5$, or $\gamma > 1.05$).
+	\item The cost function places more weight on \Inconveniences than \Times ($\alpha < 20$, $\beta < 5$, or $\gamma > 1.05$).
 \end{itemize}
-Intuitively the first four conditions affect $q_t$ (the probability that time slot $t$ is feasible) in the same way, and if $q_t$'s are high then Doodle is more likely to be inefficient because a few time slots may be sufficient for finding a feasible one. While the last condition is independent of $q_t$, the cost function determines what is being optimized, and Doodle becomes more inefficient if $c$ favors reducing \Inconvenience\ over reducing \Time.
+Intuitively the first four conditions affect $q_t$ (the probability that time slot $t$ is feasible) in the same way, and if $q_t$'s are high then Doodle is more likely to be inefficient because a few time slots may be sufficient for finding a feasible one. While the last condition is independent of $q_t$, the cost function determines what is being optimized, and Doodle becomes more inefficient if $c$ favors reducing \Inconveniences over reducing \Time.
 
 
 
+
+\section{Discussion} \label{bdoodle:sec:Discussion}
+
+We identified and formally defined two dimensions of optimality in
+group scheduling : \Times and \Inconvenience. We generalized the popular
+Doodle mechanism to a class of B-Doodle mechanisms that partition time
+slots into batches. We showed an example of the Pareto-frontier of
+B-Doodle mechanisms on the \Time-\Inconveniences dimensions. We then
+described an efficient algorithm for finding an optimal B-Doodle
+mechanisms, given a simple cost function that aggregates \Times and
+\Inconvenience, assuming probabilistic independence among availability 
+of agents. We showed in simulations that optimal B-Doodle mechanism 
+is superior to Doodle in realistic situations, sometimes greatly so.
+
+While useful in and of itself, this work leaves open many questions.
+Here we focused on a sub-class of the Single-proposer mechanisms in
+which there is a sole convener who is trying to find an agreeable
+schedule. In realistic situations a group of agents often negotiate
+among themselves or respond with counter-offers. It will be
+interesting to extend our B-Doodle mechanisms to the Multi-proposer
+mechanisms. Another obvious extension of our work is to relax the
+independence assumption and develop an adaptive mechanism that infers
+availability of agents based on their responses. In addition, we
+implicitly assumed that agents prefer all time slots equally (by
+allowing agents to specify their availability but not preferences),
+but people often have specific preferences. Thus it will be important
+to study the trade-off between optimizing the cost of scheduling
+process and finding a `good' schedule.
+
+Finally, we assumed honesty, promptness, and trust of invitees, but
+these are strong assumptions. In particular, promptness assumes that
+invitees do not procrastinate and do not deliberately delay responses.
+It is arguably true that if the scheduling process is efficient then
+it will indeed reduce the procrastination of invitees. However in
+practice an invitee may have an incentive to delay her response or to
+lie about her availability or preferences. Practical mechanisms should
+not be vulnerable to such strategic behavior of invitees, and this is
+yet another direction for future work.
 
 
 %
