@@ -63,7 +63,7 @@ In additino, if there is an overall cost function combining time
 and inconvenience, one can identify an optimal B-Doodle mechanism
 along this frontier as illustrated in
 Figure~\ref{bdoodle:fig:Pareto_objective}. 
-If we assume that the overall cost is defined as 3$\cdot$\Time+\Inconvenience\ (which is a linear combination of the two), the optimal mechanism happens to be the ``Half-n-half" mechanism; this mechanism
+If we assume that the overall cost is defined as 3$\cdot$\Time+\Inconveniences(which is a linear combination of the two), the optimal mechanism happens to be the ``Half-n-half" mechanism; this mechanism
 sends out $3$ options in the first batch, and if no feasible time
 slot is found then sends out the remaining $3$ options in the next
 batch.
@@ -90,9 +90,8 @@ In addition we also  assume that the event organizer is given probability estima
 
 \section{Notation and Definitions}
 
-% \subsection{Problem Setting}
-We mentioned two dimensions of optimality in the scheduling process: \Time\ and \Inconvenience.
-\Time\ captures the duration of the scheduling process and \Inconvenience\ measures how much inconvenience is caused for each invitee during the scheduling process.
+We mentioned two dimensions of optimality in the scheduling process: \Timesand \Inconvenience.
+\Timescaptures the duration of the scheduling process and \Inconveniencesmeasures how much inconvenience is caused for each invitee during the scheduling process.
 In this section we formally define the class of B-Doodle mechanisms and the Batched Doodle Problem (\BDP).
 
 Consider a setting where there are $n$ invitees and $s$ date/time options from which the organizer can choose to propose. The organizer wishes to find a {\em feasible} date/time option that works for at least $\lceil f \cdot n \rceil$ invitees (we call $f\in [0,1]$ the {\em feasibility threshold}) or determines that there is no feasible option.
@@ -106,7 +105,7 @@ Given probability of success for each Bernoulli random variable, the organizer c
  We say that $A$ is {\em feasible} if it contains at least one feasible column (otherwise it is {\em infeasible}).
  \end{definition}
 
-The organizer iteratively sends out a batch of options until a feasible option is found. In our setting \Time\ spent by the scheduling process is measured by the number of iterations and \Inconvenience\ caused is measured by the number of options that have been sent out by the organizer.
+The organizer iteratively sends out a batch of options until a feasible option is found. In our setting \Timesspent by the scheduling process is measured by the number of iterations and \Inconveniencescaused is measured by the number of options that have been sent out by the organizer.
 Let us define a class of B-Doodle mechanisms that describe how the organizer sends out options in each iteration.
 \begin{definition}[B-Doodle Mechanism]\label{bdoodle:def:BDoodleMechanism}
 Let $S = \{1, 2, \dots, s\}$ be a set of $s$ options.
@@ -119,12 +118,12 @@ We write $B_m$ to emphasize that $B$ has $m$ batches.
 We interpret a B-Doodle mechanism $B$ as follows: the organizer sends out options in $S_1$ during the first iteration. If a feasible option is found, the process ends. Otherwise she sends out the next batch, $S_2$, and so on.
 Note that there exist exponentially many B-Doodle mechanisms for any a given $S$ (exponential in cardinality of $S$).
 
-The goal is to find a B-Doodle mechanism that minimizes the expected cost of scheduling process, given an objective function of \Time\ and \Inconvenience.
+The goal is to find a B-Doodle mechanism that minimizes the expected cost of scheduling process, given an objective function of \Timesand \Inconvenience.
 Earlier we considered a simple cost function that is a linear combination of the two.
 While this cost function fits in many realistic situations, we want to explore a larger class of cost functions.
 We define a class of cost functions that depend only on the number of iterations and batch sizes.
 \begin{definition}[Cost function] \label{bdoodle:def:CostFunction}
-	A cost function $c$ takes two integers $j$ and $b$ as arguments, and $c(j, b) > 0$ describes the aggregate cost of \Time\ and \Inconvenience\ that is incurred by sending out a batch of $b$ options during the $j$-th iteration. We assume that cost is additive so that the overall cost of executing the first $j$ iterations of ${B}_m = \langle S_1, S_2, \dots, S_m \rangle$ is simply the sum, $\sum_{k=1}^{j} c(k, b_k)$, which we denote by $C(j, {B}_m)$; recall that $b_k = |S_k|$.
+	A cost function $c$ takes two integers $j$ and $b$ as arguments, and $c(j, b) > 0$ describes the aggregate cost of \Timesand \Inconveniencesthat is incurred by sending out a batch of $b$ options during the $j$-th iteration. We assume that cost is additive so that the overall cost of executing the first $j$ iterations of ${B}_m = \langle S_1, S_2, \dots, S_m \rangle$ is simply the sum, $\sum_{k=1}^{j} c(k, b_k)$, which we denote by $C(j, {B}_m)$; recall that $b_k = |S_k|$.
 A cost function $c$ is said to be $\theta$-\emph{simple} if there exists some constant $\theta>0$ such that $c(j, b) = \theta \cdot c(j-1, b)$ for all $j > 1$ and for all $b \geq 1$.
 We often drop $\theta$ and just state that a cost function is \emph{simple}, for brevity.
 \end{definition}
@@ -132,7 +131,7 @@ It is reasonable to assume that cost is additive (with respect to iterations) be
 
 Note that $C(j, B_{m})$ is strictly increasing in $j$ for any fixed $B_{m}$ because $c(j, b) > 0$ for any $j$ and $b$. While the class of simple cost functions may seem too restrictive, we present a few natural choices of cost functions that belong to the class of simple cost functions. In this work we assume that the underlying cost function is simple; further we assume that $c(j, b)$ for all $1 \leq j, b \leq s$ can be computed in polynomial time with respect to $s$.
 \begin{example}[Examples of simple cost functions] \label{bdoodle:exmp:CostFunctions}
-	The simplest choice of a cost function is a linear combination of \Time\ and \Inconvenience, parameterized by some constant $\alpha > 0$; we call this a \emph{linear} cost function. This cost function is $1$-simple. Notice that the first term captures \Time\ and the second captures \Inconvenience\ in both expressions.
+	The simplest choice of a cost function is a linear combination of \Timesand \Inconvenience, parameterized by some constant $\alpha > 0$; we call this a \emph{linear} cost function. This cost function is $1$-simple. Notice that the first term captures \Timesand the second captures \Inconveniencesin both expressions.
 	\begin{eqnarray*} \label{bdoodle:eqn:linear_cost_function}
 	&&	c_{\alpha}(j, b_j) = \alpha + b_j \\
 	&&	C_{\alpha}(j, {B}_m) = \left(\alpha \cdot j\right) + \left(\sum_{k=1}^{j} b_k\right)
@@ -422,7 +421,7 @@ Entries in boldface emphasize that $e_{D} < .750$.
 } \label{bdoodle:table:DoodleEfficiency-lower-attendance_time_averse}
 \end{table}
 
-For the inconvenience-averse cost function (recall $c_{\gamma}(j, b) = \gamma^{b}$), we chose $\gamma = 1.1$ as an experimental choice. While $\gamma$ is fairly small, because the cost function is an exponential function of $b$, an optimal B-Doodle must send out small-size batches. This cost function optimizes \Inconvenience\ primarily. We ran the same set of experiments as before to measure efficiency of Doodle, $e_{D}$.
+For the inconvenience-averse cost function (recall $c_{\gamma}(j, b) = \gamma^{b}$), we chose $\gamma = 1.1$ as an experimental choice. While $\gamma$ is fairly small, because the cost function is an exponential function of $b$, an optimal B-Doodle must send out small-size batches. This cost function optimizes \Inconveniencesprimarily. We ran the same set of experiments as before to measure efficiency of Doodle, $e_{D}$.
 
 The result is summarized in Table~\ref{bdoodle:table:DoodleEfficiency-lower-attendance_inconvenience_averse}. Notice that $e_{D}$ is not equal to $1$ even when $p = .2$ in this setting, which we did not observe with the other cost functions previously. Due to integer-rounding, we again observe some fluctuations in $e_{D}$ across columns within the same row, but the general trend is that $e_{D}$ decreases as $n$ increases.
 \begin{table}[h]  % \small
@@ -448,20 +447,20 @@ While we only presented experimental results with specific values of $(n, s, p, 
 	\item There is a large number of options ($s \geq 15$).
 	\item invitees are relatively free ($p > .5$).
 	\item Feasibility threshold is relaxed ($f < .8$).
-	\item The cost function places more weight on \Inconvenience\ than \Time\ ($\alpha < 20$, $\beta < 5$, or $\gamma > 1.05$).
+	\item The cost function places more weight on \Inconveniencesthan \Times($\alpha < 20$, $\beta < 5$, or $\gamma > 1.05$).
 \end{itemize}
-Intuitively the first four conditions affect $q_t$ (the probability that option $t$ is feasible) in the same way, and if $q_t$'s are high then Doodle is more likely to be inefficient because a few options may be sufficient for finding a feasible one. While the last condition is independent of $q_t$, the cost function determines what is being optimized, and Doodle becomes more inefficient if $c$ favors reducing \Inconvenience\ over reducing \Time.
+Intuitively the first four conditions affect $q_t$ (the probability that option $t$ is feasible) in the same way, and if $q_t$'s are high then Doodle is more likely to be inefficient because a few options may be sufficient for finding a feasible one. While the last condition is independent of $q_t$, the cost function determines what is being optimized, and Doodle becomes more inefficient if $c$ favors reducing \Inconveniencesover reducing \Time.
 
 
 \section{Discussion}
 
 In this chapter we identified two important dimensions of optimality in
-group scheduling: \Time\ and \Inconvenience. We generalized the popular
+group scheduling: \Timesand \Inconvenience. We generalized the popular
 Doodle mechanism to a class of B-Doodle mechanisms that partition date/time
 options into batches. We showed an example of the Pareto-frontier of
-B-Doodle mechanisms on the \Time-\Inconvenience\ dimensions. We then
+B-Doodle mechanisms on the \Time-\Inconveniencesdimensions. We then
 described an efficient algorithm for finding an optimal B-Doodle
-mechanisms, given a simple cost function that aggregates \Time\ and
+mechanisms, given a simple cost function that aggregates \Timesand
 \Inconvenience, assuming probabilistic independence among availability
 of invitees. We showed in simulations that optimal B-Doodle mechanism
 is superior to Doodle in realistic situations, sometimes greatly so.
