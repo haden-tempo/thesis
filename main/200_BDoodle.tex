@@ -139,16 +139,16 @@ For instance, when $\theta = 1$, it means that the cost of sending out a batch o
 Note that $C(j, B_{m})$ is strictly increasing in $j$ for any fixed $B_{m}$ because $c(j, b) > 0$ for any $j$ and $b$. While the class of simple cost functions may seem too restrictive, we present a few natural choices of cost functions that belong to the class of simple cost functions. In this work we assume that the underlying cost function is simple; further we assume that $c(j, b)$ for all $1 \leq j, b \leq s$ can be computed in polynomial time with respect to $s$.
 \begin{example}[Three simple cost functions] \label{bdoodle:exmp:CostFunctions}
 	
-	The simplest choice of a cost function is a linear combination of \Times and \Inconvenience, parameterized by some constant $\alpha > 0$; we call this a \emph{linear} cost function. This cost function is $1$-simple. Notice that the first term captures \Times and the second captures \Inconveniences in both expressions.
+	The simplest choice of a cost function is a linear combination of \Times and \Inconvenience, parameterized by some constant $\alpha > 0$; we call this a \emph{linear} cost function. This cost function is $1$-simple. Notice that the first term captures \Times and the second captures \Inconveniences in Equation~\ref{bdoodle:eqn:linear_cost_function}.
 	\begin{equation} \label{bdoodle:eqn:linear_cost_function}
 		c_{\alpha}(j, b_j) = \alpha + b_j,
-		~~~	C_{\alpha}(j, {B}_m) = \left(\alpha \cdot j\right) + \left(\sum_{k=1}^{j} b_k\right).
+		~~	C_{\alpha}(j, {B}_m) = \left(\alpha \cdot j\right) + \left(\sum_{k=1}^{j} b_k\right).
 	\end{equation}
 	In some cases the organizer may want to penalize the mechanism for executing too many iterations by making later iterations to cost more than earlier iterations. The following describes such cost function, parameterized by some constant $\beta > 1$; we call this a \emph{time-averse} cost function. Notice that the term $\beta^j$ is strictly increasing as $j$ increases (recall $\beta > 1$). This cost function is $\beta$-simple.
-	\begin{eqnarray*} \label{bdoodle:eqn:time_averse_cost_function}
-	&&	c_{\beta}(j, b_j) = \beta^j \cdot b_j \\
-	&&	C_{\beta}(j, {B}_m) = \left(\sum_{k=1}^{j} \beta^k \cdot b_k \right)
-	\end{eqnarray*}
+	\begin{equation} \label{bdoodle:eqn:time_averse_cost_function}
+	c_{\beta}(j, b_j) = \beta^j \cdot b_j,
+	~~ C_{\beta}(j, {B}_m) = \left(\sum_{k=1}^{j} \beta^k \cdot b_k \right).
+	\end{equation}
 	In contrast if the organizer is interested in reducing the size of each batch because it may cause too much inconvenience, then the following cost function could be used, which is parameterized by some constant $\gamma > 1$; we call this an \emph{inconvenience-averse} cost function which is $1$-simple.
 	\begin{eqnarray*} \label{bdoodle:eqn:inconvenience_averse_cost_function}
 	&&	c_{\gamma}(j, b_j) = \gamma^{b_j} \\
