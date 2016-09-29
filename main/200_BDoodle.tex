@@ -142,9 +142,9 @@ In contrast if the convener is interested in reducing the size of each batch bec
 \end{example}
 
 
-We now formally define the Group Scheduling Problem.
+We now formally define the Batched Doodle Problem.
 \begin{definition}[Batched Doodle Problem] \label{bdoodle:def:bdp}
-An instance of the Group Scheduling Problem (\BDP) is a tuple $(N, S, f, c, P)$ where $N = \{a_1, a_2, \dots, a_n\}$ is a set of $n$ agents , $S = \{1, 2, \dots, s\}$ is a set of time $s$ slots, $f$ is the feasibility threshold ($0 \leq f \leq 1$), $c$ is a cost function, and $P$ is a probability distribution matrix of availability ($P = \{p_{i, t}\}$ with $0 \leq p_{i,t}\leq 1$ for all $i, t$).
+An instance of the Batched Doodle Problem (\BDP) is a tuple $(N, S, f, c, P)$ where $N = \{a_1, a_2, \dots, a_n\}$ is a set of $n$ agents , $S = \{1, 2, \dots, s\}$ is a set of time $s$ slots, $f$ is the feasibility threshold ($0 \leq f \leq 1$), $c$ is a cost function, and $P$ is a probability distribution matrix of availability ($P = \{p_{i, t}\}$ with $0 \leq p_{i,t}\leq 1$ for all $i, t$).
 
 The objective in \BDPs is to find an optimal partition of $S$, $B^*$, among all B-Doodle mechanisms that partition $S$, such that $B^*$ minimizes the expected cost of the scheduling process (expectation with respect to $P$), given $(N, S, f, c, P)$.
 \end{definition}
@@ -152,7 +152,61 @@ Since there are exponentially many B-Doodle mechanisms, it is impractical to enu
 
 
 
+\subsection{Assumptions}
+As we briefly mentioned in the intro, we assume that the availability of agents for each time slot is independent of their availability at other time slots, and of the availability of other agents.  We discuss the relaxation of this assumption in Section~\ref{sec:Discussion}. The independence assumption allows us to compute the likelihood of each time slot being feasible, as the following lemma states. 
+\begin{Lemma} \label{lemma:q_t_polytime}
+Given $(N, S, f, P)$, let $q_t$ for each $t\in S$ be the probability that time slot $t$ is $f$-feasible. Under the independence assumption, $q_t$ can be computed in polynomial time.
+\end{Lemma}
+\begin{proof}
+For any fixed $t$, let us define $V_t(i, z)$ to be the probability that among the agents $\{a_1, a_2, \dots, a_i\}$ exactly $z$ agents are available at time slot $t$. $V_t(i, z)$ is well-defined where $1 \leq i \leq n$ and $0 \leq z \leq i$. We further define $V_t(i, z)$ for the following degenerate cases:
+\begin{equation*}
+V_t(i, z) =
+\begin{cases} 
+	1 & \mbox{if~} i = z = 0 \\
+	0 & \mbox{if~} z = -1 \mbox{~or~} (i = 0 \land z > 0)
+\end{cases}
+\end{equation*}
+Then we can compute $V_t(i, z)$ using a simple dynamic programming algorithm according to the following recurrence relation where $1 \leq i \leq n$ and $0 \leq z \leq i$:
+\begin{equation} \label{eqn:vt_precompute}
+V_t(i, z) = V_t(i-1, z-1) \cdot p_{i,t} + V_t(i-1, z) \cdot (1- p_{i,t}) 
+\end{equation}
+It is easy to verify that the recurrence relation is correct. For the degenerate cases (or base cases) when $i = z = 0$ it is always (with probability 1) the case that no agents are available. When $z = -1$ or $(i=0 \land z>0)$, it is never (with probability 0) the case that $z$ agents are available. For the main recurrence relation, agent $a_i$ is either available or unavailable, and we compute $V_t(i, z)$ by considering both cases. For each fixed $t$, there are $O(n^2)$ entries of $V_t$ to be computed, and computing each entry takes $O(1)$; therefore it takes $O(sn^2)$ to compute $V_t(i, z)$ for all $t, i, z$. 
 
+Finally we can compute $q_t$ after we compute $V_t(i, z)$ for all $i,z$, as follows:
+$q_t = \sum_{z = \lceil f \cdot n \rceil}^{n} V_t(n, z)$.
+\qed
+\end{proof}
+
+% %%% HERE GOES THE THEOREM!! 
+
+Lemma~\ref{lemma:q_t_polytime} allows us to describe a B-Doodle mechanism in a simpler form, along with the following theorem. 
+\begin{Thm} \label{thm:swap_argument}
+Consider a B-Doodle mechanism $B$ described by $\langle S_1, S_2, \dots, S_m \rangle$. Suppose that there is some time slot $t \in S_l$ and $t'\in S_{l'}$ with $q_t < q_{t'}$ and $l < l'$. Then $B$ is not an optimal in the sense that we can find another mechanism $B^*$ whose expected cost is strictly less than the expected cost of $B$.
+\end{Thm}
+\begin{proof}
+Given $B$, let us construct $B^* = \langle S^*_1, S^*_2, \dots, S^*_m \rangle$ that is the same as $B$ except that we swap $t$ and $t'$. That is, $S^*_i = S_i$ for all $i \neq l$ and $i\neq l'$, and $S^*_{l} = (S_l \cup t') \setminus t$ and $S^*_{l'} = (S_{l'} \cup t) \setminus t'$. Note that the two mechanisms have the same batch sizes ($b_j = b^*_j$ for all $j$). \\
+
+Let $w_j$ be the probability that the scheduling process ends after the $j$-th iteration if we use $B$, and $w_j^*$ if we use $B^*$. Then $w_j = w_j^*$ for all $j < l$ because $S_j = S^*_j$ for all $j$ with $1 \leq j < l$. Clearly it holds that $w_l < w_l^*$ because of the swap of $t$ and $t'$. For $j$ with $l < j \leq l'$, it holds that $w_j > w_j^*$; this is not obvious, but the intuition is that if $w_l^*$ increases then the subsequent $w_j^*$'s with $l < j \leq l'$ must decrease as they depend on $1-w_l^*$, until this effect is canceled out in the $l'$-th batch. Since the probability of finding no feasible time slots during $l'$ iterations is the same in both cases (because $\cup_{i=1}^{l'} S_i = \cup_{i=1}^{l'}S^*_i$) it holds that $w_j = w_j^*$ for all $j > l'$. \\
+
+Let $E_B$ be the expected cost of $B$ and $E_{B^*}$ of $B^*$. Since $b_j = b^*_j$ for all $j$, it holds that $C(j, B) = C(j, B^*)$ for all $j$, and we have:
+\begin{eqnarray*}
+	E_B - E_{B^*} 
+	&=& (w_l - w_l^*)C(l, B) + \sum_{j=l+1}^{l'} (w_j - w_j^*)C(j, B) \\
+	&=& \sum_{j=l+1}^{l'} (w_j - w_j^*)(C(j, B) - C(l, B))
+\end{eqnarray*} 
+The first inequality holds by definition of the expected cost and canceling out some terms; the second inequality holds because $(w_l - w_l^*) + \sum_{j=l+1}^{l'} (w_j - w_j^*) = 0$ (as probabilities must add up to one). Since $w_j > w_j^*$ and $C(j, B) > C(l, B)$ for all $j$ (because $C(j, B)$ is an increasing function in $j$ for fixed $B$), we conclude that $E_{B} > E_{B^*}$.
+\qed
+\end{proof}
+Theorem~\ref{thm:swap_argument} implies that an optimal B-Doodle that minimizes the expected cost must have the following property: for any two batches $S_j$ and $S_k$ with $j < k$, it must hold that $q_t \geq q_{t'}$ for all $t\in S_j$ and $t' \in S_k$ (otherwise we can apply the theorem and swap the two time slots to obtain a mechanism with smaller expected cost).
+Therefore we can limit our attention to the sub-class of B-Doodle mechanisms that only describe batch sizes, but not explicitly which time slots in each batch. Due to Lemma~\ref{lemma:q_t_polytime} we can compute $q_t$ for each $t$ in polynomial time, and thus we can simply sort time slots by $q_t$ in non-increasing order as a pre-processing step.
+
+Therefore we can focus on the following sub-class of \emph{simplified} B-Doodle mechanisms:
+\begin{Def}[Simplified B-Doodle Mechanism]
+Let $S = \{1, 2, \dots, s\}$ be a set of $s$ time slots. 
+A simplified B-Doodle mechanism $B$ for $S$ is a vector of integers, described as $B = \langle b_1, b_2, \dots, b_m\rangle$ where $(b_j \geq 1$ for all $j \leq m)$ and $(\sum_{k=1}^{m} b_k = s)$.
+We write $B_m$ to emphasize that $B$ has $m$ batches.
+\end{Def}
+From now on we use the definition of a simplified B-Doodle, and simply write a B-Doodle mechanism to mean a simplified B-Doodle mechanism but this should cause no confusion.
 
 
 
