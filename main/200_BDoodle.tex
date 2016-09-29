@@ -97,6 +97,7 @@ We consider a setting where there are $n$ invitees and $s$ date/time options fro
 We model the uncertainty of availability of invitees as a random matrix as follows.
 Consider a matrix of mutually independent Bernoulli random variables where rows represent invitees and columns represent a set of date/time options. 
 Given probability of success for each Bernoulli random variable, the organizer can ``inspect'' a batch of columns at once to know of the realization of those entries. This corresponds to polling invitees' availability for a batch of date/time options. The organizer wishes to determine with certainty whether the matrix contains a feasible column or it does not. Using the random matrix model, we first investigate interesting properties of an optimal solution, and then discuss how it performs better than the classic Doodle under various settings.
+By modeling the setting as a more abstract problem using random matrices, we can apply our model and algorithms to 
 
  \begin{definition}[Feasibility]
  Let $A$ be a matrix whose entries are from $\{0,1\}$, and refer to the entry of $A$ at row $r$ and column $c$ as $a_{r,c}$.
