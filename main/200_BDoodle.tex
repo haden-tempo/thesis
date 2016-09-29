@@ -107,12 +107,14 @@ By modeling the setting as a more abstract problem using random matrices, we can
  We say that $A$ is {\em feasible} if it contains at least one feasible column (otherwise it is {\em infeasible}).
  \end{definition}
  
-In our setting, the organizer iteratively sends out a batch of options until a feasible option is found. In our setting \Times spent by the scheduling process is measured by the number of iterations and \Inconveniences caused is measured by the number of options that have been sent out by the organizer.
+In our setting, the organizer iteratively sends out a batch of options until a feasible option is found. 
+\Times spent by the scheduling process is measured by the number of iterations and \Inconveniences caused is measured by the number of options that have been sent out by the organizer.
+
 Let us define a class of B-Doodle mechanisms that describe how the organizer sends out options in each iteration.
 \begin{definition}[B-Doodle Mechanism]\label{bdoodle:def:BDoodleMechanism}
 Let $S = \{1, 2, \dots, s\}$ be a set of $s$ options.
 We define a B-Doodle mechanism for $S$ as an ordered partition of $S$.
-Let $B = \langle S_1, S_2, \dots, S_m \rangle$ be a partition of $S$ into $m$ subsets such that $S_j \neq\emptyset$, $S_j \cap S_k = \emptyset$ for $j \neq k$, and $\cup_{l=1}^{m} S_l = S$ where $1 \leq j,k \leq m$.
+Let $B = \langle S_1, S_2, \dots, S_m \rangle$ be a partition of $S$ into $m$ subsets such that $S_j \neq\emptyset$ for all $j$, $S_j \cap S_k = \emptyset$ for all $j \neq k$, and $\cup_{l=1}^{m} S_l = S$ where $1 \leq j,k \leq m$.
 We define $b_j = |S_j|$ for all $j \leq m$ and call $b_j$ the size of the $j$-th batch.
 We write $B_m$ to emphasize that $B$ has $m$ batches.
 \end{definition}
