@@ -134,6 +134,7 @@ We often drop $\theta$ and just state that a cost function is \emph{simple}, for
 \end{definition}
 It is reasonable to assume that cost is additive (with respect to iterations) because an additional iteration adds the time spent and inconvenience caused for the invitees.
 
+
 Note that $C(j, B_{m})$ is strictly increasing in $j$ for any fixed $B_{m}$ because $c(j, b) > 0$ for any $j$ and $b$. While the class of simple cost functions may seem too restrictive, we present a few natural choices of cost functions that belong to the class of simple cost functions. In this work we assume that the underlying cost function is simple; further we assume that $c(j, b)$ for all $1 \leq j, b \leq s$ can be computed in polynomial time with respect to $s$.
 \begin{example}[Examples of simple cost functions] \label{bdoodle:exmp:CostFunctions}
 	The simplest choice of a cost function is a linear combination of \Times and \Inconvenience, parameterized by some constant $\alpha > 0$; we call this a \emph{linear} cost function. This cost function is $1$-simple. Notice that the first term captures \Times and the second captures \Inconveniences in both expressions.
