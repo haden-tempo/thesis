@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 SEP 2016 23:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  29 SEP 2016 00:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -491,8 +491,26 @@ n input line 75.
  [4 <./plots/pareto_objective_fin-eps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 100.
- [5] [6] [7] [8] [9] [10] [11] [12] [13]
-Overfull \hbox (15.11455pt too wide) in paragraph at lines 346--348
+ [5] [6] [7]
+
+LaTeX Warning: Reference `sec:Discussion' on page 8 undefined on input line 153
+.
+
+
+LaTeX Warning: Reference `lemma:q_t_polytime' on page 8 undefined on input line
+ 179.
+
+[8]
+
+LaTeX Warning: Reference `thm:swap_argument' on page 9 undefined on input line 
+197.
+
+
+LaTeX Warning: Reference `lemma:q_t_polytime' on page 9 undefined on input line
+ 198.
+
+[9] [10] [11] [12] [13] [14] [15]
+Overfull \hbox (15.11455pt too wide) in paragraph at lines 397--399
 []\OT1/ptm/m/n/10.95 Recall that $[] \OT1/ztmcm/m/n/10.95 = \OMS/ztmcm/m/n/10.9
 5 h\OML/ztmcm/m/it/10.95 b[]; b[]; [] ; b[]\OMS/ztmcm/m/n/10.95 i$\OT1/ptm/m/n/
 10.95 . Not to be con-fused, let us ex-press it as $[] \OT1/ztmcm/m/n/10.95 = \
@@ -500,18 +518,18 @@ OMS/ztmcm/m/n/10.95 h[]\OML/ztmcm/m/it/10.95 ; []; [] ; []\OMS/ztmcm/m/n/10.95
 i$
  []
 
-[14] [15] [16] [17] [18] [19]
+[16] [17] [18] [19] [20] [21]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20]
+[22]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 531.
-) [21]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 582.
+) [23]
 Chapter 3.
-(./300_Matrix.tex [22
+(./300_Matrix.tex [24
 
-] [23] [24] [25] [26] [27] [28] [29]
+] [25] [26] [27] [28] [29] [30] [31]
 Overfull \hbox (53.95978pt too wide) in paragraph at lines 268--271
 \OT1/ptm/m/n/10.95 Here we have $\OML/ztmcm/m/it/10.95 s[] [] \OT1/ztmcm/m/n/10
 .95 = 0\OML/ztmcm/m/it/10.95 :\OT1/ztmcm/m/n/10.95 199$ \OT1/ptm/m/n/10.95 and 
@@ -521,11 +539,11 @@ o-duce $\OML/ztmcm/m/it/10.95 ^^Y \OT1/ztmcm/m/n/10.95 = []$\OT1/ptm/m/n/10.95
 .
  []
 
-[30] [31] [32]) [33]
+[32] [33] [34]) [35]
 Chapter 4.
-(./400_GASP.tex [34
+(./400_GASP.tex [36
 
-] [35] [36]
+] [37] [38]
 Overfull \hbox (32.06836pt too wide) in paragraph at lines 65--67
 \OT1/ztmcm/m/n/10.95 [3]$\OT1/ptm/m/n/10.95 . Sup-pose $\OML/ztmcm/m/it/10.95 S
 [] \OT1/ztmcm/m/n/10.95 = \OMS/ztmcm/m/n/10.95 f\OT1/ztmcm/m/n/10.95 (\OML/ztmc
@@ -545,12 +563,12 @@ OML/ztmcm/m/it/10.95 a[]; \OT1/ztmcm/m/n/10.95 2)\OMS/ztmcm/m/n/10.95 g$\OT1/pt
 m/m/n/10.95 .
  []
 
-[37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51]
-[52] [53] [54] [55]) [56] [57]
+[39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53]
+[54] [55] [56] [57]) [58] [59]
 Chapter 5.
-(./500_SIP.tex [58
+(./500_SIP.tex [60
 
-] [59]
+] [61]
 Overfull \hbox (6.27542pt too wide) in paragraph at lines 75--77
 []\OT1/ptm/m/n/10.95 Theorem 17[] sum-ma-rizes the most rel-e-vant re-sults of 
 Dar-mann et al. [[]] and Lee and Shoham [[]]
@@ -561,7 +579,7 @@ Overfull \hbox (40.96858pt too wide) in paragraph at lines 92--102
  [][] 
  []
 
-[60] [61] [62]
+[62] [63] [64]
 Overfull \hbox (5.42677pt too wide) in paragraph at lines 202--203
 []\OT1/ptm/m/n/10.95 Assume un-bounded $\OML/ztmcm/m/it/10.95 $ \OT1/ptm/m/n/1
 0.95 and $\OML/ztmcm/m/it/10.95 ^^L$\OT1/ptm/m/n/10.95 , and let us re-duce the
@@ -569,20 +587,20 @@ Overfull \hbox (5.42677pt too wide) in paragraph at lines 202--203
  weighted
  []
 
-[63] [64] [65] [66] [67]
+[65] [66] [67] [68] [69]
 Overfull \hbox (84.17479pt too wide) in paragraph at lines 312--322
  [][] 
  []
 
-[68] [69] [70] [71] [72] [73] [74]) [75]
+[70] [71] [72] [73] [74] [75] [76]) [77]
 Chapter 6.
-(./600_GT.tex [76
+(./600_GT.tex [78
 
-] [77]) [78] [79]
+] [79]) [80] [81]
 Chapter 7.
-(./700_Discussion.tex) (./thesis.bbl [80
+(./700_Discussion.tex) (./thesis.bbl [82
 
-] [81
+] [83
 
 ]
 Missing character: There is no Ã in font ptmr7t!
@@ -593,20 +611,23 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ƒ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
- [82] [83] [84]) [85]
+ [84] [85] [86]) [87]
 (./thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 4434 strings out of 493014
- 65364 string characters out of 6133351
+ 4438 strings out of 493014
+ 65446 string characters out of 6133351
  130103 words of memory out of 5000000
- 7770 multiletter control sequences out of 15000+600000
+ 7774 multiletter control sequences out of 15000+600000
  75489 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,10n,24p,1783b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,10n,24p,1783b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -621,10 +642,10 @@ ive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016
 1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (95 pages, 419590 bytes).
+Output written on thesis.pdf (97 pages, 428342 bytes).
 PDF statistics:
- 380 PDF objects out of 1000 (max. 8388607)
- 262 compressed objects within 3 object streams
+ 387 PDF objects out of 1000 (max. 8388607)
+ 267 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

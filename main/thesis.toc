@@ -6,60 +6,61 @@
 \contentsline {chapter}{\numberline {2}Batched Doodle Problem}{2}
 \contentsline {section}{\numberline {2.1}Notation and Definitions}{5}
 \contentsline {subsection}{\numberline {2.1.1}Problem Setting}{5}
-\contentsline {section}{\numberline {2.2}Efficient Algorithm for Finding Optimal B-Doodle}{11}
-\contentsline {subsection}{\numberline {2.2.1}Preliminaries}{11}
-\contentsline {subsection}{\numberline {2.2.2}Optimal Algorithm}{13}
-\contentsline {section}{\numberline {2.3}Experimental Results with Synthetic Data}{17}
-\contentsline {subsection}{\numberline {2.3.1}Case of Linear Cost Function}{18}
-\contentsline {subsection}{\numberline {2.3.2}Case of Other Cost Functions}{20}
-\contentsline {subsection}{\numberline {2.3.3}Summary of Experiments}{20}
-\contentsline {section}{\numberline {2.4}Discussion}{21}
-\contentsline {chapter}{\numberline {3}Probabilistic Matrix Inspection Problem}{22}
-\contentsline {section}{\numberline {3.1}Notation and Definitions}{22}
-\contentsline {subsection}{\numberline {3.1.1}Example}{24}
-\contentsline {section}{\numberline {3.2}Technical Results and Algorithm}{25}
-\contentsline {subsection}{\numberline {3.2.1}1-Row Matrix and 1-Column Matrix}{25}
-\contentsline {subsection}{\numberline {3.2.2}Inspection of Entire Column}{26}
-\contentsline {subsection}{\numberline {3.2.3}Optimal Ordering within Column}{28}
-\contentsline {subsection}{\numberline {3.2.4}Main Result and Algorithm}{30}
-\contentsline {section}{\numberline {3.3}Discussion and Future Work}{32}
-\contentsline {chapter}{\numberline {4}Complexity of Group Activity Selection Problem}{34}
-\contentsline {section}{\numberline {4.1}Introduction and Related Work}{34}
-\contentsline {paragraph}{Related Work.}{36}
-\contentsline {section}{\numberline {4.2}Definitions and Known Results}{37}
-\contentsline {section}{\numberline {4.3}Parameterized Complexity}{40}
-\contentsline {subsection}{\numberline {4.3.1}$k$-IR-GASP: Finding Individually Rational Assignments in GASP}{40}
-\contentsline {subsection}{\numberline {4.3.2}$k$-Stable-GASP: Finding Stable Assignments}{42}
-\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{43}
-\contentsline {paragraph}{Proof of equivalence between instances.}{43}
+\contentsline {subsection}{\numberline {2.1.2}Assumptions}{8}
+\contentsline {section}{\numberline {2.2}Efficient Algorithm for Finding Optimal B-Doodle}{13}
+\contentsline {subsection}{\numberline {2.2.1}Preliminaries}{13}
+\contentsline {subsection}{\numberline {2.2.2}Optimal Algorithm}{15}
+\contentsline {section}{\numberline {2.3}Experimental Results with Synthetic Data}{19}
+\contentsline {subsection}{\numberline {2.3.1}Case of Linear Cost Function}{20}
+\contentsline {subsection}{\numberline {2.3.2}Case of Other Cost Functions}{22}
+\contentsline {subsection}{\numberline {2.3.3}Summary of Experiments}{22}
+\contentsline {section}{\numberline {2.4}Discussion}{23}
+\contentsline {chapter}{\numberline {3}Probabilistic Matrix Inspection Problem}{24}
+\contentsline {section}{\numberline {3.1}Notation and Definitions}{24}
+\contentsline {subsection}{\numberline {3.1.1}Example}{26}
+\contentsline {section}{\numberline {3.2}Technical Results and Algorithm}{27}
+\contentsline {subsection}{\numberline {3.2.1}1-Row Matrix and 1-Column Matrix}{27}
+\contentsline {subsection}{\numberline {3.2.2}Inspection of Entire Column}{28}
+\contentsline {subsection}{\numberline {3.2.3}Optimal Ordering within Column}{30}
+\contentsline {subsection}{\numberline {3.2.4}Main Result and Algorithm}{32}
+\contentsline {section}{\numberline {3.3}Discussion and Future Work}{34}
+\contentsline {chapter}{\numberline {4}Complexity of Group Activity Selection Problem}{36}
+\contentsline {section}{\numberline {4.1}Introduction and Related Work}{36}
+\contentsline {paragraph}{Related Work.}{38}
+\contentsline {section}{\numberline {4.2}Definitions and Known Results}{39}
+\contentsline {section}{\numberline {4.3}Parameterized Complexity}{42}
+\contentsline {subsection}{\numberline {4.3.1}$k$-IR-GASP: Finding Individually Rational Assignments in GASP}{42}
+\contentsline {subsection}{\numberline {4.3.2}$k$-Stable-GASP: Finding Stable Assignments}{44}
 \contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{45}
 \contentsline {paragraph}{Proof of equivalence between instances.}{45}
-\contentsline {paragraph}{Preliminaries.}{46}
-\contentsline {paragraph}{FPT Algorithm.}{47}
-\contentsline {paragraph}{Preliminaries.}{49}
-\contentsline {paragraph}{FPT Algorithm.}{50}
-\contentsline {subsection}{\numberline {4.3.3}$k$-EF-GASP: Finding Envy-free Assignments}{51}
-\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{51}
-\contentsline {paragraph}{Proof of equivalence between instances.}{52}
-\contentsline {paragraph}{Preliminaries.}{54}
-\contentsline {paragraph}{FPT algorithm.}{54}
-\contentsline {subsection}{\numberline {4.3.4}$k$-Perfect-GASP: Finding Perfect Assignments}{55}
-\contentsline {section}{\numberline {4.4}Discussion and Future Work}{56}
-\contentsline {chapter}{\numberline {5}Complexity of Stable Invitations Problem}{58}
-\contentsline {section}{\numberline {5.1}Introduction and Related Work}{58}
-\contentsline {paragraph}{Related Work.}{59}
-\contentsline {section}{\numberline {5.2}Definitions and Known Results}{59}
-\contentsline {section}{\numberline {5.3}Parameterized Complexity}{60}
-\contentsline {subsection}{\numberline {5.3.1}$k$-IR-Invitation}{61}
-\contentsline {subsection}{\numberline {5.3.2}$k$-Stable-Invitation}{63}
-\contentsline {section}{\numberline {5.4}Symmetric Social Relationship}{68}
-\contentsline {subsection}{\numberline {5.4.1}Symmetric $k$-IR-Invitations}{69}
-\contentsline {subsection}{\numberline {5.4.2}Symmetric $k$-Stable-Invitations}{72}
-\contentsline {section}{\numberline {5.5}Discussion and Future Work}{75}
-\contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems}{76}
-\contentsline {section}{\numberline {6.1}Introduction and Related Work}{76}
-\contentsline {section}{\numberline {6.2}Definitions and Known Results}{76}
-\contentsline {subsection}{\numberline {6.2.1}Main Results}{76}
-\contentsline {subsection}{\numberline {6.2.2}Extensions}{78}
-\contentsline {chapter}{\numberline {7}Discussion and Open Problems}{80}
-\contentsline {chapter}{Bibliography}{81}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{47}
+\contentsline {paragraph}{Proof of equivalence between instances.}{47}
+\contentsline {paragraph}{Preliminaries.}{48}
+\contentsline {paragraph}{FPT Algorithm.}{49}
+\contentsline {paragraph}{Preliminaries.}{51}
+\contentsline {paragraph}{FPT Algorithm.}{52}
+\contentsline {subsection}{\numberline {4.3.3}$k$-EF-GASP: Finding Envy-free Assignments}{53}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{53}
+\contentsline {paragraph}{Proof of equivalence between instances.}{54}
+\contentsline {paragraph}{Preliminaries.}{56}
+\contentsline {paragraph}{FPT algorithm.}{56}
+\contentsline {subsection}{\numberline {4.3.4}$k$-Perfect-GASP: Finding Perfect Assignments}{57}
+\contentsline {section}{\numberline {4.4}Discussion and Future Work}{58}
+\contentsline {chapter}{\numberline {5}Complexity of Stable Invitations Problem}{60}
+\contentsline {section}{\numberline {5.1}Introduction and Related Work}{60}
+\contentsline {paragraph}{Related Work.}{61}
+\contentsline {section}{\numberline {5.2}Definitions and Known Results}{61}
+\contentsline {section}{\numberline {5.3}Parameterized Complexity}{62}
+\contentsline {subsection}{\numberline {5.3.1}$k$-IR-Invitation}{63}
+\contentsline {subsection}{\numberline {5.3.2}$k$-Stable-Invitation}{65}
+\contentsline {section}{\numberline {5.4}Symmetric Social Relationship}{70}
+\contentsline {subsection}{\numberline {5.4.1}Symmetric $k$-IR-Invitations}{71}
+\contentsline {subsection}{\numberline {5.4.2}Symmetric $k$-Stable-Invitations}{74}
+\contentsline {section}{\numberline {5.5}Discussion and Future Work}{77}
+\contentsline {chapter}{\numberline {6}Incentive Compatibility in Group Assignment Problems}{78}
+\contentsline {section}{\numberline {6.1}Introduction and Related Work}{78}
+\contentsline {section}{\numberline {6.2}Definitions and Known Results}{78}
+\contentsline {subsection}{\numberline {6.2.1}Main Results}{78}
+\contentsline {subsection}{\numberline {6.2.2}Extensions}{80}
+\contentsline {chapter}{\numberline {7}Discussion and Open Problems}{82}
+\contentsline {chapter}{Bibliography}{83}
