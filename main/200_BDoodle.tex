@@ -101,15 +101,13 @@ By modeling the setting as a more abstract problem using random matrices, we can
 
  \begin{definition}[Feasibility]
  Let $A$ be a matrix whose entries are from $\{0,1\}$, and refer to the entry of $A$ at row $r$ and column $c$ as $a_{r,c}$.
- 
- 
+ We interpret that rows represent the invitees and columns the options; an entry $a_{r,c}$ being equal to $1$ means invitee $r$ is available for option $c$.  
  Let $f \in [0,1]$ be a fixed constant called the {\em feasibility threshold}.
  We say that a column $c$ of $A$ is {\em feasible} if at least a fraction $f$ of the entries of the column are 1's (otherwise it is {\em infeasible}).
  We say that $A$ is {\em feasible} if it contains at least one feasible column (otherwise it is {\em infeasible}).
  \end{definition}
  
-
-The organizer iteratively sends out a batch of options until a feasible option is found. In our setting \Times spent by the scheduling process is measured by the number of iterations and \Inconveniences caused is measured by the number of options that have been sent out by the organizer.
+In our setting, the organizer iteratively sends out a batch of options until a feasible option is found. In our setting \Times spent by the scheduling process is measured by the number of iterations and \Inconveniences caused is measured by the number of options that have been sent out by the organizer.
 Let us define a class of B-Doodle mechanisms that describe how the organizer sends out options in each iteration.
 \begin{definition}[B-Doodle Mechanism]\label{bdoodle:def:BDoodleMechanism}
 Let $S = \{1, 2, \dots, s\}$ be a set of $s$ options.
