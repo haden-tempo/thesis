@@ -63,15 +63,14 @@ In additino, if there is an overall cost function combining time
 and inconvenience, one can identify an optimal B-Doodle mechanism
 along this frontier as illustrated in
 Figure~\ref{bdoodle:fig:Pareto_objective}. 
-If we assume that the overall cost is the linear function 3$\cdot$\Time+\Inconvenience, the optimal
-mechanism happens to be the ``Half-n-half" mechanism; this mechanism
+If we assume that the overall cost is defined as 3$\cdot$\Time+\Inconvenience\ (which is a linear combination of the two), the optimal mechanism happens to be the ``Half-n-half" mechanism; this mechanism
 sends out $3$ options in the first batch, and if no feasible time
 slot is found then sends out the remaining $3$ options in the next
 batch.
 
 \begin{figure}[h!] \small
 \centering
-\includegraphics[scale=0.45]{plots/pareto_objective_fin.eps}
+\includegraphics[scale=0.48]{plots/pareto_objective_fin.eps}
 \caption{Pareto-frontier and objective function.}
 \label{bdoodle:fig:Pareto_objective}
 \end{figure}

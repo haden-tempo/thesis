@@ -8,11 +8,11 @@
 \contentsline {section}{\numberline {2.2}Efficient Algorithm for Finding Optimal B-Doodle}{8}
 \contentsline {subsection}{\numberline {2.2.1}Preliminaries}{8}
 \contentsline {subsection}{\numberline {2.2.2}Optimal Algorithm}{10}
-\contentsline {section}{\numberline {2.3}Experimental Results with Synthetic Data}{14}
+\contentsline {section}{\numberline {2.3}Experimental Results with Synthetic Data}{15}
 \contentsline {subsection}{\numberline {2.3.1}Case of Linear Cost Function}{15}
 \contentsline {subsection}{\numberline {2.3.2}Case of Other Cost Functions}{17}
 \contentsline {subsection}{\numberline {2.3.3}Summary of Experiments}{18}
-\contentsline {section}{\numberline {2.4}Discussion}{18}
+\contentsline {section}{\numberline {2.4}Discussion}{19}
 \contentsline {chapter}{\numberline {3}Probabilistic Matrix Inspection Problem}{20}
 \contentsline {section}{\numberline {3.1}Notation and Definitions}{20}
 \contentsline {subsection}{\numberline {3.1.1}Example}{22}
