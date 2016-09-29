@@ -122,12 +122,13 @@ We write $B_m$ to emphasize that $B$ has $m$ batches.
 We interpret a B-Doodle mechanism $B$ as follows: the organizer proposes the options contained in $S_1$ during the first iteration. If a feasible option is found, the process ends. Otherwise she sends out the next batch, $S_2$, and so on.
 Note that there exist exponentially many B-Doodle mechanisms for any a given $S$ (exponential in cardinality of $S$).
 
-The objective in the Batched Doodle PRoblem (\BDP) is to find a B-Doodle mechanism that minimizes the expected cost of scheduling process, given an objective function of \Times and \Inconvenience.
+The objective in the Batched Doodle Problem (\BDP) is to find an optimal B-Doodle mechanism with minimum expeted cost.
 Earlier we considered a simple cost function that is a linear combination of the two.
 While this cost function fits in many realistic situations, we want to explore a larger class of cost functions.
 We define a class of cost functions that depend only on the number of iterations and batch sizes.
 \begin{definition}[Cost function] \label{bdoodle:def:CostFunction}
-	A cost function $c$ takes two integers $j$ and $b$ as arguments, and $c(j, b) > 0$ describes the aggregate cost of \Times and \Inconveniences that is incurred by sending out a batch of $b$ options during the $j$-th iteration. We assume that cost is additive so that the overall cost of executing the first $j$ iterations of ${B}_m = \langle S_1, S_2, \dots, S_m \rangle$ is simply the sum, $\sum_{k=1}^{j} c(k, b_k)$, which we denote by $C(j, {B}_m)$; recall that $b_k = |S_k|$.
+	A cost function $c$ takes two integers $j$ and $b$ as arguments, and $c(j, b) > 0$ describes the aggregate cost of \Times and \Inconveniences that is incurred by sending out a batch containing $b$ options during the $j$-th iteration. 
+	We assume that cost is additive so that the overall cost of executing the first $j$ iterations of ${B}_m = \langle S_1, S_2, \dots, S_m \rangle$ is simply the sum, $\sum_{k=1}^{j} c(k, b_k)$, which we denote by $C(j, {B}_m)$; recall that $b_k = |S_k|$.
 A cost function $c$ is said to be $\theta$-\emph{simple} if there exists some constant $\theta>0$ such that $c(j, b) = \theta \cdot c(j-1, b)$ for all $j > 1$ and for all $b \geq 1$.
 We often drop $\theta$ and just state that a cost function is \emph{simple}, for brevity.
 \end{definition}
