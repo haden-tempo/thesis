@@ -100,12 +100,23 @@ Given probability of success for each Bernoulli random variable, the organizer c
 By modeling the setting as a more abstract problem using random matrices, we can apply our model and algorithms to different settings, which we discuss in Section~\ref{bdoodle:sec:discussion}.
 
  \begin{definition}[Feasibility]
- Let $A$ be a matrix whose entries are from $\{0,1\}$, and refer to the entry of $A$ at row $r$ and column $c$ as $a_{r,c}$.
+ Let $A$ be an $n$ by $m$ matrix whose entries are from $\{0,1\}$, and refer to the entry of $A$ at row $r$ and column $c$ as $a_{r,c}$.
  We interpret that rows represent the invitees and columns the options; an entry $a_{r,c}$ being equal to $1$ means invitee $r$ is available for option $c$.  
  Let $f \in [0,1]$ be a fixed constant called the {\em feasibility threshold}.
  We say that a column $c$ of $A$ is {\em feasible} if at least a fraction $f$ of the entries of the column are 1's (otherwise it is {\em infeasible}).
  We say that $A$ is {\em feasible} if it contains at least one feasible column (otherwise it is {\em infeasible}).
  \end{definition}
+
+
+ \begin{definition}[Input instance]
+ An input instance of the Probabilistic Matrix Inspection problem is a pair of matrices $(A, P_A)$ of size $n$ by $m$
+ where $A$ is a matrix of Bernoulli random variables 
+ and $P_A$ is the probability matrix associated with it.
+ We denote an entry of $A$ as $a_{r,c}$ and of $P_A$ as $p_{r,c}$.
+ Each entry $a_{r,c}$ of $A$ is a Bernoulli random variable, and $p_{r,c}$ is the probability of success for $a_{r,c}$ (i.e., $p_{r,c} = \mathbf{P}[a_{r,c} = 1]$).
+ We define $s_c = \prod_{r=1}^{n} p_{r,c}$ to denote the probability that column $c$ is feasible (probability of success for column $c$).
+ \end{definition}
+
  
 In our setting, the organizer iteratively sends out a batch of options until a feasible option is found. 
 \Times spent by the scheduling process is measured by the number of iterations and \Inconveniences caused is measured by the number of options that have been sent out by the organizer.
