@@ -101,10 +101,10 @@ By modeling the setting as a more abstract problem using random matrices, we can
 
  \begin{definition}[Feasibility]
  Let $A$ be an $n$ by $m$ matrix whose entries are from $\{0,1\}$, and refer to the entry of $A$ at row $r$ and column $c$ as $a_{r,c}$.
- Rows represent the invitees, columns represent the options, and an entry being $1$ means the invitee is available for the option.
- Let $f \in [0,1]$ be a fixed constant called the {\em feasibility threshold}.
- We say that a column $c$ of $A$ is {\em feasible} if at least a fraction $f$ of the entries of the column are 1's (otherwise it is {\em infeasible}).
- We say that $A$ is {\em feasible} if it contains at least one feasible column (otherwise it is {\em infeasible}).
+ Rows represent the invitees, columns represent the options, and an entry being $1$ means the invitee is available for the option. 
+ Let $f \in [0,1]$ be the {\em feasibility threshold}.
+ We say that a column $c$ of $A$ is {\em $f$-feasible} if at least a fraction $f$ of the entries of the column are 1's.
+ We say that $A$ is {\em $f$-feasible} if it contains at least one feasible column.
  \end{definition}
  
 In our setting, the organizer iteratively sends out a batch of options until a feasible option is found. 
