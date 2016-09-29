@@ -7,7 +7,7 @@
 \contentsline {section}{\numberline {2.1}Notation and Definitions}{5}
 \contentsline {section}{\numberline {2.2}Efficient Algorithm for Finding Optimal B-Doodle}{8}
 \contentsline {subsection}{\numberline {2.2.1}Preliminaries}{8}
-\contentsline {subsection}{\numberline {2.2.2}Optimal Algorithm}{10}
+\contentsline {subsection}{\numberline {2.2.2}Optimal Algorithm}{11}
 \contentsline {section}{\numberline {2.3}Experimental Results with Synthetic Data}{15}
 \contentsline {subsection}{\numberline {2.3.1}Case of Linear Cost Function}{15}
 \contentsline {subsection}{\numberline {2.3.2}Case of Other Cost Functions}{17}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 SEP 2016 23:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 SEP 2016 23:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -490,9 +490,9 @@ n input line 75.
 (pdftex.def)             Requested size: 344.96487pt x 158.99219pt.
  [4 <./plots/pareto_objective_fin-eps-converted-to.pdf>] [5] [6] [7]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 183.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 182.
  [8] [9] [10] [11]
-Overfull \hbox (15.11455pt too wide) in paragraph at lines 274--276
+Overfull \hbox (15.11455pt too wide) in paragraph at lines 273--275
 []\OT1/ptm/m/n/10.95 Recall that $[] \OT1/ztmcm/m/n/10.95 = \OMS/ztmcm/m/n/10.9
 5 h\OML/ztmcm/m/it/10.95 b[]; b[]; [] ; b[]\OMS/ztmcm/m/n/10.95 i$\OT1/ptm/m/n/
 10.95 . Not to be con-fused, let us ex-press it as $[] \OT1/ztmcm/m/n/10.95 = \
@@ -506,7 +506,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [16] [17]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 459.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 458.
  [18]) [19]
 Chapter 3.
 (./300_Matrix.tex [20
@@ -618,7 +618,7 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on thesis.pdf (93 pages, 411114 bytes).
+Output written on thesis.pdf (93 pages, 411484 bytes).
 PDF statistics:
  374 PDF objects out of 1000 (max. 8388607)
  258 compressed objects within 3 object streams
