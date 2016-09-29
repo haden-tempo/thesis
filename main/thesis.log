@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 SEP 2016 22:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 SEP 2016 22:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -490,29 +490,29 @@ n input line 73.
 (pdftex.def)             Requested size: 344.96487pt x 158.99219pt.
  [4 <./plots/pareto_objective_fin-eps-converted-to.pdf>] [5] [6] [7]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 179.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 171.
  [8]
-Underfull \hbox (badness 10000) in paragraph at lines 213--214
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
  []
 
 [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 267--269
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
 
-Overfull \hbox (15.11455pt too wide) in paragraph at lines 270--272
+Underfull \hbox (badness 10000) in paragraph at lines 259--261
+
+ []
+
+
+Overfull \hbox (15.11455pt too wide) in paragraph at lines 262--264
 []\OT1/ptm/m/n/10.95 Recall that $[] \OT1/ztmcm/m/n/10.95 = \OMS/ztmcm/m/n/10.9
 5 h\OML/ztmcm/m/it/10.95 b[]; b[]; [] ; b[]\OMS/ztmcm/m/n/10.95 i$\OT1/ptm/m/n/
 10.95 . Not to be con-fused, let us ex-press it as $[] \OT1/ztmcm/m/n/10.95 = \
@@ -520,34 +520,38 @@ OMS/ztmcm/m/n/10.95 h[]\OML/ztmcm/m/it/10.95 ; []; [] ; []\OMS/ztmcm/m/n/10.95
 i$
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 283--285
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 275--277
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 329--330
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
-[14] [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 414--415
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
+
+[16]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [17]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 455.
- [18]) [19]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 447.
+) [18]
 Chapter 3.
-(./300_Matrix.tex [20
+(./300_Matrix.tex [19
 
-] [21] [22] [23] [24] [25] [26] [27]
+] [20] [21] [22] [23] [24] [25] [26]
 Overfull \hbox (53.95978pt too wide) in paragraph at lines 268--271
 \OT1/ptm/m/n/10.95 Here we have $\OML/ztmcm/m/it/10.95 s[] [] \OT1/ztmcm/m/n/10
 .95 = 0\OML/ztmcm/m/it/10.95 :\OT1/ztmcm/m/n/10.95 199$ \OT1/ptm/m/n/10.95 and 
@@ -557,11 +561,11 @@ o-duce $\OML/ztmcm/m/it/10.95 ^^Y \OT1/ztmcm/m/n/10.95 = []$\OT1/ptm/m/n/10.95
 .
  []
 
-[28] [29] [30]) [31]
+[27] [28] [29]) [30]
 Chapter 4.
-(./400_GASP.tex [32
+(./400_GASP.tex [31
 
-] [33] [34]
+] [32] [33]
 Overfull \hbox (32.06836pt too wide) in paragraph at lines 65--67
 \OT1/ztmcm/m/n/10.95 [3]$\OT1/ptm/m/n/10.95 . Sup-pose $\OML/ztmcm/m/it/10.95 S
 [] \OT1/ztmcm/m/n/10.95 = \OMS/ztmcm/m/n/10.95 f\OT1/ztmcm/m/n/10.95 (\OML/ztmc
@@ -581,12 +585,12 @@ OML/ztmcm/m/it/10.95 a[]; \OT1/ztmcm/m/n/10.95 2)\OMS/ztmcm/m/n/10.95 g$\OT1/pt
 m/m/n/10.95 .
  []
 
-[35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49]
-[50] [51] [52] [53]) [54] [55]
+[34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48]
+[49] [50] [51] [52]) [53] [54]
 Chapter 5.
-(./500_SIP.tex [56
+(./500_SIP.tex [55
 
-] [57]
+] [56]
 Overfull \hbox (6.27542pt too wide) in paragraph at lines 75--77
 []\OT1/ptm/m/n/10.95 Theorem 17[] sum-ma-rizes the most rel-e-vant re-sults of 
 Dar-mann et al. [[]] and Lee and Shoham [[]]
@@ -597,7 +601,7 @@ Overfull \hbox (40.96858pt too wide) in paragraph at lines 92--102
  [][] 
  []
 
-[58] [59] [60]
+[57] [58] [59]
 Overfull \hbox (5.42677pt too wide) in paragraph at lines 202--203
 []\OT1/ptm/m/n/10.95 Assume un-bounded $\OML/ztmcm/m/it/10.95 $ \OT1/ptm/m/n/1
 0.95 and $\OML/ztmcm/m/it/10.95 ^^L$\OT1/ptm/m/n/10.95 , and let us re-duce the
@@ -605,20 +609,20 @@ Overfull \hbox (5.42677pt too wide) in paragraph at lines 202--203
  weighted
  []
 
-[61] [62] [63] [64] [65]
+[60] [61] [62] [63] [64]
 Overfull \hbox (84.17479pt too wide) in paragraph at lines 312--322
  [][] 
  []
 
-[66] [67] [68] [69] [70] [71] [72]) [73]
+[65] [66] [67] [68] [69] [70] [71]) [72]
 Chapter 6.
-(./600_GT.tex [74
+(./600_GT.tex [73
 
-] [75]) [76] [77]
+] [74]) [75] [76]
 Chapter 7.
-(./700_Discussion.tex) (./thesis.bbl [78
+(./700_Discussion.tex) (./thesis.bbl [77
 
-] [79
+] [78
 
 ]
 Missing character: There is no Ã in font ptmr7t!
@@ -629,7 +633,7 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ƒ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
- [80] [81] [82]) [83]
+ [79] [80] [81]) [82]
 (./thesis.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -657,10 +661,10 @@ ive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016
 1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (93 pages, 410244 bytes).
+Output written on thesis.pdf (92 pages, 409100 bytes).
 PDF statistics:
- 374 PDF objects out of 1000 (max. 8388607)
- 258 compressed objects within 3 object streams
+ 371 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
