@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {2.2}Algorithm}{10}
 \contentsline {section}{\numberline {2.3}Experimental Results}{14}
 \contentsline {subsection}{\numberline {2.3.1}Case of Linear Cost Function}{15}
-\contentsline {subsection}{\numberline {2.3.2}Case of Other Cost Functions}{16}
+\contentsline {subsection}{\numberline {2.3.2}Case of Other Cost Functions}{17}
 \contentsline {subsection}{\numberline {2.3.3}Summary of Experiments}{18}
 \contentsline {section}{\numberline {2.4}Discussion}{18}
 \contentsline {chapter}{\numberline {3}Probabilistic Matrix Inspection Problem}{20}
