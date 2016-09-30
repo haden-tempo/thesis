@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  29 SEP 2016 19:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  29 SEP 2016 19:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -492,17 +492,17 @@ n input line 75.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 100.
  [5] [6] [7] [8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 236--237
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--248
+Underfull \hbox (badness 10000) in paragraph at lines 247--249
 
  []
 
 [11]
-Overfull \hbox (15.11455pt too wide) in paragraph at lines 249--251
+Overfull \hbox (15.11455pt too wide) in paragraph at lines 250--252
 []\OT1/ptm/m/n/10.95 Recall that $[] \OT1/ztmcm/m/n/10.95 = \OMS/ztmcm/m/n/10.9
 5 h\OML/ztmcm/m/it/10.95 b[]; b[]; [] ; b[]\OMS/ztmcm/m/n/10.95 i$\OT1/ptm/m/n/
 10.95 . Not to be con-fused, let us ex-press it as $[] \OT1/ztmcm/m/n/10.95 = \
@@ -511,22 +511,22 @@ i$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--264
+Underfull \hbox (badness 10000) in paragraph at lines 263--265
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
 [14] [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 400--401
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
 
  []
 
@@ -535,7 +535,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [17]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 441.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 442.
  [18]) [19]
 Chapter 3.
 (./300_Matrix.tex [20
@@ -647,7 +647,7 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on thesis.pdf (93 pages, 411985 bytes).
+Output written on thesis.pdf (93 pages, 411960 bytes).
 PDF statistics:
  374 PDF objects out of 1000 (max. 8388607)
  258 compressed objects within 3 object streams
