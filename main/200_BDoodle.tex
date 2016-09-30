@@ -218,9 +218,9 @@ From now on we use the definition of a simplified B-Doodle, and simply write a B
 
 In this section we present an algorithm that finds an optimal B-Doodle mechanism that minimizes the expected cost, given an instance of \BDP. Let us first describe how one can express the expected cost of a B-Doodle mechanism. 
 
-Given an instance $(N, S, f, c, P)$, consider some B-Doodle mechanism $B_{m} = \langle b_1, b_2, \dots, b_m \rangle$ with $\sum_{k=1}^{m} b_k = |S|$. Let $Pr(j)$ be the probability that the scheduling process ends after $j$-th iteration. Let $E_c[B_{m}]$ denote the expected cost of $B_{m}$ by $E_c[B_{m}]$, which can be expressed in terms of $Pr(\cdot)$ and the cost function $c$:
+Given an instance $(N, S, f, c, P)$, consider some B-Doodle mechanism $B_{m} = \langle b_1, b_2, \dots, b_m \rangle$ with $\sum_{k=1}^{m} b_k = |S|$. Let $Pr(j)$ be the probability that the scheduling process ends after $j$-th iteration. Let $\Exp[B_{m}~|~c|]$ denote the expected cost of $B_{m}$ given cost function $c$, which can be expressed in terms of $Pr(\cdot)$ and the cost function $c$:
 \begin{equation} \label{bdoodle:eqn:expCost}
-	E_c[B_{m}] = \sum_{j=1}^{m} Pr(j) \cdot C(j, B_{m})  =  \sum_{j=1}^{m} Pr(j) \cdot \left(\sum_{k=1}^{j} c(k, b_k)\right)
+	\Exp_c[B_{m}] = \sum_{j=1}^{m} Pr(j) \cdot C(j, B_{m})  =  \sum_{j=1}^{m} Pr(j) \cdot \left(\sum_{k=1}^{j} c(k, b_k)\right)
 \end{equation}%
 
 While one can compute $Pr(j)$ in polynomial time, it is not necessary for our algorithm. Instead we present an important lemma that leads us to an efficient algorithm. The following lemma states that if $c$ is simple, then we can compute $E_c[B_{m}]$ in a recursive manner.
