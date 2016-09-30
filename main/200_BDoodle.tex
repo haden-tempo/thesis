@@ -100,18 +100,18 @@ In this section we formally define the class of B-Doodle mechanisms, the Batched
 \subsection{Problem Setting}
 Consider $n$ invitees denoted by $\{a_1, \dots, a_n\}$ and $s$ time slots denoted by $\{1, 2, \dots, s\}$.
 For each agent $a_i$ and each time slot $t$, there is a known prior probability, $p_{i, t}$, such that the agent is available at time $t$ with probability $p_{i, t}$ and unavailable with probability $(1-p_{i, t})$. 
-While the convener knows all such priors (i.e. all $p_{i,t}$'s), she does not know the realization of availability of agents -- it is private information of each agent.
-The convener is trying to find a \emph{feasible} time slot by asking invitees to reveal their availability; we assume that the convener has a \emph{feasibility threshold}, $f$, such that a feasible time slot requires at least $\lceil f \cdot n \rceil$ agents be available. The convener iteratively sends out a batch of time slots until a feasible time slot is found. In our setting \Times spent by the scheduling process is measured by the number of iterations and \Inconveniences caused is measured by the number of time slots that have been sent out by the convener.
+While the organizer knows all such priors (i.e. all $p_{i,t}$'s), she does not know the realization of availability of agents -- it is private information of each agent.
+The organizer is trying to find a \emph{feasible} time slot by asking invitees to reveal their availability; we assume that the organizer has a \emph{feasibility threshold}, $f$, such that a feasible time slot requires at least $\lceil f \cdot n \rceil$ agents be available. The organizer iteratively sends out a batch of time slots until a feasible time slot is found. In our setting \Times spent by the scheduling process is measured by the number of iterations and \Inconveniences caused is measured by the number of time slots that have been sent out by the organizer.
 
 This setting is general enough to capture many realistic scenarios of group scheduling. For instance in a corporate setting, a busy manager may have low probability of being available for all time slots while other employees may be less busy and have high probability of being available. Or, if students are trying to decide on the meeting time for a group project, their availability is expected to be equally likely because the schedules of their classes are similar.
 
-Let us define a class of B-Doodle mechanisms that describe how the convener sends out time slots in each iteration.
+Let us define a class of B-Doodle mechanisms that describe how the organizer sends out time slots in each iteration.
 \begin{definition}[B-Doodle Mechanism]
 Let $S = \{1, 2, \dots, s\}$ be a set of $s$ time slots. We define a B-Doodle mechanism for $S$ as a partition of $S$.
 Let $B = \langle S_1, S_2, \dots, S_m \rangle$ be a partition of $S$ into $m$ subsets such that $S_j \neq\emptyset$, $S_j \cap S_k = \emptyset$ for $j \neq k$, and $\cup_{l=1}^{m} S_l = S$ where $1 \leq j,k \leq m$. We define $b_j = |S_j|$ for all $j \leq m$ and call $b_j$ the size of the $j$-th batch. 
 We write $B_m$ to emphasize that $B$ has $m$ batches.
 \end{definition}
-We interpret a B-Doodle mechanism $B$ as follows: the convener sends out time slots in $S_1$ during the first iteration. If a feasible time slot is found, the process ends. Otherwise she sends out the next batch, $S_2$, and so on.
+We interpret a B-Doodle mechanism $B$ as follows: the organizer sends out time slots in $S_1$ during the first iteration. If a feasible time slot is found, the process ends. Otherwise she sends out the next batch, $S_2$, and so on.
 Note that there exist exponentially many B-Doodle mechanisms for any fixed $S$ (exponential in cardinality of $S$). 
 Doodle is a special case of B-Doodle mechanism and can be described as $\langle S \rangle$.
 
@@ -128,11 +128,11 @@ The simplest choice of a cost function is a linear combination of \Times and \In
 \begin{equation} \label{bdoodle:eqn:linear_cost_function}
 c_{\alpha}(j, b_j) = \alpha + b_j, ~~ C_{\alpha}(j, {B}_m) = \left(\alpha \cdot j\right) + \left(\sum_{k=1}^{j} b_k\right).
 \end{equation}
-In some cases the convener may want to penalize the mechanism for executing too many iterations by making later iterations to cost more than earlier iterations. The following describes such cost function, parameterized by some constant $\beta > 1$; we call this a \emph{time-averse} cost function. Notice that the term $\beta^j$ is strictly increasing as $j$ increases (recall $\beta > 1$). This cost function is $\beta$-simple.
+In some cases the organizer may want to penalize the mechanism for executing too many iterations by making later iterations to cost more than earlier iterations. The following describes such cost function, parameterized by some constant $\beta > 1$; we call this a \emph{time-averse} cost function. Notice that the term $\beta^j$ is strictly increasing as $j$ increases (recall $\beta > 1$). This cost function is $\beta$-simple.
 \begin{equation} \label{bdoodle:eqn:time_averse_cost_function}
 c_{\beta}(j, b_j) = \beta^j \cdot b_j, ~~ C_{\beta}(j, {B}_m) = \left(\sum_{k=1}^{j} \beta^k \cdot b_k \right).
 \end{equation}
-In contrast if the convener is interested in reducing the size of each batch because it may cause too much inconvenience, then the following cost function could be used, which is parameterized by some constant $\gamma > 1$; we call this an \emph{inconvenience-averse} cost function which is $1$-simple.
+In contrast if the organizer is interested in reducing the size of each batch because it may cause too much inconvenience, then the following cost function could be used, which is parameterized by some constant $\gamma > 1$; we call this an \emph{inconvenience-averse} cost function which is $1$-simple.
 \begin{equation} \label{bdoodle:eqn:inconvenience_averse_cost_function}
 c_{\gamma}(j, b_j) = \gamma^{b_j}, ~~ C_{\gamma}(j, {B}_m) = \left(\sum_{k=1}^{j} \gamma^{b_k} \right).
 \end{equation}
@@ -229,7 +229,7 @@ E_c[B_{m}] = c(1, b_1) +  \left(\prod_{t=1}^{b_1} \left(1 - q_t\right)\right) \c
 \end{equation}
 \end{lemma}
 \begin{proof}
-Let us first provide an intuitive way to understand the recurrence relation given by Equation~\ref{bdoodle:eqn:recurrence}. The first term $c(1, b_1)$ captures the cost of sending out the first batch; regardless of when the scheduling process ends, this cost incurs with probability of $1$. If it turns out that the first batch does not contain a feasible time slot with probability of $(1 - Pr(1))$, then the convener must send out the remaining batches, which is precisely $\hat{B}_{m-1}$. It is easy to verify that the product term in the equation is equal to $(1 - Pr(1))$. The expected cost of $\hat{B}_{m-1}$ is adjusted by a factor of $\theta$ in the equation because the cost function is $\theta$-simple. \\
+Let us first provide an intuitive way to understand the recurrence relation given by Equation~\ref{bdoodle:eqn:recurrence}. The first term $c(1, b_1)$ captures the cost of sending out the first batch; regardless of when the scheduling process ends, this cost incurs with probability of $1$. If it turns out that the first batch does not contain a feasible time slot with probability of $(1 - Pr(1))$, then the organizer must send out the remaining batches, which is precisely $\hat{B}_{m-1}$. It is easy to verify that the product term in the equation is equal to $(1 - Pr(1))$. The expected cost of $\hat{B}_{m-1}$ is adjusted by a factor of $\theta$ in the equation because the cost function is $\theta$-simple. \\
 
 We now formally prove the claim. Given $B_{m}$ as described above, for each batch $j \in \{1, 2, \dots, m\}$, let $r_j$ be the probability that the $j$-th batch has at least one $f$-feasible time slot. Let us define $v_0 = 0$ and $v_j = \sum_{k=1}^{j} b_k$ (i.e. $v_j$ is the number of time slots in batches $1$ through $j$).
 We can express $r_j$ as:
@@ -332,7 +332,7 @@ Recall that the linear cost function is parameterized by some constant $\alpha>0
 
 We reasoned that Doodle becomes suboptimal if the number of time slots, $s$, is large. Therefore it is interesting to know for what ranges of $s$, Doodle is suboptimal. For some fixed $(n, s, p)$, let $C^D(n, s, p)$ be the cost of Doodle and $C^*(n, s, p)$ be the expected cost of $B^*$. We want to find the smallest critical point $S^*(n, p)$ such that for any $s \geq S^*(n, p)$ we have $C^D(n, s, p) > C^*(n, s, p)$. 
 
-In Table~\ref{bdoodle:table:DoodleSuboptimal}, we show $S^*$ for various $(n, p)$ when $f = 1$ (i.e. the convener requires everyone be available). For instance we find $S^*(6, .8) = 5$, which implies that Doodle is suboptimal for all $s \geq 5$ given that $n=6$ and $p=.8$. The smaller $S^*$ is, the less practical Doodle is for the corresponding $(n, p)$. 
+In Table~\ref{bdoodle:table:DoodleSuboptimal}, we show $S^*$ for various $(n, p)$ when $f = 1$ (i.e. the organizer requires everyone be available). For instance we find $S^*(6, .8) = 5$, which implies that Doodle is suboptimal for all $s \geq 5$ given that $n=6$ and $p=.8$. The smaller $S^*$ is, the less practical Doodle is for the corresponding $(n, p)$. 
 Across the table we can observe that $S^*$ is small when $n$ is small and/or when $p$ is high -- this agrees with our intuition.  
 We highlighted $8$ entries in boldface to emphasize that $S^* \leq 15$; for the corresponding $(n, p)$ values, Doodle is suboptimal if there are $15$ or more time slots being considered.
 \begin{table}[h!]  % \small
@@ -366,12 +366,12 @@ Entries in boldface emphasize that $e_{D} < .750$.
 } \label{bdoodle:table:DoodleEfficiency}
 \end{table}
 
-Inefficiency of Doodle is more pronounced when the convener has a lower feasibility threshold such as $f = .7$; in such case, only a fraction of agents need to be available. 
+Inefficiency of Doodle is more pronounced when the organizer has a lower feasibility threshold such as $f = .7$; in such case, only a fraction of agents need to be available. 
 We can clearly observe the worsened inefficiency of Doodle in Table~\ref{bdoodle:table:DoodleEfficiency-lower-attendance}. 
 Here we show $e_{D}$ values for the same set of $(n, p)$ as in Table~\ref{bdoodle:table:DoodleEfficiency} but with $f = .7$. 
 Previously we highlighted four entries with $e_{D} < .750$ when $f = 1$ in Table~~\ref{bdoodle:table:DoodleEfficiency}; when $f = .7$ the number of entires with $e_{D} < .750$ doubled to eight. 
 Note that the first column is identical between the two tables; this is because $f = .7$ still requires both agents to be available when $n = 2$. 
-Also notice that $e_{D}$ is surprisingly low in the first row of Table~\ref{bdoodle:table:DoodleEfficiency-lower-attendance} across all columns. This shows that regardless of the number of invitees, Doodle is significantly inefficient when the invitees are highly available ($p \geq .8$) and the convener has a relaxed feasibility threshold.
+Also notice that $e_{D}$ is surprisingly low in the first row of Table~\ref{bdoodle:table:DoodleEfficiency-lower-attendance} across all columns. This shows that regardless of the number of invitees, Doodle is significantly inefficient when the invitees are highly available ($p \geq .8$) and the organizer has a relaxed feasibility threshold.
 \begin{table}[h]  % \small
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -395,7 +395,7 @@ We ran experiments with different values of $(n, s, p, f, \alpha)$, and observed
 \subsection{Case of Other Cost Functions}
 We present some of the experimental results we obtained with different cost functions, namely the time-averse cost function and the inconvenience-averse cost function. As the names suggest, the former places more weight on optimizing \Time, while the latter on optimizing \Inconvenience. \\
 
-For the time-averse cost function (recall $c_{\beta}(j, b) = \beta^j \cdot b$), we chose $\beta = 2$ as an experimental choice. Notice that the cost increases exponentially for later iterations, which forces the convener to send out a small number of batches (as in Doodle). We ran the same set of experiments as before to measure efficient of Doodle, $e_{D}$. 
+For the time-averse cost function (recall $c_{\beta}(j, b) = \beta^j \cdot b$), we chose $\beta = 2$ as an experimental choice. Notice that the cost increases exponentially for later iterations, which forces the organizer to send out a small number of batches (as in Doodle). We ran the same set of experiments as before to measure efficient of Doodle, $e_{D}$. 
 
 The result is summarized in Table~\ref{bdoodle:table:DoodleEfficiency-lower-attendance_time_averse}, which shows the same trends as we observed in previous experiments. Notice that in the first row ($p = .8$), as $n$ increases we expect $e_{D}$ to decrease, but $e_{D}$ fluctuates while decreasing in general. The fluctuation is due to the rounding of attendance requirement ($\lceil a \cdot n \rceil$). For instance when $n = 4$, $\lceil a \cdot n \rceil$ = 3 which effectively requires 75\% of attendees be available. 
 \begin{table}[h]  % \small
@@ -460,7 +460,7 @@ is superior to Doodle in realistic situations, sometimes greatly so.
 
 While useful in and of itself, this work leaves open many questions.
 Here we focused on a sub-class of the Single-proposer mechanisms in
-which there is a sole convener who is trying to find an agreeable
+which there is a sole organizer who is trying to find an agreeable
 schedule. In realistic situations a group of agents often negotiate
 among themselves or respond with counter-offers. It will be
 interesting to extend our B-Doodle mechanisms to the Multi-proposer
