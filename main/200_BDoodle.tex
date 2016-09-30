@@ -256,28 +256,28 @@ Not to be confused, let us express it as $\hat{B}_{m-1} = \langle \hat{b}_1, \ha
 \end{equation}
 We can express $\Exp[\hat{B}_{m-1}|c]$ as follows:
 \begin{eqnarray*}
-\Exp[\hat{B}_{m-1}]
+\Exp[\hat{B}_{m-1}|c]
 &=& \sum_{j=1}^{m-1} \hat{Pr}(j) \left( \sum_{k=1}^{j} c(k, \hat{b}_k) \right) \\
 &=& \sum_{j=1}^{m-1} r_{j+1} \left(\prod_{k=2}^{j} (1 - r_{k})\right) \left(\sum_{k=2}^{j+1} c(k-1, b_{k+1})\right) \\
 &=& \sum_{j=2}^{m} r_{j} \left(\prod_{k=2}^{j-1} (1 - r_{k})\right) \left(\sum_{k=2}^{j} c(k-1, b_{k+1})\right)
 \end{eqnarray*}
 The first equality holds by definition. The second equality is due to Equation~\ref{bdoodle:eqn:pr_hat_b} and because $\hat{b}_k = b_{k+1}$. The third equality is by changing the range of $j$ in the summation. 
 
-If we multiply $\Exp[\hat{B}_{m-1}]$ by $(1 - r_1)\theta$, we get the following:
+If we multiply $\Exp[\hat{B}_{m-1}|c]$ by $(1 - r_1)\theta$, we get the following:
 \begin{equation} \label{bdoodle:eqn:ExpCost_Bhat}
-(1-r_1)\theta \Exp[\hat{B}_{m-1}] = \sum_{j=2}^{m} r_{j} \left(\prod_{k=1}^{j-1} (1 - r_{k})\right) \left(\sum_{k=2}^{j} c(k, b_{k+1})\right)
+(1-r_1)\theta \Exp[\hat{B}_{m-1}|c] = \sum_{j=2}^{m} r_{j} \left(\prod_{k=1}^{j-1} (1 - r_{k})\right) \left(\sum_{k=2}^{j} c(k, b_{k+1})\right)
 \end{equation}
 Notice that the product term now runs from $k = 1$ to $j-1$ as we multiply by $(1-r_1)$ and the inner-most summation has $c(k, b_{k+1})$ as we multiply by $\theta$ (recall that $c$ is $\theta$-simple).
 
-Finally we can express $\Exp[B_m]$ in terms of $\Exp[\hat{B}_{m-1}]$ as follows (where $c_1 = c(1, b_1)$ for brevity):
+Finally we can express $\Exp[B_m|c]$ in terms of $\Exp[\hat{B}_{m-1}|c]$ as follows (where $c_1 = c(1, b_1)$ for brevity):
 \begin{eqnarray*} 
-\Exp[B_{m}]
+\Exp[B_{m}|c]
 &=& \sum_{j=1}^{m} Pr(j) \left(\sum_{k=1}^{j} c(k, b_k)\right) \\
 &=& c_1 + \left(\sum_{j=2}^{m} r_j \left(\prod_{k=1}^{j-1} (1 - r_k)\right) \left(\sum_{k=2}^{j} c(k, b_k)\right) \right) \\
-&=& c_1 + (1-r_1)\theta \Exp[\hat{B}_{m-1}] \\
-&=& c(1, b_1) + \left(\prod_{t=1}^{b_1} (1-q_t) \right)\cdot \theta \cdot \Exp[\hat{B}_{m-1}] 
+&=& c_1 + (1-r_1)\theta \Exp[\hat{B}_{m-1}|c] \\
+&=& c(1, b_1) + \left(\prod_{t=1}^{b_1} (1-q_t) \right)\cdot \theta \cdot \Exp[\hat{B}_{m-1}|c] 
 \end{eqnarray*}
-The first equality holds by definition of $\Exp[B_{m}]$. The second equality is obtained by taking $c(1, b_1)$ out from the summation (and note that $Pr(j)$ adds up to 1) first and then applying Equation~\ref{bdoodle:eqn:Pr_j}. The last two inequalities hold due to Equation~\ref{bdoodle:eqn:ExpCost_Bhat} and \ref{bdoodle:eqn:r_j}, respectively. 
+The first equality holds by definition of $\Exp[B_{m}|c]$. The second equality is obtained by taking $c(1, b_1)$ out from the summation (and note that $Pr(j)$ adds up to 1) first and then applying Equation~\ref{bdoodle:eqn:Pr_j}. The last two inequalities hold due to Equation~\ref{bdoodle:eqn:ExpCost_Bhat} and \ref{bdoodle:eqn:r_j}, respectively. 
 The last expression exactly  matches Equation~\ref{bdoodle:eqn:recurrence} in the lemma.
  
 \end{proof}
