@@ -6,7 +6,7 @@
 \contentsline {chapter}{\numberline {2}Batched Doodle Problem}{2}
 \contentsline {section}{\numberline {2.1}Notation and Definitions}{5}
 \contentsline {subsection}{\numberline {2.1.1}Problem Setting}{5}
-\contentsline {subsection}{\numberline {2.1.2}Assumptions}{8}
+\contentsline {subsection}{\numberline {2.1.2}Technical Assumptions}{8}
 \contentsline {section}{\numberline {2.2}Algorithm}{10}
 \contentsline {section}{\numberline {2.3}Experimental Results}{14}
 \contentsline {subsection}{\numberline {2.3.1}Case of Linear Cost Function}{15}
