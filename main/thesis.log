@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  29 SEP 2016 18:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  29 SEP 2016 19:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -627,7 +627,7 @@ Missing character: There is no ½ in font ptmr7t!
 Here is how much of TeX's memory you used:
  4426 strings out of 493014
  65127 string characters out of 6133351
- 131041 words of memory out of 5000000
+ 131043 words of memory out of 5000000
  7762 multiletter control sequences out of 15000+600000
  75489 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -646,7 +646,7 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on thesis.pdf (93 pages, 409497 bytes).
+Output written on thesis.pdf (93 pages, 409529 bytes).
 PDF statistics:
  370 PDF objects out of 1000 (max. 8388607)
  255 compressed objects within 3 object streams
