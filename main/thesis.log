@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  29 SEP 2016 19:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  29 SEP 2016 19:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -491,28 +491,13 @@ n input line 75.
  [4 <./plots/pareto_objective_fin-eps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 100.
- [5] [6] [7] [8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 247--249
-
- []
-
-[11]
+ [5] [6] [7] [8] [9] [10] [11]
 Overfull \hbox (15.11455pt too wide) in paragraph at lines 250--252
 []\OT1/ptm/m/n/10.95 Recall that $[] \OT1/ztmcm/m/n/10.95 = \OMS/ztmcm/m/n/10.9
 5 h\OML/ztmcm/m/it/10.95 b[]; b[]; [] ; b[]\OMS/ztmcm/m/n/10.95 i$\OT1/ptm/m/n/
 10.95 . Not to be con-fused, let us ex-press it as $[] \OT1/ztmcm/m/n/10.95 = \
 OMS/ztmcm/m/n/10.95 h[]\OML/ztmcm/m/it/10.95 ; []; [] ; []\OMS/ztmcm/m/n/10.95 
 i$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 263--265
-
  []
 
 [12]
@@ -525,15 +510,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
-[14] [15] [16]
+[14]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 401--402
 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[17]
+[16] [17]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 442.
  [18]) [19]
@@ -623,31 +613,34 @@ Missing character: There is no ƒ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
  [80] [81] [82]) [83]
-(./thesis.aux) ) 
+(./thesis.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  4426 strings out of 493014
  65127 string characters out of 6133351
- 131043 words of memory out of 5000000
+ 130043 words of memory out of 5000000
  7762 multiletter control sequences out of 15000+600000
  75489 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1783b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc
-}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
-type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/
-times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr
-i8a.pfb>
-Output written on thesis.pdf (93 pages, 411958 bytes).
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
+1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
+s/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (93 pages, 411527 bytes).
 PDF statistics:
  374 PDF objects out of 1000 (max. 8388607)
  258 compressed objects within 3 object streams

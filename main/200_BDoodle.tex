@@ -234,7 +234,7 @@ If $c$ is a $\theta$-simple cost function with with $\theta > 0$, then the follo
 \end{equation}
 \end{lemma}
 \begin{proof}
-Let us first provide an intuitive way to understand the recurrence relation given by Equation~\ref{bdoodle:eqn:recurrence}. The first term $c(1, b_1)$ captures the cost of sending out the first batch; regardless of when the scheduling process ends, this cost incurs with probability of $1$. If it turns out that the first batch does not contain a feasible time slot with probability of $(1 - Pr(1))$, then the organizer must send out the remaining batches, which is precisely $\hat{B}_{m-1}$. It is easy to verify that the product term in the equation is equal to $(1 - Pr(1))$. The expected cost of $\hat{B}_{m-1}$ is adjusted by a factor of $\theta$ in the equation because the cost function is $\theta$-simple. \\
+Let us first provide an intuitive way to understand the recurrence relation given by Equation~\ref{bdoodle:eqn:recurrence}. The first term $c(1, b_1)$ captures the cost of sending out the first batch; regardless of when the scheduling process ends, this cost incurs with probability of $1$. If it turns out that the first batch does not contain a feasible time slot with probability of $(1 - Pr(1))$, then the organizer must send out the remaining batches, which is precisely $\hat{B}_{m-1}$. It is easy to verify that the product term in the equation is equal to $(1 - Pr(1))$. The expected cost of $\hat{B}_{m-1}$ is adjusted by a factor of $\theta$ in the equation because the cost function is $\theta$-simple. 
 
 We now formally prove the claim. Given $B_{m}$ as described above, for each batch $j \in \{1, 2, \dots, m\}$, let $r_j$ be the probability that the $j$-th batch has at least one $f$-feasible time slot. Let us define $v_0 = 0$ and $v_j = \sum_{k=1}^{j} b_k$ (i.e. $v_j$ is the number of time slots in batches $1$ through $j$).
 We can express $r_j$ as:
@@ -245,7 +245,7 @@ $Pr(j)$ is the probability that the scheduling process ends after $j$-th iterati
 \begin{equation} \label{bdoodle:eqn:Pr_j}
 Pr(j) =  r_j  \prod_{k=1}^{j-1} (1 - r_k)   
 \end{equation}
-It is understood that $\prod_{k=x}^{y} (\cdot)$ is equal to $1$ when $x > y$. \\
+It is understood that $\prod_{k=x}^{y} (\cdot)$ is equal to $1$ when $x > y$. 
 	
 Recall that $\hat{B}_{m-1} = \langle b_2, b_3, \dots, b_{m} \rangle$. 
 Not to be confused, let us express it as $\hat{B}_{m-1} = \langle \hat{b}_1, \hat{b}_2, \dots, \hat{b}_{m-1}\rangle$ with $\hat{b}_j = b_{j+1}$ for all $j\geq 1$. Let $\hat{r}_j$ be the probability that a feasible time slot exists in $j$-th batch of $\hat{B}_{m-1}$, which is equal to $r_{j+1}$ for all $j \geq 1$. Let $\hat{Pr}(j)$ be the probability that scheduling ends after the $j$-th iteration of $\hat{B}_{m-1}$:
@@ -254,30 +254,30 @@ Not to be confused, let us express it as $\hat{B}_{m-1} = \langle \hat{b}_1, \ha
 	= \hat{r}_j \prod_{k=1}^{j-1} (1 - \hat{r}_k)
 	= r_{j+1} \prod_{k=2}^{j} (1 - r_{k})  \label{bdoodle:eqn:pr_hat_b}
 \end{equation}
-We can express $E_c[\hat{B}_{m-1}]$ as follows:
+We can express $\Exp[\hat{B}_{m-1}|c]$ as follows:
 \begin{eqnarray*}
-E_c[\hat{B}_{m-1}]
+\Exp[\hat{B}_{m-1}]
 &=& \sum_{j=1}^{m-1} \hat{Pr}(j) \left( \sum_{k=1}^{j} c(k, \hat{b}_k) \right) \\
 &=& \sum_{j=1}^{m-1} r_{j+1} \left(\prod_{k=2}^{j} (1 - r_{k})\right) \left(\sum_{k=2}^{j+1} c(k-1, b_{k+1})\right) \\
 &=& \sum_{j=2}^{m} r_{j} \left(\prod_{k=2}^{j-1} (1 - r_{k})\right) \left(\sum_{k=2}^{j} c(k-1, b_{k+1})\right)
 \end{eqnarray*}
-The first equality holds by definition. The second equality is due to Equation~\ref{bdoodle:eqn:pr_hat_b} and because $\hat{b}_k = b_{k+1}$. The third equality is by changing the range of $j$ in the summation. \\
+The first equality holds by definition. The second equality is due to Equation~\ref{bdoodle:eqn:pr_hat_b} and because $\hat{b}_k = b_{k+1}$. The third equality is by changing the range of $j$ in the summation. 
 
-If we multiply $E_c[\hat{B}_{m-1}]$ by $(1 - r_1)\theta$, we get the following:
+If we multiply $\Exp[\hat{B}_{m-1}]$ by $(1 - r_1)\theta$, we get the following:
 \begin{equation} \label{bdoodle:eqn:ExpCost_Bhat}
-(1-r_1)\theta E_c[\hat{B}_{m-1}] = \sum_{j=2}^{m} r_{j} \left(\prod_{k=1}^{j-1} (1 - r_{k})\right) \left(\sum_{k=2}^{j} c(k, b_{k+1})\right)
+(1-r_1)\theta \Exp[\hat{B}_{m-1}] = \sum_{j=2}^{m} r_{j} \left(\prod_{k=1}^{j-1} (1 - r_{k})\right) \left(\sum_{k=2}^{j} c(k, b_{k+1})\right)
 \end{equation}
 Notice that the product term now runs from $k = 1$ to $j-1$ as we multiply by $(1-r_1)$ and the inner-most summation has $c(k, b_{k+1})$ as we multiply by $\theta$ (recall that $c$ is $\theta$-simple).
 
-Finally we can express $E_c[B_m]$ in terms of $E_c[\hat{B}_{m-1}]$ as follows (where $c_1 = c(1, b_1)$ for brevity):
+Finally we can express $\Exp[B_m]$ in terms of $\Exp[\hat{B}_{m-1}]$ as follows (where $c_1 = c(1, b_1)$ for brevity):
 \begin{eqnarray*} 
-E_c[B_{m}]
+\Exp[B_{m}]
 &=& \sum_{j=1}^{m} Pr(j) \left(\sum_{k=1}^{j} c(k, b_k)\right) \\
 &=& c_1 + \left(\sum_{j=2}^{m} r_j \left(\prod_{k=1}^{j-1} (1 - r_k)\right) \left(\sum_{k=2}^{j} c(k, b_k)\right) \right) \\
-&=& c_1 + (1-r_1)\theta E_c[\hat{B}_{m-1}] \\
-&=& c(1, b_1) + \left(\prod_{t=1}^{b_1} (1-q_t) \right)\cdot \theta \cdot E_c[\hat{B}_{m-1}] 
+&=& c_1 + (1-r_1)\theta \Exp[\hat{B}_{m-1}] \\
+&=& c(1, b_1) + \left(\prod_{t=1}^{b_1} (1-q_t) \right)\cdot \theta \cdot \Exp[\hat{B}_{m-1}] 
 \end{eqnarray*}
-The first equality holds by definition of $E_c[B_{m}]$. The second equality is obtained by taking $c(1, b_1)$ out from the summation (and note that $Pr(j)$ adds up to 1) first and then applying Equation~\ref{bdoodle:eqn:Pr_j}. The last two inequalities hold due to Equation~\ref{bdoodle:eqn:ExpCost_Bhat} and \ref{bdoodle:eqn:r_j}, respectively. 
+The first equality holds by definition of $\Exp[B_{m}]$. The second equality is obtained by taking $c(1, b_1)$ out from the summation (and note that $Pr(j)$ adds up to 1) first and then applying Equation~\ref{bdoodle:eqn:Pr_j}. The last two inequalities hold due to Equation~\ref{bdoodle:eqn:ExpCost_Bhat} and \ref{bdoodle:eqn:r_j}, respectively. 
 The last expression exactly  matches Equation~\ref{bdoodle:eqn:recurrence} in the lemma.
  
 \end{proof}
