@@ -245,10 +245,9 @@ $Pr(j)$ is the probability that the scheduling process ends after $j$-th iterati
 \begin{equation} \label{bdoodle:eqn:Pr_j}
 Pr(j) =  r_j  \prod_{k=1}^{j-1} (1 - r_k)   
 \end{equation}
-It is understood that $\prod_{k=x}^{y} (\cdot)$ is equal to $1$ when $x > y$. 
 	
 Recall that $\hat{B}_{m-1} = \langle b_2, b_3, \dots, b_{m} \rangle$. 
-Not to be confused, let us express it as $\hat{B}_{m-1} = \langle \hat{b}_1, \hat{b}_2, \dots, \hat{b}_{m-1}\rangle$ with $\hat{b}_j = b_{j+1}$ for all $j\geq 1$. Let $\hat{r}_j$ be the probability that a feasible time slot exists in $j$-th batch of $\hat{B}_{m-1}$, which is equal to $r_{j+1}$ for all $j \geq 1$. Let $\hat{Pr}(j)$ be the probability that scheduling ends after the $j$-th iteration of $\hat{B}_{m-1}$:
+For clarity, let us express it as $\hat{B}_{m-1} = \langle \hat{b}_1, \hat{b}_2, \dots, \hat{b}_{m-1}\rangle$ with $\hat{b}_j = b_{j+1}$ for all $j\geq 1$. Let $\hat{r}_j$ be the probability that a feasible time slot exists in $j$-th batch of $\hat{B}_{m-1}$, which is equal to $r_{j+1}$ for all $j \geq 1$. Let $\hat{Pr}(j)$ be the probability that scheduling ends after the $j$-th iteration of $\hat{B}_{m-1}$:
 \begin{equation}
 	\hat{Pr}(j) 
 	= \hat{r}_j \prod_{k=1}^{j-1} (1 - \hat{r}_k)
