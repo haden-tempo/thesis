@@ -228,7 +228,7 @@ While one can compute $Pr(j)$ in polynomial time, it is not necessary for our al
 \begin{lemma} \label{bdoodle:lemma:recurrence} 
 	Consider any mechanism $B_m = \langle b_1, b_2, \dots, b_m \rangle$. Let us denote another mechanism that is obtained after removing the first batch ($b_1$) from $B_m$, as $\hat{B}_{m-1}$ (i.e. $\hat{B}_{m-1} = \langle b_2, b_3, \dots, b_m \rangle$). For each time slot $t \in S$, let $q_t$ be the probability that $t$ is $f$-feasible.
 
-If $c$ is a $\theta$-simple cost function with with $\theta > 0$, the following equality holds:
+If $c$ is a $\theta$-simple cost function with with $\theta > 0$, then the following equality holds:
 \begin{equation} \label{bdoodle:eqn:recurrence}
 \Exp[B_{m}|c] = c(1, b_1) +  \left(\prod_{t=1}^{b_1} \left(1 - q_t\right)\right) \cdot \theta \cdot \Exp[\hat{B}_{m-1}|c]
 \end{equation}
