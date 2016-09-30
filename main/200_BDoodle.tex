@@ -176,11 +176,10 @@ V_t(i, z) = V_t(i-1, z-1) \cdot p_{i,t} + V_t(i-1, z) \cdot (1- p_{i,t})
 It is easy to verify that the recurrence relation is correct. For the degenerate cases (or base cases) when $i = z = 0$ it is always (with probability 1) the case that no agents are available. When $z = -1$ or $(i=0 \land z>0)$, it is never (with probability 0) the case that $z$ agents are available. For the main recurrence relation, agent $a_i$ is either available or unavailable, and we compute $V_t(i, z)$ by considering both cases. For each fixed $t$, there are $O(n^2)$ entries of $V_t$ to be computed, and computing each entry takes $O(1)$; therefore it takes $O(sn^2)$ to compute $V_t(i, z)$ for all $t, i, z$. 
 
 Finally we can compute $q_t$ after we compute $V_t(i, z)$ for all $i,z$, as follows:
-$q_t = \sum_{z = \lceil f \cdot n \rceil}^{n} V_t(n, z)$.
- 
+\begin{equation}
+q_t = \sum_{z = \lceil f \cdot n \rceil}^{n} V_t(n, z).
+ \end{equation}
 \end{proof}
-
-% %%% HERE GOES THE THEOREM!! 
 
 Lemma~\ref{bdoodle:lemma:q_t_polytime} allows us to describe a B-Doodle mechanism in a simpler form, along with the following theorem. 
 \begin{theorem} \label{bdoodle:thm:swap_argument}
@@ -198,7 +197,6 @@ Let $E_B$ be the expected cost of $B$ and $E_{B^*}$ of $B^*$. Since $b_j = b^*_j
 	&=& \sum_{j=l+1}^{l'} (w_j - w_j^*)(C(j, B) - C(l, B))
 \end{eqnarray*} 
 The first inequality holds by definition of the expected cost and canceling out some terms; the second inequality holds because $(w_l - w_l^*) + \sum_{j=l+1}^{l'} (w_j - w_j^*) = 0$ (as probabilities must add up to one). Since $w_j > w_j^*$ and $C(j, B) > C(l, B)$ for all $j$ (because $C(j, B)$ is an increasing function in $j$ for fixed $B$), we conclude that $E_{B} > E_{B^*}$.
-\qed
 \end{proof}
 Theorem~\ref{bdoodle:thm:swap_argument} implies that an optimal B-Doodle that minimizes the expected cost must have the following property: for any two batches $S_j$ and $S_k$ with $j < k$, it must hold that $q_t \geq q_{t'}$ for all $t\in S_j$ and $t' \in S_k$ (otherwise we can apply the theorem and swap the two time slots to obtain a mechanism with smaller expected cost).
 Therefore we can limit our attention to the sub-class of B-Doodle mechanisms that only describe batch sizes, but not explicitly which time slots in each batch. Due to Lemma~\ref{bdoodle:lemma:q_t_polytime} we can compute $q_t$ for each $t$ in polynomial time, and thus we can simply sort time slots by $q_t$ in non-increasing order as a pre-processing step.
@@ -280,7 +278,7 @@ E_c[B_{m}]
 \end{eqnarray*}
 The first equality holds by definition of $E_c[B_{m}]$. The second equality is obtained by taking $c(1, b_1)$ out from the summation (and note that $Pr(j)$ adds up to 1) first and then applying Equation~\ref{bdoodle:eqn:Pr_j}. The last two inequalities hold due to Equation~\ref{bdoodle:eqn:ExpCost_Bhat} and \ref{bdoodle:eqn:r_j}, respectively. 
 The last expression exactly  matches Equation~\ref{bdoodle:eqn:recurrence} in the lemma.
-\qed
+ 
 \end{proof}
 
 Using the recurrence relation in Lemma~\ref{bdoodle:lemma:recurrence} and the computing method in Lemma~\ref{bdoodle:lemma:q_t_polytime}, we can now design an efficient recursive algorithm finds the optimal B-Doodle mechanism. Our algorithm is presented in Algorithm~\ref{bdoodle:alg:recursive} as a recursive method $Rec(x)$. We assume that the values of $q_t$ have been computed as a pre-processing step prior to running our algorithm, using the method in Lemma~\ref{bdoodle:lemma:q_t_polytime}. We further assume that time slots are sorted in decreasing order of $q_t$ (i.e. $q_1 \geq q_2 \geq \dots \geq q_{s}$); therefore we simply refer to the time slot by its index (i.e. $t = 3$ refers to the third time slot in the sorted list of time slots).
@@ -313,7 +311,7 @@ Our recursive method is very simple: given time slots $\{x, x+1, \dots, s\}$, it
 We prove correctness of the algorithm by induction on $x$ (from $x = s$ to $x = 1$). The base case is trivial: if $x = s$ the only B-Doodle mechanism is $\langle 1 \rangle$ and our method finds it in line $1$ and returns it in line $10$. Suppose our method correctly returns the optimal B-Doodle mechanism (and its expected cost) for all $x > k$ for some $k$ (the inductive hypothesis), and we prove for the case of $x = k$. When $x = k$, there are precisely $(s-k+1)$ time slots that are to be sent, and the first batch can contain any number of time slots between $1$ and $(s-k+1)$, inclusive. In lines 1-9 our method considers all such cases, and for each case it computes the expected cost correctly (in line 4) due to our inductive hypothesis and Lemma~\ref{bdoodle:lemma:recurrence}. Therefore our method finds the optimal B-Doodle for all $x$ with $1 \leq x \leq s$; in particular when $x = 1$, it returns the desired optimal B-Doodle mechanism for the given problem instance.\\
 
 Our recursive method runs in polynomial time when we use memoization on $Rec(x)$ with respect to $x$; that is, for each $x$ we cache what $Rec(x)$ returns for the first time, and for any subsequence calls to $Rec(x)$ we simply return the cached values. Therefore lines 1-9 are executed at most once for each $x$ with $1 \leq x \leq s$. Also note that $Rec(x)$ makes a call to $Rec(x + b)$ with $b \geq 1$ and $x+b \leq s$, which means there are no infinite loops. Once $Rec(x)$ is computed for all $x > k$, it takes $O(|S|^2)$ time to compute $Rec(k)$, and thus the overall running time of our algorithm is $O(|S|^3)$ when we start with $Rec(1)$. Pre-processing steps (of computing $q_t$) also run in polynomial time due to Lemma~\ref{bdoodle:lemma:q_t_polytime}.
-\qed
+ 
 \end{proof}
 
 
