@@ -1,7 +1,7 @@
 \label{matrix:chapter}
 
-In Chapter~\ref{bdoodle:chapter}, we assumed that an event organizer is only allowed to inspect a group of columns (as a batch) by polling all invitees at once.
-In this chapter, we relax this restriction, and assume that the organizer can inspect each entry of a random matrix at unit cost (by querying a certain invitee about a certain date/time option). 
+In Chapter~\ref{bdoodle:chapter}, we assumed that an event organizer is only allowed to inspect a group of columns (as a batch of date/time options) by polling all invitees at once.
+In this chapter, we generalize how the organizer can poll invitees, and assume that the organizer can inspect each entry of a random matrix at unit cost (by querying a certain invitee about a certain date/time option at unit cost). 
 Consequently, \Time and \Inconvenience are always equal in this setting, and the goal is to find an optimal inspection sequence which is a permutation of entries of a given random matrix.
 As in \BDP, we would like to optimize the expected cost, which is the expected number of inspections until a feasible column is found or all columns are deemed infeasible -- we call this problem the Probabilistic Matrix Inspection Problem (\PMIP). 
 
