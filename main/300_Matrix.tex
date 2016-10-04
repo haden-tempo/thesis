@@ -2,9 +2,8 @@
 
 In Chapter~\ref{bdoodle:chapter}, we assumed that an event organizer is only allowed to inspect a group of columns (as a batch of date/time options) by polling all invitees at once.
 In this chapter, we generalize how the organizer can poll invitees, and assume that the organizer can inspect each entry of a random matrix at unit cost (by querying a certain invitee about a certain date/time option at unit cost). 
-Consequently, \Time and \Inconvenience are always equal in this setting, and the goal is to find an optimal inspection sequence which is a permutation of entries of a given random matrix.
+Consequently, \Times and \Inconveniences are always equal in this setting, and the goal is to find an optimal inspection sequence which is a permutation of entries of a given random matrix.
 As in \BDP, we would like to optimize the expected cost, which is the expected number of inspections until a feasible column is found or all columns are deemed infeasible -- we call this problem the Probabilistic Matrix Inspection Problem (\PMIP). 
-
 
 The main difference between the Batched Doodle Problem (\BDP) and the Probabilistic Matrix Inspection Problem (\PMIP) lies in the solution domain (a unit operation on a group of columns versus entries) and the cost model (a function of Time and Inconvenience versus the number of inspections). 
 The Batched Doodle generalizes Doodle by allowing columns-by-columns inspections, and we further generalize it by allowing entry-by-entry inspections. 
