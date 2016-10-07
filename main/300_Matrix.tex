@@ -7,15 +7,11 @@ Consequently, \Times and \Inconveniences are always equal in this setting, and t
 In classic Doodle, an inspection is performed over the entire random matrix by querying all invitees (rows) about all date/time options (columns).
 In the Batched Doodle Problem, we considered a class of B-Doodle mechanisms in which all invitees are queried about a subset of date/time options.
 In this chapter, we study the Probabilistic Matrix Inspection Problem in which an individual invitee is queried over a single date/time option. In practice, an organizer may want to ask the most important (and/or busiest) invitee first about a couple of date/time options, to ensure that the person is available, before asking other invitees. For instance, when a PhD student is scheduling his/her defense of dissertation in computer science at Stanford University, it is required that both the student's primary advisor and the exam chair must be physically present while other examiners may participate virtually. %TODO CITE as of some date.
-In such cases, the student can ask the advisor and exam chair to rule out 
+In such cases, the student can ask the advisor and exam chair to rule out datet/times on which one of them is unavailable, and then ask other examiners about their availability. 
 
-
-Given a random matrix whose entries are Bernoulli random variables, the objective is to find an optimal sequence of inspections (which is a permutation of the entries of the matrix) which minimizes the expected number of inspections until, with certainty, feasibility of the matrix is determined.
-
-
-As in \BDP, we would like to optimize the expected cost, which is the expected number of inspections until a feasible column is found or all columns are deemed infeasible -- we call this problem the Probabilistic Matrix Inspection Problem (\PMIP). 
-The main difference between the Batched Doodle Problem (\BDP) and the Probabilistic Matrix Inspection Problem (\PMIP) lies in the solution domain (a unit operation on a group of columns versus entries) and the cost model (a function of Time and Inconvenience versus the number of inspections). 
-This generalization (from column-inspections to entry-inspections) allows for more applications that are not necessarily motivated by group scheduling settings.
+% As in \BDP, we would like to optimize the expected cost, which is the expected number of inspections until a feasible column is found or all columns are deemed infeasible -- we call this problem the Probabilistic Matrix Inspection Problem (\PMIP).
+% The main difference between the Batched Doodle Problem (\BDP) and the Probabilistic Matrix Inspection Problem (\PMIP) lies in the solution domain (a unit operation on a group of columns versus entries) and the cost model (a function of Time and Inconvenience versus the number of inspections).
+% This generalization (from column-inspections to entry-inspections) allows for more applications that are not necessarily motivated by group scheduling settings.
 
 
 \section{Notation and Definitions} \label{matrix:sec:notation}
