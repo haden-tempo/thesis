@@ -10,13 +10,14 @@ In this chapter, we study the Probabilistic Matrix Inspection Problem in which a
 In such cases, the student can ask the advisor and exam chair to rule out certain date/time options that do not work for them, and then ask other examiners about their availability. 
 
 We model this setting as the problem of inspecting a random matrix where each entry is a random variable (representing availability in group scheduling settings). 
-Consider a matrix of mutually independent Bernoulli random variables where rows represent agents and columns represents the set of potential outcomes (such as date/time options). Given probability distribution of the matrix, the organizer can ``inspect'' an entry of the matrix at unit cost to know of the realization of it, and wishes to determine with certainty whether the matrix contains a column consisting only of 1's at minimum number of inspections possible. In our example, this corresponds to querying an agent for her availability, and seeking an agreeable outcome.
-By abstracting away the details of group scheduling, we are left with a mathematical model that represents the scheduling process, and in this work we study the properties of an optimal inspection policy and design an algorithm that finds it in polynomial time.
+Consider a matrix of mutually independent Bernoulli random variables where rows represent agents and columns represents the set of potential outcomes (such as date/time options). 
+Given probability distribution of the matrix, the organizer can ``inspect'' an entry of the matrix at unit cost to know of the realization of it, and wishes to determine with certainty whether the matrix contains a column consisting only of 1's at minimum number of inspections possible. In our example, this corresponds to querying an agent for her availability, and seeking an agreeable outcome.
+By abstracting away the details of group scheduling, we are left with a mathematical model that represents the scheduling process, and in this work we study the properties of an optimal inspection policy and design an algorithm that finds it in polynomial time. As we later discuss, this model is applicable to other real-life settings as well.
 
 This chapter is organized as follows.
 In Section~\ref{matrix:sec:notation}, we introduce notation and formally define the problem. 
 In Section~\ref{matrix:sec:results}, we present our technical results.
-In Section~\ref{matrix:sec:discussion}, we discuss how our technical results can be used for the real-life scenarios we described in this introduction. 
+In Section~\ref{matrix:sec:discussion}, we discuss how our technical results can be used for group scheduling problems and other real-life scenarios. 
 
 
 
