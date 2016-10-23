@@ -15,7 +15,7 @@ Given probability distribution of the matrix, the organizer can ``inspect'' an e
 By abstracting away the details of group scheduling, we are left with a mathematical model that represents the scheduling process, and in this work we study the properties of an optimal inspection policy and design an algorithm that finds it in polynomial time. As we later discuss, this model is applicable to other real-life settings as well.
 
 This chapter is organized as follows.
-In Section~\ref{matrix:sec:notation}, we introduce notation and formally define the problem. 
+In Section~\ref{matrix:sec:model}, we introduce notation and formally define the problem. 
 In Section~\ref{matrix:sec:results}, we present our technical results.
 In Section~\ref{matrix:sec:discussion}, we discuss how our technical results can be used for group scheduling problems and other real-life scenarios. 
 
@@ -23,12 +23,13 @@ In Section~\ref{matrix:sec:discussion}, we discuss how our technical results can
 
 
 
-\section{Notation and Definitions} \label{matrix:sec:notation}
+\section{Formal Model} \label{matrix:sec:model}
 
-Let us introduce mathematical notation we use in this paper, and formally define the Probabilistic Matrix Inspection Problem, followed by an example to help the reader understand the setup.
+Let us introduce mathematical notation we use in this chapter, and formally define the Probabilistic Matrix Inspection Problem, followed by an example to help the reader understand the setup.
 
 
-  We use the same definition of feasibility as in previous chapter, which is copied below. 
+\subsection{Notation and Definitions}
+
 
  \begin{definition}[Feasibility]
  Let $A$ be a matrix whose entries are from $\{0,1\}$, and refer to the entry of $A$ at row $r$ and column $c$ as $a_{r,c}$.
