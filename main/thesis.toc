@@ -14,14 +14,14 @@
 \contentsline {subsection}{\numberline {2.3.3}Summary of Experiments}{18}
 \contentsline {section}{\numberline {2.4}Discussion}{18}
 \contentsline {chapter}{\numberline {3}Probabilistic Matrix Inspection Problem}{20}
-\contentsline {section}{\numberline {3.1}Notation and Definitions}{20}
-\contentsline {subsection}{\numberline {3.1.1}Example}{22}
+\contentsline {section}{\numberline {3.1}Notation and Definitions}{21}
+\contentsline {subsection}{\numberline {3.1.1}Example}{23}
 \contentsline {section}{\numberline {3.2}Technical Results and Algorithm}{23}
-\contentsline {subsection}{\numberline {3.2.1}1-Row Matrix and 1-Column Matrix}{23}
-\contentsline {subsection}{\numberline {3.2.2}Inspection of Entire Column}{24}
-\contentsline {subsection}{\numberline {3.2.3}Optimal Ordering within Column}{26}
-\contentsline {subsection}{\numberline {3.2.4}Main Result and Algorithm}{28}
-\contentsline {section}{\numberline {3.3}Discussion and Future Work}{30}
+\contentsline {subsection}{\numberline {3.2.1}1-Row Matrix and 1-Column Matrix}{24}
+\contentsline {subsection}{\numberline {3.2.2}Inspection of Entire Column}{25}
+\contentsline {subsection}{\numberline {3.2.3}Optimal Ordering within Column}{27}
+\contentsline {subsection}{\numberline {3.2.4}Main Result and Algorithm}{29}
+\contentsline {section}{\numberline {3.3}Discussion and Future Work}{31}
 \contentsline {chapter}{\numberline {4}Complexity of Group Activity Selection Problem}{32}
 \contentsline {section}{\numberline {4.1}Introduction and Related Work}{32}
 \contentsline {paragraph}{Related Work.}{34}
