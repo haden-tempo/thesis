@@ -23,7 +23,7 @@ can specify a set of friends and a set of enemies (in addition to her preference
 An agent is willing to attend only if all of her friends attend, none of her enemies attends, and  the number of attendees is acceptable to her. 
 
 Not surprisingly, complexity of \SIPs depends highly on the cardinality of friend-sets and enemy-sets, as friends-and-enemies relationship introduces combinatoric complexity in the problem of finding a good solution. 
-In this chapter we provide a complete analysis of complexity results on \SIPs; we consider individual rationality (IR) and Nash stability as we did for \GASP, and we also consider both asymmetric and symmetric friends-and-enemmies relation. 
+In this chapter we provide a complete analysis of complexity results on \SIP; we consider individual rationality (IR) and Nash stability as we did for \GASP, and we also consider both asymmetric and symmetric friends-and-enemmies relation. 
 
 
 \section{Definitions and Notation} \label{SIP:sec:SIP:prelim}
@@ -53,8 +53,8 @@ We consider the following two problems of finding invitations of size $k$:
 \end{itemize}
 
 We first consider restrictions on inputs by limiting the size of largest friend-sets and enemy-sets, respectively. 
-For integer constants $\alpha$ and $\beta$, if an instance of \SIPs satisfies $|F_i| \leq \alpha$ and $|E_i| \leq \beta$ for all $a_i\in N$, we call it an $(\alpha,\beta)$-instance of \SIP. 
-Lee and Shoham~\cite{LEE15AAAI} showed that \SIPs can be solved in polytime only if $\alpha$ and $\beta$ are small enough, but the problems are NP-hard in general. We will consider the same restrictions in this work, and provide our complete analysis of parameterized complexity of \SIP.
+For integer constants $\alpha$ and $\beta$, if an instance of \SIPs satisfies $|F_i| \leq \alpha$ and $|E_i| \leq \beta$ for all $a_i\in N$, we call it an $(\alpha,\beta)$-instance of \SIP.
+We show that that \SIPs can be solved in polytime only if $\alpha$ and $\beta$ are small enough, but the problems are NP-hard in general. We will consider the same restrictions in this work, and provide our complete analysis of parameterized complexity of \SIP.
 
 In addition to these restrictions, we consider the special case where agents have symmetric social relationships.
 \begin{definition} \label{SIP:def:symmetric_social}
