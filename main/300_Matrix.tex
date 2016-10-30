@@ -99,7 +99,7 @@ Let us consider an example in which we are given a 2-by-2 matrix $A$ of Bernoull
  To express $\mathbf{E}[C(\pi)]$ in $N(\pi,c)$'s, we need to take conditional probability into account, as column 2 is inspected only if column 1 is infeasible: 
  $\mathbf{E}[C(\pi)] = \mathbf{E}[N(\pi,1)] + \mathbf{E}[N(\pi,2)] (1-s_1) = 2.382$. Recall that $s_c$ is the probability of success for column $c$.
 
-There is a trivial, brute-force algorithm that can find an optimal inspection policy: Consider every inspection policy (there are $(nm)!$ of them) and for each inspection policy compute its expected number of inspections (in time $2^{nm}$ by considering all realization of $A$). Clearly, this is not a scalable algorithm as its runtime is exponential in the size of an input matrix, and the goal in this chapter is to design an efficient algorithm.
+There is a trivial, brute-force algorithm that can find an optimal inspection policy: Consider every inspection policy (there are $(nm)!$ of them) and for each inspection policy compute its expected number of inspections (by considering all $2^{nm}$ realization of $A$). This algorithm's runtime is exponential in the size of an input matrix, and we shall design an efficient algorithm in this chapter.
 
 
 \section{Technical Results and Algorithm} \label{matrix:sec:results}
