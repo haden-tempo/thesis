@@ -28,7 +28,7 @@
 \contentsline {paragraph}{Related Work.}{34}
 \contentsline {section}{\numberline {4.2}Definitions and Known Results}{35}
 \contentsline {section}{\numberline {4.3}Parameterized Complexity}{38}
-\contentsline {subsection}{\numberline {4.3.1}$k$-IR-GASP: Finding Individually Rational Assignments in GASP}{38}
+\contentsline {subsection}{\numberline {4.3.1}$k$-IR-GASP: Finding Individually Rational Assignments in GASP}{39}
 \contentsline {subsection}{\numberline {4.3.2}$k$-Stable-GASP: Finding Stable Assignments}{40}
 \contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{41}
 \contentsline {paragraph}{Proof of equivalence between instances.}{41}
@@ -39,7 +39,7 @@
 \contentsline {paragraph}{Preliminaries.}{47}
 \contentsline {paragraph}{FPT Algorithm.}{48}
 \contentsline {subsection}{\numberline {4.3.3}$k$-EF-GASP: Finding Envy-free Assignments}{49}
-\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{49}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{50}
 \contentsline {paragraph}{Proof of equivalence between instances.}{50}
 \contentsline {paragraph}{Preliminaries.}{52}
 \contentsline {paragraph}{FPT algorithm.}{52}

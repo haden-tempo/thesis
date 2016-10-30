@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  30 OCT 2016 11:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  30 OCT 2016 11:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -511,10 +511,15 @@ Chapter 3.
 ] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30])
 [31]
 Chapter 4.
-(./400_GASP.tex [32
+(./400_GASP.tex
+
+LaTeX Warning: Reference `bdoodle:chapter,matrix:chapter' on page 32 undefined 
+on input line 3.
+
+[32
 
 ] [33] [34]
-Overfull \hbox (32.06836pt too wide) in paragraph at lines 65--67
+Overfull \hbox (32.06836pt too wide) in paragraph at lines 68--70
 \OT1/ztmcm/m/n/10.95 [3]$\OT1/ptm/m/n/10.95 . Sup-pose $\OML/ztmcm/m/it/10.95 S
 [] \OT1/ztmcm/m/n/10.95 = \OMS/ztmcm/m/n/10.95 f\OT1/ztmcm/m/n/10.95 (\OML/ztmc
 m/m/it/10.95 a[]; \OT1/ztmcm/m/n/10.95 1)\OML/ztmcm/m/it/10.95 ; \OT1/ztmcm/m/n
@@ -584,14 +589,17 @@ Missing character: There is no ½ in font ptmr7t!
  [80] [81] [82]) [83]
 (./thesis.aux)
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 4425 strings out of 493014
- 65118 string characters out of 6133351
+ 4426 strings out of 493014
+ 65150 string characters out of 6133351
  130044 words of memory out of 5000000
- 7762 multiletter control sequences out of 15000+600000
+ 7763 multiletter control sequences out of 15000+600000
  74382 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1783b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -609,7 +617,7 @@ ive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016
 1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (93 pages, 413528 bytes).
+Output written on thesis.pdf (93 pages, 413966 bytes).
 PDF statistics:
  374 PDF objects out of 1000 (max. 8388607)
  258 compressed objects within 3 object streams
