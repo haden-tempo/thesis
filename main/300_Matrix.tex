@@ -65,7 +65,7 @@ We do not know of the values (or realizations) of the entries of $A$, as they ar
  \end{definition}
  The interpretation of a permutation is as follows. The entries of $A$ will be inspected in order specified by the permutation. After each inspection, if $A$ is found to be feasible or infeasible, the inspection process ends. Otherwise, it continues inspecting the entries as specified, but it will not make any unnecessary inspections as mentioned earlier. 
 
- If $\pi$ is a permutation of the entries of $A$, we write $C(\pi)$ to denote the number of inspections performed by $\pi$. $C(\pi)$ is a random variable whose probability distribution is determined by $P_A$. We are interested in finding an optimal policy which minimizes the expected number of inspections, $\mathbf{E}[C(\pi)]$.
+ If $\pi$ is a permutation of the entries of $A$, we write $C(\pi)$ to denote the number of inspections performed by $\pi$. $C(\pi)$ is a random variable whose probability distribution is determined by $P_A$. We are interested in finding an optimal policy which minimizes the expected number of inspections, $\Exp[C(\pi)]$.
  Note that there are $(nm)!$ permutations of the entries of $A$, and therefore exhaustive search for an optimal permutation will not produce an efficient algorithm. 
 
  \subsection{Example} \label{matrix:sec:example}
@@ -92,12 +92,12 @@ Consider the 2-by-2 matrix of Bernoulli random variables whose probability of su
  \end{equation*}	
  Suppose that the realization of $A$ happens to be the identity matrix of size $2$ (i.e., $a_{1,1} = a_{2,2} = 1$ and $a_{2,1} = a_{1,2} = 0$). If we use $\pi$ to inspect the matrix, it will first inspect $a_{1,1}$ and learn its realization. Because $a_{1,1} = 1$, it will inspect $a_{2,1}$ next only to find that column $1$ is infeasible after all. It will then inspect $a_{1,2}$ and learn that column $2$ is also infeasible, which implies that $A$ is infeasible. At this point, the inspection process terminates without inspecting $a_{2,2}$ as it is not necessary.
  This specific realization of $A$ happens with probability $p_{1,1}(1 - p_{2,1})(1-p_{1,2})p_{2,2}$, and yields $C(\pi) = 3$ because 3 inspections would occur. 
- If the realization of $A$ happens to be the null matrix (i.e., all entries are $0$'s), then $\pi$ would only inspect $a_{1,1}$ and $a_{1,2}$ but skip $a_{2,1}$ and $a_{2,2}$.  In this manner one can consider all $2^{2\cdot 2} = 16$ possible realizations of $A$, and compute $\mathbf{E}[C(\pi)]$ in this example. 
+ If the realization of $A$ happens to be the null matrix (i.e., all entries are $0$'s), then $\pi$ would only inspect $a_{1,1}$ and $a_{1,2}$ but skip $a_{2,1}$ and $a_{2,2}$.  In this manner one can consider all $2^{2\cdot 2} = 16$ possible realizations of $A$, and compute $\Exp[C(\pi)]$ in this example. 
 
- Another way to compute $\mathbf{E}[C(\pi)]$ is by de-coupling $C(\pi)$ into two random variables $N(\pi, c)$ with $c\in\{1,2\}$ where $N(\pi,c)$ denotes the number of inspections (on column $c$) performed by $\pi$ conditioning on the event that (at least one element of) column $c$ is inspected.
- We can efficiently compute these: $\mathbf{E}[N(\pi, c)] = 1 \cdot \mathbf{P}[a_{1,c} = 0] + 2 \cdot \mathbf{P}[a_{1,c} = 1]$ for $c\in \{1, 2\}$.
- To express $\mathbf{E}[C(\pi)]$ in $N(\pi,c)$'s, we need to take conditional probability into account, as column 2 is inspected only if column 1 is infeasible: 
- $\mathbf{E}[C(\pi)] = \mathbf{E}[N(\pi,1)] + \mathbf{E}[N(\pi,2)] (1-s_1) = 2.382$. Recall that $s_c$ is the probability of success for column $c$.
+ Another way to compute $\Exp[C(\pi)]$ is by de-coupling $C(\pi)$ into two random variables $N(\pi, c)$ with $c\in\{1,2\}$ where $N(\pi,c)$ denotes the number of inspections (on column $c$) performed by $\pi$ conditioning on the event that (at least one element of) column $c$ is inspected.
+ We can efficiently compute these: $\Exp[N(\pi, c)] = 1 \cdot \mathbf{P}[a_{1,c} = 0] + 2 \cdot \mathbf{P}[a_{1,c} = 1]$ for $c\in \{1, 2\}$.
+ To express $\Exp[C(\pi)]$ in $N(\pi,c)$'s, we need to take conditional probability into account, as column 2 is inspected only if column 1 is infeasible: 
+ $\Exp[C(\pi)] = \Exp[N(\pi,1)] + \Exp[N(\pi,2)] (1-s_1) = 2.382$. Recall that $s_c$ is the probability of success for column $c$.
 
 There is a trivial, brute-force algorithm that can find an optimal inspection policy: Consider every inspection policy (there are $(nm)!$ of them) and for each inspection policy compute its expected number of inspections (by considering all $2^{nm}$ realization of $A$). This algorithm's runtime is exponential in the size of an input matrix, and we shall design an efficient algorithm in this chapter.
 
@@ -119,7 +119,7 @@ We first consider two special cases of the Probabilistic Matrix Inspection probl
  	We can express the expectation of $C(\pi)$ in terms of $p_{1,c}$'s as follows:
  	\small
  	\begin{equation} \label{matrix:eqn:exp_cost_pi_1row}
- 		\mathbf{E}\left[C(\pi)\right] = 
+ 		\Exp\left[C(\pi)\right] = 
  		m \left(\prod_{k=1}^{m-1}(1 - p_{1,k})\right) + 
  		\sum_{j=1}^{m-1} j \left(p_j \prod_{k=1}^{j-1} (1-p_{1,k}) \right).
  	\end{equation}
@@ -136,16 +136,16 @@ We first consider two special cases of the Probabilistic Matrix Inspection probl
  			\pi'(j) = \pi(j)  &  \mbox{if~} j \neq c^* \land j \neq c^*+1
  		\end{cases}
  	\end{equation*}	
- 	After expressing $\mathbf{E}[C(\pi)]$ and $\mathbf{E}[C(\pi')]$ as in Equation~\ref{matrix:eqn:exp_cost_pi_1row}, one can re-arrange the terms to obtain the following:
+ 	After expressing $\Exp[C(\pi)]$ and $\Exp[C(\pi')]$ as in Equation~\ref{matrix:eqn:exp_cost_pi_1row}, one can re-arrange the terms to obtain the following:
  	\begin{equation} \label{matrix:eqn:proof_pi_1row}
- 	\mathbf{E}\left[C(\pi)\right] - \mathbf{E}\left[C(\pi')\right] = 
+ 	\Exp\left[C(\pi)\right] - \Exp\left[C(\pi')\right] = 
  	\left(\prod_{j=1}^{c^*-1} (1-p_{1,j})\right) (p_{1,c^*+1} - p_{1,c^*}).
  	\end{equation}
  	This quantity is positive if $p_{1,c^*+1} > p_{1,c^*}$ (recall that $p_{1,j} \in (0,1)$ for all $j$ as mentioned in Section~\ref{matrix:sec:notation}). 
 	
  	This proves the lemma because any policy that inspects an entry with smaller probability before another entry with higher probability is suboptimal, and therefore an optimal policy must inspect entries in non-increasing order of their associated probabilities. 
  \end{proof}
- Although the proof of Lemma~\ref{matrix:lemma:single_row_opt} is simple, it confirms correctness of our intuition. Equation~\ref{matrix:eqn:proof_pi_1row} illustrates this intuition; conditioning on the event that the first $c^*-1$ inspections fail (whose probability is the product term in Equation~\ref{matrix:eqn:proof_pi_1row}), the difference $\mathbf{E}[C(\pi)] - \mathbf{E}[C(\pi')]$ depends on the difference in the probabilities of success between the next-entry-to-be-inspected by $\pi$ and $\pi'$.
+ Although the proof of Lemma~\ref{matrix:lemma:single_row_opt} is simple, it confirms correctness of our intuition. Equation~\ref{matrix:eqn:proof_pi_1row} illustrates this intuition; conditioning on the event that the first $c^*-1$ inspections fail (whose probability is the product term in Equation~\ref{matrix:eqn:proof_pi_1row}), the difference $\Exp[C(\pi)] - \Exp[C(\pi')]$ depends on the difference in the probabilities of success between the next-entry-to-be-inspected by $\pi$ and $\pi'$.
 
  We can also consider the case where an input matrix $A$ has only one column.
  Intuitively, if we wish to minimize the expected number of inspections, we must inspect entries with smallest probability first because we can stop as soon as we determine that $A$ is infeasible.
@@ -172,23 +172,23 @@ We first consider two special cases of the Probabilistic Matrix Inspection probl
  First, $\pi'$ inspects all entries of column $1$ in the same order $\pi$ does. 
  Then, $\pi'$ inspects all entries of column $2$ in the same order $\pi$ does, and so on. 
  In particular, $\pi'$ inspects all entries of a column before inspecting another column, while preserving the original ordering of the entries within each column that is given by $\pi$. 
- We will show that $\mathbf{E}[C(\pi')] < \mathbf{E}[C(\pi)]$.
+ We will show that $\Exp[C(\pi')] < \Exp[C(\pi)]$.
 
  Let us define a set of new random variables which can be used to express $C(\cdot)$, as we did in Section~\ref{matrix:sec:example} when analyzing an example.
  Recall that $s_c = \prod_{r=1}^{n} a_{r,c}$ is the probability of success for column $c$.
  Let $N(\pi, c)$ ($N(\pi', c)$, respectively) be a random variable that denotes the number of entries of column $c$ that is inspected by $\pi$ (by $\pi'$, respectively), conditioning on the event that column $c$ is inspected (i.e., when the previous $c-1$ columns are infeasible).
- We can then express $\mathbf{E}[C(\pi)]$ and $\mathbf{E}[C(\pi')]$ as follows:
+ We can then express $\Exp[C(\pi)]$ and $\Exp[C(\pi')]$ as follows:
  \begin{equation} \label{matrix:eqn:exp_c_pi_decoupled}
- 	\mathbf{E}[C(\pi)] = \sum_{c=1}^{m} \mathbf{E}[N(\pi, c)]\left( \prod_{k=1}^{c-1} (1 - s_c) \right)
+ 	\Exp[C(\pi)] = \sum_{c=1}^{m} \Exp[N(\pi, c)]\left( \prod_{k=1}^{c-1} (1 - s_c) \right)
  \end{equation}
  and
  \begin{equation} \label{matrix:eqn:exp_c_pi2_decoupled}
- 	\mathbf{E}[C(\pi')] = \sum_{c=1}^{m} \mathbf{E}[N(\pi', c)]\left( \prod_{k=1}^{c-1} (1 - s_c) \right).
+ 	\Exp[C(\pi')] = \sum_{c=1}^{m} \Exp[N(\pi', c)]\left( \prod_{k=1}^{c-1} (1 - s_c) \right).
  \end{equation}
 
 
- To prove the theorem we will first show that for any realization of $A$, $N(\pi, c) \geq N(\pi', c)$ holds for all $c$; this immediately implies $\mathbf{E}[C(\pi)] \geq \mathbf{E}[C(\pi')]$.
- We will then show that there exists at least one realization of $A$ such that for some column $c'$ the strict inequality $N(\pi, c') > N(\pi', c')$ holds. These two statements together imply that $\mathbf{E}[C(\pi)] > \mathbf{E}[C(\pi')]$.
+ To prove the theorem we will first show that for any realization of $A$, $N(\pi, c) \geq N(\pi', c)$ holds for all $c$; this immediately implies $\Exp[C(\pi)] \geq \Exp[C(\pi')]$.
+ We will then show that there exists at least one realization of $A$ such that for some column $c'$ the strict inequality $N(\pi, c') > N(\pi', c')$ holds. These two statements together imply that $\Exp[C(\pi)] > \Exp[C(\pi')]$.
 
 
  Consider any realization of $A$ with the condition that the first $m-1$ columns are infeasible (recall that $m$ is the number of columns of $A$).
@@ -205,7 +205,7 @@ We first consider two special cases of the Probabilistic Matrix Inspection probl
  Consider any realization of $A$ with the condition that the first $c^*-1$ columns are infeasible and column $c^*$ is feasible (feasibility of other columns do not matter). 
  Using the same arguments we used earlier, we can show that $N(\pi, c) = N(\pi', c)$ for all $c < c^*$, that $N(\pi, c^*) = N(\pi', c^*) = n$, and that $N(\pi', c) = 0$ for all $c> c^*$. 
  However, because $b_{c^*} > n \cdot c^*$, there is at least one entry $a_{r',c'}$ with $c' > c^*$ which  appears before $b_{n, c^*}$ in $\pi$ (otherwise, if no such entry exists, then $b_{c^*}$ would be equal to $n \cdot c^*$). This implies that there exists some $c'$ with $c' > c^*$ such that $N(\pi, c') > 0$. 
- This proves the second claim that for some realization of $A$, there is some column $c'$ for which $N(\pi, c') >  N(\pi', c')$, and together with the first claim we proved earlier, this implies that $\mathbf{E}[C(\pi)] > \mathbf{E}[C(\pi')]$. 
+ This proves the second claim that for some realization of $A$, there is some column $c'$ for which $N(\pi, c') >  N(\pi', c')$, and together with the first claim we proved earlier, this implies that $\Exp[C(\pi)] > \Exp[C(\pi')]$. 
 
  This proves the theorem: Any policy that does not inspect all entries of a column consecutively is suboptimal.
  \end{proof}
@@ -236,27 +236,27 @@ We first consider two special cases of the Probabilistic Matrix Inspection probl
  		\end{cases}
  	\end{equation*}	
 	
- 	We claim that $\mathbf{E}[C(\pi')] < \mathbf{E}[C(\pi)]$, which implies that $\pi$ is not optimal.
+ 	We claim that $\Exp[C(\pi')] < \Exp[C(\pi)]$, which implies that $\pi$ is not optimal.
 	
  	Let us define new random variables $N(\pi, c)$ and $N(\pi', c)$ as we did in our proof of Theorem~\ref{matrix:theorem:col_by_col_opt} (i.e., the number of inspections performed by the respective policy on column $c$, conditioning on the event that the column is inspected).
- 	Then we can express $\mathbf{E}[C(\pi)]$ and $\mathbf{E}[C(\pi')]$ in terms of the new random variables and $s_c$'s as we did in Equations~\ref{matrix:eqn:exp_c_pi_decoupled} and \ref{matrix:eqn:exp_c_pi2_decoupled}.
+ 	Then we can express $\Exp[C(\pi)]$ and $\Exp[C(\pi')]$ in terms of the new random variables and $s_c$'s as we did in Equations~\ref{matrix:eqn:exp_c_pi_decoupled} and \ref{matrix:eqn:exp_c_pi2_decoupled}.
 	
  	Observe that $N(\pi, c) = N(\pi', c)$ for any realization of $A$ if $c \neq c^*$.
- 	To see this, first note that column $c$ would not be inspected by $\pi$ or by $\pi'$ if any of the previous columns (that is, columns $1$ through $c-1$) is found to be feasible, in which case $N(\pi, c) = N(\pi', c) = 0$. Otherwise, if column $c$ is inspected, both policies would inspect the entries of $c$ in the very same order, so $N(\pi, c) = N(\pi', c)$ must hold. Therefore we conclude that $\mathbf{E}[N(\pi, c)] = \mathbf{E}[N(\pi', c)]$ when $c \neq c^*$. 
+ 	To see this, first note that column $c$ would not be inspected by $\pi$ or by $\pi'$ if any of the previous columns (that is, columns $1$ through $c-1$) is found to be feasible, in which case $N(\pi, c) = N(\pi', c) = 0$. Otherwise, if column $c$ is inspected, both policies would inspect the entries of $c$ in the very same order, so $N(\pi, c) = N(\pi', c)$ must hold. Therefore we conclude that $\Exp[N(\pi, c)] = \Exp[N(\pi', c)]$ when $c \neq c^*$. 
 	
- 	We will now show that $\mathbf{E}[N(\pi, c^*)] > \mathbf{E}[N(\pi', c^*)]$ holds. 
- 	This immediately implies $\mathbf{E}[C(\pi)] > \mathbf{E}[C(\pi')]$ due to Equations~\ref{matrix:eqn:exp_c_pi_decoupled} and \ref{matrix:eqn:exp_c_pi2_decoupled}.
- 	Let us express $\mathbf{E}[N(\pi, c^*)]$ in terms of $p_{r,c^*}$'s.
+ 	We will now show that $\Exp[N(\pi, c^*)] > \Exp[N(\pi', c^*)]$ holds. 
+ 	This immediately implies $\Exp[C(\pi)] > \Exp[C(\pi')]$ due to Equations~\ref{matrix:eqn:exp_c_pi_decoupled} and \ref{matrix:eqn:exp_c_pi2_decoupled}.
+ 	Let us express $\Exp[N(\pi, c^*)]$ in terms of $p_{r,c^*}$'s.
  	\begin{equation*}
- 		\mathbf{E}[N(\pi, c^*)] = n\left( \prod_{k=1}^{n-1} p_{k,c^*}\right) + 
+ 		\Exp[N(\pi, c^*)] = n\left( \prod_{k=1}^{n-1} p_{k,c^*}\right) + 
  		\sum_{j=1}^{n-1} j (1-p_{j,c^*}) \left( \prod_{k=1}^{j-1} p_{k,c^*} \right)
  	\end{equation*}
  	Note that the event $N(\pi, c^*) = j$ occurs if the first $j-1$ entries are feasible while the $j$-th entry is not feasible when $j < n$, and $N(\pi, c^*) = n$ occurs if the first $n-1$ entries are feasible (but the $n$-th entry's feasibility does not matter).
 	
- 	We can express $\mathbf{E}[N(\pi', c^*)]$ in a similar manner, and simplify  $\mathbf{E}[N(\pi, c^*)] - \mathbf{E}[N(\pi', c^*)]$ as follows:
+ 	We can express $\Exp[N(\pi', c^*)]$ in a similar manner, and simplify  $\Exp[N(\pi, c^*)] - \Exp[N(\pi', c^*)]$ as follows:
  	\small
  	\begin{equation*}
- 		\mathbf{E}[N(\pi, c^*)] - \mathbf{E}[N(\pi', c^*)] = 
+ 		\Exp[N(\pi, c^*)] - \Exp[N(\pi', c^*)] = 
  		r \left( \prod_{k=1}^{r-1} p_{k,c^*} \right) (p_{r,c^*} - p_{r+1,c^*}).
  	\end{equation*}
  	\normalsize
@@ -283,7 +283,7 @@ We first consider two special cases of the Probabilistic Matrix Inspection probl
  		0.4459  & 0.8114
  	\end{bmatrix}
  \end{equation*}
- Here we have $s_1 ~= 0.199$ and $s_2 ~= 0.184$, and the greedy algorithm would produce $\pi = \begin{pmatrix} a_{1,1} & a_{2,1} & a_{1,2} & a_{2,2} \end{pmatrix}$. Its expected cost, $\mathbf{E}[C(\pi)]$, is $2.428$, but if we inspect the second column first, then the expected cost is $2.407$ which is optimal in this example.
+ Here we have $s_1 ~= 0.199$ and $s_2 ~= 0.184$, and the greedy algorithm would produce $\pi = \begin{pmatrix} a_{1,1} & a_{2,1} & a_{1,2} & a_{2,2} \end{pmatrix}$. Its expected cost, $\Exp[C(\pi)]$, is $2.428$, but if we inspect the second column first, then the expected cost is $2.407$ which is optimal in this example.
  One can consider another greedy algorithm which inspects the columns in increasing order of their expected number of inspections (within column), but this algorithm turns out to be suboptimal as well. 
 
 
@@ -299,9 +299,9 @@ We first consider two special cases of the Probabilistic Matrix Inspection probl
  	Consider a column-by-column inspection policy $\pi$ which inspects the column 1 through $m$ in increasing order of their index (we can assume this without loss of generality by re-labeling columns).
 	
  	As before, let $N(\pi,c)$ be a random variable that denotes the number of inspections performed by $\pi$ on column $c$, conditioning on the event that column $c$ is inspected.
- 	Then we can express $\mathbf{E}[N(\pi, c)]$ in terms of $s_c$ and $\mu_c$ as follows.
+ 	Then we can express $\Exp[N(\pi, c)]$ in terms of $s_c$ and $\mu_c$ as follows.
  	\begin{equation}\label{matrix:eqn:exp_cost_column_by_condition}
- 		\mathbf{E}[N(\pi, c)] = s_c \cdot n  + (1-s_c) \cdot \mu_c
+ 		\Exp[N(\pi, c)] = s_c \cdot n  + (1-s_c) \cdot \mu_c
  	\end{equation}
  	This equation holds because if the column is feasible (with probability $s_c$), it would require $n$ inspections, but if it is not (with probability $1-s_c$), it would require $\mu_c$ inspections in expectation. The equation above simply considers these two events, and calculates the expected value of $N(\pi, c)$. 
 	
@@ -317,11 +317,11 @@ We first consider two special cases of the Probabilistic Matrix Inspection probl
  		\end{cases}
  	\end{equation*}
 	
- 	As we did in proofs of Theorems~\ref{matrix:theorem:col_by_col_opt} and \ref{matrix:theorem:within_column_opt}, we can use Equations~\ref{matrix:eqn:exp_c_pi_decoupled} and \ref{matrix:eqn:exp_c_pi2_decoupled}, and simplify $\mathbf{E}[C(\pi)] - \mathbf{E}[C(\pi')]$ as follows.
+ 	As we did in proofs of Theorems~\ref{matrix:theorem:col_by_col_opt} and \ref{matrix:theorem:within_column_opt}, we can use Equations~\ref{matrix:eqn:exp_c_pi_decoupled} and \ref{matrix:eqn:exp_c_pi2_decoupled}, and simplify $\Exp[C(\pi)] - \Exp[C(\pi')]$ as follows.
 	\small
  	\begin{equation} \label{matrix:eqn:main_result_diff}
  		\begin{aligned}
- 		\mathbf{E}[C(\pi)] - \mathbf{E}[C(\pi')] ={} & \left(\frac{\mathbf{E}[N(\pi, c^*)]}{s_{c^*}}  - \frac{\mathbf{E}[N(\pi, c^*+1)]}{s_{c^*+1}} \right) \\
+ 		\Exp[C(\pi)] - \Exp[C(\pi')] ={} & \left(\frac{\Exp[N(\pi, c^*)]}{s_{c^*}}  - \frac{\Exp[N(\pi, c^*+1)]}{s_{c^*+1}} \right) \\
  		& \cdot \left( \prod_{j=1}^{c^*-1} (1 - s_j)\right) s_{c^*} s_{c^*+1}
  		 \end{aligned}
  	\end{equation}	
@@ -330,12 +330,12 @@ We first consider two special cases of the Probabilistic Matrix Inspection probl
  	\begin{equation*}
  		\begin{aligned}
  			{} &
- 		\frac{\mathbf{E}[N(\pi, c^*)]}{s_{c^*}}  > \frac{\mathbf{E}[N(\pi, c^*+1)]}{s_{c^*+1}} \\
+ 		\frac{\Exp[N(\pi, c^*)]}{s_{c^*}}  > \frac{\Exp[N(\pi, c^*+1)]}{s_{c^*+1}} \\
  		\Leftrightarrow &
  		\mu_{c^*} (1 - s_{c^*}) / s_{c^*} > \mu_{c^*+1}(1 - s_{c^*+1}) / s_{c^*+1} 
  		\end{aligned}
  	\end{equation*}
- 	By definition of $c^*$, the second inequality above holds, which implies $\mathbf{E}[C(\pi)] > \mathbf{E}[C(\pi')]$.
+ 	By definition of $c^*$, the second inequality above holds, which implies $\Exp[C(\pi)] > \Exp[C(\pi')]$.
  	Therefore, an optimal inspection policy must inspect the columns in non-decreasing order of $\mu_c(1 - s_c)/s_c$. 
  \end{proof}
  Because there is a unique ordering of columns if we sort them by $\mu_c(1-s_c)/s_c$ (up to ties), Theorem~\ref{matrix:thm:main_result} leads to the following algorithm: We inspect the columns in increasing order of $\mu_c(1-s_c)/s_c$, and in each column, we inspect the entries of it in increasing order of probabilities. 

@@ -189,13 +189,13 @@ Given $B$, let us construct another B-Doodle mechanism, $B^*$, as follows: $B^* 
 
 Let $w_j$ be the probability that the scheduling process ends after the $j$-th iteration if we use $B$, and $w_j^*$ if we use $B^*$. Then $w_j = w_j^*$ for all $j < l$ because $S_j = S^*_j$ for all $j$ with $1 \leq j < l$. Clearly it holds that $w_l < w_l^*$ because of the swap of $t$ and $t'$. For $j$ with $l < j \leq l'$, it holds that $w_j > w_j^*$; this is not obvious, but the intuition is that if $w_l^*$ increases then the subsequent $w_j^*$'s with $l < j \leq l'$ must decrease as they depend on $1-w_l^*$, until this effect is canceled out in the $l'$-th batch. Since the probability of finding no feasible time slots during $l'$ iterations is the same in both cases (because $\cup_{i=1}^{l'} S_i = \cup_{i=1}^{l'}S^*_i$) it holds that $w_j = w_j^*$ for all $j > l'$. 
 
-Let $E_B$ be the expected cost of $B$ and $E_{B^*}$ of $B^*$. Since $b_j = b^*_j$ for all $j$, it holds that $C(j, B) = C(j, B^*)$ for all $j$, and we have:
+Let $\Exp_B$ be the expected cost of $B$ and $\Exp_{B^*}$ of $B^*$. Since $b_j = b^*_j$ for all $j$, it holds that $C(j, B) = C(j, B^*)$ for all $j$, and we have:
 \begin{eqnarray}
-	E_B - E_{B^*} 
+	\Exp_B - \Exp_{B^*} 
 	&=& (w_l - w_l^*) C(l, B) + \sum_{j=l+1}^{l'} (w_j - w_j^*)C(j, B) \\
 	&=& \sum_{j=l+1}^{l'} (w_j - w_j^*)(C(j, B) - C(l, B))
 \end{eqnarray} 
-The first inequality holds by definition of the expected cost and canceling out some terms; the second inequality holds because $(w_l - w_l^*) + \sum_{j=l+1}^{l'} (w_j - w_j^*) = 0$ (as probabilities must add up to one). Since $w_j > w_j^*$ and $C(j, B) > C(l, B)$ for all $j$ (because $C(j, B)$ is an increasing function in $j$ for fixed $B$), we conclude that $E_{B} > E_{B^*}$.
+The first inequality holds by definition of the expected cost and canceling out some terms; the second inequality holds because $(w_l - w_l^*) + \sum_{j=l+1}^{l'} (w_j - w_j^*) = 0$ (as probabilities must add up to one). Since $w_j > w_j^*$ and $C(j, B) > C(l, B)$ for all $j$ (because $C(j, B)$ is an increasing function in $j$ for fixed $B$), we conclude that $\Exp_{B} > \Exp_{B^*}$.
 \end{proof}
 Theorem~\ref{bdoodle:thm:swap_argument} implies that an optimal B-Doodle that minimizes the expected cost must have the following property: for any two batches $S_j$ and $S_k$ with $j < k$, it must hold that $q_t \geq q_{t'}$ for all $t\in S_j$ and $t' \in S_k$ (otherwise we can apply the theorem and swap the two time slots to obtain a mechanism with smaller expected cost).
 Therefore we can limit our attention to the sub-class of B-Doodle mechanisms that only describe batch sizes, but not explicitly which time slots in each batch. Due to Lemma~\ref{bdoodle:lemma:q_t_polytime} we can compute $q_t$ for each $t$ in polynomial time, and thus we can simply sort time slots by $q_t$ in non-increasing order as a pre-processing step.
