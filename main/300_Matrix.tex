@@ -90,7 +90,7 @@ Let us consider an example in which we are given a 2-by-2 matrix $A$ of Bernoull
  	a_{1,1} & a_{2,1} & a_{1,2} & a_{2,2} 
  	\end{pmatrix}.
  \end{equation*}	
- Suppose that the realization of $A$ happens to be the identity matrix of size $2$ (i.e., $a_{1,1} = a_{2,2} = 1$ and $a_{2,1} = a_{1,2} = 0$). If we use $\pi$, it will first inspect $a_{1,1}$ and learn its realization. Since $a_{1,1} = 1$, it will inspect $a_{2,1}$ next only to find that column $1$ is infeasible after all. It will then inspect $a_{1,2}$ and learn that column $2$ is also infeasible, which implies that $A$ is infeasible. At this point, the inspection process terminates without inspecting $a_{2,2}$.
+ Suppose that the realization of $A$ happens to be the identity matrix of size $2$ (i.e., $a_{1,1} = a_{2,2} = 1$ and $a_{2,1} = a_{1,2} = 0$). If we use $\pi$ to inspect the matrix, it will first inspect $a_{1,1}$ and learn its realization. Since $a_{1,1} = 1$, it will inspect $a_{2,1}$ next only to find that column $1$ is infeasible after all. It will then inspect $a_{1,2}$ and learn that column $2$ is also infeasible, which implies that $A$ is infeasible. At this point, the inspection process terminates without inspecting $a_{2,2}$.
  This specific realization of $A$ happens with probability $p_{1,1}(1 - p_{2,1})(1-p_{1,2})p_{2,2}$, and yields $C(\pi) = 3$ because 3 inspections would occur. 
  If the realization of $A$ happens to be the null matrix (i.e., all entries are $0$'s), then $\pi$ would only inspect $a_{1,1}$ and $a_{1,2}$ but skip $a_{2,1}$ and $a_{2,2}$.  In this manner one can consider all $2^{2\cdot 2} = 16$ possible realizations of $A$, and compute $\mathbf{E}[C(\pi)]$ in this example. 
 
