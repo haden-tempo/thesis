@@ -17,7 +17,7 @@
 \contentsline {section}{\numberline {3.1}Formal Model}{21}
 \contentsline {subsection}{\numberline {3.1.1}Notation and Definitions}{21}
 \contentsline {subsection}{\numberline {3.1.2}Example}{23}
-\contentsline {section}{\numberline {3.2}Technical Results and Algorithm}{23}
+\contentsline {section}{\numberline {3.2}Technical Results and Algorithm}{24}
 \contentsline {subsection}{\numberline {3.2.1}1-Row Matrix and 1-Column Matrix}{24}
 \contentsline {subsection}{\numberline {3.2.2}Inspection of Entire Column}{25}
 \contentsline {subsection}{\numberline {3.2.3}Optimal Ordering within Column}{27}
