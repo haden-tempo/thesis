@@ -332,8 +332,7 @@ Its expected cost, $\Exp[C(\pi)]$, is $2.428$, but if we inspect the second colu
  		\Leftrightarrow 
  		\frac{\mu_{c^*} (1 - s_{c^*})}{s_{c^*}} > \frac{\mu_{c^*+1}(1 - s_{c^*+1}}{s_{c^*+1}}
  	\end{equation*}
- 	By definition of $c^*$, the second inequality above holds, which implies $\Exp[C(\pi)] > \Exp[C(\pi')]$.
- 	Therefore, an optimal inspection policy must inspect the columns in non-decreasing order of $\mu_c(1 - s_c)/s_c$. 
+ 	By definition of $c^*$, the second inequality above holds, which implies the first. Hence, an optimal inspection policy must inspect the columns in non-decreasing order of $\mu_c(1 - s_c)/s_c$. 
  \end{proof}
  Because there is a unique ordering of columns if we sort them by $\mu_c(1-s_c)/s_c$ (up to ties), Theorem~\ref{matrix:thm:main_result} leads to the following algorithm: We inspect the columns in increasing order of $\mu_c(1-s_c)/s_c$, and in each column, we inspect the entries of it in increasing order of probabilities. 
  This algorithm can easily be implemented to run in polynomial time. 
