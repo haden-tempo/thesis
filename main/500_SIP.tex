@@ -25,14 +25,10 @@ An agent is willing to attend only if all of her friends attend, none of her ene
 Not surprisingly, complexity of \SIPs depends highly on the cardinality of friend-sets and enemy-sets, as friends-and-enemies relationship introduces combinatoric complexity in the problem of finding a good solution. 
 In this chapter we provide a complete analysis of complexity results on \SIPs; we consider individual rationality (IR) and Nash stability as we did for \GASP, and we also consider both asymmetric and symmetric friends-and-enemmies relation. 
 
-From the work by Darmann et al.~\cite{GASP12WINE}, we know that if all agents have anonymous preferences, then \SIPs can be solved in polynomial time -- which is equivalent to \GASPs with one activity. 
+From the work by Darmann et al.~\cite{GASP12WINE}, we know that if all agents have anonymous preferences, then \SIPs can be solved in polynomial time -- which is equivalent to \GASPs with one activity. Yet, as we shall show, preferences of agents play an important role in complexity of \SIPs under various settings. 
 
 
-
-\section{Definitions and Known Results} \label{SIP:sec:SIP:prelim}
-
-To make this work self-contained, we begin by introducing the formal definitions proposed by 
-Lee and Shoham~\cite{LEE15AAAI}, yet we make slight modifications to notation for readability and consistency in this paper.
+\section{Definitions} \label{SIP:sec:SIP:prelim}
 
 \begin{definition}
 An instance of the Stable Invitations Problem (\SIP) is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$, and an {\em approval set} $S_i \subseteq [1,n]$, a {\em friend set} $F_i \subseteq N$, and an {\em enemy set} $E_i \subseteq N$ for each agent $a_i\in N$.
