@@ -24,27 +24,26 @@
 \contentsline {subsection}{\numberline {3.2.4}Main Result and Algorithm}{29}
 \contentsline {section}{\numberline {3.3}Discussion and Future Work}{31}
 \contentsline {chapter}{\numberline {4}Complexity of Group Activity Selection Problem}{32}
-\contentsline {section}{\numberline {4.1}Introduction and Related Work}{32}
 \contentsline {paragraph}{Related Work.}{34}
-\contentsline {section}{\numberline {4.2}Definitions and Known Results}{35}
-\contentsline {section}{\numberline {4.3}Parameterized Complexity}{38}
-\contentsline {subsection}{\numberline {4.3.1}$k$-IR-GASP: Finding Individually Rational Assignments in GASP}{39}
-\contentsline {subsection}{\numberline {4.3.2}$k$-Stable-GASP: Finding Stable Assignments}{41}
+\contentsline {section}{\numberline {4.1}Definitions and Known Results}{35}
+\contentsline {section}{\numberline {4.2}Parameterized Complexity}{38}
+\contentsline {subsection}{\numberline {4.2.1}$k$-IR-GASP: Finding Individually Rational Assignments in GASP}{39}
+\contentsline {subsection}{\numberline {4.2.2}$k$-Stable-GASP: Finding Stable Assignments}{40}
 \contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{41}
-\contentsline {paragraph}{Proof of equivalence between instances.}{42}
+\contentsline {paragraph}{Proof of equivalence between instances.}{41}
 \contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{43}
-\contentsline {paragraph}{Proof of equivalence between instances.}{44}
-\contentsline {paragraph}{Preliminaries.}{45}
+\contentsline {paragraph}{Proof of equivalence between instances.}{43}
+\contentsline {paragraph}{Preliminaries.}{44}
 \contentsline {paragraph}{FPT Algorithm.}{45}
-\contentsline {paragraph}{Preliminaries.}{48}
+\contentsline {paragraph}{Preliminaries.}{47}
 \contentsline {paragraph}{FPT Algorithm.}{48}
-\contentsline {subsection}{\numberline {4.3.3}$k$-EF-GASP: Finding Envy-free Assignments}{50}
+\contentsline {subsection}{\numberline {4.2.3}$k$-EF-GASP: Finding Envy-free Assignments}{49}
 \contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{50}
 \contentsline {paragraph}{Proof of equivalence between instances.}{50}
 \contentsline {paragraph}{Preliminaries.}{52}
-\contentsline {paragraph}{FPT algorithm.}{53}
-\contentsline {subsection}{\numberline {4.3.4}$k$-Perfect-GASP: Finding Perfect Assignments}{54}
-\contentsline {section}{\numberline {4.4}Discussion and Future Work}{55}
+\contentsline {paragraph}{FPT algorithm.}{52}
+\contentsline {subsection}{\numberline {4.2.4}$k$-Perfect-GASP: Finding Perfect Assignments}{53}
+\contentsline {section}{\numberline {4.3}Discussion and Future Work}{54}
 \contentsline {chapter}{\numberline {5}Complexity of Stable Invitations Problem}{56}
 \contentsline {section}{\numberline {5.1}Introduction and Related Work}{56}
 \contentsline {paragraph}{Related Work.}{57}
