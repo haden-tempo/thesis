@@ -283,7 +283,10 @@ We first consider two special cases of the Probabilistic Matrix Inspection probl
  		0.4459  & 0.8114
  	\end{bmatrix}
  \end{equation*}
- Here we have $s_1 ~= 0.199$ and $s_2 ~= 0.184$, and the greedy algorithm would produce $\pi = \begin{pmatrix} a_{1,1} & a_{2,1} & a_{1,2} & a_{2,2} \end{pmatrix}$. Its expected cost, $\Exp[C(\pi)]$, is $2.428$, but if we inspect the second column first, then the expected cost is $2.407$ which is optimal in this example.
+ Here we have $s_1 ~= 0.199$ and $s_2 ~= 0.184$, and the greedy algorithm would produce 
+ $$\pi = \begin{pmatrix} a_{1,1} & a_{2,1} & a_{1,2} & a_{2,2} \end{pmatrix}.$$ 
+
+Its expected cost, $\Exp[C(\pi)]$, is $2.428$, but if we inspect the second column first, then the expected cost is $2.407$ which is optimal in this example.
  One can consider another greedy algorithm which inspects the columns in increasing order of their expected number of inspections (within column), but this algorithm turns out to be suboptimal as well. 
 
 
