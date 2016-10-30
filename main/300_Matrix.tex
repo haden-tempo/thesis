@@ -323,14 +323,14 @@ Its expected cost, $\Exp[C(\pi)]$, is $2.428$, but if we inspect the second colu
  	As we did in proofs of Theorems~\ref{matrix:theorem:col_by_col_opt} and \ref{matrix:theorem:within_column_opt}, we can use Equations~\ref{matrix:eqn:exp_c_pi_decoupled} and \ref{matrix:eqn:exp_c_pi2_decoupled}, and simplify $\Exp[C(\pi)] - \Exp[C(\pi')]$ as follows.
 	\small
  	\begin{equation} \label{matrix:eqn:main_result_diff}
- 		\Exp[C(\pi)] - \Exp[C(\pi')] ={} & \left(\frac{\Exp[N(\pi, c^*)]}{s_{c^*}}  - \frac{\Exp[N(\pi, c^*+1)]}{s_{c^*+1}} \right)  \cdot \left( \prod_{j=1}^{c^*-1} (1 - s_j)\right) s_{c^*} s_{c^*+1}
+ 		\Exp[C(\pi)] - \Exp[C(\pi')] =  \left(\frac{\Exp[N(\pi, c^*)]}{s_{c^*}}  - \frac{\Exp[N(\pi, c^*+1)]}{s_{c^*+1}} \right)  \cdot \left( \prod_{j=1}^{c^*-1} (1 - s_j)\right) s_{c^*} s_{c^*+1}
  	\end{equation}	
 	\normalsize
  	The quantity in Equation~\ref{matrix:eqn:main_result_diff} is positive if the difference of the weighted expected values (in the first parentheses) are positive. Using Equation~\ref{matrix:eqn:exp_cost_column_by_condition} we obtain the following inequality.
  	\begin{equation*}
  		\frac{\Exp[N(\pi, c^*)]}{s_{c^*}}  > \frac{\Exp[N(\pi, c^*+1)]}{s_{c^*+1}} 
  		\Leftrightarrow 
- 		\frac{\mu_{c^*} (1 - s_{c^*})}{s_{c^*}} > \frac{\mu_{c^*+1}(1 - s_{c^*+1}}}{s_{c^*+1}}
+ 		\frac{\mu_{c^*} (1 - s_{c^*})}{s_{c^*}} > \frac{\mu_{c^*+1}(1 - s_{c^*+1}}{s_{c^*+1}}
  	\end{equation*}
  	By definition of $c^*$, the second inequality above holds, which implies $\Exp[C(\pi)] > \Exp[C(\pi')]$.
  	Therefore, an optimal inspection policy must inspect the columns in non-decreasing order of $\mu_c(1 - s_c)/s_c$. 
