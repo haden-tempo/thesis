@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  30 OCT 2016 13:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  30 OCT 2016 13:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -468,10 +468,7 @@ File: plots/pareto_scatter_fin-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: plots/pareto_scatter_fin-eps-converted-to.pdf used on 
 input line 59.
 (pdftex.def)             Requested size: 344.96487pt x 158.99219pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+ [3 <./plots/pareto_scatter_fin-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <plots/pareto_objective_fin.eps>
 (epstopdf)                    date: 2013-10-10 17:45:23
 (epstopdf)                    size: 21574 bytes
@@ -484,23 +481,18 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 76.
 Package epstopdf Info: Output file is already uptodate.
 
-<plots/pareto_objective_fin-eps-converted-to.pdf, id=49, 718.685pt x 331.2375pt
+<plots/pareto_objective_fin-eps-converted-to.pdf, id=59, 718.685pt x 331.2375pt
 >
 File: plots/pareto_objective_fin-eps-converted-to.pdf Graphic file (type pdf)
  <use plots/pareto_objective_fin-eps-converted-to.pdf>
 Package pdftex.def Info: plots/pareto_objective_fin-eps-converted-to.pdf used o
 n input line 76.
 (pdftex.def)             Requested size: 344.96487pt x 158.99219pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3] [4 <./plots/pareto_scatter_fin-eps-converted-to.pdf> <./plots/pareto_object
-ive_fin-eps-converted-to.pdf>]
+ [4 <./plots/pareto_objective_fin-eps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 101.
- [5] [6] [7] [8] [9] [10] [11] [12] [13] [14]
-[15]
+ [5] [6] [7] [8] [9] [10] [11] [12] [13]
+[14] [15]
 Underfull \hbox (badness 10000) in paragraph at lines 399--400
 
  []
@@ -516,12 +508,12 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 Chapter 3.
 (./300_Matrix.tex [20
 
-] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30]
-[31]) [32]
+] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30])
+[31]
 Chapter 4.
-(./400_GASP.tex [33
+(./400_GASP.tex [32
 
-] [34] [35]
+] [33] [34]
 Overfull \hbox (32.06836pt too wide) in paragraph at lines 71--73
 \OT1/ztmcm/m/n/10.95 [3]$\OT1/ptm/m/n/10.95 . Sup-pose $\OML/ztmcm/m/it/10.95 S
 [] \OT1/ztmcm/m/n/10.95 = \OMS/ztmcm/m/n/10.95 f\OT1/ztmcm/m/n/10.95 (\OML/ztmc
@@ -541,16 +533,16 @@ OML/ztmcm/m/it/10.95 a[]; \OT1/ztmcm/m/n/10.95 2)\OMS/ztmcm/m/n/10.95 g$\OT1/pt
 m/m/n/10.95 .
  []
 
-[36] [37] [38]
+[35] [36] [37]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53]
-[54] [55]) [56]
+[38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52]
+[53] [54]) [55]
 Chapter 5.
-(./500_SIP.tex [57
+(./500_SIP.tex [56
 
-] [58]
+] [57]
 Overfull \hbox (6.27542pt too wide) in paragraph at lines 75--77
 []\OT1/ptm/m/n/10.95 Theorem 17[] sum-ma-rizes the most rel-e-vant re-sults of 
 Dar-mann et al. [[]] and Lee and Shoham [[]]
@@ -561,7 +553,7 @@ Overfull \hbox (40.96858pt too wide) in paragraph at lines 92--102
  [][] 
  []
 
-[59] [60] [61]
+[58] [59] [60]
 Overfull \hbox (5.42677pt too wide) in paragraph at lines 202--203
 []\OT1/ptm/m/n/10.95 Assume un-bounded $\OML/ztmcm/m/it/10.95 $ \OT1/ptm/m/n/1
 0.95 and $\OML/ztmcm/m/it/10.95 ^^L$\OT1/ptm/m/n/10.95 , and let us re-duce the
@@ -569,20 +561,20 @@ Overfull \hbox (5.42677pt too wide) in paragraph at lines 202--203
  weighted
  []
 
-[62] [63] [64] [65] [66]
+[61] [62] [63] [64] [65]
 Overfull \hbox (84.17479pt too wide) in paragraph at lines 312--322
  [][] 
  []
 
-[67] [68] [69] [70] [71] [72] [73]) [74]
+[66] [67] [68] [69] [70] [71] [72]) [73]
 Chapter 6.
-(./600_GT.tex [75
+(./600_GT.tex [74
 
-] [76]) [77] [78]
+] [75]) [76] [77]
 Chapter 7.
-(./700_Discussion.tex) (./thesis.bbl [79
+(./700_Discussion.tex) (./thesis.bbl [78
 
-] [80
+] [79
 
 ]
 Missing character: There is no Ã in font ptmr7t!
@@ -593,7 +585,7 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ƒ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
- [81] [82] [83]) [84]
+ [80] [81] [82]) [83]
 (./thesis.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -602,7 +594,7 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  4427 strings out of 493014
  65155 string characters out of 6133351
- 132044 words of memory out of 5000000
+ 131065 words of memory out of 5000000
  7764 multiletter control sequences out of 15000+600000
  74382 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -621,10 +613,10 @@ ive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016
 1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (94 pages, 414000 bytes).
+Output written on thesis.pdf (93 pages, 413436 bytes).
 PDF statistics:
- 377 PDF objects out of 1000 (max. 8388607)
- 260 compressed objects within 3 object streams
+ 374 PDF objects out of 1000 (max. 8388607)
+ 258 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
