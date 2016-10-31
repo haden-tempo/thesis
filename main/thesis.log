@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 OCT 2016 11:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 OCT 2016 11:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -582,7 +582,11 @@ Missing character: There is no ƒ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
  [81] [82] [83]) [84]
-(./thesis.aux) ) 
+(./thesis.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  4425 strings out of 493014
  65119 string characters out of 6133351
@@ -591,22 +595,21 @@ Here is how much of TeX's memory you used:
  74382 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1783b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc
-}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
-type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/
-times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr
-i8a.pfb>
-Output written on thesis.pdf (94 pages, 414491 bytes).
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
+1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
+s/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (94 pages, 414498 bytes).
 PDF statistics:
  377 PDF objects out of 1000 (max. 8388607)
  260 compressed objects within 3 object streams
