@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 OCT 2016 12:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 OCT 2016 12:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -552,12 +552,12 @@ and $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/it/10.95 -Stable-Invitation
  []
 
 
-Overfull \hbox (40.96858pt too wide) in paragraph at lines 102--113
+Overfull \hbox (40.96858pt too wide) in paragraph at lines 107--118
  [][] 
  []
 
 [57] [58] [59] [60]
-Overfull \hbox (5.42677pt too wide) in paragraph at lines 213--214
+Overfull \hbox (5.42677pt too wide) in paragraph at lines 218--219
 []\OT1/ptm/m/n/10.95 Assume un-bounded $\OML/ztmcm/m/it/10.95 $ \OT1/ptm/m/n/1
 0.95 and $\OML/ztmcm/m/it/10.95 ^^L$\OT1/ptm/m/n/10.95 , and let us re-duce the
  $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/n/10.95 -Stable-Invitation prob-lem to the
@@ -565,19 +565,19 @@ Overfull \hbox (5.42677pt too wide) in paragraph at lines 213--214
  []
 
 [61] [62] [63] [64]
-Overfull \hbox (84.17479pt too wide) in paragraph at lines 323--333
+Overfull \hbox (84.17479pt too wide) in paragraph at lines 328--338
  [][] 
  []
 
-[65] [66] [67] [68] [69] [70] [71]) [72]
+[65] [66] [67] [68] [69] [70] [71] [72]) [73]
 Chapter 6.
-(./600_GT.tex [73
+(./600_GT.tex [74
 
-] [74]) [75] [76]
+] [75]) [76] [77]
 Chapter 7.
-(./700_Discussion.tex) (./thesis.bbl [77
+(./700_Discussion.tex) (./thesis.bbl [78
 
-] [78
+] [79
 
 ]
 Missing character: There is no Ã in font ptmr7t!
@@ -588,7 +588,7 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ƒ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
- [79] [80] [81]) [82]
+ [80] [81] [82]) [83]
 (./thesis.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -616,10 +616,10 @@ ive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016
 1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (92 pages, 414102 bytes).
+Output written on thesis.pdf (93 pages, 414752 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 256 compressed objects within 3 object streams
+ 374 PDF objects out of 1000 (max. 8388607)
+ 258 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
