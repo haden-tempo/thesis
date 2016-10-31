@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 OCT 2016 13:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 OCT 2016 13:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -552,12 +552,12 @@ and $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/it/10.95 -Stable-Invitation
  []
 
 [57] [58]
-Overfull \hbox (40.96858pt too wide) in paragraph at lines 158--169
+Overfull \hbox (40.96858pt too wide) in paragraph at lines 160--171
  [][] 
  []
 
 [59] [60] [61]
-Overfull \hbox (5.42677pt too wide) in paragraph at lines 269--270
+Overfull \hbox (5.42677pt too wide) in paragraph at lines 271--272
 []\OT1/ptm/m/n/10.95 Assume un-bounded $\OML/ztmcm/m/it/10.95 $ \OT1/ptm/m/n/1
 0.95 and $\OML/ztmcm/m/it/10.95 ^^L$\OT1/ptm/m/n/10.95 , and let us re-duce the
  $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/n/10.95 -Stable-Invitation prob-lem to the
@@ -565,7 +565,7 @@ Overfull \hbox (5.42677pt too wide) in paragraph at lines 269--270
  []
 
 [62] [63] [64] [65] [66]
-Overfull \hbox (84.17479pt too wide) in paragraph at lines 379--389
+Overfull \hbox (84.17479pt too wide) in paragraph at lines 381--391
  [][] 
  []
 
@@ -597,7 +597,7 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  4429 strings out of 493014
  65231 string characters out of 6133351
- 130084 words of memory out of 5000000
+ 129084 words of memory out of 5000000
  7766 multiletter control sequences out of 15000+600000
  74382 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -616,7 +616,7 @@ ive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016
 1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (94 pages, 417425 bytes).
+Output written on thesis.pdf (94 pages, 417961 bytes).
 PDF statistics:
  377 PDF objects out of 1000 (max. 8388607)
  260 compressed objects within 3 object streams
