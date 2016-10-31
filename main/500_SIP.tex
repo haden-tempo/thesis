@@ -188,12 +188,12 @@ TODO: To point out same complexity results.
 
 \section{Parameterized Complexity} \label{SIP:sec:results}
 
- \begin{table*}[t!] %TODO: To take care of the margins.
+ \begin{table*}[t!] 
 	 \small
  	\centering
  \begin{tabular}{|l|*{4}{c|}|*{4}{c|}}\hline
  \multirow{2}*{} & \multicolumn{4}{c||}{$k$-IR-Invitations} & \multicolumn{4}{c|}{$k$-Stable-Invitations} \\ \cline{2-9}
-  & $\beta = 0$ & $\beta = 1$ & $2 \leq \beta \leq f(k)$ & unbounded $\beta$ & $\beta = 0$ & $\beta = 1$ & $2 \leq \beta \leq f(k)$ & unbounded $\beta$ \\ \hline
+  & $\beta = 0$ & $\beta = 1$ & $2 \leq \beta \leq f(k)$ & $\beta<n$ & $\beta = 0$ & $\beta = 1$ & $2 \leq \beta \leq f(k)$ & $\beta<n$ \\ \hline
  $\alpha = 0$ & P & P & FPT  & W[1]-C & P & P & FPT & W[2]-C \\ \hline
  $\alpha = 1$ & P & FPT  & FPT & W[1]-C & P & W[1]-C & W[1]-C & W[2]-C\\ \hline
  $\alpha \geq 2$ & W[1]-C & W[1]-C & W[1]-C & W[1]-C & W[1]-C & W[1]-C & W[1]-C & W[2]-C \\ \hline
@@ -409,12 +409,12 @@ This is not surprising because a stable invitation requires that everyone (wheth
 
 \section{Symmetric Social Relationship} \label{SIP:sec:symm}
 
- \begin{table*}[t!]
+ \begin{table*}[t!] %TODO: To take care of the margins.
 	 \small
  	\centering
  \begin{tabular}{|l|*{5}{c|}|*{5}{c|}}\hline
  \multirow{2}*{} & \multicolumn{5}{c||}{Symmetric $k$-IR-Invitations } & \multicolumn{5}{c|}{Symmetric $k$-Stable-Invitations } \\ \cline{2-11}
-  & $\beta = 0$ & $\beta = 1$& $\beta=2$ & $3 \leq \beta \leq f(k)$ & $\beta \leq n$ & $\beta = 0$ & $\beta = 1$ & $\beta=2$ & $3 \leq \beta \leq f(k)$ & unbounded $\beta$  \\ \hline
+  & $\beta = 0$ & $\beta = 1$& $\beta=2$ & $3 \leq \beta \leq f(k)$ & $\beta < n$ & $\beta = 0$ & $\beta = 1$ & $\beta=2$ & $3 \leq \beta \leq f(k)$ & $\beta < n$ \\ \hline
  $\alpha = 0$ & P & P & P & FPT & W[1]-C & P & P & P & FPT & W[2]-C \\ \hline
  $\alpha = 1$ & P & P & FPT & FPT & W[1]-C & P & P & FPT & FPT & W[2]-C \\ \hline
  $\alpha \geq 2$ & P & FPT & FPT & FPT & W[1]-C & P & FPT & FPT & FPT & W[2]-C \\ \hline

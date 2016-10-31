@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 OCT 2016 13:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 OCT 2016 13:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -551,12 +551,7 @@ Overfull \hbox (7.05106pt too wide) in paragraph at lines 73--75
 and $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/it/10.95 -Stable-Invitation
  []
 
-[57] [58] [59] [60]
-Overfull \hbox (40.96858pt too wide) in paragraph at lines 194--205
- [][] 
- []
-
-[61] [62] [63] [64]
+[57] [58] [59] [60] [61] [62] [63] [64]
 Overfull \hbox (5.42677pt too wide) in paragraph at lines 305--306
 []\OT1/ptm/m/n/10.95 Assume un-bounded $\OML/ztmcm/m/it/10.95 $ \OT1/ptm/m/n/1
 0.95 and $\OML/ztmcm/m/it/10.95 ^^L$\OT1/ptm/m/n/10.95 , and let us re-duce the
@@ -565,7 +560,7 @@ Overfull \hbox (5.42677pt too wide) in paragraph at lines 305--306
  []
 
 [65] [66] [67] [68]
-Overfull \hbox (84.17479pt too wide) in paragraph at lines 415--425
+Overfull \hbox (39.05446pt too wide) in paragraph at lines 415--425
  [][] 
  []
 
@@ -593,7 +588,7 @@ Missing character: There is no ½ in font ptmr7t!
 Here is how much of TeX's memory you used:
  4429 strings out of 493014
  65231 string characters out of 6133351
- 131084 words of memory out of 5000000
+ 132084 words of memory out of 5000000
  7766 multiletter control sequences out of 15000+600000
  74382 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -613,7 +608,7 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on thesis.pdf (96 pages, 424320 bytes).
+Output written on thesis.pdf (96 pages, 424312 bytes).
 PDF statistics:
  383 PDF objects out of 1000 (max. 8388607)
  264 compressed objects within 3 object streams
