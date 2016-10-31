@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 OCT 2016 11:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 OCT 2016 11:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -562,15 +562,15 @@ Overfull \hbox (84.17479pt too wide) in paragraph at lines 323--333
  [][] 
  []
 
-[66] [67] [68] [69] [70] [71] [72]) [73]
+[66] [67] [68] [69] [70] [71] [72] [73]) [74]
 Chapter 6.
-(./600_GT.tex [74
+(./600_GT.tex [75
 
-] [75]) [76] [77]
+] [76]) [77] [78]
 Chapter 7.
-(./700_Discussion.tex) (./thesis.bbl [78
+(./700_Discussion.tex) (./thesis.bbl [79
 
-] [79
+] [80
 
 ]
 Missing character: There is no Ã in font ptmr7t!
@@ -581,7 +581,7 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ƒ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
- [80] [81] [82]) [83]
+ [81] [82] [83]) [84]
 (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
  4425 strings out of 493014
@@ -606,10 +606,10 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on thesis.pdf (93 pages, 414927 bytes).
+Output written on thesis.pdf (94 pages, 414491 bytes).
 PDF statistics:
- 374 PDF objects out of 1000 (max. 8388607)
- 258 compressed objects within 3 object streams
+ 377 PDF objects out of 1000 (max. 8388607)
+ 260 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
