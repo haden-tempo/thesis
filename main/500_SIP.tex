@@ -110,9 +110,8 @@ We know from the work of Darmann et al.~\cite{GASP12WINE} that $k$-IR-Invitation
 	Let us first consider $(1, 0)$-instances of $k$-IR-Invitation in which all agents have at most one friend and all agents have no enemies. Without loss of generality, we can assume that every agent approves size $k$. Otherwise, such agents cannot be included in the solution without violating IR conditions. If we remove an agent who does not approve size $k$, then all agents who consider this agent as friends must also be removed as they cannot be included in the solution. This removal process can be done in polynomial time (in fact, in time $O(n)$), and we assume all agents approve size $k$ from here on. 
 	
 	Let us construct a (directed) ``friend graph'' ($G_f$) in which nodes represent agents and edges represent (directed) friend relationship such that there is an edge from node $i$ to node $j$ if and only if $j \in F_i$. Clearly, there is a one-to-one correspondence between an invitation and a subset of nodes -- we shall interchangeably refer to a subset of agents or a subset of nodes as an IR invitation. Because individual rationaliy requires that all friends of every invited agent are also invited, it is clear that every strongly connected component in $G_f$ must all or none be included in an IR invitation. Hence, we can construct a directed acyclic (weighted) graph $G'$ in which each node corresponds to a strongly connected component of $G_f$ and the weight of the node is equal to the number of ndoes in the component. The problem of finding an IR invitation of size $k$ is now equivalent to finding a subset of weighted nodes in $G'$ whose sum of weights is equal to $k$ and there is no outgoing edge from the subset. 
-	
-	
-	To find such subset(s), we can use a dynamic programming algorithm which determines the following for every integer $x \in [0, k]$ and each node $v$ in $G'$: Whether there exists a subset of nodes 
+
+TODO: To be added.
 
 	
 \end{proof}
@@ -124,6 +123,7 @@ We know from the work of Darmann et al.~\cite{GASP12WINE} that $k$-IR-Invitation
 	$k$-IR-Invitation is NP-complete when $\alpha + \beta > 1$.
 \end{theorem} 
 \begin{proof} %TODO
+	To be added.
 \end{proof}
 
 
@@ -136,17 +136,20 @@ Let us present easiness results when $\alpha + \beta \leq 1$, followed by hardne
 	$k$-Stable-Invitation can be solved in polynomial time when $\alpha + \beta \leq 1$.
 \end{theorem} 
 \begin{proof} %TODO
+	To be added.
 \end{proof}
 
 \begin{theorem} \label{SIP:thm:stable_invitation_NPC}
 	$k$-Stable-Invitation is NP-complete when $\alpha + \beta > 1$.
 \end{theorem} 
 \begin{proof} %TODO
+	To be added.
 \end{proof}
 
 
-%TODO: To point out same complexity results. 
-%TODO: To mention 'max' IR-invitation can be solved in P-time.
+TODO: To point out same complexity results. 
+
+TODO: To mention 'max' IR-invitation can be solved in P-time.
 
 \section{Parameterized Complexity} \label{SIP:sec:results}
 
