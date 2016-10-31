@@ -99,14 +99,20 @@ Earlier we mentioned that both $k$-IR-Invitation and $k$-Stable-Invitation are N
 
 Let us present easiness results when $\alpha + \beta \leq 1$, followed by hardness results when $\alpha + \beta > 1$. 
 
+the theorem is true when $\alpha = \beta = 0$. 
+
+
 \begin{theorem} \label{SIP:thm:IR_invitation_P}
 	$k$-IR-Invitation can be solved in polynomial time when $\alpha + \beta \leq 1$.
 \end{theorem} 
 \begin{proof}
-	We know from the work of Darmann et al.~\cite{GASP12WINE} that the theorem is true when $\alpha = \beta = 0$. 
+We know from the work of Darmann et al.~\cite{GASP12WINE} that $k$-IR-Invitation is solvable in polynomial time when $\alpha = \beta = 0$.
 	
 	Let us first consider $(1, 0)$-instances of $k$-IR-Invitation in which all agents have at most one friend and all agents have no enemies. 
 \end{proof}
+
+
+
 
 \begin{theorem} \label{SIP:thm:IR_invitation_NPC}
 	$k$-IR-Invitation is NP-complete when $\alpha + \beta > 1$.
