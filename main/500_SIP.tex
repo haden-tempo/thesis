@@ -70,8 +70,23 @@ Note that $k$-IR-Invitation and $k$-Stable-Invitation are of the same classical 
 In what follows, we show that the parameterized complexity of these problems varies with different solution concepts and under different restrictions on inputs to \SIP.
 
 
+\section{Preliminary Results} \label{SIP:sec:prelim}
 
-%TODO: How about NP-hardness results?
+ \begin{table*}[t!]
+	 \small
+ 	\centering
+ \begin{tabular}{|l|*{4}{c|}|*{4}{c|}}\hline
+ \multirow{2}*{} & \multicolumn{4}{c||}{$k$-IR-Invitations} & \multicolumn{4}{c|}{$k$-Stable-Invitations} \\ \cline{2-9}
+  & $\beta = 0$ & $\beta = 1$ & $2 \leq \beta \leq f(k)$ & unbounded $\beta$ & $\beta = 0$ & $\beta = 1$ & $2 \leq \beta \leq f(k)$ & unbounded $\beta$ \\ \hline
+ $\alpha = 0$ & P & P & FPT  & W[1]-C & P & P & FPT & W[2]-C \\ \hline
+ $\alpha = 1$ & P & FPT  & FPT & W[1]-C & P & W[1]-C & W[1]-C & W[2]-C\\ \hline
+ $\alpha \geq 2$ & W[1]-C & W[1]-C & W[1]-C & W[1]-C & W[1]-C & W[1]-C & W[1]-C & W[2]-C \\ \hline
+ \end{tabular}
+ \caption{\small Complexity of $k$-IR-Invitation and $k$-Stable-Invitation.   }
+ \label{SIP:tbl:prelim}
+ \end{table*}
+
+
 
 \section{Parameterized Complexity} \label{SIP:sec:results}
 
