@@ -55,7 +55,7 @@ We consider the following two problems of finding invitations of size $k$:
 As we shall see, both problems are NP-hard even under some restrictions on inputs of the problems. Yet, as we mentioned in Chapter~\ref{GASP:chapter}, NP-hardness is not the end of hardness, and we focus on parameterized complexity of these problems in this chapter. 
 
 There are two kinds of restrictions on inputs we will consider in this work.
-First, we consider inputs in which the sizes of largest friend sets and enemy sets is bounded above by constants; intuitively, the smaller the constants are, the easier the problems become. 
+First, we consider inputs in which the sizes of largest friend sets and enemy sets is bounded above by constants; intuitively, the smaller the constants are, the easier the problems become. Second, we consider the cases where friend relationship and enemy relationship are symmetric (i.e., A is a friend of B if and only if B is a friend of A and X is an enemy of Y if and only if Y is an enemy of X). 
 
 We first consider restrictions on inputs by limiting the size of largest friend-sets and enemy-sets, respectively. 
 For integer constants $\alpha$ and $\beta$, if an instance of \SIPs satisfies $|F_i| \leq \alpha$ and $|E_i| \leq \beta$ for all $a_i\in N$, we call it an $(\alpha,\beta)$-instance of \SIP.
