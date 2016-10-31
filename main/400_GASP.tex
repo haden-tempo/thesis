@@ -105,7 +105,7 @@ A natural example that accounts for an increasing preference is when an activity
 
 Next, we consider a restriction on the activities when there may exist multiple ``copies'' of the same activity (e.g., chess matches with multiple chessboards). We define equivalence of activities, and consider a special case of the problem in which all activities are equivalent. 
 \begin{definition}
-	We say that two activities $a_j$ and $a_{j'}$ are equivalent if for every agent $i \in N$, $S_i(a_j) = S_i(a_{j'})$. 
+	We say that two activities $a_j$ and $a_{j'}$ are {\em equivalent} if $\forall i \in N$, $S_i(a_j) = S_i(a_{j'})$. 
 \end{definition}
 
 Let us re-visit the problem instance from Example~\ref{GASP:eg:notation}, and relate it to various definitions and concepts we have defined in this section. 
@@ -124,7 +124,7 @@ Here we mention the most relevant results of theirs to this work.
 	even if all agents have decreasing preferences for all activities,
 	or even if all activities are equivalent (Theorems 4.1, 4.2, 4.3, and 4.4 of \cite{GASP12WINE}).
 \end{theorem}
-As corollaries, the following four problems are also NP-hard even under any of the three restrictions mentioned in Theorem~\ref{GASP:thm:nphard}. Note that the first three problems parameterize the size of an assignment while the last problem parameterizes the number of used activities in a perfect assignment.
+As corollaries, the following four problems are also NP-hard under any of the three restrictions mentioned in Theorem~\ref{GASP:thm:nphard}. Note that the first three problems parameterize the size of an assignment while the last problem parameterizes the number of used activities in a perfect assignment.
 \begin{itemize}
 	\item $k$-IR-GASP: Does there exist an individually rational assignment of size $k$?
 	\item $k$-Stable-GASP: Does there exist a stable assignment of size $k$?

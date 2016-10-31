@@ -39,7 +39,7 @@
 \contentsline {paragraph}{FPT Algorithm.}{48}
 \contentsline {subsection}{\numberline {4.2.3}$k$-EF-GASP: Finding Envy-free Assignments}{49}
 \contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{49}
-\contentsline {paragraph}{Proof of equivalence between instances.}{50}
+\contentsline {paragraph}{Proof of equivalence between instances.}{49}
 \contentsline {paragraph}{Preliminaries.}{51}
 \contentsline {paragraph}{FPT algorithm.}{52}
 \contentsline {subsection}{\numberline {4.2.4}$k$-Perfect-GASP: Finding Perfect Assignments}{53}
