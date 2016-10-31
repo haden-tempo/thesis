@@ -59,7 +59,7 @@ First, we consider inputs in which the sizes of largest friend sets and enemy se
 
 We first consider restrictions on inputs by limiting the size of largest friend-sets and enemy-sets, respectively. 
 For integer constants $\alpha$ and $\beta$, if an instance of \SIPs satisfies $|F_i| \leq \alpha$ and $|E_i| \leq \beta$ for all $a_i\in N$, we call it an $(\alpha,\beta)$-instance of \SIP.
-We show that that \SIPs can be solved in polytime only if $\alpha$ and $\beta$ are small enough, but the problems are NP-hard in general. 
+We show that that \SIPs can be solved in polytime only if $\alpha$ and $\beta$ are small enough, but the problems are NP-hard in general (this is summarized in Table~\ref{SIP:tbl:prelim}).
 We then investigate parameterized complexity of the problem under the same restrictions when the size of a solution is parameterzed. 
 Lastly, we will consider a special case of \SIPs where agents have symmetric social relationships.
 \begin{definition} \label{SIP:def:symmetric_social}
@@ -68,7 +68,7 @@ Lastly, we will consider a special case of \SIPs where agents have symmetric soc
 
 Theorem~\ref{SIP:thm:nphard} summarizes the most relevant results of Darmann et al.~\cite{GASP12WINE} and Lee and Shoham~\cite{LEE15AAAI} on complexity of \SIPs.\footnote{
 Darmann et al.~\cite{GASP12WINE} showed easiness when $\alpha=\beta=0$, while Lee and Shoham~\cite{LEE15AAAI} proved easiness and hardness in all other cases.}
-\begin{theorem} \label{SIP:thm:nphard} [\cite{LEE15AAAI,GASP12WINE}]
+\begin{theorem} \label{SIP:thm:nphard} [Lee and Shoham~\cite{LEE15AAAI} and Darmann et al.~\cite{GASP12WINE}]
 	$k$-IR-Invitation and $k$-Stable-Invitation can be solved in polynomial time if $(\max_{a_i \in N} |F_i|) + (\max_{a_i \in N} |E_i|) \leq 1$ (i.e., $\alpha + \beta \leq 1$). In other cases, both problems are NP-hard.
 \end{theorem}
 Note that $k$-IR-Invitation and $k$-Stable-Invitation are of the same classical complexity, even though stability is a stronger solution concept. Under parameterization, however, these two problems are contained in different complexity classes in the W-hierarchy (see Table~\ref{SIP:tbl:summary}).
