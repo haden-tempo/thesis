@@ -30,6 +30,11 @@ Recall from Definition~\ref{SIP:def:instance} that an instance of the Stable Inv
 
 We first focus on the special case of this problem when all friend sets and enemy sets are empty sets -- we call this the Anonymous Stable Invitations Problem (\ASIP), which is known to be solvable in polynomial time; this problem is also equivalent to the special case of the Group Activity Selection Problem with just one activity. We then discuss how our technical results extend to the Stable Invitations Problem and the Group Activity Selection Problem.
 
+\begin{definition}
+	The Anonymous Stable Invitations Problem (\ASIP) is a special case of the Stable Invitations Problem (and of the Group Activity Selection Problem), in which no agent has friends or enemies. An instance of \ASIPs is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$ and an approval set $S_i$ for each agent.
+\end{definition}
+
+
 
 Let us formally define a mechanism in the context of \ASIPs with strategic agents. 
 We then state several impossibility results for general cases of \ASIP, and also provide a strategy-proof mechanism for special cases of \ASIP.  Although we only consider deterministic mechanisms here, we discuss how one can generalize to randomized mechanisms at the end of this section.
