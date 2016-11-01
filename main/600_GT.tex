@@ -38,9 +38,7 @@ We first focus on the special case of this problem when all friend sets and enem
 While we define instances of \ASIPs here for clarity, we use the same solution concepts and definitions from Section~\ref{SIP:sec:SIP:prelim} by assuming that $F_i = R_i = \emptyset$ for every agent $a_i\in N$. 
 
 
-Let us formally define a mechanism in the context of \ASIPs with strategic agents. 
-
-We then state several impossibility results for general cases of \ASIP, and also provide a strategy-proof mechanism for special cases of \ASIP.  Although we only consider deterministic mechanisms here, we later discuss how one can generalize to randomized mechanisms in Section~\ref{GT:sec:asip_extension}.
+Let us formally define a deterministic mechanism in the context of \ASIPs with strategic agents, and define what constitutes a strategy-proof mechanism. We later discuss in Sectino~\ref{GT:sec:asip_extension} why our technical results do not change when we consider randomized mechanisms.
 
 \begin{definition} \label{GT:def:mechanism}
 Given an instance of \ASIP, we define $V_i$ (the set of available actions to $a_i$) to be the set of all subsets of the set of outcomes, $[1, n]$.\footnote{In the Anonymous Stable Invitations Problem, agents only care about the size of an invitation, not participants.} 
@@ -48,7 +46,7 @@ A (deterministic) \emph{mechanism} $\mathcal{M}$ is a pair $(V, Z)$ where $V = (
 Let $V_{-i} = (V_1 \times \cdots \times V_{i-1} \times V_{i+1} \times \cdots \times V_{n})$ be the set of action profiles available to all agents but agent $a_i$. A mechanism $\mathcal{M} = (V, Z)$ is said to be \emph{strategy-proof} if for all $a_i\in N$, $a_i$ prefers the invitation $Z(S_i, v_{-i})$ over the invitation $Z(v_i, v_{-i})$ for all $v_i \in V_i$ and $v_{-i} \in V_{-i}$.
 \end{definition}
 
- 
+
 
 
 
