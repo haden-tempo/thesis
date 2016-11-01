@@ -32,7 +32,7 @@ In this chapter we provide a complete analysis of complexity results on \SIP; we
 
 Let us first define the Stable Invitations Problem and related solution concepts. 
 
-\begin{definition}
+\begin{definition} \label{SIP:def:instance}
 An instance of the Stable Invitations Problem (\SIP) is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$, and an {\em approval set} $S_i \subseteq [1,n]$, a {\em friend set} $F_i \subseteq N$, and an {\em enemy set} $E_i \subseteq N$ for each agent $a_i\in N$.
 We interpret that agent $a_i$ is willing to attend if all friends in $F_i$ attend, no one in $E_i$ attends, and the number of attendees (including $a_i$) is acceptable (i.e., it is contained in $S_i$).
 \end{definition}
