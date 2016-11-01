@@ -61,17 +61,16 @@ No strategy-proof mechanism can find a stable invitation (even if it exists) giv
 Example~\ref{GT:eg:strategicAgents} can serve as a proof; no strategy-proof mechanism can find a stable invitation for this instance.
 \end{proof}
 
-Intuitively this result is due to the conflicting interests of the organizer and agents -- the organizer is trying to maximize attendance while the agents (with \DEC-preferences) to minimize. 
+Intuitively, this can be explained by conflicting interests of the organizer and agents -- the organizer is trying to maximize attendance while the agents (with \DEC-preferences) to minimize. 
 Since no strategy-proof mechanisms can find a stable invitation, 
-one can instead seek to design a strategy-proof mechanism that can find a non-empty IR invitation 
-by dropping the requirement of envy-freeness.
-We show that this is also impossible as Theorem~\ref{GT:thm:impossibility_IR} states.
+one can instead seek to design a strategy-proof mechanism that can find a non-empty IR invitation.
+We show that this is also impossible as the following theorem states.
 
 \begin{theorem} \label{GT:thm:impossibility_IR}
 	No strategy-proof mechanism can find a non-empty individually rational (IR) invitation, even if it exists, for arbitrary instances of \ASIP. 
 \end{theorem}
 \begin{proof}
-Consider three agents with preferences as follows:
+Consider three agents with their approval sets shown as follows:
 \begin{equation*}
 	\begin{aligned}
 			P_1: 3\succ 0 \succ 2 \sim 1,~ P_2: 2 \succ 3 \succ 2 \succ 1, ~ P_3: 3 \succ 2 \succ 0 \succ 1
