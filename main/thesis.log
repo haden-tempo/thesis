@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 NOV 2016 14:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 NOV 2016 14:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -561,13 +561,16 @@ Overfull \hbox (5.42677pt too wide) in paragraph at lines 305--306
 
 [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75]) [76]
 Chapter 6.
-(./600_GT.tex [77
+(./600_GT.tex
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no Ÿ in font ptmr7t!
+ [77
 
-] [78] [79]) [80]
+] [78] [79]) [80] [81]
 Chapter 7.
-(./700_Discussion.tex) (./thesis.bbl [81
+(./700_Discussion.tex) (./thesis.bbl [82
 
-] [82
+] [83
 
 ]
 Missing character: There is no Ã in font ptmr7t!
@@ -578,7 +581,7 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ƒ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
- [83] [84] [85]) [86]
+ [84] [85] [86]) [87]
 (./thesis.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -606,10 +609,10 @@ ive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016
 1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (96 pages, 425186 bytes).
+Output written on thesis.pdf (97 pages, 426432 bytes).
 PDF statistics:
- 383 PDF objects out of 1000 (max. 8388607)
- 264 compressed objects within 3 object streams
+ 387 PDF objects out of 1000 (max. 8388607)
+ 267 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
