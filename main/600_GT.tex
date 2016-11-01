@@ -26,7 +26,7 @@ In this chapter we investigate how strategic behavior of agents can affect the o
 
 \section{Definitions and Notation} \label{GT:sec:prelim}
 
-
+Recall that an instance of the Stable Invitations Problem is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$, a set of friends $F_i$, a set of enemies $R_i$, and a set of approved 
 
 While we focused on designing algorithms or proving computational hardness results in previous chapters, the focus of this chapter is on mechanism design and impossibility results (much like computational hardness results). In mechanism design theory, the objective is to design a mechanism which is given an action profile of all agents and chooses an outcome (which can be probabilistic) such that the mechanism satisfies certain properties. One of the most important properties is incentive compatibility -- agents must be incentivized to act in a certain way (such as truth-telling) because no agent can be better off by acting in a different way. In many settings, utilites of agents may be transferable (such as money), which provides ways to compensate for agents who end up with less desirable outcomes. However, in social settings like the ßgroup scheduling and assignment problems, it is more reasonable to assume that utilites of agents are assumed to be non-transferable, and therefore it is not possible to compenstate agents for any outcome. 
 
@@ -34,26 +34,6 @@ While we focused on designing algorithms or proving computational hardness resul
 
 \section{Impossibility Results and Strategy-proof Mechanisms} \label{GT:sec:Mechanism}
 In the strategic case of \ASIP, we assume that agents may act strategically in reporting their preferences to the event organizer. 
-Example~\ref{GT:eg:strategicAgents} shows how agents may have an incentive to act strategically. 
-
-
-% \begin{example}[An agent may act strategically.] \label{GT:eg:strategicAgents}
-%
-% 	Let us consider an example with two agents with identical preferences:
-% 	\begin{equation*}
-% 		\begin{aligned}
-% 				P_1: 1 \succ 0 \succ 2,~~~& P_2: 1 \succ 0 \succ 2
-% 		\end{aligned}
-% 	\end{equation*}
-% 	Note that both agents have \DEC-preferences (with $h_1 = h_2 = 1$).
-% 	The two stable invitations are $S_1 = \{a_1\}$ and $S_2 = \{a_2\}$.
-% 	The empty invitation ($\emptyset$) is not EF while the full invitation ($N$) is not IR.
-%
-% 	Hence $S_1 = \{a_1\}$ and $S_2 =\{a_2\}$ are the only two stable invitations provided that both agents are truthful.
-% 	If $S_1$ were to be chosen by the organizer, $a_2$ would have an incentive to act strategically, by reporting $\hat{P}_2 (1 \succ 2 \succ 0)$ instead of $P_2$.
-% 	Given $(P_1, \hat{P}_2)$, the only stable invitation is $S_2$ ($S_1$ is no longer EF due to $a_2$).
-% 	Notice that $a_2$ strictly prefers $S_2$ over $S_1$ (because $1 \succ_2 0$) and has an incentive to misreport in this example. By symmetry, $a_1$ may act strategically if $S_2$ were to be chosen.
-% \end{example}
 
 We first provide a formal definition of a mechanism in the context of \ASIP\ with strategic agents. 
 We then state several impossibility results for general cases of \ASIP, and also provide a strategy-proof mechanism for special cases of \ASIP.  Although we only consider deterministic mechanisms here, we discuss how one can generalize to randomized mechanisms at the end of this section.
