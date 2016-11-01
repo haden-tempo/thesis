@@ -79,11 +79,6 @@ If a mechanism chooses $I_1$ given $(S_1, S_2, S_3)$, then $a_2$ can report $\ha
  Similarly, if a mechanism chooses $I_2$ given $(S_1, S_2, S_3)$, then $a_3$ can report $\hat{S}_3=\{3\}$ instead to make $I_3$ the only non-empty IR invitation. The rest of the proof is similar to that of Theorem~\ref{GT:thm:impossibility}.
 \end{proof}
 
-% TODO: proof sketch, at least.
-% To strengthen our impossibility results even further, we show that manipulation is computationally easy provided that preferences of other agents are known to a manipulator. We provide an informal lemma and omit its proof.
-% \begin{lemma}[Informal] \label{GT:lemma:gsip_manipulation}
-% There exists a polynomial time algorithm, given an instance $(N, P)$ of \GSIP\ and a mechanism $(V, Z)$, that decides in polynomial time whether there exists a certain preference ordering $v_i \in V_i$ of $a_i$ such that $a_i$ (strictly) prefers $Z(v_i, v_{-i})$ to $Z(P_i, v_{-i})$ where $v_{-i} \in V_{-i}$.
-% \end{lemma}  
 
 Earlier we emphasized that the conflict between agent(s) and the organizer is the main factor that leads to an impossibility result. 
 Indeed, in the example we used in the proof of Theorem~\ref{GT:thm:impossibility}, both agents have \DEC-preferences while the organizer's goal is to maximize attendance.
