@@ -3,23 +3,9 @@
 
 We have so far assumed that the event organizer knows of or can query preferences and constraints of agents, but in some settings this may not be a realistic assumption. For instance, if agents are strategic, the organizer can no longer assume that agents will report their preferences and constraints truthfull because lying may lead to a better outcome than telling the truth would.
 
-In this chapter we investigate how strategic behavior of agents can affect the outcome in the Group Activity Selection Problem and the Stable Invitations Problem that we presented in previous two chapters. We begin our discussion by considering the least complex problem, which is the intersection of these two problems -- agents have anonymous preferences (i.e., no friends and enemies) and there is only one activity. This is a fairly restrictive assumption, but it reveals interesting interactions between strategic behavior of agents and the objectives in these problems. In fact, as we shall see, it is in general impossible to design a mechanism under which truth-telling is a dominant strategy. In a more restrictive setting, however, where all agents have increasing preferences (i.e., all agents prefer more participants than fewer), we can design a mechanism under which truth-telling is a dominant strategy in addition to many other desirable properties. 
+To understand why strategic behavior of agents can be troublesome, let us consider a small example.
 
-
-%TODO: To add a paragraph that wraps up an intro nicely. 
-
-\section{Definitions and Notation} \label{GT:sec:prelim}
-
-While we focused on designing algorithms or proving computational hardness results in previous chapters, the focus of this chapter is on mechanism design and impossibility results (much like computational hardness results). In mechanism design theory, the objective is to design a mechanism which is given an action profile of all agents and chooses an outcome (which can be probabilistic) such that the mechanism satisfies certain properties. One of the most important properties is incentive compatibility -- agents must be incentivized to act in a certain way (such as truth-telling) because no agent can be better off by acting in a different way. In many settings, utilites of agents may be transferable (such as money), which provides ways to compensate for agents who end up with less desirable outcomes. However, in social settings like the ßgroup scheduling and assignment problems, it is more reasonable to assume that utilites of agents are assumed to be non-transferable, and therefore it is not possible to compenstate agents for any outcome. 
-
-
-
-\section{Impossibility Results and Strategy-proof Mechanisms}\label{GT:sec:Mechanism}
-In the strategic case of \ASIP, we assume that agents may act strategically in reporting their preferences to the event organizer. 
-Example~\ref{GT:eg:strategicAgents} shows how agents may have an incentive to act strategically. 
-
-
-\begin{example}[An agent may act strategically.] \label{GT:eg:strategicAgents}
+\begin{example} \label{GT:eg:strategicAgents}
 	
 	Let us consider an example with two agents with identical preferences:
 	\begin{equation*}
@@ -36,6 +22,42 @@ Example~\ref{GT:eg:strategicAgents} shows how agents may have an incentive to ac
 	Given $(P_1, \hat{P}_2)$, the only stable invitation is $S_2$ ($S_1$ is no longer EF due to $a_2$).
 	Notice that $a_2$ strictly prefers $S_2$ over $S_1$ (because $1 \succ_2 0$) and has an incentive to misreport in this example. By symmetry, $a_1$ may act strategically if $S_2$ were to be chosen. 
 \end{example}
+
+
+In this chapter we investigate how strategic behavior of agents can affect the outcome in the Group Activity Selection Problem and the Stable Invitations Problem that we presented in previous two chapters. We begin our discussion by considering the least complex problem, which is the intersection of these two problems -- agents have anonymous preferences (i.e., no friends and enemies) and there is only one activity. This is a fairly restrictive assumption, but it reveals interesting interactions between strategic behavior of agents and the objectives in these problems. In fact, as we shall see, it is in general impossible to design a mechanism under which truth-telling is a dominant strategy. In a more restrictive setting, however, where all agents have increasing preferences (i.e., all agents prefer more participants than fewer), we can design a mechanism under which truth-telling is a dominant strategy in addition to many other desirable properties. 
+
+
+
+%TODO: To add a paragraph that wraps up an intro nicely. 
+
+\section{Definitions and Notation} \label{GT:sec:prelim}
+
+While we focused on designing algorithms or proving computational hardness results in previous chapters, the focus of this chapter is on mechanism design and impossibility results (much like computational hardness results). In mechanism design theory, the objective is to design a mechanism which is given an action profile of all agents and chooses an outcome (which can be probabilistic) such that the mechanism satisfies certain properties. One of the most important properties is incentive compatibility -- agents must be incentivized to act in a certain way (such as truth-telling) because no agent can be better off by acting in a different way. In many settings, utilites of agents may be transferable (such as money), which provides ways to compensate for agents who end up with less desirable outcomes. However, in social settings like the ßgroup scheduling and assignment problems, it is more reasonable to assume that utilites of agents are assumed to be non-transferable, and therefore it is not possible to compenstate agents for any outcome. 
+
+
+
+\section{Impossibility Results and Strategy-proof Mechanisms}\label{GT:sec:Mechanism}
+In the strategic case of \ASIP, we assume that agents may act strategically in reporting their preferences to the event organizer. 
+Example~\ref{GT:eg:strategicAgents} shows how agents may have an incentive to act strategically. 
+
+
+% \begin{example}[An agent may act strategically.] \label{GT:eg:strategicAgents}
+%
+% 	Let us consider an example with two agents with identical preferences:
+% 	\begin{equation*}
+% 		\begin{aligned}
+% 				P_1: 1 \succ 0 \succ 2,~~~& P_2: 1 \succ 0 \succ 2
+% 		\end{aligned}
+% 	\end{equation*}
+% 	Note that both agents have \DEC-preferences (with $h_1 = h_2 = 1$).
+% 	The two stable invitations are $S_1 = \{a_1\}$ and $S_2 = \{a_2\}$.
+% 	The empty invitation ($\emptyset$) is not EF while the full invitation ($N$) is not IR.
+%
+% 	Hence $S_1 = \{a_1\}$ and $S_2 =\{a_2\}$ are the only two stable invitations provided that both agents are truthful.
+% 	If $S_1$ were to be chosen by the organizer, $a_2$ would have an incentive to act strategically, by reporting $\hat{P}_2 (1 \succ 2 \succ 0)$ instead of $P_2$.
+% 	Given $(P_1, \hat{P}_2)$, the only stable invitation is $S_2$ ($S_1$ is no longer EF due to $a_2$).
+% 	Notice that $a_2$ strictly prefers $S_2$ over $S_1$ (because $1 \succ_2 0$) and has an incentive to misreport in this example. By symmetry, $a_1$ may act strategically if $S_2$ were to be chosen.
+% \end{example}
 
 We first provide a formal definition of a mechanism in the context of \ASIP\ with strategic agents. 
 We then state several impossibility results for general cases of \ASIP, and also provide a strategy-proof mechanism for special cases of \ASIP.  Although we only consider deterministic mechanisms here, we discuss how one can generalize to randomized mechanisms at the end of this section.
