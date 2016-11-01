@@ -72,12 +72,10 @@ We show that this is also impossible as the following theorem states.
 \begin{proof}
 Consider three agents with their approval sets shown as follows:
 \begin{equation*}
-	\begin{aligned}
-			P_1: 3\succ 0 \succ 2 \sim 1,~ P_2: 2 \succ 3 \succ 2 \succ 1, ~ P_3: 3 \succ 2 \succ 0 \succ 1
-	\end{aligned}
+		S_1 = \{3\},~~ S_2 = \{2, 3\}, ~~ S_3 = \{2, 3\}.
 \end{equation*}
-There are two non-empty IR invitations: $S_1 = \{a_1, a_2, a_3\}$ and $S_2 = \{a_2, a_3\}$. 
-If a mechanism chooses $S_1$ given $(P_1, P_2, P_3)$, $a_2$ can report $(2 \succ 0 \succ 3 \sim 1)$ and make $S_2$ the only non-empty IR invitation. Similarly, if a mechanism chooses $S_2$ given $(P_1, P_2, P_3)$, $a_3$ can report $(3 \succ 0 \succ 2 \sim 1)$ so as to make $S_3$ the only non-empty IR invitation. The rest of the proof is similar to that of Theorem~\ref{GT:thm:impossibility}.
+There are two non-empty IR invitations: $I_1 = \{a_1, a_2, a_3\}$ and $I_2 = \{a_2, a_3\}$. 
+If a mechanism chooses $I_1$ given $(S_1, S_2, S_3)$, then $a_2$ can report $(2 \succ 0 \succ 3 \sim 1)$ and make $S_2$ the only non-empty IR invitation. Similarly, if a mechanism chooses $S_2$ given $(P_1, P_2, P_3)$, $a_3$ can report $(3 \succ 0 \succ 2 \sim 1)$ so as to make $S_3$ the only non-empty IR invitation. The rest of the proof is similar to that of Theorem~\ref{GT:thm:impossibility}.
 %\qed
 \end{proof}
 
