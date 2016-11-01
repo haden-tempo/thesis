@@ -60,5 +60,6 @@
 \contentsline {section}{\numberline {6.1}Definitions and Notation}{78}
 \contentsline {section}{\numberline {6.2}Impossibility Results and Strategy-proof Mechanisms}{79}
 \contentsline {subsection}{\numberline {6.2.1}Extensions}{80}
+\contentsline {section}{\numberline {6.3}Discussion}{81}
 \contentsline {chapter}{\numberline {7}Discussion and Open Problems}{82}
 \contentsline {chapter}{Bibliography}{83}

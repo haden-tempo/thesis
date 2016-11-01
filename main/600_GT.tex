@@ -38,8 +38,7 @@ We first focus on the special case of this problem when all friend sets and enem
 While we define instances of \ASIPs here for clarity, we use the same solution concepts and definitions from Section~\ref{SIP:sec:SIP:prelim} by assuming that $F_i = R_i = \emptyset$ for every agent $a_i\in N$. 
 
 
-Let us formally define a mechanism in the context of \ASIPs with strategic agents. 
-We then state several impossibility results for general cases of \ASIP, and also provide a strategy-proof mechanism for special cases of \ASIP.  Although we only consider deterministic mechanisms here, we discuss how one can generalize to randomized mechanisms at the end of this section.
+Let us formally define a mechanism in the context of \ASIPs with strategic agents. We then state several impossibility results for general cases of \ASIP, and also provide a strategy-proof mechanism for special cases of \ASIP.  Although we only consider deterministic mechanisms here, we discuss how one can generalize to randomized mechanisms at the end of this section.
 
 \begin{definition} \label{GT:def:mechanism}
 Given an instance of \ASIP, we define $V_i$ (the set of available actions to $a_i$) to be the set of all preferences over $X$ where $X = \{0, 1, 2, \dots, n\}$ is the set of outcomes. 
@@ -48,7 +47,6 @@ Let $V_{-i} = (V_1 \times \cdots \times V_{i-1} \times V_{i+1} \times \cdots \ti
 \end{definition}
  
 
-While we focused on designing algorithms or proving computational hardness results in previous chapters, the focus of this chapter is on mechanism design and impossibility results (much like computational hardness results). In mechanism design theory, the objective is to design a mechanism which is given an action profile of all agents and chooses an outcome (which can be probabilistic) such that the mechanism satisfies certain properties. One of the most important properties is incentive compatibility -- agents must be incentivized to act in a certain way (such as truth-telling) because no agent can be better off by acting in a different way. In many settings, utilites of agents may be transferable (such as money), which provides ways to compensate for agents who end up with less desirable outcomes. However, in social settings like the ßgroup scheduling and assignment problems, it is more reasonable to assume that utilites of agents are assumed to be non-transferable, and therefore it is not possible to compenstate agents for any outcome. 
 
 
 
@@ -116,3 +114,10 @@ We can extend our results in a different direction by considering multiple time-
 In the non-strategic case, our easiness result is still applicable: One can run the algorithm used in Theorem~(to be added  GT:thm:asip:algo) iteratively for each time-alternative, and choose the maximum stable invitation among all.
 In the strategic case, our impossibility results immediately imply the same negative results. 
 For \INC-instances of \ASIP, we obtain a similar impossibility result even if there is only two time-alternatives. The intuition is that over-reporting ($L_i > l_i$) can give the veto power to an agent, which prevents us from designing a strategy-proof mechanism even for \INC-instances of \ASIP. Note that all of our impossibility results can be naturally extended to the Group Activity Selection Problem by Darmann et al.~\cite{GASP12WINE} since \ASIPs is a sub-class of \GASPs with a single activity.
+
+
+
+
+\section{Discussion}
+
+While we focused on designing algorithms or proving computational hardness results in previous chapters, the focus of this chapter is on mechanism design and impossibility results (much like computational hardness results). In mechanism design theory, the objective is to design a mechanism which is given an action profile of all agents and chooses an outcome (which can be probabilistic) such that the mechanism satisfies certain properties. One of the most important properties is incentive compatibility -- agents must be incentivized to act in a certain way (such as truth-telling) because no agent can be better off by acting in a different way. In many settings, utilites of agents may be transferable (such as money), which provides ways to compensate for agents who end up with less desirable outcomes. However, in social settings like the ßgroup scheduling and assignment problems, it is more reasonable to assume that utilites of agents are assumed to be non-transferable, and therefore it is not possible to compenstate agents for any outcome. 
