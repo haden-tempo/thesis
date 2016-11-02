@@ -43,7 +43,7 @@ We drop the subscript ($i$) if it is clear from the context.
 
 We assume that for each $a_i$ and each $x\in (X\setminus\{0\})$, either $x \succ_i 0$ or $0 \succ_i x$. That is, no agent is indifferent between not attending and any other outcome. This assumption is made for convenience and does not change our technical results.
 
-Let us define three solution concepts of \AOIP.
+Let us define solution concepts of \AOIP.
 
 \begin{definition} \label{GT:def:invitation}
 Given an instance of \AOIP, an \emph{invitation} $I$ is a subset of $N$, and is interpreted as the organizer inviting the agents in $I$. 
@@ -53,7 +53,7 @@ An invitation $I$ is said to be \emph{individually rational} (IR) if for every a
 An invitation $I$ is said to be \emph{(Nash) stable}ß if for every agent $a_j\not\in I$ it holds that $|S \cup \{a_j\}| = (|I| + 1) \prec_j 0$ and $I$ is individually rational as well.
 % An invitation $I$ is said to be \emph{envy-free} if for every agent $a_j\not\in I$ it holds that $|I| \prec_j 0$ and $I$ is individually rational as well.
 \end{definition}
-Stability states that an agent who is not invited should not wish to participate (even without permission of others), while envy-freeness states that an agent who is not invited should not be envy of someone who's invited. It is worth noting that these two concepts are not equivalent.
+Individual rationality requires that every agent who is invited be willing to participate. In addition, stability further requires that every agent who is not invited be unwilling to participate (even without permission of others).
 
 % In addition to individual rationality, stability states that an agent who is not invited should not wish to participate (even without permission of others), while envy-freeness states that an agent who is not invited should not be envy of someone who's invited. It is worth noting that these two concepts are not equivalent.
 
@@ -145,8 +145,6 @@ Consider three agents with preferences as follows:
 \end{equation*}
 There are two non-empty IR invitations: $I_1 = \{a_1, a_2, a_3\}$ and $I_2 = \{a_2, a_3\}$. 
 If a mechanism chooses $I_1$ given $(P_1, P_2, P_3)$, $a_2$ can report $(2 \succ 0 \succ 3 \sim 1)$ and make $I_2$ the only non-empty IR invitation. Similarly, if a mechanism chooses $I_2$ given $(P_1, P_2, P_3)$, $a_3$ can report $(3 \succ 0 \succ 2 \sim 1)$ so as to make $I_3$ the only non-empty IR invitation. The rest of the proof is similar to that of Theorem~\ref{thm:impossibility}.
-
-
 \end{proof}
 
 Earlier we emphasized that the conflict between agent(s) and the organizer is the main factor that leads to an impossibility result.
@@ -165,10 +163,10 @@ For simplicity, let us assume that each agent reports her threshold value (i.e.,
 	\State \textbf{Input:} $(N, \{L_i\})$ ~ // $\{L_i\}$ is sorted decreasingly
 	\For{$k := n, n-1, n-2, \dots, 2, 1$}
 		\If{$L_k \leq k$}
-			\State \textbf{return} $S = \{a_1, a_2, \dots, a_{k-1}, a_{k}\}$
+			\State \textbf{return} $I = \{a_1, a_2, \dots, a_{k-1}, a_{k}\}$
 		\EndIf
 	\EndFor
-	\State \textbf{return} $S = \emptyset$
+	\State \textbf{return} $I = \emptyset$
 \end{algorithmic}
 \end{algorithm} 
 	
