@@ -51,11 +51,11 @@ Given an instance of \AOIP, an \emph{invitation} $I$ is a subset of $N$, and is 
 An invitation $I$ is said to be \emph{individually rational} (IR) if for every agent $a_i\in I$ it holds that $|I| \succ_i 0$. 
 
 An invitation $I$ is said to be \emph{(Nash) stable}ß if for every agent $a_j\not\in I$ it holds that $|S \cup \{a_j\}| = (|I| + 1) \prec_j 0$ and $I$ is individually rational as well.
-
-An invitation $I$ is said to be \emph{envy-free} if for every agent $a_j\not\in I$ it holds that $|I| \prec_j 0$ and $I$ is individually rational as well.
+% An invitation $I$ is said to be \emph{envy-free} if for every agent $a_j\not\in I$ it holds that $|I| \prec_j 0$ and $I$ is individually rational as well.
 \end{definition}
+Stability states that an agent who is not invited should not wish to participate (even without permission of others), while envy-freeness states that an agent who is not invited should not be envy of someone who's invited. It is worth noting that these two concepts are not equivalent.
 
-In addition to individual rationality, stability states that an agent who is not invited should not wish to participate (even without permission of others), while envy-freeness states that an agent who is not invited should not be envy of someone who's invited. It is worth noting that these two concepts are not equivalent.
+% In addition to individual rationality, stability states that an agent who is not invited should not wish to participate (even without permission of others), while envy-freeness states that an agent who is not invited should not be envy of someone who's invited. It is worth noting that these two concepts are not equivalent.
 
 For each agent $a_i$, we can naturally induce from $P_i$ her preference over the set of all invitations.
 Given $I$ and $I'$, if both contain $a_i$, then the preference relation between $I$ and $I'$ is induced from $P_i$ on $|I|$ and $|I'|$ (their cardinality). If neither contains $a_i$, then both invitations are equivalent to $0$ (the outside option). If $I$ contains $a_i$ and $I'$ does not, then the preference relation is induced from $P_i$ on $|I|$ and $0$. 
