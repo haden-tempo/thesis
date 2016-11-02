@@ -31,7 +31,7 @@ In this chapter, we study the Anonymous Ordinal Invitations Problem (\AOIP) whic
 
 % Recall from Definition~\ref{SIP:def:instance} that an instance of the Stable Invitations Problem is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$, a set of friends $F_i$, a set of enemies $R_i$, and an approval set $S_i$ for each agent $a_i$.
 %
-% We first focus on the special case of this problem when all friend sets and enemy sets are empty sets -- we call this the Anonymous Stable Invitations Problem (\ASIP), which is known to be solvable in polynomial time; this problem is also equivalent to the special case of the Group Activity Selection Problem with just one activity. We then discuss how our technical results extend to the Stable Invitations Problem and the Group Activity Selection Problem.
+% We first focus on the special case of this problem when all friend sets and enemy sets are empty sets -- we call this the Anonymous Stable Invitations Problem (\AOIP), which is known to be solvable in polynomial time; this problem is also equivalent to the special case of the Group Activity Selection Problem with just one activity. We then discuss how our technical results extend to the Stable Invitations Problem and the Group Activity Selection Problem.
 
 
 \begin{definition}
@@ -106,10 +106,10 @@ Let us consider two small examples of \AOIP.
 
 
 
-Let us formally define a deterministic mechanism in the context of \ASIPs with strategic agents, and define what constitutes a strategy-proof mechanism. We later discuss in Sectino~\ref{GT:sec:randomized} why our technical results do not change when we consider randomized mechanisms.
+Let us formally define a deterministic mechanism in the context of \AOIPs with strategic agents, and define what constitutes a strategy-proof mechanism. We later discuss in Sectino~\ref{GT:sec:randomized} why our technical results do not change when we consider randomized mechanisms.
 
 \begin{definition} \label{GT:def:mechanism}
-Given an instance of \ASIP, we define $V_i$ (the set of available actions to $a_i$) to be the set of all subsets of the set of outcomes, $[1, n]$.\footnote{In the Anonymous Stable Invitations Problem, agents only care about the size of an invitation, not participants.} 
+Given an instance of \AOIP, we define $V_i$ (the set of available actions to $a_i$) to be the set of all subsets of the set of outcomes, $[1, n]$.\footnote{In the Anonymous Stable Invitations Problem, agents only care about the size of an invitation, not participants.} 
 A (deterministic) \emph{mechanism} $\mathcal{M}$ is a pair $(V, Z)$ where $V = (V_1 \times \cdots \times V_n)$ is the set of action profiles of all agents (i.e., $V_i \subset [1,n]$) and $Z: V \mapsto U$ is a mapping from each action profile to an invitation in $U$ where $U = 2^{N}$. 
 Let $V_{-i} = (V_1 \times \cdots \times V_{i-1} \times V_{i+1} \times \cdots \times V_{n})$ be the set of action profiles available to all agents but agent $a_i$. A mechanism $\mathcal{M} = (V, Z)$ is said to be \emph{strategy-proof} if for all $a_i\in N$, $a_i$ prefers the invitation $Z(S_i, v_{-i})$ over the invitation $Z(v_i, v_{-i})$ for all $v_i \in V_i$ and $v_{-i} \in V_{-i}$.
 \end{definition}
@@ -127,11 +127,11 @@ In words, mechanism $\mathcal{M}$ is strtaegy-proof if for every agent $a_i\in N
 
 \section{Main Technical Results} \label{GT:sec:Mechanism}
 
-Let us present our first impossibility result which states that strategy-proofness and stability of an invitation are not compatible in \ASIP. 
+Let us present our first impossibility result which states that strategy-proofness and stability of an invitation are not compatible in \AOIP. 
 
 %%%% ========== Impossibility Results
 \begin{theorem} \label{GT:thm:impossibility}
-No strategy-proof mechanism can find a stable invitation (even if it exists) given arbitrary instances of \ASIPs when the number of agents is at least two.
+No strategy-proof mechanism can find a stable invitation (even if it exists) given arbitrary instances of \AOIPs when the number of agents is at least two.
 \end{theorem}
 \begin{proof}
 Example~\ref{GT:eg:multiple_stable} can serve as a proof; no strategy-proof mechanism can find a stable invitation for this instance.
@@ -141,7 +141,7 @@ Intuitively, this can be explained by conflicting interests of the organizer and
 This intuition begs the question: What if all agents have \INC-preferences instead? When all agents have \INC-preferences, we obtain a positive result in this case as Theorem~\ref{GT:thm:mechanism} states. 
 
 \begin{theorem} \label{GT:thm:mechanism}
-	There is a strategy-proof mechanism for \INC-instances of \ASIP, which can also find a stable invitation in linear time (after sorting) and its size is maximum among all stable invitations.
+	There is a strategy-proof mechanism for \INC-instances of \AOIP, which can also find a stable invitation in linear time (after sorting) and its size is maximum among all stable invitations.
 \end{theorem}
 \begin{proof}
 For simplicity, let us assume that each agent reports her threshold value (i.e., $l_i$ as defined in Definition (to be added)) as $L_i$ ($L_i$ may differ from $l_i$). Our mechanism then chooses the largest $k$ such that $L_k \leq k$ holds and chooses the set of $k$ agents with largest threshold values (if no such $k$ exists, mechanism chooses the empty invitation). Algorithm~\ref{alg:mechanism} describes this mechanism.
@@ -186,7 +186,7 @@ We first show that the invitation $S$ that is returned by the mechanism in line 
 % We show that this is also impossible as the following theorem states.
 %
 % \begin{theorem} \label{GT:thm:impossibility_IR}
-% 	No strategy-proof mechanism can find a non-empty individually rational (IR) invitation, even if it exists, for arbitrary instances of \ASIP.
+% 	No strategy-proof mechanism can find a non-empty individually rational (IR) invitation, even if it exists, for arbitrary instances of \AOIP.
 % \end{theorem}
 % \begin{proof}%TODO: This example requires that agents have ordinal preferences (agent 2 and 3). Can I find another example?
 % Consider three agents with their approval sets shown as follows:
@@ -209,7 +209,7 @@ Although we have so far only discussed deterministic mechanisms, our impossibili
 We can extend our results in a different direction by considering multiple time-alternatives for the event. In such settings, agents may have preferences over time-alternatives for the event, in addition to size of invitations.   
 In the non-strategic case, our easiness result is still applicable: One can run the algorithm used in Theorem~(to be added  GT:thm:asip:algo) iteratively for each time-alternative, and choose the maximum stable invitation among all.
 In the strategic case, our impossibility results immediately imply the same negative results. 
-For \INC-instances of \ASIP, we obtain a similar impossibility result even if there is only two time-alternatives. The intuition is that over-reporting ($L_i > l_i$) can give the veto power to an agent, which prevents us from designing a strategy-proof mechanism even for \INC-instances of \ASIP. Note that all of our impossibility results can be naturally extended to the Group Activity Selection Problem by Darmann et al.~\cite{GASP12WINE} since \ASIPs is a sub-class of \GASPs with a single activity.
+For \INC-instances of \AOIP, we obtain a similar impossibility result even if there is only two time-alternatives. The intuition is that over-reporting ($L_i > l_i$) can give the veto power to an agent, which prevents us from designing a strategy-proof mechanism even for \INC-instances of \AOIP. Note that all of our impossibility results can be naturally extended to the Group Activity Selection Problem by Darmann et al.~\cite{GASP12WINE} since \AOIPs is a sub-class of \GASPs with a single activity.
 
 
 \subsection{Extensions to Stable Invitations Problem}
