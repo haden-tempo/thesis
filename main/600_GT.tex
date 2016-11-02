@@ -139,14 +139,16 @@ This intuition begs the question: What if all agents have \INC-preferences inste
 	No strategy-proof mechanism can find a non-empty individually rational (IR) invitation, even if it exists, for arbitrary instances of \AOIP.
 \end{theorem}
 \begin{proof}
-Consider three agents with their approval sets shown as follows:
+Consider three agents with preferences as follows:
 \begin{equation*}
-		S_1 = \{3\},~~ S_2 = \{2, 3\}, ~~ S_3 = \{2, 3\}.
+			P_1: 3\succ 0 \succ 2 \sim 1,~~~ P_2: 2 \succ 3 \succ 2 \succ 1,~~~ P_3: 3 \succ 2 \succ 0 \succ 1
 \end{equation*}
-There are two non-empty IR invitations: $I_1 = \{a_1, a_2, a_3\}$ and $I_2 = \{a_2, a_3\}$.
-If a mechanism chooses $I_1$ given $(S_1, S_2, S_3)$, then $a_2$ can report $\hat{S}_2 = \{2\}$ instead, which makes $I_2$ the only non-empty IR invitation given $(S_1, \hat{S}_2, S_3)$.
- Similarly, if a mechanism chooses $I_2$ given $(S_1, S_2, S_3)$, then $a_3$ can report $\hat{S}_3=\{3\}$ instead to make $I_3$ the only non-empty IR invitation. The rest of the proof is similar to that of Theorem~\ref{GT:thm:impossibility}.
+There are two non-empty IR invitations: $I_1 = \{a_1, a_2, a_3\}$ and $I_2 = \{a_2, a_3\}$. 
+If a mechanism chooses $I_1$ given $(P_1, P_2, P_3)$, $a_2$ can report $(2 \succ 0 \succ 3 \sim 1)$ and make $I_2$ the only non-empty IR invitation. Similarly, if a mechanism chooses $I_2$ given $(P_1, P_2, P_3)$, $a_3$ can report $(3 \succ 0 \succ 2 \sim 1)$ so as to make $I_3$ the only non-empty IR invitation. The rest of the proof is similar to that of Theorem~\ref{thm:impossibility}.
+
+
 \end{proof}
+
 Earlier we emphasized that the conflict between agent(s) and the organizer is the main factor that leads to an impossibility result.
 Indeed, in the example we used in the proof of Theorem~\ref{GT:thm:impossibility}, both agents have \DEC-preferences while the organizer's goal is to maximize attendance.
 
