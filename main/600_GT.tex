@@ -56,6 +56,31 @@ An invitation $I$ is said to be \emph{envy-free} if for every agent $a_j\not\in 
 
 In addition to individual rationality, stability states that an agent who is not invited should not wish to participate (even without permission of others), while envy-freeness states that an agent who is not invited should not be envy of someone who's invited. It is worth noting that these two concepts are not equivalent.
 
+For each agent $a_i$, we can naturally induce from $P_i$ her preference over the set of all invitations.
+Given $I$ and $I'$, if both contain $a_i$, then the preference relation between $I$ and $I'$ is induced from $P_i$ on $|I|$ and $|I'|$ (their cardinality). If neither contains $a_i$, then both invitations are equivalent to $0$ (the outside option). If $I$ contains $a_i$ and $I'$ does not, then the preference relation is induced from $P_i$ on $|I|$ and $0$. 
+We overload our notation ($\sim_i, \succeq_i, \succ_i$) for the induced preferences over invitations. 
+The preferences of agents over invitations are now well-defined.
+
+Let us define two special classes of preferences of agents, increasing (\INC) and decreasing (\DEC). Informally, agents with \INC-preferences (\DEC, respectively) prefer the event with more attendees (fewer, respectively). In particular \INC-preference implies that $n$ is the most favorable outcome and \DEC-preference that $1$ is the most favorable outcome.
+\begin{definition}\label{def:preferenceTypes}
+Agent $a_i$ has an \INC-preference if there is some threshold $l_i$ such that 
+$n \succeq_i (n-1) \succeq_i \cdots \succeq_i (l_i) \succ_i 0 \sim k$ for all $1 \leq k < l_i$. 
+Agent $a_i$ has a \DEC-preference if there is some threshold $h_i$ such that 
+$1 \succeq_i 2 \succeq_i \cdots \succeq_i (h_i) \succ_i 0 \sim k$ for all $h_i < k \leq n$. 
+\end{definition}
+We assume that agents can have arbitrary preferences, but these two special types  preferences play an important role in the strategic case in Section~\ref{sec:Mechanism}. 
+
+
+
+
+
+
+
+
+
+
+
+
 Let us formally define a deterministic mechanism in the context of \ASIPs with strategic agents, and define what constitutes a strategy-proof mechanism. We later discuss in Sectino~\ref{GT:sec:randomized} why our technical results do not change when we consider randomized mechanisms.
 
 \begin{definition} \label{GT:def:mechanism}
