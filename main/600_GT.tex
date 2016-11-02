@@ -226,23 +226,13 @@ We also learned that agents having non-\INC-preferences (such as \DEC-preference
 No strategy-proof mechanism can find a stable invitation (even if it exists) given arbitrary instances of \AOIPs when the number of agents is at least two.
 \end{theorem}
 \begin{proof}
-% TODO: Impossibility with just enemies, no friends, all sizes approved and equally preferred.
-% n = 2.
-% E1 = 2, E2 = 1.
-% I1 = 1, I2 = 2.
-% If I1 is picked, then a2 can report E2 = empty. This makes I1 not stable.
 Consider two agents who do not like each other yet they do not care about the size of an invitation:
 	\begin{equation*}
 			R_1 = \{2\}, ~~~ R_2 = \{1\}.
 	\end{equation*}
-	Clearly, the only stable invitations (or non-empty IR invitations) are $I_1 = \{1\}$ and $I_2 = \{2\}$. 
+	Clearly, the only stable invitations are $I_1 = \{1\}$ and $I_2 = \{2\}$. 
 	Let $\mathcal{M} = (V, Z)$ be any (deterministic) mechanism.	
-	If $Z(R_1, R_2) = I_1$, then $a_2$ would have an incentive to act strategically, by reporting $\hat{R}_2 = \emptyset$ instead of $R_2$. 
-	
-	
-	Given $(P_1, \hat{P}_2)$, the only stable invitation is $I_2$.
-	Notice that $a_2$ strictly prefers $I_2$ over $I_1$ (because $1 \succ_2 0$) and has an incentive to misreport in this example. By symmetry, $a_1$ may act strategically if $I_2$ were to be chosen (i.e., $Z(P_1, P_2) = I_2$).
-	Therefore, no mechanism can be strategy-proof and able to find a stable invitation in this example at the same time.
+	If $Z(R_1, R_2) = I_1$, then $a_2$ would have an incentive to act strategically, by reporting $\hat{R}_2 = \emptyset$ instead of $R_2$. Given $(R_1, \hat{R}_2)$, $I_1$ is no longer stable, and therefore the mechanism must choose $I_2$. By symmetry, an analogous argument applies if $Z(R_1, R_2) = I_2$. This concludes the proof. 
 \end{proof}
 
 
