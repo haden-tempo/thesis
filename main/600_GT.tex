@@ -151,14 +151,11 @@ If a mechanism chooses $I_1$ given $(P_1, P_2, P_3)$, $a_2$ can report $(2 \succ
 
 Earlier we emphasized that the conflict between agent(s) and the organizer is the main factor that leads to an impossibility result.
 Indeed, in the example we used in the proof of Theorem~\ref{GT:thm:impossibility}, both agents have \DEC-preferences while the organizer's goal is to maximize attendance.
-
-
-
 When all agents have \INC-preferences, we obtain a positive result in this case as Theorem~\ref{GT:thm:mechanism} states. 
 
 \begin{theorem} \label{GT:thm:mechanism}
 	There is a strategy-proof mechanism for \INC-instances of \AOIP, which can also find a stable invitation in linear time (after sorting) and its size is maximum among all stable invitations.
-\end{theorem}
+\end{theorem} % How about IR and envy-free?
 \begin{proof}
 For simplicity, let us assume that each agent reports her threshold value (i.e., $l_i$ as defined in Definition (to be added)) as $L_i$ ($L_i$ may differ from $l_i$). Our mechanism then chooses the largest $k$ such that $L_k \leq k$ holds and chooses the set of $k$ agents with largest threshold values (if no such $k$ exists, mechanism chooses the empty invitation). Algorithm~\ref{alg:mechanism} describes this mechanism.
 \begin{algorithm}
