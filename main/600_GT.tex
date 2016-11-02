@@ -84,7 +84,7 @@ In words, mechanism $\mathcal{M}$ is strtaegy-proof if for every agent $a_i\in N
 
 
 
-\section{Main Technical Results} \label{GT:sec:Mechanism}
+\section{Stability and Strategic Agents} \label{GT:sec:Mechanism}
 
 Let us present our first impossibility result which states that strategy-proofness and stability of an invitation are not compatible in \AOIP. 
 
@@ -109,22 +109,7 @@ Example~\ref{GT:eg:multiple_stable} can serve as a proof. Consider the two agent
 \end{proof}
 
 Intuitively, this can be explained by conflicting interests of the organizer and agents -- the organizer is trying to maximize attendance while the agents (with \DEC-preferences) to minimize. 
-This intuition begs the question: What if all agents have \INC-preferences instead? Before we answer this question, let us present another impossibility result when we seek an individually rational or envy-free invitation instead of a stable invitation.
-
-\begin{theorem} \label{GT:thm:impossibility_IR}
-	No strategy-proof mechanism can find a non-empty individually rational (IR) invitation, even if it exists, for arbitrary instances of \AOIP.
-\end{theorem}
-\begin{proof}
-Consider three agents with preferences as follows:
-\begin{equation*}
-			P_1: 3\succ 0 \succ 2 \sim 1,~~~ P_2: 2 \succ 3 \succ 2 \succ 1,~~~ P_3: 3 \succ 2 \succ 0 \succ 1
-\end{equation*}
-There are two non-empty IR invitations: $I_1 = \{a_1, a_2, a_3\}$ and $I_2 = \{a_2, a_3\}$. 
-If a mechanism chooses $I_1$ given $(P_1, P_2, P_3)$, $a_2$ can report $(2 \succ 0 \succ 3 \sim 1)$ and make $I_2$ the only non-empty IR invitation. Similarly, if a mechanism chooses $I_2$ given $(P_1, P_2, P_3)$, $a_3$ can report $(3 \succ 0 \succ 2 \sim 1)$ so as to make $I_3$ the only non-empty IR invitation. The rest of the proof is similar to that of Theorem~\ref{thm:impossibility}.
-\end{proof}
-
-Earlier we emphasized that the conflict between agent(s) and the organizer is the main factor that leads to an impossibility result.
-Indeed, in the example we used in the proof of Theorem~\ref{GT:thm:impossibility}, both agents have \DEC-preferences while the organizer's goal is to maximize attendance.
+This intuition begs the question: What if all agents have \INC-preferences instead? 
 When all agents have \INC-preferences, we obtain a positive result in this case as Theorem~\ref{GT:thm:mechanism} states. 
 
 \begin{theorem} \label{GT:thm:mechanism}
@@ -182,7 +167,6 @@ No strategy-proof mechanism can find a stable assignment (even if it exists) giv
 \end{proof}
 
 
-
 We also learned that agents having non-\INC-preferences (such as \DEC-preferences) lead to impossibility of designing strategy-proof mechanisms. An interesting special case of \SIPs is when all agents approve all sizes of invitations and prefer all sizes equally and have no friends at all. In other words, agents only have enemy relationships in this special case, and sizes of an invitation or friends do not matter at all. This is a very restritive domain of preferences, yet we obtain a similar impossibility result for this special case. Although we did not formally define a mechanism in the context of \SIP, one can easily generalize Definition~\ref{GT:def:mechanism} such that a (deterministic) mechanism takes an enemy set of each agent, and produces an invitation.
 
 \begin{theorem} \label{GT:thm:impossibility_only_enemies}
@@ -199,7 +183,26 @@ Consider two agents who do not like each other (while $F_1=F_2=\emptyset$ and bo
 \end{proof}
 
 
+
+
+
+
+\subsection{Results on Other Solution Concepts}
+
 %TODO: Individual rationality? Envt-freeness?
+
+\begin{theorem} \label{GT:thm:impossibility_IR}
+	No strategy-proof mechanism can find a non-empty individually rational (IR) invitation, even if it exists, for arbitrary instances of \AOIP.
+\end{theorem}
+\begin{proof}
+Consider three agents with preferences as follows:
+\begin{equation*}
+			P_1: 3\succ 0 \succ 2 \sim 1,~~~ P_2: 2 \succ 3 \succ 2 \succ 1,~~~ P_3: 3 \succ 2 \succ 0 \succ 1
+\end{equation*}
+There are two non-empty IR invitations: $I_1 = \{a_1, a_2, a_3\}$ and $I_2 = \{a_2, a_3\}$. 
+If a mechanism chooses $I_1$ given $(P_1, P_2, P_3)$, $a_2$ can report $(2 \succ 0 \succ 3 \sim 1)$ and make $I_2$ the only non-empty IR invitation. Similarly, if a mechanism chooses $I_2$ given $(P_1, P_2, P_3)$, $a_3$ can report $(3 \succ 0 \succ 2 \sim 1)$ so as to make $I_3$ the only non-empty IR invitation. The rest of the proof is similar to that of Theorem~\ref{thm:impossibility}.
+\end{proof}
+
 
 \subsection{Randomized Mechanisms} \label{GT:sec:randomized}
 Although we have so far only discussed deterministic mechanisms, our impossibility results can be extended to randomized mechanisms. First we define $Z$ to be a mapping from $V$ to $\Pi(U)$ where $\Pi(U)$ denotes the set of all probability distributions over $U$. The definition of a strategy-proof mechanism must change accordingly -- we do this by adopting the axioms in the von Neumann-Morgenstern utility theorem~\cite{von1947theory}. We introduce lotteries over invitations and define preferences of agents over lotteries. Given a probability distribution over invitations, one can compute the expected cardinal utility of lotteries. We then define a strategy-proof mechanism analogously to Definition~\ref{GT:def:mechanism}: for each $a_i$, it must hold that the expected utility of $Z(P_i, v_{-i})$ is no less than the expected utility of $Z(v_i, v_{-i})$ for all $v_i\in V_i$ and for all $v_{-i} \in V_{-i}$. The impossibility result given by Theorem~\ref{GT:thm:impossibility} still holds: If $(V, Z)$ is a strategy-proof mechanism, then $Z(P_1, P_2)$ must assign zero probability to both $\{a_1\}$ and $\{a_2\}$, yet these are the only two stable invitations.  All other impossibility results we mention in this work can be extended in this manner.
