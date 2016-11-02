@@ -153,7 +153,7 @@ When all agents have \INC-preferences, we obtain a positive result in this case 
 
 \begin{theorem} \label{GT:thm:mechanism}
 	There is a strategy-proof mechanism for \INC-instances of \AOIP, which can also find a stable invitation in linear time and its size is maximum among all stable invitations.
-\end{theorem} % How about IR and envy-free?
+\end{theorem} 
 \begin{proof}
 For simplicity, let us assume that each agent reports her threshold value (i.e., $l_i$ as defined in Definition (to be added)) as $L_i$ ($L_i$ may differ from $l_i$). Our mechanism then chooses the largest $k$ such that $L_k \leq k$ holds and chooses the set of $k$ agents with largest threshold values (if no such $k$ exists, mechanism chooses the empty invitation). Algorithm~\ref{alg:mechanism} describes this mechanism.
 \begin{algorithm}
@@ -188,7 +188,11 @@ We first show that the invitation $I$ that is returned by the mechanism in line 
 	Next we consider the other sub-case where $a_i$ under-reports and $a_i\not\in I_L$. We will show that $|I_M| = k_M < l_i$, which means that the invitation returned by the mechanism when $a_i$ under-reports is not preferred to her outside option of not attending, and therefore $a_i$ has no incentive to under-report. Suppose $k_M \geq l_i$ instead. Since $a_i \not\in I_L$, we know that $k_L < i$ and that $l_i > i$ (otherwise the mechanism would have returned an invitation of size $i$ or larger given $(l_i, L_{-i})$). Therefore $k_M \geq l_i$ implies that $k_M > i$. Since the mechanism returns $I_M$ given $(v_i, L_{-i})$, we know that $M_{k_M} \leq k_M$. However the mechanism given $(l_i, L_{-i})$ returns an invitation of size $k_L < i$, which implies that $L_{k_M} > k_M$. We earlier showed that $L_j = M_j$ for all $j > i$ if $a_i$ under-reports, and in particular we have that $L_{k_M} = M_{k_M}$. Since $L_{k_M} > k_M$ and $M_{k_M} \leq k_M$, this is a contradiction, and we conclude that if $a_i$ under-reports and $a_i\not\in I_L$ then $|I_M| = k_M < l_i$. 
 
 	In all cases we have shown that truth-telling is a weakly dominant strategy for $a_i$ regardless of what the remaining agents report. Therefore the mechanism is strategy-proof.  Combined with our previous arguments, this shows that the mechanism is able to find a maximum stable invitation (provided that all agents play their weakly dominant strategy, truth-telling). It is worth noting that sorting the reported threshold values of agents can be done in linear time as the values are ranged in $[0, n+1]$.
-\end{proof} 	 %TODO: Also include anecdnote from Matt Jackson.
+\end{proof} 	 
+
+TODO: To related this to IR.
+
+%TODO: Also include anecdnote from Matt Jackson.
 
 
 \subsection{Generalization} \label{GT:sec:generalization}
