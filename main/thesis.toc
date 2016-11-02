@@ -59,8 +59,8 @@
 \contentsline {chapter}{\numberline {6}Strategic Agents and Mechanisms}{77}
 \contentsline {section}{\numberline {6.1}Definitions and Notation}{78}
 \contentsline {section}{\numberline {6.2}Stability and Strategic Agents}{80}
-\contentsline {subsection}{\numberline {6.2.1}Results on Other Solution Concepts}{84}
+\contentsline {subsection}{\numberline {6.2.1}Results on Other Solution Concepts}{85}
 \contentsline {subsection}{\numberline {6.2.2}Randomized Mechanisms}{85}
-\contentsline {section}{\numberline {6.3}Discussion}{85}
-\contentsline {chapter}{\numberline {7}Discussion and Open Problems}{86}
-\contentsline {chapter}{Bibliography}{87}
+\contentsline {section}{\numberline {6.3}Discussion}{86}
+\contentsline {chapter}{\numberline {7}Discussion and Open Problems}{87}
+\contentsline {chapter}{Bibliography}{88}
