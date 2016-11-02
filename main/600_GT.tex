@@ -174,8 +174,9 @@ The induced preference over these three assignments can be determined from each 
 	\end{equation*} %TODO: To elaborate more on the example. 
 Although there are three stable assignments, a mechanism cannot choose any one of them while incentivizing the agents to act truthfully.
 
-If a mechanism chooses $\pi_1$ given $(P_1, P_2)$, then agent $2$ has an incentive to lie about her preferences by reporting $\hat{P}_2: (a_2, 2) \succ_2 (a_2, 1)$ instead (by not approving $(a_1, 2)$). 
-o achieve $\pi_2$. 
+If a mechanism chooses $\pi_1$ given $(P_1, P_2)$, then agent $2$ has an incentive to lie about her preferences by reporting $\hat{P}_2: (a_2, 2) \succ_2 (a_2, 1)$ instead (by not approving $(a_1, 2)$). Given $(P_1, \hat{P}_2)$, the mechanism must now choose $\pi_2$ which is the only stable assignment. 
+By symmetry, the mechanism cannot choose $\pi_2$ because of agent $1$.
+Lastly, if the mechanism chooses $\pi_3$, then now both agents have incentives to lie. For instance, agent $1$ can report 
 
 By symmetry, a mechanism cannot choose $\pi_2$, either. If it chooses $\pi_3$, both agents have incentives to lie. This shows that, even if all agents have \INC-preferences for all activities, it is impossible to achieve strategy-proofness and stability of a solution at the same time.
 \end{proof}
