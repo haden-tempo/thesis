@@ -117,6 +117,14 @@ Let $V_{-i} = (V_1 \times \cdots \times V_{i-1} \times V_{i+1} \times \cdots \ti
 In words, mechanism $\mathcal{M}$ is strtaegy-proof if for every agent $a_i\in N$, truth-telling is a dominant strategy for any against any strategy profile of other agents given any type of agent $a_i$ (i.e., any preference of $a_i$). Due to the revelation principle, we only need to consider direct mechanims in which agents simply report their types (or preferences, in our setting). For more information, please see BLAH. (TODO).
 
 
+
+
+
+
+
+
+
+
 \section{Main Technical Results} \label{GT:sec:Mechanism}
 
 Let us present our first impossibility result which states that strategy-proofness and stability of an invitation are not compatible in \ASIP. 
@@ -126,7 +134,7 @@ Let us present our first impossibility result which states that strategy-proofne
 No strategy-proof mechanism can find a stable invitation (even if it exists) given arbitrary instances of \ASIPs when the number of agents is at least two.
 \end{theorem}
 \begin{proof}
-Example~\ref{GT:eg:strategicAgents} can serve as a proof; no strategy-proof mechanism can find a stable invitation for this instance.
+Example~\ref{GT:eg:multiple_stable} can serve as a proof; no strategy-proof mechanism can find a stable invitation for this instance.
 \end{proof}
 
 Intuitively, this can be explained by conflicting interests of the organizer and agents -- the organizer is trying to maximize attendance while the agents (with \DEC-preferences) to minimize. 
