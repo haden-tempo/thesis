@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 NOV 2016 22:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 NOV 2016 22:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -570,12 +570,12 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no Ÿ in font ptmr7t!
  [78]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 92.
+LaTeX Font Warning: Command \small invalid in math mode on input line 91.
 
-[79] [80] [81] [82]
+[79] [80] [81] [82] [83]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no Ÿ in font ptmr7t!
-) [83] [84]
+) [84]
 Chapter 7.
 (./700_Discussion.tex) (./thesis.bbl [85
 
@@ -614,7 +614,7 @@ exlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016
 t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on thesis.pdf (100 pages, 437114 bytes).
+Output written on thesis.pdf (100 pages, 437257 bytes).
 PDF statistics:
  392 PDF objects out of 1000 (max. 8388607)
  270 compressed objects within 3 object streams
