@@ -197,8 +197,7 @@ TODO: To related this to IR.
 
 Recall that \AOIPs is a special case of \GASPs and \SIPs as there is only one activity and no friends or enemies in \AOIPs instances. As such, our impossibility results are applicable to \GASPs and \SIPs if ordinal preferences of agents are assumed. In addition, let us consider two other special cases of these two problems for which similar impossibility results hold.
 
-First, we learned that when all agents have \INC-preferences, there exists a strategy-proof mechanism that can find a maximum stable invitation in linear time. However, this mechanism cannot be generalized to the cases where there are two or more activities even if all agents have \INC-preferences for each of the activities. 
-
+We learned that when all agents have \INC-preferences, there exists a strategy-proof mechanism that can find a maximum stable invitation in linear time. However, this mechanism cannot be generalized to the cases where there are two or more activities even if all agents have \INC-preferences for each of the activities. 
 \begin{theorem} \label{GT:thm:impossibility_inc_gasp}
 No strategy-proof mechanism can find a stable invitation (even if it exists) given arbitrary instances of \AOIPs when the number of agents is at least two.
 \end{theorem}
@@ -223,7 +222,7 @@ Example~\ref{GT:eg:multiple_stable} can serve as a proof. Consider the two agent
 We also learned that agents having non-\INC-preferences (such as \DEC-preferences) lead to impossibility of designing strategy-proof mechanisms. An interesting special case of \SIPs is when all agents approve all sizes of invitations and prefer all sizes equally and have no friends at all. In other words, agents only have enemy relationships in this special case, and sizes of an invitation or friends do not matter at all. This is a very restritive domain of preferences, yet we obtain a similar impossibility result for this special case. Although we did not formally define a mechanism in the context of \SIP, one can easily generalize Definition~\ref{GT:def:mechanism} such that a (deterministic) mechanism takes an enemy set of each agent, and produces an invitation.
 
 \begin{theorem} \label{GT:thm:impossibility_only_enemies}
-No strategy-proof mechanism can find a stable invitation (even if it exists) given arbitrary instances of \AOIPs when the number of agents is at least two.
+No strategy-proof mechanism can find a stable invitation (even if it exists) given arbitrary instances of \SIPs even when all agents approve all sizes of invitations and all agents have empty friend sets. 
 \end{theorem}
 \begin{proof}
 Consider two agents who do not like each other yet they do not care about the size of an invitation:
