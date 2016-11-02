@@ -44,7 +44,7 @@ We assume that for each $a_i$ and each $x\in (X\setminus\{0\})$, either $x \succ
 
 Let us define three solution concepts of \AOIP.
 
-\begin{definition} \label{def:invitation}
+\begin{definition} \label{GT:def:invitation}
 Given an instance of \AOIP, an \emph{invitation} $I$ is a subset of $N$, and is interpreted as the organizer inviting the agents in $I$. 
 
 An invitation $I$ is said to be \emph{individually rational} (IR) if for every agent $a_i\in I$ it holds that $|I| \succ_i 0$. 
@@ -62,16 +62,40 @@ We overload our notation ($\sim_i, \succeq_i, \succ_i$) for the induced preferen
 The preferences of agents over invitations are now well-defined.
 
 Let us define two special classes of preferences of agents, increasing (\INC) and decreasing (\DEC). Informally, agents with \INC-preferences (\DEC, respectively) prefer the event with more attendees (fewer, respectively). In particular \INC-preference implies that $n$ is the most favorable outcome and \DEC-preference that $1$ is the most favorable outcome.
-\begin{definition}\label{def:preferenceTypes}
+\begin{definition}\label{GT:def:preferenceTypes}
 Agent $a_i$ has an \INC-preference if there is some threshold $l_i$ such that 
 $n \succeq_i (n-1) \succeq_i \cdots \succeq_i (l_i) \succ_i 0 \sim k$ for all $1 \leq k < l_i$. 
 Agent $a_i$ has a \DEC-preference if there is some threshold $h_i$ such that 
 $1 \succeq_i 2 \succeq_i \cdots \succeq_i (h_i) \succ_i 0 \sim k$ for all $h_i < k \leq n$. 
 \end{definition}
-We assume that agents can have arbitrary preferences, but these two special types  preferences play an important role in the strategic case in Section~\ref{sec:Mechanism}. 
+We assume that agents can have arbitrary preferences, but these two special types preferences play an important role in the strategic case in Section~\ref{GT:sec:Mechanism}. 
 
 
+Let us consider two small examples of \AOIP.
 
+\begin{example}[Stable invitations are not unique] \label{GT:eg:multiple_stable}
+	Let us consider two agents with identical preferences: 
+	\begin{equation*}
+		\begin{aligned}
+				P_1: 1 \succ 0 \succ 2,~~~& P_2: 1 \succ 0 \succ 2
+		\end{aligned}
+	\end{equation*}
+	Note that both agents have \DEC-preferences (with $h_1 = h_2 = 1$).
+	The two stable invitations are $S_1 = \{a_1\}$ and $S_2 = \{a_2\}$. 
+	The empty invitation ($\emptyset$) exhibits ER while the full invitation ($N$) is not IR. 
+\end{example}
+
+\begin{example}[A stable invitation may not exist] \label{GT:eg:noStableSet}
+	Let us consider three agents with the following preferences: 
+	\begin{equation*}
+		\small
+		\begin{aligned}
+				P_1: 3\succ 2 \succ 0 \succ 1,~ P_2: 1 \succ 0 \succ 2 \sim 3, ~ P_3: 0 \succ 1 \sim 2 \sim 3
+		\end{aligned}
+	\end{equation*}
+	Note that $a_1$ has an \INC-preference (with $l_1 = 2$) while $a_2$ has a \DEC-preference (with  $h_2 = 1$). $a_3$ is simply unwilling to attend the event (no outcome is acceptable to her).
+	Due to $a_3$, any invitation including $a_3$ is not IR. Between $a_1$ and $a_2$ only, the empty invitation exhibits ER due to $a_2$, $S_1 = \{a_1\}$ is not IR due to $a_1$, $S_2 = \{a_2\}$ exhibits ER due to $a_1$, and $\{a_1, a_2\}$ is not IR due to $a_2$.
+\end{example}
 
 
 
