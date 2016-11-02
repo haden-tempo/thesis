@@ -199,15 +199,6 @@ Recall that \AOIPs is a special case of \GASPs and \SIPs as there is only one ac
 
 First, we learned that when all agents have \INC-preferences, there exists a strategy-proof mechanism that can find a maximum stable invitation in linear time. However, this mechanism cannot be generalized to the cases where there are two or more activities even if all agents have \INC-preferences for each of the activities. 
 
-
-We also learned that agents having non-\INC-preferences (such as \DEC-preferences) lead to impossibility of designing strategy-proof mechanisms. An interesting special case of \SIPs is when all agents approve all sizes of invitations and prefer all sizes equally and have no friends at all. In other words, agents only have enemy relationships in this special case, and sizes of an invitation or friends do not matter at all. This is a very restritive domain of preferences, yet we obtain a similar impossibility result for this special case.
-
-
-Let us now consider difference special cases of the Group Activity Selection Problem (\GASP) and the Stable Invitations Problem (\SIP). Our impossibility results hold for both problems because \AOIPs is a special case of these two problems, respectively.
-However, we present a couple of impossibility results of \GASPs and \SIPs by considering different special cases of these problems.
-
-TODO: Impossibility with inc and two activities in gasp.
-
 \begin{theorem} \label{GT:thm:impossibility_inc_gasp}
 No strategy-proof mechanism can find a stable invitation (even if it exists) given arbitrary instances of \AOIPs when the number of agents is at least two.
 \end{theorem}
@@ -228,14 +219,23 @@ Example~\ref{GT:eg:multiple_stable} can serve as a proof. Consider the two agent
 \end{proof}
 
 
+
+We also learned that agents having non-\INC-preferences (such as \DEC-preferences) lead to impossibility of designing strategy-proof mechanisms. An interesting special case of \SIPs is when all agents approve all sizes of invitations and prefer all sizes equally and have no friends at all. In other words, agents only have enemy relationships in this special case, and sizes of an invitation or friends do not matter at all. This is a very restritive domain of preferences, yet we obtain a similar impossibility result for this special case.
+
+
 \begin{theorem} \label{GT:thm:impossibility_only_enemies}
 No strategy-proof mechanism can find a stable invitation (even if it exists) given arbitrary instances of \AOIPs when the number of agents is at least two.
 \end{theorem}
 \begin{proof}
-Example~\ref{GT:eg:multiple_stable} can serve as a proof. Consider the two agents with identical preferences from the example:
+% TODO: Impossibility with just enemies, no friends, all sizes approved and equally preferred.
+% n = 2.
+% E1 = 2, E2 = 1.
+% I1 = 1, I2 = 2.
+% If I1 is picked, then a2 can report E2 = empty. This makes I1 not stable.
+Consider two agents who do not like each other yet they do not care about the size of an invitation:
 	\begin{equation*}
 		\begin{aligned}
-				P_1: 1 \succ 0 \succ 2,~~~& P_2: 1 \succ 0 \succ 2
+				P_1: 1 \sim 2 \succ 0 \,~~~& P_2: 1 \succ 0 \succ 2
 		\end{aligned}
 	\end{equation*}
 	Recall that $I_1 = \{a_1\}$ and $I_2 =\{a_2\}$ are the only two stable invitations provided that both agents are truthful.
@@ -248,14 +248,6 @@ Example~\ref{GT:eg:multiple_stable} can serve as a proof. Consider the two agent
 \end{proof}
 
 
-TODO: Impossibility with just friends, no enemies, all sizes approved.
-n = 2.
-
-TODO: Impossibility with just enemies, no friends, all sizes approved and equally preferred.
-n = 2.
-E1 = 2, E2 = 1.
-I1 = 1, I2 = 2. 
-If I1 is picked, then a2 can report E2 = empty. This makes I1 not stable. 
 
 \subsection{Randomized Mechanisms} \label{GT:sec:randomized}
 Although we have so far only discussed deterministic mechanisms, our impossibility results can be extended to randomized mechanisms. First we define $Z$ to be a mapping from $V$ to $\Pi(U)$ where $\Pi(U)$ denotes the set of all probability distributions over $U$. The definition of a strategy-proof mechanism must change accordingly -- we do this by adopting the axioms in the von Neumann-Morgenstern utility theorem~\cite{von1947theory}. We introduce lotteries over invitations and define preferences of agents over lotteries. Given a probability distribution over invitations, one can compute the expected cardinal utility of lotteries. We then define a strategy-proof mechanism analogously to Definition~\ref{GT:def:mechanism}: for each $a_i$, it must hold that the expected utility of $Z(P_i, v_{-i})$ is no less than the expected utility of $Z(v_i, v_{-i})$ for all $v_i\in V_i$ and for all $v_{-i} \in V_{-i}$. The impossibility result given by Theorem~\ref{GT:thm:impossibility} still holds: If $(V, Z)$ is a strategy-proof mechanism, then $Z(P_1, P_2)$ must assign zero probability to both $\{a_1\}$ and $\{a_2\}$, yet these are the only two stable invitations.  All other impossibility results we mention in this work can be extended in this manner.
