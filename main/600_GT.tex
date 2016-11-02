@@ -49,10 +49,12 @@ Given an instance of \AOIP, an \emph{invitation} $I$ is a subset of $N$, and is 
 
 An invitation $I$ is said to be \emph{individually rational} (IR) if for every agent $a_i\in I$ it holds that $|I| \succ_i 0$. 
 
-An invitation $I$ exhibits \emph{no exclusion-regret with addition (a-ER)} if for every agent $a_j\not\in S$ it holds that $|S \cup \{a_j\}| = (|S| + 1) \prec_j 0$.
-An invitation $S$ exhibits \emph{no exclusion-regret with replacement (r-ER)} if for every agent $a_j\not\in S$ it holds that $|S| \prec_j 0$.
-An invitation is \emph{a-stable} (\emph{r-stable}, respectively) if it satisfies IR and exhibits no a-ER (IR and no r-ER, respectively). 
+An invitation $I$ is said to be \emph{(Nash) stable}ß if for every agent $a_j\not\in I$ it holds that $|S \cup \{a_j\}| = (|I| + 1) \prec_j 0$ and $I$ is individually rational as well.
+
+An invitation $I$ is said to be \emph{envy-free} if for every agent $a_j\not\in I$ it holds that $|I| \prec_j 0$ and $I$ is individually rational as well.
+
 \end{definition}
+
 In words, a-ER states that an agent who is not invited should not wish that she had been invited in addition to those who are invited (hence the name `addition'),
 while r-ER states that an agent who is not invited should not wish that she had been invited in place of someone else who is invited (hence the name `replacement').
 These two definitions are not equivalent. 
