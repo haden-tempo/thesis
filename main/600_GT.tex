@@ -42,6 +42,23 @@ We drop the subscript ($i$) if it is clear from the context.
 
 We assume that for each $a_i$ and each $x\in (X\setminus\{0\})$, either $x \succ_i 0$ or $0 \succ_i x$. That is, no agent is indifferent between not attending and any other outcome. This assumption is made for convenience and does not change our technical results.
 
+Let us define solution concepts of \AOIP.
+
+\begin{definition} \label{def:invitation}
+Given an instance $(N, P)$, an \emph{invitation} $S$ is a subset of $N$, and is interpreted as the organizer inviting the agents in $S$. 
+An invitation $S$ satisfies \emph{individual rationality (IR)} if for every agent $a_i\in S$ it holds that $|S| \succ_i 0$. 
+An invitation $S$ exhibits \emph{no exclusion-regret with addition (a-ER)} if for every agent $a_j\not\in S$ it holds that $|S \cup \{a_j\}| = (|S| + 1) \prec_j 0$.
+An invitation $S$ exhibits \emph{no exclusion-regret with replacement (r-ER)} if for every agent $a_j\not\in S$ it holds that $|S| \prec_j 0$.
+An invitation is \emph{a-stable} (\emph{r-stable}, respectively) if it satisfies IR and exhibits no a-ER (IR and no r-ER, respectively). 
+\end{definition}
+In words, a-ER states that an agent who is not invited should not wish that she had been invited in addition to those who are invited (hence the name `addition'),
+while r-ER states that an agent who is not invited should not wish that she had been invited in place of someone else who is invited (hence the name `replacement').
+These two definitions are not equivalent. 
+In most parts of this paper we only use a-ER and a-stable and refer to them simply as ER and stable. However our technical results are unchanged when we instead use r-ER and r-stable (see Section~\ref{sec:gsip_extension} for details).
+
+
+
+
 	
 	a special case of the Stable Invitations Problem (and of the Group Activity Selection Problem), in which no agent has friends or enemies. An instance of \ASIPs is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$ and an approval set $S_i$ for each agent.
 \end{definition}
