@@ -108,9 +108,6 @@ In words, mechanism $\mathcal{M}$ is strtaegy-proof if for every agent $a_i\in N
 
 
 
-
-
-
 \section{Main Technical Results} \label{GT:sec:Mechanism}
 
 Let us present our first impossibility result which states that strategy-proofness and stability of an invitation are not compatible in \AOIP. 
@@ -121,6 +118,18 @@ No strategy-proof mechanism can find a stable invitation (even if it exists) giv
 \end{theorem}
 \begin{proof}
 Example~\ref{GT:eg:multiple_stable} can serve as a proof; no strategy-proof mechanism can find a stable invitation for this instance.
+
+Consider the two agents with identical preferences from the example:
+	\begin{equation*}
+		\begin{aligned}
+				P_1: 1 \succ 0 \succ 2,~~~& P_2: 1 \succ 0 \succ 2
+		\end{aligned}
+	\end{equation*}
+	Recall that $S_1 = \{a_1\}$ and $S_2 =\{a_2\}$ are the only two stable invitations provided that both agents are truthful. If $S_1$ were to be chosen by the organizer, $a_2$ would have an incentive to act strategically, by reporting $\hat{P}_2 (1 \succ 2 \succ 0)$ instead of $P_2$. 
+	Given $(P_1, \hat{P}_2)$, the only stable invitation is $S_2$ ($S_1$ now exhibits ER due to $a_2$).
+	Notice that $a_2$ strictly prefers $S_2$ over $S_1$ (because $1 \succ_2 0$) and has an incentive to misreport in this example. By symmetry, $a_1$ may act strategically if $S_2$ were to be chosen. 
+
+
 \end{proof}
 
 Intuitively, this can be explained by conflicting interests of the organizer and agents -- the organizer is trying to maximize attendance while the agents (with \DEC-preferences) to minimize. 
