@@ -61,5 +61,5 @@
 \contentsline {section}{\numberline {6.2}Main Technical Results}{80}
 \contentsline {subsection}{\numberline {6.2.1}Randomized Mechanisms}{85}
 \contentsline {section}{\numberline {6.3}Discussion}{85}
-\contentsline {chapter}{\numberline {7}Discussion and Open Problems}{87}
-\contentsline {chapter}{Bibliography}{88}
+\contentsline {chapter}{\numberline {7}Discussion and Open Problems}{86}
+\contentsline {chapter}{Bibliography}{87}
