@@ -60,22 +60,23 @@ Example~\ref{GT:eg:strategicAgents} can serve as a proof; no strategy-proof mech
 \end{proof}
 
 Intuitively, this can be explained by conflicting interests of the organizer and agents -- the organizer is trying to maximize attendance while the agents (with \DEC-preferences) to minimize. 
-Since no strategy-proof mechanisms can find a stable invitation, 
-one can instead seek to design a strategy-proof mechanism that can find a non-empty IR invitation.
-We show that this is also impossible as the following theorem states.
 
-\begin{theorem} \label{GT:thm:impossibility_IR}
-	No strategy-proof mechanism can find a non-empty individually rational (IR) invitation, even if it exists, for arbitrary instances of \ASIP. 
-\end{theorem}
-\begin{proof}%TODO: This example requires that agents have ordinal preferences (agent 2 and 3). Can I find another example?
-Consider three agents with their approval sets shown as follows:
-\begin{equation*}
-		S_1 = \{3\},~~ S_2 = \{2, 3\}, ~~ S_3 = \{2, 3\}.
-\end{equation*}
-There are two non-empty IR invitations: $I_1 = \{a_1, a_2, a_3\}$ and $I_2 = \{a_2, a_3\}$. 
-If a mechanism chooses $I_1$ given $(S_1, S_2, S_3)$, then $a_2$ can report $\hat{S}_2 = \{2\}$ instead, which makes $I_2$ the only non-empty IR invitation given $(S_1, \hat{S}_2, S_3)$.
- Similarly, if a mechanism chooses $I_2$ given $(S_1, S_2, S_3)$, then $a_3$ can report $\hat{S}_3=\{3\}$ instead to make $I_3$ the only non-empty IR invitation. The rest of the proof is similar to that of Theorem~\ref{GT:thm:impossibility}.
-\end{proof}
+% Since no strategy-proof mechanisms can find a stable invitation,
+% one can instead seek to design a strategy-proof mechanism that can find a non-empty IR invitation.
+% We show that this is also impossible as the following theorem states.
+%
+% \begin{theorem} \label{GT:thm:impossibility_IR}
+% 	No strategy-proof mechanism can find a non-empty individually rational (IR) invitation, even if it exists, for arbitrary instances of \ASIP.
+% \end{theorem}
+% \begin{proof}%TODO: This example requires that agents have ordinal preferences (agent 2 and 3). Can I find another example?
+% Consider three agents with their approval sets shown as follows:
+% \begin{equation*}
+% 		S_1 = \{3\},~~ S_2 = \{2, 3\}, ~~ S_3 = \{2, 3\}.
+% \end{equation*}
+% There are two non-empty IR invitations: $I_1 = \{a_1, a_2, a_3\}$ and $I_2 = \{a_2, a_3\}$.
+% If a mechanism chooses $I_1$ given $(S_1, S_2, S_3)$, then $a_2$ can report $\hat{S}_2 = \{2\}$ instead, which makes $I_2$ the only non-empty IR invitation given $(S_1, \hat{S}_2, S_3)$.
+%  Similarly, if a mechanism chooses $I_2$ given $(S_1, S_2, S_3)$, then $a_3$ can report $\hat{S}_3=\{3\}$ instead to make $I_3$ the only non-empty IR invitation. The rest of the proof is similar to that of Theorem~\ref{GT:thm:impossibility}.
+% \end{proof}
 
 
 Earlier we emphasized that the conflict between agent(s) and the organizer is the main factor that leads to an impossibility result. 
