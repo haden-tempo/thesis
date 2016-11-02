@@ -42,12 +42,14 @@ We drop the subscript ($i$) if it is clear from the context.
 
 We assume that for each $a_i$ and each $x\in (X\setminus\{0\})$, either $x \succ_i 0$ or $0 \succ_i x$. That is, no agent is indifferent between not attending and any other outcome. This assumption is made for convenience and does not change our technical results.
 
-Let us define solution concepts of \AOIP.
+Let us define three solution concepts of \AOIP.
 
 \begin{definition} \label{def:invitation}
-Given an instance $(N, P)$, an \emph{invitation} $S$ is a subset of $N$, and is interpreted as the organizer inviting the agents in $S$. 
-An invitation $S$ satisfies \emph{individual rationality (IR)} if for every agent $a_i\in S$ it holds that $|S| \succ_i 0$. 
-An invitation $S$ exhibits \emph{no exclusion-regret with addition (a-ER)} if for every agent $a_j\not\in S$ it holds that $|S \cup \{a_j\}| = (|S| + 1) \prec_j 0$.
+Given an instance of \AOIP, an \emph{invitation} $I$ is a subset of $N$, and is interpreted as the organizer inviting the agents in $I$. 
+
+An invitation $I$ is said to be \emph{individually rational} (IR) if for every agent $a_i\in I$ it holds that $|I| \succ_i 0$. 
+
+An invitation $I$ exhibits \emph{no exclusion-regret with addition (a-ER)} if for every agent $a_j\not\in S$ it holds that $|S \cup \{a_j\}| = (|S| + 1) \prec_j 0$.
 An invitation $S$ exhibits \emph{no exclusion-regret with replacement (r-ER)} if for every agent $a_j\not\in S$ it holds that $|S| \prec_j 0$.
 An invitation is \emph{a-stable} (\emph{r-stable}, respectively) if it satisfies IR and exhibits no a-ER (IR and no r-ER, respectively). 
 \end{definition}
