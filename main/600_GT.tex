@@ -98,10 +98,6 @@ Let us formally define a deterministic mechanism in the context of \AOIPs with s
 Given an instance of \AOIP, we define $V_i$ (the set of available actions to $a_i$) to be the set of all preferences over $X$ where $X = \{0, 1, 2, \dots, n\}$ is the set of outcomes. 
 A (deterministic) \emph{mechanism} $\mathcal{M}$ is a pair $(V, Z)$ where $V = (V_1 \times \cdots \times V_n)$ is the set of action profiles of all agents (i.e., $V_i$ is a subset of total preorder on $X$) and $Z: V \mapsto U$ is a mapping from each action profile to an invitation in $U$ where $U = 2^{N}$. 
 Let $V_{-i} = (V_1 \times \cdots \times V_{i-1} \times V_{i+1} \times \cdots \times V_{n})$ be the set of action profiles available to all agents but agent $a_i$. A mechanism $(V, Z)$ is said to be \emph{strategy-proof} if for all $a_i\in N$ it holds that $Z(P_i, v_{-i}) \succeq_i Z(v_i, v_{-i})$ for all $v_i \in V_i$ and $v_{-i} \in V_{-i}$.
-
-
-A (deterministic) \emph{mechanism} $\mathcal{M}$ is a pair $(V, Z)$ where $V = (V_1 \times \cdots \times V_n)$ is the set of action profiles of all agents (i.e., $V_i \subset [1,n]$) and $Z: V \mapsto U$ is a mapping from each action profile to an invitation in $U$ where $U = 2^{N}$. 
-Let $V_{-i} = (V_1 \times \cdots \times V_{i-1} \times V_{i+1} \times \cdots \times V_{n})$ be the set of action profiles available to all agents but agent $a_i$. A mechanism $\mathcal{M} = (V, Z)$ is said to be \emph{strategy-proof} if for all $a_i\in N$, $a_i$ prefers the invitation $Z(S_i, v_{-i})$ over the invitation $Z(v_i, v_{-i})$ for all $v_i \in V_i$ and $v_{-i} \in V_{-i}$.
 \end{definition}
 
 In words, mechanism $\mathcal{M}$ is strtaegy-proof if for every agent $a_i\in N$, truth-telling is a dominant strategy for any against any strategy profile of other agents given any type of agent $a_i$ (i.e., any preference of $a_i$). Due to the revelation principle, we only need to consider direct mechanims in which agents simply report their types (or preferences, in our setting). For more information, please see BLAH. (TODO).
@@ -121,9 +117,7 @@ Let us present our first impossibility result which states that strategy-proofne
 No strategy-proof mechanism can find a stable invitation (even if it exists) given arbitrary instances of \AOIPs when the number of agents is at least two.
 \end{theorem}
 \begin{proof}
-Example~\ref{GT:eg:multiple_stable} can serve as a proof; no strategy-proof mechanism can find a stable invitation for this instance.
-
-Consider the two agents with identical preferences from the example:
+Example~\ref{GT:eg:multiple_stable} can serve as a proof. Consider the two agents with identical preferences from the example:
 	\begin{equation*}
 		\begin{aligned}
 				P_1: 1 \succ 0 \succ 2,~~~& P_2: 1 \succ 0 \succ 2
