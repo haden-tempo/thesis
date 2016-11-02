@@ -26,14 +26,14 @@ In this chapter we investigate how strategic behavior of agents can complicate t
 
 \section{Definitions and Notation} \label{GT:sec:prelim}
 
-In this chapter, we study the Anonymous Ordinal Invitations Problem (\AOIP) which is motivated by the Stable Invitations Problem. 
+In this chapter, we study the Anonymous Ordinal Invitations Problem (\AOIP) which is motivated by the Stable Invitations Problem. The term ``anonymous'' emphasizes that agents only care about size of invitations and ``ordinal'' emphasizes that agents do have ordinal prefernces over sizes rather than dichotomic prefernces. 
 
 % Recall from Definition~\ref{SIP:def:instance} that an instance of the Stable Invitations Problem is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$, a set of friends $F_i$, a set of enemies $R_i$, and an approval set $S_i$ for each agent $a_i$.
 %
 % We first focus on the special case of this problem when all friend sets and enemy sets are empty sets -- we call this the Anonymous Stable Invitations Problem (\ASIP), which is known to be solvable in polynomial time; this problem is also equivalent to the special case of the Group Activity Selection Problem with just one activity. We then discuss how our technical results extend to the Stable Invitations Problem and the Group Activity Selection Problem.
 
 \begin{definition}
-	The Anonymous Stable Invitations Problem (\ASIP) is a special case of the Stable Invitations Problem (and of the Group Activity Selection Problem), in which no agent has friends or enemies. An instance of \ASIPs is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$ and an approval set $S_i$ for each agent.
+	The Anonymous Ordinal Invitations Problem (\AOIP) is a special case of the Stable Invitations Problem (and of the Group Activity Selection Problem), in which no agent has friends or enemies. An instance of \ASIPs is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$ and an approval set $S_i$ for each agent.
 \end{definition}
 
 In this chapter we focus on finding a stable invitation whose definition was given in Section~\ref{SIP:sec:SIP:prelim} by assuming that $F_i = R_i = \emptyset$ for every agent $a_i\in N$. 
