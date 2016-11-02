@@ -193,11 +193,18 @@ We first show that the invitation $I$ that is returned by the mechanism in line 
 
 \subsection{Generalization} \label{GT:sec:generalization}
 
+Let us now generalize our impossibility results to the Group Activity Selection Problem and the Stable Invitations Problem. 
+
+
+
+
+Note that all of our impossibility results can be naturally extended to the Group Activity Selection Problem by Darmann et al.~\cite{GASP12WINE} since \AOIPs is a sub-class of \GASPs with a single activity. In addition, even if all agents have \INC-preferences, if there are two or more activities, then we obtain a similar impossibility result. Lastly, if agents have friends or enemies but dichotomic preferences of sizes (as in the Stable Invitations Problem), then we also obtain impossibility results.
+
+
+
 
 \subsection{Randomized Mechanisms} \label{GT:sec:randomized}
 Although we have so far only discussed deterministic mechanisms, our impossibility results can be extended to randomized mechanisms. First we define $Z$ to be a mapping from $V$ to $\Pi(U)$ where $\Pi(U)$ denotes the set of all probability distributions over $U$. The definition of a strategy-proof mechanism must change accordingly -- we do this by adopting the axioms in the von Neumann-Morgenstern utility theorem~\cite{von1947theory}. We introduce lotteries over invitations and define preferences of agents over lotteries. Given a probability distribution over invitations, one can compute the expected cardinal utility of lotteries. We then define a strategy-proof mechanism analogously to Definition~\ref{GT:def:mechanism}: for each $a_i$, it must hold that the expected utility of $Z(P_i, v_{-i})$ is no less than the expected utility of $Z(v_i, v_{-i})$ for all $v_i\in V_i$ and for all $v_{-i} \in V_{-i}$. The impossibility result given by Theorem~\ref{GT:thm:impossibility} still holds: If $(V, Z)$ is a strategy-proof mechanism, then $Z(P_1, P_2)$ must assign zero probability to both $\{a_1\}$ and $\{a_2\}$, yet these are the only two stable invitations.  All other impossibility results we mention in this work can be extended in this manner.
-
-Note that all of our impossibility results can be naturally extended to the Group Activity Selection Problem by Darmann et al.~\cite{GASP12WINE} since \AOIPs is a sub-class of \GASPs with a single activity. In addition, even if all agents have \INC-preferences, if there are two or more activities, then we obtain a similar impossibility result. Lastly, if agents have friends or enemies but dichotomic preferences of sizes (as in the Stable Invitations Problem), then we also obtain impossibility results.
 
 
 
