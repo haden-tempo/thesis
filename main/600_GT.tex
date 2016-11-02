@@ -84,7 +84,7 @@ In words, mechanism $\mathcal{M}$ is strtaegy-proof if for every agent $a_i\in N
 
 
 
-\section{Stability and Strategic Agents} \label{GT:sec:Mechanism}
+\section{Mechanisms and Strategic Agents} \label{GT:sec:Mechanism}
 In this section we present several techcnial results on how strategic agents can affect finding stable solutions.
 
 Our first result is an impossibility result on \AOIP.
@@ -171,7 +171,7 @@ The induced preference over these three assignments can be determined from each 
 	\begin{equation*}
 		\pi_1 \succ_1 \pi_2 \succ_1 \pi_3, ~~~
 		\pi_2 \succ_2 \pi_1 \succ_2 \pi_3.
-	\end{equation*} %TODO: To elaborate more on the example. 
+	\end{equation*} 
 Although there are three stable assignments, a mechanism cannot choose any one of them while incentivizing the agents to act truthfully.
 
 If a mechanism chooses $\pi_1$ given $(P_1, P_2)$, then agent $2$ has an incentive to lie about her preferences by reporting $\hat{P}_2: (a_2, 2) \succ_2 (a_2, 1)$ instead (by not approving $(a_1, 2)$). Given $(P_1, \hat{P}_2)$, the mechanism must now choose $\pi_2$ which is the only stable assignment. 
@@ -197,14 +197,7 @@ Consider two agents who do not like each other (while $F_1=F_2=\emptyset$ and bo
 	If $Z(R_1, R_2) = I_1$, then $a_2$ would have an incentive to act strategically, by reporting $\hat{R}_2 = \emptyset$ instead of $R_2$. Given $(R_1, \hat{R}_2)$, $I_1$ is no longer stable, and therefore the mechanism must choose $I_2$. By symmetry, an analogous argument applies if $Z(R_1, R_2) = I_2$. This concludes the proof. 
 \end{proof}
 
-
-
-
-
-
-\subsection{Results on Other Solution Concepts}
-
-%TODO: Individual rationality? Envt-freeness?
+f
 
 \begin{theorem} \label{GT:thm:impossibility_IR}
 	No strategy-proof mechanism can find a non-empty individually rational (IR) invitation, even if it exists, for arbitrary instances of \AOIP.
