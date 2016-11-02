@@ -32,17 +32,16 @@ In this chapter, we study the Anonymous Ordinal Invitations Problem (\AOIP) whic
 %
 % We first focus on the special case of this problem when all friend sets and enemy sets are empty sets -- we call this the Anonymous Stable Invitations Problem (\ASIP), which is known to be solvable in polynomial time; this problem is also equivalent to the special case of the Group Activity Selection Problem with just one activity. We then discuss how our technical results extend to the Stable Invitations Problem and the Group Activity Selection Problem.
 
-\begin{definition} \label{def:ASIP}
-An instance of the \emph{Anonymous Stable Invitation Problem} (\ASIP) is a pair $(N, P)$ where $N = \{a_1, a_2, \dots, a_n\}$ is a set of $n$ agents and $P$ is an $n$-tuple of preferences of agents where $P = (P_1, P_2, \dots, P_n)$.  For each agent $a_i$, we define $P_i$ to be a total preorder ($\succeq_i$) on the set of outcomes, $X = \{0, 1, 2, \dots, n\}$. An outcome $x\in (X\setminus\{0\})$ denotes the number of attendees and $x = 0$ is a special outcome of not attending. 
+
+\begin{definition}
+An instance of the Anonymous Ordinal Invitations Problem (\AOIP) is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$ and a preference $P_i$ for each agent $a_i\in N$. $P_i$ is defined as a total preorder ($\succeq_i$) on the set of outcomes, $x = \{0, 1, 2, \dots, n\}$. An outcome $x\in (X\setminus\{0\})$ denotes the number of attendees and $x = 0$ is a special outcome of not attending. 
 For any $x_1, x_2\in (X \setminus\{0\})$, $x_1 \succeq_i x_2$ is interpreted as agent $a_i$ weakly preferring attending the event if $x_1$ attendees are present (including herself) to attending if $x_2$ attendees are present (including herself).
 We use $\succ_i$ and $\sim_i$ to denote the induced strict preferences and indifference relations, respectively. 
 We drop the subscript ($i$) if it is clear from the context.
 \end{definition}
+
 We assume that for each $a_i$ and each $x\in (X\setminus\{0\})$, either $x \succ_i 0$ or $0 \succ_i x$. That is, no agent is indifferent between not attending and any other outcome. This assumption is made for convenience and does not change our technical results.
 
-
-\begin{definition}
-An instance of the Anonymous Ordinal Invitations Problem (\AOIP) is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$ and a 
 	
 	a special case of the Stable Invitations Problem (and of the Group Activity Selection Problem), in which no agent has friends or enemies. An instance of \ASIPs is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$ and an approval set $S_i$ for each agent.
 \end{definition}
