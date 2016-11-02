@@ -195,12 +195,50 @@ TODO: To related this to IR.
 %TODO: Also include anecdnote from Matt Jackson.
 
 
-\subsection{Generalization} \label{GT:sec:generalization}
-
-Let us now generalize our impossibility results to the Group Activity Selection Problem (\GASP) and the Stable Invitations Problem (\SIP). Our impossibility results hold for both problems because \AOIPs is a special case of these two problems, respectively.
+Let us now consider difference special cases of the Group Activity Selection Problem (\GASP) and the Stable Invitations Problem (\SIP). Our impossibility results hold for both problems because \AOIPs is a special case of these two problems, respectively.
 However, we present a couple of impossibility results of \GASPs and \SIPs by considering different special cases of these problems.
 
 TODO: Impossibility with inc and two activities in gasp.
+
+\begin{theorem} \label{GT:thm:impossibility_inc_gasp}
+No strategy-proof mechanism can find a stable invitation (even if it exists) given arbitrary instances of \AOIPs when the number of agents is at least two.
+\end{theorem}
+\begin{proof}
+Example~\ref{GT:eg:multiple_stable} can serve as a proof. Consider the two agents with identical preferences from the example:
+	\begin{equation*}
+		\begin{aligned}
+				P_1: 1 \succ 0 \succ 2,~~~& P_2: 1 \succ 0 \succ 2
+		\end{aligned}
+	\end{equation*}
+	Recall that $I_1 = \{a_1\}$ and $I_2 =\{a_2\}$ are the only two stable invitations provided that both agents are truthful.
+
+	Let $\mathcal{M} = (V, Z)$ be any (deterministic) mechanism.
+	If $Z(P_1, P_2) = I_1$, then $a_2$ would have an incentive to act strategically, by reporting $\hat{P}_2 (1 \succ 2 \succ 0)$ instead of $P_2$. 
+	Given $(P_1, \hat{P}_2)$, the only stable invitation is $I_2$.
+	Notice that $a_2$ strictly prefers $I_2$ over $I_1$ (because $1 \succ_2 0$) and has an incentive to misreport in this example. By symmetry, $a_1$ may act strategically if $I_2$ were to be chosen (i.e., $Z(P_1, P_2) = I_2$).
+	Therefore, no mechanism can be strategy-proof and able to find a stable invitation in this example at the same time.
+\end{proof}
+
+
+\begin{theorem} \label{GT:thm:impossibility_only_enemies}
+No strategy-proof mechanism can find a stable invitation (even if it exists) given arbitrary instances of \AOIPs when the number of agents is at least two.
+\end{theorem}
+\begin{proof}
+Example~\ref{GT:eg:multiple_stable} can serve as a proof. Consider the two agents with identical preferences from the example:
+	\begin{equation*}
+		\begin{aligned}
+				P_1: 1 \succ 0 \succ 2,~~~& P_2: 1 \succ 0 \succ 2
+		\end{aligned}
+	\end{equation*}
+	Recall that $I_1 = \{a_1\}$ and $I_2 =\{a_2\}$ are the only two stable invitations provided that both agents are truthful.
+
+	Let $\mathcal{M} = (V, Z)$ be any (deterministic) mechanism.
+	If $Z(P_1, P_2) = I_1$, then $a_2$ would have an incentive to act strategically, by reporting $\hat{P}_2 (1 \succ 2 \succ 0)$ instead of $P_2$. 
+	Given $(P_1, \hat{P}_2)$, the only stable invitation is $I_2$.
+	Notice that $a_2$ strictly prefers $I_2$ over $I_1$ (because $1 \succ_2 0$) and has an incentive to misreport in this example. By symmetry, $a_1$ may act strategically if $I_2$ were to be chosen (i.e., $Z(P_1, P_2) = I_2$).
+	Therefore, no mechanism can be strategy-proof and able to find a stable invitation in this example at the same time.
+\end{proof}
+
 
 TODO: Impossibility with just friends, no enemies, all sizes approved.
 n = 2.
