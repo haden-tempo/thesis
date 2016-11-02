@@ -52,22 +52,9 @@ An invitation $I$ is said to be \emph{individually rational} (IR) if for every a
 An invitation $I$ is said to be \emph{(Nash) stable}ß if for every agent $a_j\not\in I$ it holds that $|S \cup \{a_j\}| = (|I| + 1) \prec_j 0$ and $I$ is individually rational as well.
 
 An invitation $I$ is said to be \emph{envy-free} if for every agent $a_j\not\in I$ it holds that $|I| \prec_j 0$ and $I$ is individually rational as well.
-
 \end{definition}
 
-In words, stability states that an agent who is not invited should not wish that she had been invited in addition to those who are invited (hence the name `addition'),
-while r-ER states that an agent who is not invited should not wish that she had been invited in place of someone else who is invited (hence the name `replacement').
-These two definitions are not equivalent. 
-In most parts of this paper we only use a-ER and a-stable and refer to them simply as ER and stable. However our technical results are unchanged when we instead use r-ER and r-stable (see Section~\ref{sec:gsip_extension} for details).
-
-
-
-
-	
-	a special case of the Stable Invitations Problem (and of the Group Activity Selection Problem), in which no agent has friends or enemies. An instance of \ASIPs is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$ and an approval set $S_i$ for each agent.
-\end{definition}
-
-In this chapter we focus on finding a stable invitation whose definition was given in Section~\ref{SIP:sec:SIP:prelim} by assuming that $F_i = R_i = \emptyset$ for every agent $a_i\in N$. 
+In addition to individual rationality, stability states that an agent who is not invited should not wish to participate (even without permission of others), while envy-freeness states that an agent who is not invited should not be envy of someone who's invited. It is worth noting that these two concepts are not equivalent.
 
 Let us formally define a deterministic mechanism in the context of \ASIPs with strategic agents, and define what constitutes a strategy-proof mechanism. We later discuss in Sectino~\ref{GT:sec:randomized} why our technical results do not change when we consider randomized mechanisms.
 
