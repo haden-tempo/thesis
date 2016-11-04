@@ -162,12 +162,12 @@ We learned that when all agents have \INC-preferences, there exists a strategy-p
 No strategy-proof mechanism can find a stable assignment (even if it exists) given arbitrary instances of \GASPs even if all agents have \INC-preferences for all activities. 
 \end{theorem}
 \begin{proof} %TODO: Notation! FUCK!
-Consider two agents $N = \{1, 2\}$ and two activities $A^* = \{1, 2\}$.
+Consider two agents $N = \{1, 2\}$ and two activities $A^* = \{a_1, a_2\}$.
 	\begin{equation*}
-		P_1: (1, 2) \succ (2, 2) \succ (1, 1) \succ \void, ~~~
-		P_2: (2, 2) \succ (1, 2) \succ (2, 1).
+		P_1: (a_1, 2) \succ (a_2, 2) \succ (a_1, 1) \succ \void, ~~~
+		P_2: (a_2, 2) \succ (a_1, 2) \succ (a_2, 1).
 	\end{equation*}
-In this setting, out of nine possible assignments (each agent being assigned to one of $\{\void, 1, 2\}$), there are three stable assignments: $\pi_1$ which assigns both agents to $1$, $\pi_2$ which assigns both agents to $2$,and $\pi_3$ which assigns $1$ to $1$ and $2$ to $2$.
+In this setting, out of nine possible assignments (each agent being assigned to one of $\{\void, a_1, a_2\}$), there are three stable assignments: $\pi_1$ which assigns both agents to $a_1$, $\pi_2$ which assigns both agents to $a_2$,and $\pi_3$ which assigns $1$ to $a_1$ and $2$ to $a_2$.
 The induced preference over these three assignments can be determined from each agent's preference: 
 	\begin{equation*}
 		\pi_1 \succ_1 \pi_2 \succ_1 \pi_3, ~~~
@@ -175,7 +175,7 @@ The induced preference over these three assignments can be determined from each 
 	\end{equation*} 
 Although there are three stable assignments, a mechanism cannot choose any one of them while incentivizing the agents to act truthfully.
 
-If a mechanism chooses $\pi_1$ given $(P_1, P_2)$, then agent $2$ has an incentive to lie about her preferences by reporting $\hat{P}_2: (2, 2) \succ_2 (2, 1)$ instead (by not approving $(1, 2)$). Given $(P_1, \hat{P}_2)$, the mechanism must now choose $\pi_2$ which is the only stable assignment. 
+If a mechanism chooses $\pi_1$ given $(P_1, P_2)$, then agent $2$ has an incentive to lie about her preferences by reporting $\hat{P}_2: (a_2, 2) \succ_2 (a_2, 1) \succ_2 \void$ instead (by not approving $(1, 2)$). Given $(P_1, \hat{P}_2)$, the mechanism must now choose $\pi_2$ which is the only stable assignment. 
 By symmetry, the mechanism cannot choose $\pi_2$ because of agent $1$.
 Lastly, if the mechanism chooses $\pi_3$, then now both agents have incentives to lie. For instance, agent $1$ can report $\hat{P}_1 = (1, 2) \succ_1 (2, 2)$ instead, and $\pi_1$ and $\pi_2$ become the only stable assignments given $(\hat{P}_1, P_2)$ -- notice that agent $1$ prefers both $\pi_1, \pi_2$ to $\pi_3$. 
 
