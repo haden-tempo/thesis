@@ -77,9 +77,7 @@ A (deterministic) \emph{mechanism} $\mathcal{M}$ is a pair $(V, Z)$ where $V = (
 Let $V_{-i} = (V_1 \times \cdots \times V_{i-1} \times V_{i+1} \times \cdots \times V_{n})$ be the set of action profiles available to all agents but agent $i$. A mechanism $(V, Z)$ is said to be \emph{strategy-proof} if for all $i\in N$ it holds that $Z(P_i, v_{-i}) \succeq_i Z(v_i, v_{-i})$ for all $v_i \in V_i$ and $v_{-i} \in V_{-i}$.
 \end{definition}
 
-In words, mechanism $\mathcal{M}$ is strategy-proof if for every agent $i\in N$, truth-telling is a dominant strategy for any against any strategy profile of other agents given any type of agent $i$ (i.e., any preference of $i$). Thanks to the dominant-strategy revelation principle, we only need to consider direct mechanism in which agents simply report their types (or preferences in this setting).\footnote{TODO: To cite a reference. Perhaps GT textbook.}
-
-
+In words, mechanism $\mathcal{M}$ is strategy-proof if for every agent $i\in N$, truth-telling is a dominant strategy for any against any strategy profile of other agents given any type of agent $i$ (i.e., any preference of $i$). Thanks to the dominant-strategy revelation principle, we only need to consider direct mechanism in which agents simply report their types (or preferences in this setting).\footnote{TODO: To cite a reference. Perhaps a well-known GT textbook.}
 
 
 
@@ -227,6 +225,5 @@ While we focused on designing algorithms or proving computational hardness resul
 Our impossibility results reveal interesting aspects of preferences of agents which prevent us from obtaining strategy-proof mechanisms.  Theorem~\ref{GT:thm:impossibility} shows that agents not having \INC-preferences play an important role in \AOIP. This motivated us to consider the case where all agents have \INC-preferences, and we were able to obtain an optimal, strategy-proof mechanism that is described in blah.
 However, as Theorem~\ref{GT:thm:impossibility_inc_gasp} shows, this mechanism does not extend to the cases where two or more activities are present. Despite all agents having \INC-preferences, agents' preferences over different activities play a crucial role in this case. Lastly, we learned from Theorem~\ref{GT:thm:impossibility_only_enemies} that agents having enemies also lead to impossibility results even if agents are indifferent among sizes of solutions and friends and there is only one activity. Enemy relationship introduces combinatoric complexity in the solution space, which was observed in previous chapters as well when we investigated complexity of these problems.
 
-Although our findings answer many questions about how strategic behavior of agents affect our ability to find desirable solutions, we are left with several interesting open questions. %TODO: To add some open problems.
-
+Although our findings answer many questions about how strategic behavior of agents affect our ability to find desirable solutions, we are left with several interesting open questions. 
 
