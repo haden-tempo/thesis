@@ -59,7 +59,7 @@
 \contentsline {chapter}{\numberline {6}Strategic Agents and Mechanisms}{77}
 \contentsline {section}{\numberline {6.1}Definitions and Notation}{78}
 \contentsline {section}{\numberline {6.2}Mechanisms and Strategic Agents}{80}
-\contentsline {subsection}{\numberline {6.2.1}Randomized Mechanisms}{85}
+\contentsline {subsection}{\numberline {6.2.1}Randomized Mechanisms}{86}
 \contentsline {section}{\numberline {6.3}Discussion}{86}
-\contentsline {chapter}{\numberline {7}Discussion and Open Problems}{87}
-\contentsline {chapter}{Bibliography}{88}
+\contentsline {chapter}{\numberline {7}Discussion and Open Problems}{88}
+\contentsline {chapter}{Bibliography}{89}
