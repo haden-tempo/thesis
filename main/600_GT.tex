@@ -12,37 +12,37 @@ We study the Anonymous Ordinal Invitations Problem (\AOIP) which is motivated by
 Let us formally define the Anonymous Ordinal Invitations Problem (\AOIP).
 
 \begin{definition}
-An instance of the Anonymous Ordinal Invitations Problem (\AOIP) is given by a set of agents $N = \{a_1, a_2, \dots, a_n\}$ and a preference $P_i$ for each agent $a_i\in N$. $P_i$ is defined as a total preorder ($\succeq_i$) on the set of outcomes, $x = \{0, 1, 2, \dots, n\}$. An outcome $x\in (X\setminus\{0\})$ denotes the number of attendees and $x = 0$ is a special outcome of not attending. 
-For any $x_1, x_2\in (X \setminus\{0\})$, $x_1 \succeq_i x_2$ is interpreted as agent $a_i$ weakly preferring attending the event if $x_1$ attendees are present (including herself) to attending if $x_2$ attendees are present (including herself).
+An instance of the Anonymous Ordinal Invitations Problem (\AOIP) is given by a set of agents $N = \{1, 2, \dots, n\}$ and a preference $P_i$ for each agent $i\in N$. $P_i$ is defined as a total preorder ($\succeq_i$) on the set of outcomes, $x = \{0, 1, 2, \dots, n\}$. An outcome $x\in (X\setminus\{0\})$ denotes the number of attendees and $x = 0$ is a special outcome of not attending. 
+For any $x_1, x_2\in (X \setminus\{0\})$, $x_1 \succeq_i x_2$ is interpreted as agent $i$ weakly preferring attending the event if $x_1$ attendees are present (including herself) to attending if $x_2$ attendees are present (including herself).
 We use $\succ_i$ and $\sim_i$ to denote the induced strict preferences and indifference relations, respectively. 
 We drop the subscript ($i$) if it is clear from the context.
 \end{definition}
 
-We assume that for each $a_i$ and each $x\in (X\setminus\{0\})$, either $x \succ_i 0$ or $0 \succ_i x$. That is, no agent is indifferent between not attending and any other outcome. This assumption is made for convenience and does not change our technical results.
+We assume that for each $i$ and each $x\in (X\setminus\{0\})$, either $x \succ_i 0$ or $0 \succ_i x$. That is, no agent is indifferent between not attending and any other outcome. This assumption is made for convenience and does not change our technical results.
 
 Let us define solution concepts of \AOIP.
 
 \begin{definition} \label{GT:def:invitation}
 Given an instance of \AOIP, an \emph{invitation} $I$ is a subset of $N$, and is interpreted as the organizer inviting the agents in $I$. 
 
-An invitation $I$ is said to be \emph{individually rational} (IR) if for every agent $a_i\in I$ it holds that $|I| \succ_i 0$. 
+An invitation $I$ is said to be \emph{individually rational} (IR) if for every agent $i\in I$ it holds that $|I| \succ_i 0$. 
 
-An invitation $I$ is said to be \emph{(Nash) stable}ß if for every agent $a_j\not\in I$ it holds that $|S \cup \{a_j\}| = (|I| + 1) \prec_j 0$ and $I$ is individually rational as well.
+An invitation $I$ is said to be \emph{(Nash) stable}ß if for every agent $j\not\in I$ it holds that $|S \cup \{j\}| = (|I| + 1) \prec_j 0$ and $I$ is individually rational as well.
 \end{definition}
 Individual rationality requires that every agent who is invited be willing to participate. In addition, stability further requires that every agent who is not invited be unwilling to participate (even without permission of others).
 
 % In addition to individual rationality, stability states that an agent who is not invited should not wish to participate (even without permission of others), while envy-freeness states that an agent who is not invited should not be envy of someone who's invited. It is worth noting that these two concepts are not equivalent.
 
-For each agent $a_i$, we can naturally induce from $P_i$ her preference over the set of all invitations.
-Given $I$ and $I'$, if both contain $a_i$, then the preference relation between $I$ and $I'$ is induced from $P_i$ on $|I|$ and $|I'|$ (their cardinality). If neither contains $a_i$, then both invitations are equivalent to $0$ (the outside option). If $I$ contains $a_i$ and $I'$ does not, then the preference relation is induced from $P_i$ on $|I|$ and $0$. 
+For each agent $i$, we can naturally induce from $P_i$ her preference over the set of all invitations.
+Given $I$ and $I'$, if both contain $i$, then the preference relation between $I$ and $I'$ is induced from $P_i$ on $|I|$ and $|I'|$ (their cardinality). If neither contains $i$, then both invitations are equivalent to $0$ (the outside option). If $I$ contains $i$ and $I'$ does not, then the preference relation is induced from $P_i$ on $|I|$ and $0$. 
 We overload our notation ($\sim_i, \succeq_i, \succ_i$) for the induced preferences over invitations. 
 The preferences of agents over invitations are now well-defined.
 
 Let us define two special classes of preferences of agents, increasing (\INC) and decreasing (\DEC). Informally, agents with \INC-preferences (\DEC, respectively) prefer the event with more attendees (fewer, respectively). In particular \INC-preference implies that $n$ is the most favorable outcome and \DEC-preference that $1$ is the most favorable outcome.
 \begin{definition}\label{GT:def:preferenceTypes}
-Agent $a_i$ has an \INC-preference if there is some threshold $l_i$ such that 
+Agent $i$ has an \INC-preference if there is some threshold $l_i$ such that 
 $n \succeq_i (n-1) \succeq_i \cdots \succeq_i (l_i) \succ_i 0 \sim k$ for all $1 \leq k < l_i$. 
-Agent $a_i$ has a \DEC-preference if there is some threshold $h_i$ such that 
+Agent $i$ has a \DEC-preference if there is some threshold $h_i$ such that 
 $1 \succeq_i 2 \succeq_i \cdots \succeq_i (h_i) \succ_i 0 \sim k$ for all $h_i < k \leq n$. 
 \end{definition}
 We assume that agents can have arbitrary preferences, but these two special types of preferences play an important role in the strategic case as we shall discuss in Section~\ref{GT:sec:Mechanism}. 
@@ -55,7 +55,7 @@ To help the reader understand the setting and notation, let us present two small
 				P_1: 1 \succ 0 \succ 2,~~~ P_2: 1 \succ 0 \succ 2.		
 	\end{equation*}
 	Note that both agents have \DEC-preferences (with $h_1 = h_2 = 1$).
-	The two stable invitations are $I_1 = \{a_1\}$ and $I_2 = \{a_2\}$. 
+	The two stable invitations are $I_1 = \{1\}$ and $I_2 = \{2\}$. 
 	The empty invitation ($\emptyset$) is not stable as both agents have $1 \succ 0$ while the full invitation ($N$) is not IR. 
 \end{example}
 
@@ -64,19 +64,19 @@ To help the reader understand the setting and notation, let us present two small
 	\begin{equation*}
 				P_1: 3\succ 2 \succ 0 \succ 1,~~~ P_2: 1 \succ 0 \succ 2 \sim 3,~~~ P_3: 0 \succ 1 \sim 2 \sim 3.
 	\end{equation*}
-	Note that $a_1$ has an \INC-preference (with $l_1 = 2$) while $a_2$ has a \DEC-preference (with  $h_2 = 1$). $a_3$ is simply unwilling to attend the event (no outcome is acceptable to her).
-	Due to $a_3$, any invitation including $a_3$ is not IR. Between $a_1$ and $a_2$ only, the empty invitation is not stable due to $a_2$, $S_1 = \{a_1\}$ is not IR due to $a_1$, $S_2 = \{a_2\}$ is not stable due to $a_1$, and $\{a_1, a_2\}$ is not IR due to $a_2$.
+	Note that $1$ has an \INC-preference (with $l_1 = 2$) while $2$ has a \DEC-preference (with  $h_2 = 1$). $3$ is simply unwilling to attend the event (no outcome is acceptable to her).
+	Due to $3$, any invitation including $3$ is not IR. Between $1$ and $2$ only, the empty invitation is not stable due to $2$, $S_1 = \{1\}$ is not IR due to $1$, $S_2 = \{2\}$ is not stable due to $1$, and $\{1, 2\}$ is not IR due to $2$.
 \end{example}
 
 Let us formally define a deterministic mechanism in the context of \AOIPs with strategic agents, and define what constitutes a strategy-proof mechanism. We later discuss in Section~\ref{GT:sec:randomized} why our technical results do not change when we consider randomized mechanisms.
 
 \begin{definition} \label{GT:def:mechanism}
-Given an instance of \AOIP, we define $V_i$ (the set of available actions to $a_i$) to be the set of all preferences over $X$ where $X = \{0, 1, 2, \dots, n\}$ is the set of outcomes. 
+Given an instance of \AOIP, we define $V_i$ (the set of available actions to $i$) to be the set of all preferences over $X$ where $X = \{0, 1, 2, \dots, n\}$ is the set of outcomes. 
 A (deterministic) \emph{mechanism} $\mathcal{M}$ is a pair $(V, Z)$ where $V = (V_1 \times \cdots \times V_n)$ is the set of action profiles of all agents (i.e., $V_i$ is a subset of total preorder on $X$) and $Z: V \mapsto U$ is a mapping from each action profile to an invitation in $U$ where $U = 2^{N}$. 
-Let $V_{-i} = (V_1 \times \cdots \times V_{i-1} \times V_{i+1} \times \cdots \times V_{n})$ be the set of action profiles available to all agents but agent $a_i$. A mechanism $(V, Z)$ is said to be \emph{strategy-proof} if for all $a_i\in N$ it holds that $Z(P_i, v_{-i}) \succeq_i Z(v_i, v_{-i})$ for all $v_i \in V_i$ and $v_{-i} \in V_{-i}$.
+Let $V_{-i} = (V_1 \times \cdots \times V_{i-1} \times V_{i+1} \times \cdots \times V_{n})$ be the set of action profiles available to all agents but agent $i$. A mechanism $(V, Z)$ is said to be \emph{strategy-proof} if for all $i\in N$ it holds that $Z(P_i, v_{-i}) \succeq_i Z(v_i, v_{-i})$ for all $v_i \in V_i$ and $v_{-i} \in V_{-i}$.
 \end{definition}
 
-In words, mechanism $\mathcal{M}$ is strategy-proof if for every agent $a_i\in N$, truth-telling is a dominant strategy for any against any strategy profile of other agents given any type of agent $a_i$ (i.e., any preference of $a_i$). Due to the revelation principle, we only need to consider direct mechanism in which agents simply report their types (or preferences, in our setting). For more information, please see BLAH. (TODO).
+In words, mechanism $\mathcal{M}$ is strategy-proof if for every agent $i\in N$, truth-telling is a dominant strategy for any against any strategy profile of other agents given any type of agent $i$ (i.e., any preference of $i$). Due to the revelation principle, we only need to consider direct mechanism in which agents simply report their types (or preferences, in our setting). For more information, please see BLAH. (TODO).
 
 
 
@@ -99,12 +99,12 @@ Example~\ref{GT:eg:multiple_stable} can serve as a proof. Consider the two agent
 				P_1: 1 \succ 0 \succ 2,~~~& P_2: 1 \succ 0 \succ 2
 		\end{aligned}
 	\end{equation*}
-	Recall that $I_1 = \{a_1\}$ and $I_2 =\{a_2\}$ are the only two stable invitations provided that both agents are truthful.
+	Recall that $I_1 = \{1\}$ and $I_2 =\{2\}$ are the only two stable invitations provided that both agents are truthful.
 
 	Let $\mathcal{M} = (V, Z)$ be any (deterministic) mechanism.
-	If $Z(P_1, P_2) = I_1$, then $a_2$ would have an incentive to act strategically, by reporting $\hat{P}_2 (1 \succ 2 \succ 0)$ instead of $P_2$. 
+	If $Z(P_1, P_2) = I_1$, then $2$ would have an incentive to act strategically, by reporting $\hat{P}_2 (1 \succ 2 \succ 0)$ instead of $P_2$. 
 	Given $(P_1, \hat{P}_2)$, the only stable invitation is $I_2$.
-	Notice that $a_2$ strictly prefers $I_2$ over $I_1$ (because $1 \succ_2 0$) and has an incentive to misreport in this example. By symmetry, $a_1$ may act strategically if $I_2$ were to be chosen (i.e., $Z(P_1, P_2) = I_2$).
+	Notice that $2$ strictly prefers $I_2$ over $I_1$ (because $1 \succ_2 0$) and has an incentive to misreport in this example. By symmetry, $1$ may act strategically if $I_2$ were to be chosen (i.e., $Z(P_1, P_2) = I_2$).
 	Therefore, no mechanism can be strategy-proof and able to find a stable invitation in this example at the same time.
 \end{proof}
 
@@ -124,31 +124,31 @@ For simplicity, let us assume that each agent reports her threshold value (i.e.,
 	\State \textbf{Input:} $(N, \{L_i\})$ ~ // Assume $\{L_i\}$ is sorted in non-increasing order.
 	\For{$k := n, n-1, n-2, \dots, 2, 1$}
 		\If{$L_k \leq k$}
-			\State \textbf{return} $I = \{a_1, a_2, \dots, a_{k-1}, a_{k}\}$
+			\State \textbf{return} $I = \{1, 2, \dots, {k-1}, {k}\}$
 		\EndIf
 	\EndFor
 	\State \textbf{return} $I = \emptyset$
 \end{algorithmic}
 \end{algorithm} 
 	
-We first show that the invitation $I$ that is returned by the mechanism in line 4 is always stable (with respect to the reported threshold values, $\{L_i\}$). If the mechanism returns $I$ in line 4, we know that it contains precisely $k$ agents (i.e. $k = |I|$). Since we sorted the threshold values of agents, for each $a_i \in I$ we know that $L_i \leq L_k \leq k$, which implies that $I$ is individually rational. To see why $I$ is envy-free, for any agent $a_j\not\in I$ we know that $j > k$ (otherwise $a_j\in I$) and that $L_j \geq L_k$ (because we sorted threshold values). Furthermore, since the mechanism did not return an invitation in line 5 during the iteration when $k = j$ (recall that $k$ is iterating in decreasing order), this implies that $L_j > j$ for all $j > k$ (otherwise the mechanism would have returned a different invitation and terminated). Therefore for any $a_j\not\in I$, we conclude that $L_j > j > k$, which implies $L_j \geq k+2$. Therefore $a_j$ is envy-free of $I$ because $L_j > |I| + 1$ (i.e. even if $a_j$ joins $I$, it is still not preferred to her outside option). Therefore if the mechanism returns any invitation in line 5, then it is stable. Now suppose the mechanism does not return any invitation in line 5, but it eventually returns the empty invitation in line 9. Then $I = \emptyset$ must be stable; it is individually rational by definition. It is also envy-free because we know that $L_k > k$ for all $k \geq 1$, which implies that $L_k > 1$ for all $k$. Therefore an empty invitation is stable in this case.
+We first show that the invitation $I$ that is returned by the mechanism in line 4 is always stable (with respect to the reported threshold values, $\{L_i\}$). If the mechanism returns $I$ in line 4, we know that it contains precisely $k$ agents (i.e. $k = |I|$). Since we sorted the threshold values of agents, for each $i \in I$ we know that $L_i \leq L_k \leq k$, which implies that $I$ is individually rational. To see why $I$ is envy-free, for any agent $j\not\in I$ we know that $j > k$ (otherwise $j\in I$) and that $L_j \geq L_k$ (because we sorted threshold values). Furthermore, since the mechanism did not return an invitation in line 5 during the iteration when $k = j$ (recall that $k$ is iterating in decreasing order), this implies that $L_j > j$ for all $j > k$ (otherwise the mechanism would have returned a different invitation and terminated). Therefore for any $j\not\in I$, we conclude that $L_j > j > k$, which implies $L_j \geq k+2$. Therefore $j$ is envy-free of $I$ because $L_j > |I| + 1$ (i.e. even if $j$ joins $I$, it is still not preferred to her outside option). Therefore if the mechanism returns any invitation in line 5, then it is stable. Now suppose the mechanism does not return any invitation in line 5, but it eventually returns the empty invitation in line 9. Then $I = \emptyset$ must be stable; it is individually rational by definition. It is also envy-free because we know that $L_k > k$ for all $k \geq 1$, which implies that $L_k > 1$ for all $k$. Therefore an empty invitation is stable in this case.
 
-	Next we show that the mechanism indeed returns a maximum stable invitation given truthful threshold values (if it exists). Let $I^*$ be a maximum stable invitation, and let us focus on the iteration when $k = |I^*|$. We claim that the mechanism will return a stable invitation of size $k$.  Since $I^*$ is a stable invitation, we know that for all $a_i\in I^*$, it holds that $L_i \leq |I^*| = k$. Therefore, when the threshold values are sorted, this implies that $L_j \leq k$ for all $j\leq k$; in particular, $L_k \leq k$. Therefore the mechanism executes lines 3-4, and returns an invitation $I$ of size $k$.  In the case where the maximum stable invitation is empty, the mechanism will clearly return an empty invitation (because we have shown that the mechanism only returns a stable invitation, it would not return any invitation in line 5 but eventually execute line 9). 
+	Next we show that the mechanism indeed returns a maximum stable invitation given truthful threshold values (if it exists). Let $I^*$ be a maximum stable invitation, and let us focus on the iteration when $k = |I^*|$. We claim that the mechanism will return a stable invitation of size $k$.  Since $I^*$ is a stable invitation, we know that for all $i\in I^*$, it holds that $L_i \leq |I^*| = k$. Therefore, when the threshold values are sorted, this implies that $L_j \leq k$ for all $j\leq k$; in particular, $L_k \leq k$. Therefore the mechanism executes lines 3-4, and returns an invitation $I$ of size $k$.  In the case where the maximum stable invitation is empty, the mechanism will clearly return an empty invitation (because we have shown that the mechanism only returns a stable invitation, it would not return any invitation in line 5 but eventually execute line 9). 
 
 	Finally we show that the mechanism is strategy-proof. To show this, we will show that truth-telling is a weakly dominant strategy for any agent. 
-	Let us consider some fixed agent $a_i$ and also fix the action profile of the remaining agents to be $L_{-i}$ (which may or may not be truthful).
-	Let us assume that the mechanism sorts the threshold values $(L_i, L_{-i})$ as $L_1 \leq L_2 \leq \cdots \leq L_{i-1} \leq L_i \leq L_{i+1} \leq \cdots \leq L_n$ (since we argue for an arbitrary agent $a_i$, this assumption can be made without loss of generality).
-	Let $I_L$ denote the invitation returned by the mechanism given $(l_i, L_{-i})$ and let $k_L = |I_L|$ (i.e. when $L_i = l_i$ and thus $a_i$ is truth-telling). 
+	Let us consider some fixed agent $i$ and also fix the action profile of the remaining agents to be $L_{-i}$ (which may or may not be truthful).
+	Let us assume that the mechanism sorts the threshold values $(L_i, L_{-i})$ as $L_1 \leq L_2 \leq \cdots \leq L_{i-1} \leq L_i \leq L_{i+1} \leq \cdots \leq L_n$ (since we argue for an arbitrary agent $i$, this assumption can be made without loss of generality).
+	Let $I_L$ denote the invitation returned by the mechanism given $(l_i, L_{-i})$ and let $k_L = |I_L|$ (i.e. when $L_i = l_i$ and thus $i$ is truth-telling). 
 
-	We first consider the case where $a_i$ over-reports.  That is, we consider an action profile $(v_i, L_{-i})$ where $v_i > l_i$. Given $(v_i, L_{-i})$, let $M_1 \leq M_2 \leq \cdots \leq M_{n}$ denote the sorted list of the threshold values (we use $M$ to distinguish from the case where $a_i$ reported truthfully). Let $I_M$ denote the invitation returned by the mechanism given $(v_i, L_{-i})$ and let $k_M = |I_M|$. Between the two action profiles $(l_i, L_{-i})$ and $(v_i, L_{-i})$, the only difference (in terms of the threshold values) is between $l_i$ and $v_i$. Since $v_i > l_i$, we know that $L_j \leq M_j$ for all $j$ and in particular that $L_{k_M} \leq M_{k_M}$. If we show that $k_M \leq k_L$, then it implies that $a_i$ has no incentive to over-report because $a_i$ has an \INC-preference (hence $a_i$ weakly prefers $I_L$ to $I_M$). Suppose $k_M > k_L$ instead. Since the mechanism returns an invitation of size $k_M$ given $(v_i, L_{-i})$, we know by our construction that $M_{k_M} \leq k_M$, which in turn implies $L_{k_M} \leq k_M$ (because $L_{k_M} \leq M_{k_M}$). However, since the mechanism returns an invitation of size $k_L$ given $(l_i, L_{-i})$, this implies that $L_j > j$ for all $j > k_L$ and in particular that $L_{k_M} > k_M$.  This is a contradiction, and we conclude that $k_M \leq k_L$ if agent $a_i$ over-reports with $v_i > l_i$. 
+	We first consider the case where $i$ over-reports.  That is, we consider an action profile $(v_i, L_{-i})$ where $v_i > l_i$. Given $(v_i, L_{-i})$, let $M_1 \leq M_2 \leq \cdots \leq M_{n}$ denote the sorted list of the threshold values (we use $M$ to distinguish from the case where $i$ reported truthfully). Let $I_M$ denote the invitation returned by the mechanism given $(v_i, L_{-i})$ and let $k_M = |I_M|$. Between the two action profiles $(l_i, L_{-i})$ and $(v_i, L_{-i})$, the only difference (in terms of the threshold values) is between $l_i$ and $v_i$. Since $v_i > l_i$, we know that $L_j \leq M_j$ for all $j$ and in particular that $L_{k_M} \leq M_{k_M}$. If we show that $k_M \leq k_L$, then it implies that $i$ has no incentive to over-report because $i$ has an \INC-preference (hence $i$ weakly prefers $I_L$ to $I_M$). Suppose $k_M > k_L$ instead. Since the mechanism returns an invitation of size $k_M$ given $(v_i, L_{-i})$, we know by our construction that $M_{k_M} \leq k_M$, which in turn implies $L_{k_M} \leq k_M$ (because $L_{k_M} \leq M_{k_M}$). However, since the mechanism returns an invitation of size $k_L$ given $(l_i, L_{-i})$, this implies that $L_j > j$ for all $j > k_L$ and in particular that $L_{k_M} > k_M$.  This is a contradiction, and we conclude that $k_M \leq k_L$ if agent $i$ over-reports with $v_i > l_i$. 
 
-	Next we consider the case where $a_i$ under-reports. Similarly to the previous case, we consider an action profile $(v_i, L_{-i})$ where $v_i < l_i$. Given $(v_i, L_{-i})$, let $M_1 \leq M_2 \leq \cdots \leq M_{n}$ denote the sorted list of the threshold values (we use $M$ to distinguish from the case where $a_i$ reported truthfully). Let $I_M$ denote the invitation returned by the mechanism given $(v_i, L_{-i})$ and let $k_M = |I_M|$. Between the two action profiles $(l_i, L_{-i})$ and $(v_i, L_{-i})$, the only difference (in terms of the threshold values) is between $l_i$ and $v_i$. Since $v_i < l_i$, we know that $M_j \leq L_j$ for all $j \leq i$ and that $M_j = L_j$ for all $j > i$. 
+	Next we consider the case where $i$ under-reports. Similarly to the previous case, we consider an action profile $(v_i, L_{-i})$ where $v_i < l_i$. Given $(v_i, L_{-i})$, let $M_1 \leq M_2 \leq \cdots \leq M_{n}$ denote the sorted list of the threshold values (we use $M$ to distinguish from the case where $i$ reported truthfully). Let $I_M$ denote the invitation returned by the mechanism given $(v_i, L_{-i})$ and let $k_M = |I_M|$. Between the two action profiles $(l_i, L_{-i})$ and $(v_i, L_{-i})$, the only difference (in terms of the threshold values) is between $l_i$ and $v_i$. Since $v_i < l_i$, we know that $M_j \leq L_j$ for all $j \leq i$ and that $M_j = L_j$ for all $j > i$. 
 
-	We consider two sub-cases of under-reporting and show that in both cases $a_i$ has no incentive to under-report.  The easier case is when $a_i \in I_L$. We show that in this case $|I_M| = k_M \leq k_L = |I_L|$. Suppose $k_M > k_L$ instead. Since $a_i \in I_L$, this implies that $k_L \geq i$ (because we assumed that $L_j < L_i = l_i$ for all $j < i$). Since the mechanism returns an invitation of size $k_M$ given $(v_i, L_{-i})$, we know by our construction that $M_{k_M} \leq k_M$. Yet we showed earlier that $M_j = L_j$ for all $j > i$, which in particular implies that $M_{k_M} = L_{k_M}$ because $k_M > k_L \geq i$. However the mechanism returns an invitation of size $k_L$ given $(l_i, L_{-i})$, which implies that $L_j > j$ for all $j > k_L$ (and in particular, $L_{k_M} > k_M$). This is a contradiction, and we conclude that $k_M \leq k_L$ if $a_i$ under-reports and $a_i\in I_L$. 
+	We consider two sub-cases of under-reporting and show that in both cases $i$ has no incentive to under-report.  The easier case is when $i \in I_L$. We show that in this case $|I_M| = k_M \leq k_L = |I_L|$. Suppose $k_M > k_L$ instead. Since $i \in I_L$, this implies that $k_L \geq i$ (because we assumed that $L_j < L_i = l_i$ for all $j < i$). Since the mechanism returns an invitation of size $k_M$ given $(v_i, L_{-i})$, we know by our construction that $M_{k_M} \leq k_M$. Yet we showed earlier that $M_j = L_j$ for all $j > i$, which in particular implies that $M_{k_M} = L_{k_M}$ because $k_M > k_L \geq i$. However the mechanism returns an invitation of size $k_L$ given $(l_i, L_{-i})$, which implies that $L_j > j$ for all $j > k_L$ (and in particular, $L_{k_M} > k_M$). This is a contradiction, and we conclude that $k_M \leq k_L$ if $i$ under-reports and $i\in I_L$. 
 
-	Next we consider the other sub-case where $a_i$ under-reports and $a_i\not\in I_L$. We will show that $|I_M| = k_M < l_i$, which means that the invitation returned by the mechanism when $a_i$ under-reports is not preferred to her outside option of not attending, and therefore $a_i$ has no incentive to under-report. Suppose $k_M \geq l_i$ instead. Since $a_i \not\in I_L$, we know that $k_L < i$ and that $l_i > i$ (otherwise the mechanism would have returned an invitation of size $i$ or larger given $(l_i, L_{-i})$). Therefore $k_M \geq l_i$ implies that $k_M > i$. Since the mechanism returns $I_M$ given $(v_i, L_{-i})$, we know that $M_{k_M} \leq k_M$. However the mechanism given $(l_i, L_{-i})$ returns an invitation of size $k_L < i$, which implies that $L_{k_M} > k_M$. We earlier showed that $L_j = M_j$ for all $j > i$ if $a_i$ under-reports, and in particular we have that $L_{k_M} = M_{k_M}$. Since $L_{k_M} > k_M$ and $M_{k_M} \leq k_M$, this is a contradiction, and we conclude that if $a_i$ under-reports and $a_i\not\in I_L$ then $|I_M| = k_M < l_i$. 
+	Next we consider the other sub-case where $i$ under-reports and $i\not\in I_L$. We will show that $|I_M| = k_M < l_i$, which means that the invitation returned by the mechanism when $i$ under-reports is not preferred to her outside option of not attending, and therefore $i$ has no incentive to under-report. Suppose $k_M \geq l_i$ instead. Since $i \not\in I_L$, we know that $k_L < i$ and that $l_i > i$ (otherwise the mechanism would have returned an invitation of size $i$ or larger given $(l_i, L_{-i})$). Therefore $k_M \geq l_i$ implies that $k_M > i$. Since the mechanism returns $I_M$ given $(v_i, L_{-i})$, we know that $M_{k_M} \leq k_M$. However the mechanism given $(l_i, L_{-i})$ returns an invitation of size $k_L < i$, which implies that $L_{k_M} > k_M$. We earlier showed that $L_j = M_j$ for all $j > i$ if $i$ under-reports, and in particular we have that $L_{k_M} = M_{k_M}$. Since $L_{k_M} > k_M$ and $M_{k_M} \leq k_M$, this is a contradiction, and we conclude that if $i$ under-reports and $i\not\in I_L$ then $|I_M| = k_M < l_i$. 
 
-	In all cases we have shown that truth-telling is a weakly dominant strategy for $a_i$ regardless of what the remaining agents report. Therefore the mechanism is strategy-proof.  Combined with our previous arguments, this shows that the mechanism is able to find a maximum stable invitation (provided that all agents play their weakly dominant strategy, truth-telling). It is worth noting that sorting the reported threshold values of agents can be done in linear time as the values are ranged in $[0, n+1]$.
+	In all cases we have shown that truth-telling is a weakly dominant strategy for $i$ regardless of what the remaining agents report. Therefore the mechanism is strategy-proof.  Combined with our previous arguments, this shows that the mechanism is able to find a maximum stable invitation (provided that all agents play their weakly dominant strategy, truth-telling). It is worth noting that sorting the reported threshold values of agents can be done in linear time as the values are ranged in $[0, n+1]$.
 \end{proof} 	 
 
 %TODO: Also include anecdnote from Matt Jackson.
@@ -161,12 +161,12 @@ We learned that when all agents have \INC-preferences, there exists a strategy-p
 No strategy-proof mechanism can find a stable assignment (even if it exists) given arbitrary instances of \GASPs even if all agents have \INC-preferences for all activities. 
 \end{theorem}
 \begin{proof} %TODO: Notation! FUCK!
-Consider two agents $N = \{1, 2\}$ and two activities $A^* = \{a_1, a_2\}$.
+Consider two agents $N = \{1, 2\}$ and two activities $A^* = \{1, 2\}$.
 	\begin{equation*}
-		P_1: (a_1, 2) \succ (a_2, 2) \succ (a_1, 1) \succ \void, ~~~
-		P_2: (a_2, 2) \succ (a_1, 2) \succ (a_2, 1).
+		P_1: (1, 2) \succ (2, 2) \succ (1, 1) \succ \void, ~~~
+		P_2: (2, 2) \succ (1, 2) \succ (2, 1).
 	\end{equation*}
-In this setting, out of nine possible assignments (each agent being assigned to one of $\{\void, a_1, a_2\}$), there are three stable assignments: $\pi_1$ which assigns both agents to $a_1$, $\pi_2$ which assigns both agents to $a_2$,and $\pi_3$ which assigns $1$ to $a_1$ and $2$ to $a_2$.
+In this setting, out of nine possible assignments (each agent being assigned to one of $\{\void, 1, 2\}$), there are three stable assignments: $\pi_1$ which assigns both agents to $1$, $\pi_2$ which assigns both agents to $2$,and $\pi_3$ which assigns $1$ to $1$ and $2$ to $2$.
 The induced preference over these three assignments can be determined from each agent's preference: 
 	\begin{equation*}
 		\pi_1 \succ_1 \pi_2 \succ_1 \pi_3, ~~~
@@ -174,9 +174,9 @@ The induced preference over these three assignments can be determined from each 
 	\end{equation*} 
 Although there are three stable assignments, a mechanism cannot choose any one of them while incentivizing the agents to act truthfully.
 
-If a mechanism chooses $\pi_1$ given $(P_1, P_2)$, then agent $2$ has an incentive to lie about her preferences by reporting $\hat{P}_2: (a_2, 2) \succ_2 (a_2, 1)$ instead (by not approving $(a_1, 2)$). Given $(P_1, \hat{P}_2)$, the mechanism must now choose $\pi_2$ which is the only stable assignment. 
+If a mechanism chooses $\pi_1$ given $(P_1, P_2)$, then agent $2$ has an incentive to lie about her preferences by reporting $\hat{P}_2: (2, 2) \succ_2 (2, 1)$ instead (by not approving $(1, 2)$). Given $(P_1, \hat{P}_2)$, the mechanism must now choose $\pi_2$ which is the only stable assignment. 
 By symmetry, the mechanism cannot choose $\pi_2$ because of agent $1$.
-Lastly, if the mechanism chooses $\pi_3$, then now both agents have incentives to lie. For instance, agent $1$ can report $\hat{P}_1 = (a_1, 2) \succ_1 (a_2, 2)$ instead, and $\pi_1$ and $\pi_2$ become the only stable assignments given $(\hat{P}_1, P_2)$ -- notice that agent $1$ prefers both $\pi_1, \pi_2$ to $\pi_3$. 
+Lastly, if the mechanism chooses $\pi_3$, then now both agents have incentives to lie. For instance, agent $1$ can report $\hat{P}_1 = (1, 2) \succ_1 (2, 2)$ instead, and $\pi_1$ and $\pi_2$ become the only stable assignments given $(\hat{P}_1, P_2)$ -- notice that agent $1$ prefers both $\pi_1, \pi_2$ to $\pi_3$. 
 
 This shows that, even if all agents have \INC-preferences for all activities, it is impossible to achieve strategy-proofness and stability of a solution at the same time.
 \end{proof}
@@ -194,7 +194,7 @@ Consider two agents who do not like each other (while $F_1=F_2=\emptyset$ and bo
 	\end{equation*}
 	Clearly, the only stable invitations are $I_1 = \{1\}$ and $I_2 = \{2\}$. 
 	Let $\mathcal{M} = (V, Z)$ be any (deterministic) mechanism.	
-	If $Z(R_1, R_2) = I_1$, then $a_2$ would have an incentive to act strategically, by reporting $\hat{R}_2 = \emptyset$ instead of $R_2$. Given $(R_1, \hat{R}_2)$, $I_1$ is no longer stable, and therefore the mechanism must choose $I_2$. By symmetry, an analogous argument applies if $Z(R_1, R_2) = I_2$. This concludes the proof. 
+	If $Z(R_1, R_2) = I_1$, then $2$ would have an incentive to act strategically, by reporting $\hat{R}_2 = \emptyset$ instead of $R_2$. Given $(R_1, \hat{R}_2)$, $I_1$ is no longer stable, and therefore the mechanism must choose $I_2$. By symmetry, an analogous argument applies if $Z(R_1, R_2) = I_2$. This concludes the proof. 
 \end{proof}
 
 
@@ -208,14 +208,14 @@ Consider three agents with preferences as follows:
 \begin{equation*}
 			P_1: 3\succ 0 \succ 2 \sim 1,~~~ P_2: 2 \succ 3 \succ 2 \succ 1,~~~ P_3: 3 \succ 2 \succ 0 \succ 1
 \end{equation*}
-There are two non-empty IR invitations: $I_1 = \{a_1, a_2, a_3\}$ and $I_2 = \{a_2, a_3\}$. 
-If a mechanism chooses $I_1$ given $(P_1, P_2, P_3)$, $a_2$ can report $(2 \succ 0 \succ 3 \sim 1)$ and make $I_2$ the only non-empty IR invitation. Similarly, if a mechanism chooses $I_2$ given $(P_1, P_2, P_3)$, $a_3$ can report $(3 \succ 0 \succ 2 \sim 1)$ so as to make $I_3$ the only non-empty IR invitation. Therefore no mechanism can be strategy-proof and capable of finding IR invitations at the same time.
+There are two non-empty IR invitations: $I_1 = \{1, 2, 3\}$ and $I_2 = \{2, 3\}$. 
+If a mechanism chooses $I_1$ given $(P_1, P_2, P_3)$, $2$ can report $(2 \succ 0 \succ 3 \sim 1)$ and make $I_2$ the only non-empty IR invitation. Similarly, if a mechanism chooses $I_2$ given $(P_1, P_2, P_3)$, $3$ can report $(3 \succ 0 \succ 2 \sim 1)$ so as to make $I_3$ the only non-empty IR invitation. Therefore no mechanism can be strategy-proof and capable of finding IR invitations at the same time.
 \end{proof}
 
 
 
 \subsection{Randomized Mechanisms} \label{GT:sec:randomized}
-Although we have so far only discussed deterministic mechanisms, our impossibility results can be extended to randomized mechanisms. First we define $Z$ to be a mapping from $V$ to $\Pi(U)$ where $\Pi(U)$ denotes the set of all probability distributions over $U$. The definition of a strategy-proof mechanism must change accordingly -- we do this by adopting the axioms in the von Neumann-Morgenstern utility theorem~\cite{von1947theory}. We introduce lotteries over invitations and define preferences of agents over lotteries. Given a probability distribution over invitations, one can compute the expected cardinal utility of lotteries. We then define a strategy-proof mechanism analogously to Definition~\ref{GT:def:mechanism}: for each $a_i$, it must hold that the expected utility of $Z(P_i, v_{-i})$ is no less than the expected utility of $Z(v_i, v_{-i})$ for all $v_i\in V_i$ and for all $v_{-i} \in V_{-i}$. The impossibility result given by Theorem~\ref{GT:thm:impossibility} still holds: If $(V, Z)$ is a strategy-proof mechanism, then $Z(P_1, P_2)$ must assign zero probability to both $\{a_1\}$ and $\{a_2\}$, yet these are the only two stable invitations.  All other impossibility results we mention in this work can be extended in this manner.
+Although we have so far only discussed deterministic mechanisms, our impossibility results can be extended to randomized mechanisms. First we define $Z$ to be a mapping from $V$ to $\Pi(U)$ where $\Pi(U)$ denotes the set of all probability distributions over $U$. The definition of a strategy-proof mechanism must change accordingly -- we do this by adopting the axioms in the von Neumann-Morgenstern utility theorem~\cite{von1947theory}. We introduce lotteries over invitations and define preferences of agents over lotteries. Given a probability distribution over invitations, one can compute the expected cardinal utility of lotteries. We then define a strategy-proof mechanism analogously to Definition~\ref{GT:def:mechanism}: for each $i$, it must hold that the expected utility of $Z(P_i, v_{-i})$ is no less than the expected utility of $Z(v_i, v_{-i})$ for all $v_i\in V_i$ and for all $v_{-i} \in V_{-i}$. The impossibility result given by Theorem~\ref{GT:thm:impossibility} still holds: If $(V, Z)$ is a strategy-proof mechanism, then $Z(P_1, P_2)$ must assign zero probability to both $\{1\}$ and $\{2\}$, yet these are the only two stable invitations.  All other impossibility results we mention in this work can be extended in this manner.
 
 
 
