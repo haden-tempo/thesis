@@ -41,6 +41,7 @@
 \contentsline {subsection}{\numberline {4.2.3}$k$-EF-GASP: Finding Envy-free Assignments}{50}
 \contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{50}
 \contentsline {paragraph}{Proof of equivalence between instances.}{51}
+\contentsline {paragraph}{Proof of completeness.}{51}
 \contentsline {paragraph}{Preliminaries.}{53}
 \contentsline {paragraph}{FPT algorithm.}{53}
 \contentsline {subsection}{\numberline {4.2.4}$k$-Perfect-GASP: Finding Perfect Assignments}{54}
