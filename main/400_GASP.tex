@@ -270,6 +270,10 @@ $k$-Stable-GASP is $W[1]$-complete when all agents have increasing preferences f
 	Lastly, suppose $|W| = \binom{k}{2}$ (and from previous arguments, it is clear that the number of the indices that appear in the elements of $W$ must be exactly $k$); without loss of generality, assume $W = \{w_{i,j} : 1 \leq i < j \leq k\}$ (by re-labeling) -- this implies that $\pi$ assigns $k^2$ copies of $v_l$ to $a_l$ if $1 \leq l \leq k$, but more importantly, it implies that $(v_i, v_j) \in E$ because we create $w_{i,j}$ if and only if there is an edge between $v_i$ and $v_j$. 
 	That is, $C = \{v_1, v_2, \dots, v_k\}$ is a clique in the original instance. 
 	This completes the proof of W[1]-hardness of the problem.
+
+	\paragraph{Proof of completeness.} %TODO
+	Let us $k$-Stable-GASP to the $k$-Clique problem, which shows that $k$-Stable-GASP is in $W[1]$. 
+
 \end{proof}
 
 Unlike the case of increasing preferences, if all agents have decreasing preferences the problem admits an FPT algorithm. 

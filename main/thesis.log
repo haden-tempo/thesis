@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 NOV 2016 19:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 NOV 2016 19:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -536,11 +536,11 @@ m/m/n/10.95 .
  []
 
 [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50]
-[51] [52] [53] [54]) [55]
+[51] [52] [53] [54]) [55] [56]
 Chapter 5.
-(./500_SIP.tex [56
+(./500_SIP.tex [57
 
-] [57]
+] [58]
 Overfull \hbox (6.27542pt too wide) in paragraph at lines 70--72
 []\OT1/ptm/m/n/10.95 Theorem 17[] sum-ma-rizes the most rel-e-vant re-sults of 
 Dar-mann et al. [[]] and Lee and Shoham [[]]
@@ -553,7 +553,7 @@ Overfull \hbox (7.05106pt too wide) in paragraph at lines 72--74
 and $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/it/10.95 -Stable-Invitation
  []
 
-[58] [59] [60] [61] [62] [63] [64] [65]
+[59] [60] [61] [62] [63] [64] [65] [66]
 Overfull \hbox (5.42677pt too wide) in paragraph at lines 304--305
 []\OT1/ptm/m/n/10.95 Assume un-bounded $\OML/ztmcm/m/it/10.95 $ \OT1/ptm/m/n/1
 0.95 and $\OML/ztmcm/m/it/10.95 ^^L$\OT1/ptm/m/n/10.95 , and let us re-duce the
@@ -561,25 +561,25 @@ Overfull \hbox (5.42677pt too wide) in paragraph at lines 304--305
  weighted
  []
 
-[66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76]) [77]
+[67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]) [78]
 Chapter 6.
-(./600_GT.tex [78
+(./600_GT.tex [79
 
 ]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no Ÿ in font ptmr7t!
- [79] [80] [81] [82] [83] [84] [85] [86]
+ [80] [81] [82] [83] [84] [85] [86] [87]
 Overfull \hbox (9.21547pt too wide) in paragraph at lines 225--227
 \OT1/ptm/m/n/10.95 from ob-tain-ing strategy-proof mech-a-nisms. The-o-rem 36[]
  shows that agents not hav-ing \OT1/cmss/m/n/10.95 INC\OT1/ptm/m/n/10.95 -prefe
 rences
  []
 
-[87]) [88]
+[88]) [89]
 Chapter 7.
-(./700_Discussion.tex) (./thesis.bbl [89
+(./700_Discussion.tex) (./thesis.bbl [90
 
-] [90
+] [91
 
 ]
 Missing character: There is no Ã in font ptmr7t!
@@ -590,8 +590,12 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ƒ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
- [91] [92] [93]) [94]
-(./thesis.aux) ) 
+ [92] [93] [94]) [95]
+(./thesis.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  4446 strings out of 493014
  65528 string characters out of 6133351
@@ -600,24 +604,24 @@ Here is how much of TeX's memory you used:
  75148 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1783b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc
-}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dis
-t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
-pe1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
-mes/utmri8a.pfb>
-Output written on thesis.pdf (104 pages, 447290 bytes).
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fo
+nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
+urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/
+utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on thesis.pdf (105 pages, 447593 bytes).
 PDF statistics:
- 405 PDF objects out of 1000 (max. 8388607)
- 279 compressed objects within 3 object streams
+ 408 PDF objects out of 1000 (max. 8388607)
+ 281 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
