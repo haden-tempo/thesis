@@ -23,43 +23,43 @@
 \contentsline {subsection}{\numberline {3.2.3}Optimal Ordering within Column}{27}
 \contentsline {subsection}{\numberline {3.2.4}Main Result and Algorithm}{29}
 \contentsline {section}{\numberline {3.3}Discussion and Future Work}{31}
-\contentsline {chapter}{\numberline {4}Group Activity Selection Problem}{32}
-\contentsline {paragraph}{Related Work.}{34}
-\contentsline {section}{\numberline {4.1}Definitions and Known Results}{35}
-\contentsline {section}{\numberline {4.2}Parameterized Complexity}{38}
-\contentsline {subsection}{\numberline {4.2.1}$k$-IR-GASP: Finding Individually Rational Assignments in GASP}{38}
-\contentsline {subsection}{\numberline {4.2.2}$k$-Stable-GASP: Finding Stable Assignments}{40}
-\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{40}
-\contentsline {paragraph}{Proof of equivalence between instances.}{41}
-\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{43}
-\contentsline {paragraph}{Proof of equivalence between instances.}{43}
-\contentsline {paragraph}{Preliminaries.}{44}
-\contentsline {paragraph}{FPT Algorithm.}{44}
-\contentsline {paragraph}{Preliminaries.}{47}
-\contentsline {paragraph}{FPT Algorithm.}{48}
-\contentsline {subsection}{\numberline {4.2.3}$k$-EF-GASP: Finding Envy-free Assignments}{49}
-\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{49}
-\contentsline {paragraph}{Proof of equivalence between instances.}{49}
-\contentsline {paragraph}{Preliminaries.}{51}
-\contentsline {paragraph}{FPT algorithm.}{52}
-\contentsline {subsection}{\numberline {4.2.4}$k$-Perfect-GASP: Finding Perfect Assignments}{53}
-\contentsline {section}{\numberline {4.3}Discussion and Future Work}{54}
-\contentsline {chapter}{\numberline {5}Stable Invitations Problem}{55}
-\contentsline {section}{\numberline {5.1}Definitions and Notation}{56}
-\contentsline {section}{\numberline {5.2}Classical Complexity}{57}
-\contentsline {subsection}{\numberline {5.2.1}$k$-IR-Invitation}{58}
-\contentsline {subsection}{\numberline {5.2.2}$k$-IR-Stable}{60}
-\contentsline {section}{\numberline {5.3}Parameterized Complexity}{61}
-\contentsline {subsection}{\numberline {5.3.1}$k$-IR-Invitation}{62}
-\contentsline {subsection}{\numberline {5.3.2}$k$-Stable-Invitation}{65}
-\contentsline {section}{\numberline {5.4}Symmetric Social Relationship}{70}
-\contentsline {subsection}{\numberline {5.4.1}Symmetric $k$-IR-Invitations}{70}
-\contentsline {subsection}{\numberline {5.4.2}Symmetric $k$-Stable-Invitations}{73}
-\contentsline {section}{\numberline {5.5}Discussion and Future Work}{76}
-\contentsline {chapter}{\numberline {6}Strategic Agents and Mechanisms}{77}
-\contentsline {section}{\numberline {6.1}Definitions and Notation}{78}
-\contentsline {section}{\numberline {6.2}Mechanisms and Strategic Agents}{80}
-\contentsline {subsection}{\numberline {6.2.1}Randomized Mechanisms}{86}
-\contentsline {section}{\numberline {6.3}Discussion}{86}
-\contentsline {chapter}{\numberline {7}Discussion and Open Problems}{88}
-\contentsline {chapter}{Bibliography}{89}
+\contentsline {chapter}{\numberline {4}Group Activity Selection Problem}{33}
+\contentsline {paragraph}{Related Work.}{35}
+\contentsline {section}{\numberline {4.1}Definitions and Known Results}{36}
+\contentsline {section}{\numberline {4.2}Parameterized Complexity}{39}
+\contentsline {subsection}{\numberline {4.2.1}$k$-IR-GASP: Finding Individually Rational Assignments in GASP}{39}
+\contentsline {subsection}{\numberline {4.2.2}$k$-Stable-GASP: Finding Stable Assignments}{41}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{41}
+\contentsline {paragraph}{Proof of equivalence between instances.}{42}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{44}
+\contentsline {paragraph}{Proof of equivalence between instances.}{44}
+\contentsline {paragraph}{Preliminaries.}{45}
+\contentsline {paragraph}{FPT Algorithm.}{45}
+\contentsline {paragraph}{Preliminaries.}{48}
+\contentsline {paragraph}{FPT Algorithm.}{49}
+\contentsline {subsection}{\numberline {4.2.3}$k$-EF-GASP: Finding Envy-free Assignments}{50}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{50}
+\contentsline {paragraph}{Proof of equivalence between instances.}{50}
+\contentsline {paragraph}{Preliminaries.}{52}
+\contentsline {paragraph}{FPT algorithm.}{53}
+\contentsline {subsection}{\numberline {4.2.4}$k$-Perfect-GASP: Finding Perfect Assignments}{54}
+\contentsline {section}{\numberline {4.3}Discussion and Future Work}{55}
+\contentsline {chapter}{\numberline {5}Stable Invitations Problem}{56}
+\contentsline {section}{\numberline {5.1}Definitions and Notation}{57}
+\contentsline {section}{\numberline {5.2}Classical Complexity}{58}
+\contentsline {subsection}{\numberline {5.2.1}$k$-IR-Invitation}{59}
+\contentsline {subsection}{\numberline {5.2.2}$k$-IR-Stable}{61}
+\contentsline {section}{\numberline {5.3}Parameterized Complexity}{62}
+\contentsline {subsection}{\numberline {5.3.1}$k$-IR-Invitation}{63}
+\contentsline {subsection}{\numberline {5.3.2}$k$-Stable-Invitation}{66}
+\contentsline {section}{\numberline {5.4}Symmetric Social Relationship}{71}
+\contentsline {subsection}{\numberline {5.4.1}Symmetric $k$-IR-Invitations}{71}
+\contentsline {subsection}{\numberline {5.4.2}Symmetric $k$-Stable-Invitations}{74}
+\contentsline {section}{\numberline {5.5}Discussion and Future Work}{77}
+\contentsline {chapter}{\numberline {6}Strategic Agents and Mechanisms}{78}
+\contentsline {section}{\numberline {6.1}Definitions and Notation}{79}
+\contentsline {section}{\numberline {6.2}Mechanisms and Strategic Agents}{81}
+\contentsline {subsection}{\numberline {6.2.1}Randomized Mechanisms}{87}
+\contentsline {section}{\numberline {6.3}Discussion}{87}
+\contentsline {chapter}{\numberline {7}Discussion and Open Problems}{89}
+\contentsline {chapter}{Bibliography}{90}
