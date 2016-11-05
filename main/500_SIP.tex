@@ -577,13 +577,8 @@ We first present classical complexity results for $k$-Stable-Invitations under s
 
 
 \section{Discussion and Future Work} \label{SIP:sec:discussion}
-In this chapter, we thoroughly investigated the complexity of the Stable Invitations Problem (\SIP) for two different solution concepts -- individual rationality and (Nash) stability. We considered restrictions on inputs by limiting the number of friends and enemies each agent can have, and also studied the special case in which all agents have symmetric social relationships. 
+In this chapter, we thoroughly investigated the complexity of the Stable Invitations Problem (\SIP) for two different solution concepts -- individual rationality and (Nash) stability. We considered restrictions on inputs by limiting the number of friends and enemies each agent can have, and also studied the special case in which all agents have symmetric social relationships. In all cases we studied, classical complexity of two solution concepts did not differ at all. However, when we analyzed parameterized comlexity, their complexity results showed that finding an IR solution is much less complex a problem than finding a stable solution in all cases, whether agents have symmetric relationships or not.
 
-
-Despite the fact that the majority of the problems we consider in this work are NP-hard and that the two problems belong to the same class under classical complexity, we showed that 
-
-many special cases of the problem admit efficient FPT algorithms.
-Our results indicate that the computational complexity of \SIPs varies when its input is restricted or the solution concept changes, which is not distinguishable under the classic complexity.
 Our work leaves a few interesting open problems for future work. 
 Lee and Shoham~\cite{LEE15AAAI} considered another solution concept in which agents who are not invited are not envious of those who are invited (motivated by `envy-freeness'). It would be interesting to analyze the parameterized complexity of finding an envy-free invitation of size $k$, and compare the results with what we have in this work. In addition, analyzing the parameterized complexity of the Group Activity Selection Problem~\cite{GASP12WINE} is another interesting direction for future work. 
 
