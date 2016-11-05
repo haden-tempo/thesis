@@ -331,10 +331,10 @@ In our setting there are many experimental choices one can choose from. In what 
 
 % ===================== Linear Cost Function (Below) 
 
-\subsection{Case of Linear Cost Function} \label{bdoodle:sec:result_linear_cost}
+\subsection{Linear Cost Functions} \label{bdoodle:sec:result_linear_cost}
 Recall that the linear cost function is parameterized by some constant $\alpha>0$ and that $c_{\alpha}(j, b) = \alpha + b$. We used $\alpha = 2$ as an experimental choice, and we later discuss what we observed for different values of $\alpha$.
 
-We reasoned that Doodle becomes suboptimal if the number of time slots, $s$, is large. Therefore it is interesting to know for what ranges of $s$, Doodle is suboptimal. For some fixed $(n, s, p)$, let $C^D(n, s, p)$ be the cost of Doodle and $C^*(n, s, p)$ be the expected cost of $B^*$. We want to find the smallest critical point $S^*(n, p)$ such that for any $s \geq S^*(n, p)$ we have $C^D(n, s, p) > C^*(n, s, p)$. 
+We reasoned that Doodle becomes suboptimal when the number of time slots, $s$, gets large. Therefore it is interesting to know for what ranges of $s$, Doodle is suboptimal. For some fixed $(n, s, p)$, let $C^D(n, s, p)$ be the cost of Doodle and $C^*(n, s, p)$ be the expected cost of $B^*$. We want to find the smallest critical point $S^*(n, p)$ such that for any $s \geq S^*(n, p)$ we have $C^D(n, s, p) > C^*(n, s, p)$. 
 
 In Table~\ref{bdoodle:table:DoodleSuboptimal}, we show $S^*$ for various $(n, p)$ when $f = 1$ (i.e. the organizer requires everyone be available). For instance we find $S^*(6, .8) = 5$, which implies that Doodle is suboptimal for all $s \geq 5$ given that $n=6$ and $p=.8$. The smaller $S^*$ is, the less practical Doodle is for the corresponding $(n, p)$. 
 Across the table we can observe that $S^*$ is small when $n$ is small and/or when $p$ is high -- this agrees with our intuition.  
