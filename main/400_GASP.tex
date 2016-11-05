@@ -411,7 +411,9 @@ $k$-EF-GASP is $W[1]$-complete even if all agents have increasing preferences.
 	In addition we create $k'+1$ copies of a dummy agent $z$ such that $z$ approves all outcomes $(e_{i,j}, x)$ with $2 \leq x \leq |N|$ for all activities $e_{i,j}$ we create. 
 	
 	It is easy to see that if $\pi$ is an envy-free assignment of size $k'$, then $\pi$ cannot assign any copy of $z$ to any activity because if $\pi$ assigns any copy of $z$ to some $e_{i,j}$, then $\pi$ must assign all copies of $z$ to some activity (to avoid envy-freeness with respect to those copies) which results in the size of $\pi$ being at least $k'+1$. 
-	This in turn implies that $\pi$ cannot assign more than one agent to any $e_{i,j}$; if two or more agents are assigned to $e_{i,j}$, then all copies of $z$ must be assigned to some activity (or they would be envious) due to increasing preferences. Lastly, this implies that $\pi$ cannot assign any $v_i$ to any $e_{i,j}$ because such assignment implies $w_{i,j}$ must also be assigned to $e_{i,j}$ (due to envy-freeness and increasing preferences), resulting in more than one agent being assigned to $e_{i,j}$. With this observation, the rest of the proof follows in a straightforward manner, and we omit details. Note that completeness follows from the fact that $k$-EF-GASP is in $W[1]$. %TODO
+	This in turn implies that $\pi$ cannot assign more than one agent to any $e_{i,j}$; if two or more agents are assigned to $e_{i,j}$, then all copies of $z$ must be assigned to some activity (or they would be envious) due to increasing preferences. Lastly, this implies that $\pi$ cannot assign any $v_i$ to any $e_{i,j}$ because such assignment implies $w_{i,j}$ must also be assigned to $e_{i,j}$ (due to envy-freeness and increasing preferences), resulting in more than one agent being assigned to $e_{i,j}$. With this observation, the rest of the proof follows in a straightforward manner, and we omit details. 
+	
+	Note that completeness follows from the fact that $k$-EF-GASP is in $W[1]$.
 \end{proof}
 
 
@@ -419,7 +421,8 @@ $k$-EF-GASP is $W[1]$-complete even if all agents have increasing preferences.
 $k$-EF-GASP is $W[1]$-complete even if all agents have decreasing preferences.
 \end{theorem}
 \begin{proof}[sketch]
-	A slight modification to the reduction we used in proof of Theorem~\ref{GASP:thm:ef_gasp_w1} shows that $k$-EF-GASP is $W[1]$-hard even if all agents have decreasing preferences. We construct the same instance, but we change the approval set of each agent such that if agent $i$ approves an outcome $(a, x)$ for some activity $a$ and size $x$, then we let the agent approve all outcomes $(a, x')$ with $1 \leq x' < x$, which ensures that all agents have decreasing preferences. The rest of the proof follows in a straightforward manner, and we omit details.%TODO
+	A slight modification to the reduction we used in proof of Theorem~\ref{GASP:thm:ef_gasp_w1} shows that $k$-EF-GASP is $W[1]$-hard even if all agents have decreasing preferences. We construct the same instance, but we change the approval set of each agent such that if agent $i$ approves an outcome $(a, x)$ for some activity $a$ and size $x$, then we let the agent approve all outcomes $(a, x')$ with $1 \leq x' < x$, which ensures that all agents have decreasing preferences. The rest of the proof follows in a straightforward manner, and we omit details.
+	
 	Note that completeness follows from the fact that $k$-EF-GASP is in $W[1]$.
 \end{proof}
 
