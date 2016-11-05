@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 NOV 2016 22:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 NOV 2016 22:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -496,7 +496,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
  [5] [6] [7] [8] [9] [10] [11] [12] [13]
 [14] [15] [16] [17]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 436.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 437.
  [18]) [19]
 Chapter 3.
 (./300_Matrix.tex [20
@@ -608,7 +608,7 @@ msbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb>
 016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (104 pages, 444520 bytes).
+Output written on thesis.pdf (104 pages, 444623 bytes).
 PDF statistics:
  405 PDF objects out of 1000 (max. 8388607)
  279 compressed objects within 3 object streams

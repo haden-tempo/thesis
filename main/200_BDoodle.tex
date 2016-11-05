@@ -433,15 +433,26 @@ Entries in boldface emphasize that $e_{D} < .750$.
 \subsection{Summary of Experiments}
 While we only presented experimental results with specific values of $(n, s, p, f)$ and parameters $(\alpha, \beta, \gamma)$, we observed that Doodle is in general substantially inefficient, including (but not limited to) when one or more of the following conditions hold:
 \begin{itemize} 
+	\setlength\itemsep{-.3em}
 	\item There is a relatively small number of agents ($n \leq 10$).
 	\item There is a large number of time slots ($s \geq 15$).
 	\item Agents are relatively free ($p > .5$).
 	\item Feasibility threshold is relaxed ($f < .8$).
 	\item The cost function places more weight on \Inconveniences than \Times ($\alpha < 20$, $\beta < 5$, or $\gamma > 1.05$).
 \end{itemize}
+
+
+
 Intuitively the first four conditions affect $q_t$ (the probability that time slot $t$ is feasible) in the same way, and if $q_t$'s are high then Doodle is more likely to be inefficient because a few time slots may be sufficient for finding a feasible one. While the last condition is independent of $q_t$, the cost function determines what is being optimized, and Doodle becomes more inefficient if $c$ favors reducing \Inconveniences over reducing \Time.
 
 
+\begin{itemize} 
+	\item There is a relatively small number of agents ($n \leq 10$).
+	\item There is a large number of time slots ($s \geq 15$).
+	\item Agents are relatively free ($p > .5$).
+	\item Feasibility threshold is relaxed ($f < .8$).
+	\item The cost function places more weight on \Inconveniences than \Times ($\alpha < 20$, $\beta < 5$, or $\gamma > 1.05$).
+\end{itemize}
 
 
 \section{Discussion} \label{bdoodle:sec:Discussion}
