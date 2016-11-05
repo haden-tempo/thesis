@@ -351,7 +351,8 @@ We highlighted $8$ entries in boldface to emphasize that $S^* \leq 15$; for the 
 \caption{Critical point $S^*$ is shown for various values of $(n, p)$ when $f = 1, \alpha = 2$. Entries in boldface emphasize that $S^* \leq 15$.} \label{bdoodle:table:DoodleSuboptimal}
 \end{table}
 
-Not only do we want to know when Doodle is suboptimal, but we also want to know how inefficient Doodle is in realistic situations. For every fixed $(n, s, p)$, we define the efficiency of Doodle, $e_{D}(n,s,p)$, as the ratio of the optimal expected cost to the cost of Doodle: $e_{D}(n,s,p) = C^*(n, s, p) / C^D(n, s, p)$. 
+Not only do we want to know when Doodle is suboptimal, but we also want to know how inefficient Doodle is in realistic situations. For every fixed $(n, s, p)$, we can define {\em efficiency of Doodle}, $e_{D}(n,s,p)$, as the ratio of the optimal expected cost to the cost of Doodle: $e_{D}(n,s,p) = C^*(n, s, p) / C^D(n, s, p)$. The smaller this value is, the less efficiency Doodle is compared to the optimal Batched Doodle, for any given $(n, s, p)$.
+
 
 In Table~\ref{bdoodle:table:DoodleEfficiency} we show $e_{D}$ for the same settings of $(n, p)$ we used in Table~\ref{bdoodle:table:DoodleSuboptimal}. For this experiment we used $s = 15$ and $f = 1$. If $e_{D} = 1$ Doodle is optimal, and if $e_{D}$ is close to zero then Doodle is very inefficient. We find that $e_{D}(2, .8) = .270$, which implies that Doodle is very inefficient in this case; on the other hand $e_{D}(10, .5) = 1$, in which case Doodle is optimal. Across the table we observe the same pattern we observed before -- for small $n$ and high $p$, Doodle is substantially inefficient.
 \begin{table}[h]  % \small

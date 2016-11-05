@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 NOV 2016 22:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 NOV 2016 22:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -494,18 +494,17 @@ n input line 76.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 101.
  [5] [6] [7] [8] [9] [10] [11] [12] [13]
-[14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
+[14] [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
  []
 
-[16]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [17]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 435.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 436.
  [18]) [19]
 Chapter 3.
 (./300_Matrix.tex [20
@@ -617,7 +616,7 @@ msbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb>
 016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (104 pages, 444767 bytes).
+Output written on thesis.pdf (104 pages, 444877 bytes).
 PDF statistics:
  405 PDF objects out of 1000 (max. 8388607)
  279 compressed objects within 3 object streams
