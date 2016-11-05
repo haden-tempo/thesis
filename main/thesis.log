@@ -569,7 +569,7 @@ Chapter 6.
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no Ÿ in font ptmr7t!
  [81] [82] [83] [84] [85] [86] [87] [88] [89]
-Overfull \hbox (9.21547pt too wide) in paragraph at lines 225--227
+Overfull \hbox (9.21547pt too wide) in paragraph at lines 224--226
 \OT1/ptm/m/n/10.95 from ob-tain-ing strategy-proof mech-a-nisms. The-o-rem 36[]
  shows that agents not hav-ing \OT1/cmss/m/n/10.95 INC\OT1/ptm/m/n/10.95 -prefe
 rences
@@ -613,7 +613,7 @@ msbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb>
 016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (104 pages, 444072 bytes).
+Output written on thesis.pdf (104 pages, 444107 bytes).
 PDF statistics:
  405 PDF objects out of 1000 (max. 8388607)
  279 compressed objects within 3 object streams
