@@ -5,45 +5,45 @@ The style file: plain.bst
 Database file #1: thesis.bib
 Warning--empty journal in Borda
 Warning--empty journal in st1997satisfying
-You've used 46 entries,
+You've used 47 entries,
             2118 wiz_defined-function locations,
-            790 strings with 12310 characters,
-and the built_in function-call counts, 18494 in all, are:
-= -- 1896
-> -- 764
-< -- 25
-+ -- 305
-- -- 252
-* -- 1250
-:= -- 2849
-add.period$ -- 151
-call.type$ -- 46
-change.case$ -- 257
+            794 strings with 12411 characters,
+and the built_in function-call counts, 18961 in all, are:
+= -- 1950
+> -- 771
+< -- 26
++ -- 308
+- -- 254
+* -- 1273
+:= -- 2910
+add.period$ -- 155
+call.type$ -- 47
+change.case$ -- 261
 chr.to.int$ -- 0
-cite$ -- 48
-duplicate$ -- 768
-empty$ -- 1489
-format.name$ -- 252
-if$ -- 4047
+cite$ -- 49
+duplicate$ -- 793
+empty$ -- 1533
+format.name$ -- 254
+if$ -- 4161
 int.to.chr$ -- 0
-int.to.str$ -- 46
-missing$ -- 48
-newline$ -- 232
-num.names$ -- 98
-pop$ -- 305
+int.to.str$ -- 47
+missing$ -- 49
+newline$ -- 237
+num.names$ -- 100
+pop$ -- 312
 preamble$ -- 1
-purify$ -- 214
+purify$ -- 217
 quote$ -- 0
-skip$ -- 590
+skip$ -- 611
 stack$ -- 0
-substring$ -- 1337
-swap$ -- 262
-text.length$ -- 25
+substring$ -- 1382
+swap$ -- 275
+text.length$ -- 26
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 178
+type$ -- 182
 warning$ -- 2
-while$ -- 192
-width$ -- 48
-write$ -- 517
+while$ -- 197
+width$ -- 49
+write$ -- 529
 (There were 2 warnings)

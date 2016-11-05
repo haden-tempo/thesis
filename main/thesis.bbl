@@ -170,6 +170,13 @@ Russell Impagliazzo and Ramamohan Paturi.
 N.~R. Jennings, A.~J. Jackson, and London~E Ns.
 \newblock Agent-based meeting scheduling: A design and implementation, 1995.
 
+\bibitem{lee2014algorithmic}
+Hooyeon Lee.
+\newblock Algorithmic and game-theoretic approaches to group scheduling.
+\newblock In {\em Proceedings of the 2014 international conference on
+  Autonomous agents and multi-agent systems}, pages 1709--1710. International
+  Foundation for Autonomous Agents and Multiagent Systems, 2014.
+
 \bibitem{lee14doodle}
 Hooyeon Lee and Yoav Shoham.
 \newblock Optimizing time and convenience in group scheduling.
