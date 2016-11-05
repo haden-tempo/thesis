@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {3.2.2}Inspection of Entire Column}{25}
 \contentsline {subsection}{\numberline {3.2.3}Optimal Ordering within Column}{27}
 \contentsline {subsection}{\numberline {3.2.4}Main Result and Algorithm}{29}
-\contentsline {section}{\numberline {3.3}Discussion and Future Work}{31}
+\contentsline {section}{\numberline {3.3}Discussion}{31}
 \contentsline {chapter}{\numberline {4}Group Activity Selection Problem}{33}
 \contentsline {paragraph}{Related Work.}{35}
 \contentsline {section}{\numberline {4.1}Definitions and Known Results}{36}
@@ -45,7 +45,7 @@
 \contentsline {paragraph}{Preliminaries.}{53}
 \contentsline {paragraph}{FPT algorithm.}{53}
 \contentsline {subsection}{\numberline {4.2.4}$k$-Perfect-GASP: Finding Perfect Assignments}{54}
-\contentsline {section}{\numberline {4.3}Discussion and Future Work}{55}
+\contentsline {section}{\numberline {4.3}Discussion}{55}
 \contentsline {chapter}{\numberline {5}Stable Invitations Problem}{57}
 \contentsline {section}{\numberline {5.1}Definitions and Notation}{58}
 \contentsline {section}{\numberline {5.2}Classical Complexity}{59}
@@ -57,7 +57,7 @@
 \contentsline {section}{\numberline {5.4}Symmetric Social Relationship}{72}
 \contentsline {subsection}{\numberline {5.4.1}Symmetric $k$-IR-Invitations}{72}
 \contentsline {subsection}{\numberline {5.4.2}Symmetric $k$-Stable-Invitations}{75}
-\contentsline {section}{\numberline {5.5}Discussion and Future Work}{78}
+\contentsline {section}{\numberline {5.5}Discussion}{78}
 \contentsline {chapter}{\numberline {6}Strategic Agents and Mechanisms}{80}
 \contentsline {section}{\numberline {6.1}Definitions and Notation}{81}
 \contentsline {section}{\numberline {6.2}Mechanisms and Strategic Agents}{83}
