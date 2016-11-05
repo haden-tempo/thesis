@@ -59,9 +59,9 @@ We do not know of the values (or realizations) of the entries of $A$, as they ar
 
  Because we are interested in determining feasibility of $A$ with minimum number of inspections, there are certain ``unnecessary inspections'' that an optimal strategy must avoid.
  For instance, if a certain entry $a_{r,c}$ is found to be unsuccessful (i.e., $a_{r,c} = 0$ is realized), then there is no need to inspect any other entry from the same column because the column is already known to be infeasible. Similarly, if a certain column is found to be feasible (which implies $A$ is feasible) or if all columns are found to be infeasible (which implies $A$ is infeasible), then there is no need to inspect any other entries of the matrix. Lastly, if $p_{r,c} = 0$ or $p_{r,c} = 1$, then there is no need to inspect the entry $a_{r,c}$ because we already know its realization with probability $1$.
- Therefore, without loss of generality, we will assume that $p_{r,c} \in (0,1)$ (i.e., $p_{r,c}\neq 0,1$) in this work. 
+ Therefore, without loss of generality, we will assume that $p_{r,c} \in (0,1)$.
 
- Let us define what constitutes a solution to the problem. 
+ Let us define what constitutes a solution to the problem.  Informally, a clear description of how one should inspect a given matrix suffices. 
  \begin{definition}[Inspection policy]
  	Given an input instance $(A,P_{A})$, a solution is any permutation of the entries of $A$, and we call it an ``inspection policy'' (or simply, a ``policy'').
  \end{definition}
