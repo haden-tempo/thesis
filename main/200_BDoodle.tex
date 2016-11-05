@@ -356,7 +356,8 @@ Not only do we want to know when Doodle is suboptimal, but we also want to know 
 
 
 In Table~\ref{bdoodle:table:DoodleEfficiency} we show $e_{D}$ for the same settings of $(n, p)$ we used in Table~\ref{bdoodle:table:DoodleSuboptimal}. For this experiment we used $s = 15$ and $f = 1$. If $e_{D} = 1$ Doodle is optimal, and if $e_{D}$ is close to zero then Doodle is very inefficient. We find that $e_{D}(2, .8) = .270$, which implies that Doodle is very inefficient in this case; on the other hand $e_{D}(10, .5) = 1$, in which case Doodle is optimal. Across the table we observe the same pattern we observed before -- for small $n$ and high $p$, Doodle is substantially inefficient.
-\begin{table}[h]  % \small
+\begin{table}[h]  
+	\small
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|}
 	\hline
@@ -374,7 +375,7 @@ Here we show $e_{D}$ values for the same set of $(n, p)$ as in Table~\ref{bdoodl
 Previously we highlighted four entries with $e_{D} < .750$ when $f = 1$ in Table~~\ref{bdoodle:table:DoodleEfficiency}; when $f = .7$ the number of entires with $e_{D} < .750$ doubled to eight. 
 Note that the first column is identical between the two tables; this is because $f = .7$ still requires both agents to be available when $n = 2$. 
 Also notice that $e_{D}$ is surprisingly low in the first row of Table~\ref{bdoodle:table:DoodleEfficiency-lower-attendance} across all columns. This shows that regardless of the number of invitees, Doodle is significantly inefficient when the invitees are highly available ($p \geq .8$) and the organizer has a relaxed feasibility threshold.
-\begin{table}[h]  % \small
+\begin{table}[h]  \small
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|}
 	\hline
@@ -392,7 +393,7 @@ We ran experiments with different values of $(n, s, p, f, \alpha)$, and observed
 % ===================== Other Cost Functions (Below) 
 
 %\balancecolumns
-\subsection{Case of Other Cost Functions}
+\subsection{Other Cost Functions}
 We present some of the experimental results we obtained with different cost functions, namely the time-averse cost function and the inconvenience-averse cost function. As the names suggest, the former places more weight on optimizing \Time, while the latter on optimizing \Inconvenience. \\
 
 For the time-averse cost function (recall $c_{\beta}(j, b) = \beta^j \cdot b$), we chose $\beta = 2$ as an experimental choice. Notice that the cost increases exponentially for later iterations, which forces the organizer to send out a small number of batches (as in Doodle). We ran the same set of experiments as before to measure efficient of Doodle, $e_{D}$. 
