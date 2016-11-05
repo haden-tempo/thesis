@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 NOV 2016 14:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 NOV 2016 15:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -246,6 +246,19 @@ LaTeX Info: Redefining \hbar on input line 50.
 )
 LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 11.
 
+(/usr/local/texlive/2016/texmf-dist/tex/latex/quotchap/quotchap.sty
+Package: quotchap 2012/10/20 v1.1 Decorative Chapter Headings with Quotes
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/05/09 v1.1c Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 144.
+)
+\@quotebox=\box29
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
@@ -254,9 +267,9 @@ nment
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count103
 \float@exts=\toks30
-\float@box=\box29
+\float@box=\box30
 \@float@everytoks=\toks31
-\@floatcapt=\box30
+\@floatcapt=\box31
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
@@ -292,19 +305,19 @@ Document Style - pseudocode environments for use with the `algorithmicx' style
  (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 78.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -313,7 +326,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count117
 \scratchdimen=\dimen116
-\scratchbox=\box31
+\scratchbox=\box32
 \nofMPsegments=\count118
 \nofMParguments=\count119
 \everyMPshowfont=\toks33
@@ -358,47 +371,54 @@ e
 [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 85.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 88.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 85.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 88.
  [2]
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 85
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 88
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 85
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 88
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 85
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 88
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 85
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 88
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 85.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 85.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 85.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
  [3]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 86.
+LaTeX Font Info:    Try loading font information for T1+pbk on input line 89.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1pbk.fd
+File: t1pbk.fd 2001/06/04 font definitions for T1/pbk.
+)
+LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <20.74> not available
+(Font)              Font shape `T1/pbk/db/n' tried instead on input line 89.
+LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <100> not available
+(Font)              Font shape `T1/pbk/db/n' tried instead on input line 89.
 
 (./000_abstract.tex [4
 
@@ -431,8 +451,6 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 
 ]
 Chapter 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 95.
 (./100_Intro.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
@@ -463,14 +481,17 @@ ps-converted-to.pdf plots/pareto_scatter_fin.eps>
 (epstopdf)             \includegraphics on input line 59.
 Package epstopdf Info: Output file is already uptodate.
 
-<plots/pareto_scatter_fin-eps-converted-to.pdf, id=52, 718.685pt x 331.2375pt>
+<plots/pareto_scatter_fin-eps-converted-to.pdf, id=54, 718.685pt x 331.2375pt>
 File: plots/pareto_scatter_fin-eps-converted-to.pdf Graphic file (type pdf)
 
 <use plots/pareto_scatter_fin-eps-converted-to.pdf>
 Package pdftex.def Info: plots/pareto_scatter_fin-eps-converted-to.pdf used on 
 input line 59.
 (pdftex.def)             Requested size: 344.96487pt x 158.99219pt.
- [3 <./plots/pareto_scatter_fin-eps-converted-to.pdf>]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 Package epstopdf Info: Source file: <plots/pareto_objective_fin.eps>
 (epstopdf)                    date: 2013-10-10 17:45:23
 (epstopdf)                    size: 21574 bytes
@@ -483,21 +504,22 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 76.
 Package epstopdf Info: Output file is already uptodate.
 
-<plots/pareto_objective_fin-eps-converted-to.pdf, id=62, 718.685pt x 331.2375pt
+<plots/pareto_objective_fin-eps-converted-to.pdf, id=55, 718.685pt x 331.2375pt
 >
 File: plots/pareto_objective_fin-eps-converted-to.pdf Graphic file (type pdf)
  <use plots/pareto_objective_fin-eps-converted-to.pdf>
 Package pdftex.def Info: plots/pareto_objective_fin-eps-converted-to.pdf used o
 n input line 76.
 (pdftex.def)             Requested size: 344.96487pt x 158.99219pt.
- [4 <./plots/pareto_objective_fin-eps-converted-to.pdf>]
+ [3] [4 <./plots/pareto_scatter_fin-eps-converted-to.pdf> <./plots/pareto_objec
+tive_fin-eps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 101.
- [5] [6] [7] [8] [9] [10] [11] [12] [13]
-[14] [15] [16] [17]
+ [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 436.
- [18]) [19]
+ [18])
+[19]
 Chapter 3.
 (./300_Matrix.tex [20
 
@@ -519,12 +541,12 @@ Dar-mann et al. [[]] and Lee and Shoham [[]]
 
 
 Overfull \hbox (1.57607pt too wide) in paragraph at lines 72--74
-\OT1/ptm/b/n/10.95 Theorem 17. \OT1/ptm/m/it/10.95 [Lee and Shoham [[]] and Dar
--mann et al. [[]]] $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/it/10.95 -IR-Invitation 
-and $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/it/10.95 -Stable-Invitation
+[]\OT1/ptm/b/n/10.95 Theorem 17. []\OT1/ptm/m/it/10.95 [Lee and Shoham [[]] and
+ Dar-mann et al. [[]]] $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/it/10.95 -IR-Invitat
+ion and $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/it/10.95 -Stable-Invitation
  []
 
-[59] [60] [61] [62] [63]
+[59] [60] [61] [62] [63] [64]
 Overfull \hbox (5.42677pt too wide) in paragraph at lines 278--279
 []\OT1/ptm/m/n/10.95 Assume un-bounded $\OML/ztmcm/m/it/10.95 $ \OT1/ptm/m/n/1
 0.95 and $\OML/ztmcm/m/it/10.95 ^^L$\OT1/ptm/m/n/10.95 , and let us re-duce the
@@ -532,14 +554,14 @@ Overfull \hbox (5.42677pt too wide) in paragraph at lines 278--279
  weighted
  []
 
-[64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75]) [76]
+[65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75]) [76] [77]
 Chapter 6.
-(./600_GT.tex [77
+(./600_GT.tex [78
 
-]
+] [79]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no Ÿ in font ptmr7t!
- [78] [79] [80] [81] [82] [83] [84] [85] [86]
+ [80] [81] [82] [83] [84] [85] [86] [87]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -550,9 +572,9 @@ Overfull \hbox (9.21547pt too wide) in paragraph at lines 226--228
 rences
  []
 
-) [87]
+[88]) [89]
 Chapter 7.
-(./700_Discussion.tex) (./thesis.bbl [88
+(./700_Discussion.tex) (./thesis.bbl [90
 
 ]
 Missing character: There is no Ã in font ptmr7t!
@@ -563,17 +585,17 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ƒ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
- [89
+ [91
 
-] [90]) [91] (./thesis.aux) ) 
+] [92]) [93] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 4422 strings out of 493014
- 65057 string characters out of 6133351
- 130065 words of memory out of 5000000
- 7752 multiletter control sequences out of 15000+600000
- 76255 words of font info for 167 fonts, out of 8000000 for 9000
+ 4561 strings out of 493014
+ 67129 string characters out of 6133351
+ 133430 words of memory out of 5000000
+ 7877 multiletter control sequences out of 15000+600000
+ 77585 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,10n,24p,1783b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,24p,1783b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvip
 s/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
@@ -582,16 +604,17 @@ cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ss10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
 10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts
-/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (102 pages, 442224 bytes).
+msbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/bookman/ubkd8a.p
+fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fon
+ts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/u
+rw/times/utmri8a.pfb>
+Output written on thesis.pdf (104 pages, 457455 bytes).
 PDF statistics:
- 398 PDF objects out of 1000 (max. 8388607)
- 274 compressed objects within 3 object streams
+ 409 PDF objects out of 1000 (max. 8388607)
+ 282 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
