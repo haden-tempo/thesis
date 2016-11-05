@@ -61,7 +61,7 @@ We do not know of the values (or realizations) of the entries of $A$, as they ar
  For instance, if a certain entry $a_{r,c}$ is found to be unsuccessful (i.e., $a_{r,c} = 0$ is realized), then there is no need to inspect any other entry from the same column because the column is already known to be infeasible. Similarly, if a certain column is found to be feasible (which implies $A$ is feasible) or if all columns are found to be infeasible (which implies $A$ is infeasible), then there is no need to inspect any other entries of the matrix. Lastly, if $p_{r,c} = 0$ or $p_{r,c} = 1$, then there is no need to inspect the entry $a_{r,c}$ because we already know its realization with probability $1$.
  Therefore, without loss of generality, we will assume that $p_{r,c} \in (0,1)$.
 
- Let us define what constitutes a solution to the problem.  Informally, a clear description of how one should inspect a given matrix suffices. 
+ Let us define what constitutes a solution to the problem.  Informally, a clear description of how one should inspect a given matrix suffices -- any permutation of entries of the matrix.
  \begin{definition}[Inspection policy]
  	Given an input instance $(A,P_{A})$, a solution is any permutation of the entries of $A$, and we call it an ``inspection policy'' (or simply, a ``policy'').
  \end{definition}
@@ -71,13 +71,13 @@ We do not know of the values (or realizations) of the entries of $A$, as they ar
  Note that there are $(nm)!$ permutations of the entries of $A$, and therefore exhaustive search for an optimal permutation will not produce an efficient algorithm. 
 
  \subsection{Example} \label{matrix:sec:example}
-Consider the 2-by-2 matrix of Bernoulli random variables whose probability of success is given by $P_A$ as follows. In group scheduling, this corresponds to two agents and a set of two date/time options being considered.
+Consider the 2-by-2 random matrix whose probability of success is given by $P_A$ as follows. In group scheduling, this corresponds to two agents and a set of two date/time options being considered.
  \begin{equation*}
  A = 
  	\begin{bmatrix}
  		a_{1,1}  & a_{1, 2} \\
  		a_{2,1}  & a_{2, 2}
- 	\end{bmatrix},
+ 	\end{bmatrix}, ~~~
  P_A = 
  	\begin{bmatrix}
  		0.6  & 0.7  \\
