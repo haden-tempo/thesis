@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 NOV 2016 14:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 NOV 2016 14:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -403,16 +403,16 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (./000_abstract.tex [4
 
 
-]) [5] (./001_ack.tex) [6
+]) [5] (./001_ack.tex [6
 
-] (./thesis.toc [7
+]) [7] (./thesis.toc [8
 
 ])
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- [8]
-(./thesis.lot
+
+[9] (./thesis.lot
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -421,13 +421,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 \tf@lot=\write4
 \openout4 = `thesis.lot'.
 
- [9
+ [10
 
 ] (./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [10
+ [11
 
 ]
 Chapter 1.
@@ -463,7 +463,7 @@ ps-converted-to.pdf plots/pareto_scatter_fin.eps>
 (epstopdf)             \includegraphics on input line 59.
 Package epstopdf Info: Output file is already uptodate.
 
-<plots/pareto_scatter_fin-eps-converted-to.pdf, id=48, 718.685pt x 331.2375pt>
+<plots/pareto_scatter_fin-eps-converted-to.pdf, id=52, 718.685pt x 331.2375pt>
 File: plots/pareto_scatter_fin-eps-converted-to.pdf Graphic file (type pdf)
 
 <use plots/pareto_scatter_fin-eps-converted-to.pdf>
@@ -483,7 +483,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 76.
 Package epstopdf Info: Output file is already uptodate.
 
-<plots/pareto_objective_fin-eps-converted-to.pdf, id=59, 718.685pt x 331.2375pt
+<plots/pareto_objective_fin-eps-converted-to.pdf, id=62, 718.685pt x 331.2375pt
 >
 File: plots/pareto_objective_fin-eps-converted-to.pdf Graphic file (type pdf)
  <use plots/pareto_objective_fin-eps-converted-to.pdf>
@@ -588,10 +588,10 @@ msbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb>
 016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (101 pages, 438918 bytes).
+Output written on thesis.pdf (102 pages, 442224 bytes).
 PDF statistics:
- 395 PDF objects out of 1000 (max. 8388607)
- 272 compressed objects within 3 object streams
+ 398 PDF objects out of 1000 (max. 8388607)
+ 274 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
