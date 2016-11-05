@@ -11,7 +11,7 @@ We study the Anonymous Ordinal Invitations Problem (\AOIP) which is motivated by
 \section{Definitions and Notation} \label{GT:sec:prelim}
 
 Let us formally define the Anonymous Ordinal Invitations Problem (\AOIP).
-Recall that in \GASPs and \SIPs we assumed that agents are indifferent among any approved size of a solution -- which is a simplifying assumption that makes the problems computationally less complex, but most of technical results were hardness results. Yet the problems are still well-defined even though we assume that agents have ordinal preferences over sizes of a solution. 
+Recall that in \GASPs and \SIPs we assumed that agents are indifferent among any approved size of a solution -- which is a simplifying assumption that makes the problems computationally less complex, but most of technical results were hardness results. Yet the problems are still well-defined even though we assume that agents have ordinal preferences over sizes of a solution. In this chapter, agents are not necessarily indifferent among all sizes that are acceptable to them. 
 
 \begin{definition}
 An instance of the Anonymous Ordinal Invitations Problem (\AOIP) is given by a set of agents $N = \{1, 2, \dots, n\}$ and a preference $P_i$ for each agent $i\in N$. $P_i$ is defined as a total preorder ($\succeq_i$) on the set of outcomes, $x = \{0, 1, 2, \dots, n\}$. An outcome $x\in (X\setminus\{0\})$ denotes the number of attendees and $x = 0$ is a special outcome of not attending. 
@@ -32,8 +32,6 @@ An invitation $I$ is said to be \emph{individually rational} (IR) if for every a
 An invitation $I$ is said to be \emph{(Nash) stable}ß if for every agent $j\not\in I$ it holds that $|S \cup \{j\}| = (|I| + 1) \prec_j 0$ and $I$ is individually rational as well.
 \end{definition}
 Individual rationality requires that every agent who is invited be willing to participate. In addition, stability further requires that every agent who is not invited be unwilling to participate (even without permission of others).
-
-% In addition to individual rationality, stability states that an agent who is not invited should not wish to participate (even without permission of others), while envy-freeness states that an agent who is not invited should not be envy of someone who's invited. It is worth noting that these two concepts are not equivalent.
 
 For each agent $i$, we can naturally induce from $P_i$ her preference over the set of all invitations.
 Given $I$ and $I'$, if both contain $i$, then the preference relation between $I$ and $I'$ is induced from $P_i$ on $|I|$ and $|I'|$ (their cardinality). If neither contains $i$, then both invitations are equivalent to $0$ (the outside option). If $I$ contains $i$ and $I'$ does not, then the preference relation is induced from $P_i$ on $|I|$ and $0$. 
