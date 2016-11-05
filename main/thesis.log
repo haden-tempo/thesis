@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 NOV 2016 21:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 NOV 2016 22:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -569,7 +569,7 @@ Chapter 6.
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no Ÿ in font ptmr7t!
  [81] [82] [83] [84] [85] [86] [87] [88] [89]
-Overfull \hbox (9.21547pt too wide) in paragraph at lines 226--228
+Overfull \hbox (9.21547pt too wide) in paragraph at lines 225--227
 \OT1/ptm/m/n/10.95 from ob-tain-ing strategy-proof mech-a-nisms. The-o-rem 36[]
  shows that agents not hav-ing \OT1/cmss/m/n/10.95 INC\OT1/ptm/m/n/10.95 -prefe
 rences
@@ -592,10 +592,10 @@ Missing character: There is no ½ in font ptmr7t!
 
 ] [93]) [94] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 4417 strings out of 493014
- 64960 string characters out of 6133351
- 131049 words of memory out of 5000000
- 7748 multiletter control sequences out of 15000+600000
+ 4418 strings out of 493014
+ 64982 string characters out of 6133351
+ 131053 words of memory out of 5000000
+ 7749 multiletter control sequences out of 15000+600000
  75148 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1783b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -613,7 +613,7 @@ msbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb>
 016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (104 pages, 443954 bytes).
+Output written on thesis.pdf (104 pages, 444072 bytes).
 PDF statistics:
  405 PDF objects out of 1000 (max. 8388607)
  279 compressed objects within 3 object streams
