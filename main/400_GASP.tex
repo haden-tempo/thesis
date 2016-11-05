@@ -321,7 +321,7 @@ Without loss of generality we can assume that $N'_d = \emptyset$ for all $d\in [
 
 Now suppose that for some color $d\in [1,q]$ and agent $i\in N_d$ and some color $d'\in [q+1, l]$ and some activity $a_j\in A^*_{d'}$, we have $u_i(a_j) \geq 1$. If $i$ is assigned to $\void$ (instead of $a_{d_j}$) and $a_j$ is not used (no agents is assigned to it), then the assignment cannot be stable as $i$ approves $(a_j, 1)$. That is, any compatible, stable assignment must assign $i$ to $a_{d_j}$ and/or use activity $a_j$. If we consider agents in $X = \cup_{d\in [1,q]} N_d$ and activities in $Y = \cup_{d'\in [q+1,l]} A^*_{d'}$ as vertices and there is an edge between $(i, a_j)$ if and only if $u_i(a_j) \geq 1$ where $i\in X$ and $a_j \in Y$ (as a bipartite graph), finding a compatible assignment is equivalent to finding a vertex cover such that it chooses exactly $k_d$ vertices from each $N_d$ with $d\in [1, q]$ and exactly $1$ vertex from each $A^*_{d'}$ with $d'\in [q+1, l]$. Because the total number of vertices to be selected is bounded above by $k+l$, one can use a bounded search tree to determine whether a vertex cover of a small size exists or not in FPT time (i.e., exponential only in $k$ but polynomial in $n,p$). If vertex $i$ from $X$ is chosen then we assign $i$ to the popular activity of the same color and if vertex $a_j$ from $Y$ is chosen then we assign the agents of the same color to it. It is easy to verify that a compatible, stable assignment exists if and only if a vertex cover (with the aforementioned constraints) exists in this bipartite graph. 
 
-While we omit the details, it is straightforward to verify that our algorithm would not reject any coloring $c$ which is compatible with at least one stable assignment.%TODO
+While we omit the details, it is straightforward to verify that our algorithm would not reject any coloring $c$ which is compatible with at least one stable assignment.
 \end{proof}
 
 Lastly, we consider another special case of \GASPs when all activities are (pairwise) equivalent.
@@ -395,8 +395,9 @@ The problem remains to be $W[1]$-complete even if each agent approves at most on
 	Let $\pi$ be an assignment such that $\pi$ assigns $k^2$ copies of $v_i$ to $a_i$ if $i \leq k$ and $w_{i,j}$ to $e_{i,j}$ if $1 \leq i,j \leq k$ and assigns all other agents to the void activity. Clearly $\pi$ is individually rational by the construction of approval sets; $\pi$ is also envy-free because no copy of $v_i$ with $i > k$ or $w_{i,j}$ with $i>k$ or $j>k$ wishes to replace any other agent who is assigned to a non-void activity. This completes the proof of $W[1]$-hardness.
 	
 	Note that in our reduction each agent approves at most one size per activity, proving the second statement in the theorem.
-	
-	To show completeness, one can reduce $k$-EF-GASP to the colored $k$-clique problem which is known to be W[1]-complete (we omit the details).%TODO
+
+	\paragraph{Proof of completeness.} %TODO
+	To show completeness, one can reduce $k$-EF-GASP to the colored $k$-clique problem which is known to be W[1]-complete (we omit the details).
 \end{proof}
 
 Although $k$-EF-GASP is $W[1]$-complete, the problem may admit FPT algorithms if we assume that preferences of agents are restricted to increasing preferences or decreasing preferences. 
