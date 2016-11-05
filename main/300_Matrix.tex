@@ -203,12 +203,14 @@ We first consider two special cases of the Probabilistic Matrix Inspection probl
 
  So far we proved the first claim we stated earlier: for all realizations of $A$, we have $N(\pi, c) \geq N(\pi', c)$ for all $c$.
  Let us now prove the second claim. Let $c^*$ be the smallest index $c$ of columns such that $b_c > nc$ (note that $c^* < m$ because $b_m = nm$ by definition). 
+
  Consider any realization of $A$ with the condition that the first $c^*-1$ columns are infeasible and column $c^*$ is feasible (feasibility of other columns do not matter). 
  Using the same arguments we used earlier, we can show that $N(\pi, c) = N(\pi', c)$ for all $c < c^*$, that $N(\pi, c^*) = N(\pi', c^*) = n$, and that $N(\pi', c) = 0$ for all $c> c^*$. 
  However, because $b_{c^*} > n \cdot c^*$, there is at least one entry $a_{r',c'}$ with $c' > c^*$ which  appears before $b_{n, c^*}$ in $\pi$ (otherwise, if no such entry exists, then $b_{c^*}$ would be equal to $n \cdot c^*$). This implies that there exists some $c'$ with $c' > c^*$ such that $N(\pi, c') > 0$. 
+
  This proves the second claim that for some realization of $A$, there is some column $c'$ for which $N(\pi, c') >  N(\pi', c')$, and together with the first claim we proved earlier, this implies that $\Exp[C(\pi)] > \Exp[C(\pi')]$. 
 
- This proves the theorem: Any policy that does not inspect all entries of a column consecutively is suboptimal.
+ This completes the proof: Any policy that does not inspect all entries of a column consecutively is suboptimal.
  \end{proof}
  By Theorem~\ref{matrix:theorem:col_by_col_opt}, when seeking an optimal policy, it is sufficient to consider the set of policies that inspect an entire column before committing to another column. Lemma~\ref{matrix:lemma:single_column_opt} hints that one should inspect the entries of each column in increasing order of probabilities, and this is what we prove next.
 
