@@ -35,7 +35,7 @@
 \contentsline {paragraph}{Proof of equivalence between instances.}{44}
 \contentsline {paragraph}{Proof of completeness.}{45}
 \contentsline {paragraph}{Preliminaries.}{45}
-\contentsline {paragraph}{FPT Algorithm.}{45}
+\contentsline {paragraph}{FPT Algorithm.}{46}
 \contentsline {paragraph}{Preliminaries.}{48}
 \contentsline {paragraph}{FPT Algorithm.}{49}
 \contentsline {subsection}{\numberline {4.2.3}$k$-EF-GASP: Finding Envy-free Assignments}{50}

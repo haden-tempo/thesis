@@ -3,47 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: plain.bst
 Database file #1: thesis.bib
-Warning--empty journal in Borda
-Warning--empty journal in st1997satisfying
-You've used 41 entries,
+You've used 19 entries,
             2118 wiz_defined-function locations,
-            753 strings with 11411 characters,
-and the built_in function-call counts, 17111 in all, are:
-= -- 1758
-> -- 702
-< -- 26
-+ -- 278
-- -- 232
-* -- 1121
-:= -- 2596
-add.period$ -- 137
-call.type$ -- 41
-change.case$ -- 233
+            623 strings with 7428 characters,
+and the built_in function-call counts, 8199 in all, are:
+= -- 849
+> -- 322
+< -- 14
++ -- 127
+- -- 106
+* -- 531
+:= -- 1233
+add.period$ -- 66
+call.type$ -- 19
+change.case$ -- 107
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 728
-empty$ -- 1384
-format.name$ -- 232
-if$ -- 3793
+cite$ -- 19
+duplicate$ -- 358
+empty$ -- 668
+format.name$ -- 106
+if$ -- 1837
 int.to.chr$ -- 0
-int.to.str$ -- 41
-missing$ -- 42
-newline$ -- 207
-num.names$ -- 88
-pop$ -- 292
+int.to.str$ -- 19
+missing$ -- 21
+newline$ -- 98
+num.names$ -- 42
+pop$ -- 138
 preamble$ -- 1
-purify$ -- 194
+purify$ -- 90
 quote$ -- 0
-skip$ -- 574
+skip$ -- 280
 stack$ -- 0
-substring$ -- 1229
-swap$ -- 273
-text.length$ -- 26
+substring$ -- 596
+swap$ -- 142
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 160
-warning$ -- 2
-while$ -- 174
-width$ -- 43
-write$ -- 461
-(There were 2 warnings)
+type$ -- 72
+warning$ -- 0
+while$ -- 83
+width$ -- 21
+write$ -- 220
