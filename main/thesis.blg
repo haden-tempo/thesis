@@ -3,44 +3,86 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: plain.bst
 Database file #1: thesis.bib
-You've used 23 entries,
+Repeated entry---line 441 of file thesis.bib
+ : @inproceedings{garrido1996multi
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 466 of file thesis.bib
+ : @inproceedings{hannebauer2001distributed
+ :                                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 476 of file thesis.bib
+ : @inproceedings{decker1998coordinated
+ :                                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 485 of file thesis.bib
+ : @inproceedings{neiman1994exploiting
+ :                                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 494 of file thesis.bib
+ : @inproceedings{chia1998coordinating
+ :                                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 507 of file thesis.bib
+ : @article{sen1998formal
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 518 of file thesis.bib
+ : @inproceedings{ephrati1994non
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 526 of file thesis.bib
+ : @article{mitchell1994experience
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 536 of file thesis.bib
+ : @article{maes1994agents
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 547 of file thesis.bib
+ : @article{crawford2005learning
+ :                              ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Jennings95agent"
+You've used 35 entries,
             2118 wiz_defined-function locations,
-            648 strings with 8049 characters,
-and the built_in function-call counts, 9434 in all, are:
-= -- 972
-> -- 366
-< -- 17
-+ -- 145
-- -- 120
-* -- 607
-:= -- 1433
-add.period$ -- 78
-call.type$ -- 23
-change.case$ -- 124
+            721 strings with 10311 characters,
+and the built_in function-call counts, 14546 in all, are:
+= -- 1496
+> -- 584
+< -- 25
++ -- 232
+- -- 192
+* -- 949
+:= -- 2208
+add.period$ -- 118
+call.type$ -- 35
+change.case$ -- 193
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 413
-empty$ -- 771
-format.name$ -- 120
-if$ -- 2101
+cite$ -- 35
+duplicate$ -- 629
+empty$ -- 1181
+format.name$ -- 192
+if$ -- 3232
 int.to.chr$ -- 0
-int.to.str$ -- 23
-missing$ -- 27
-newline$ -- 118
-num.names$ -- 50
-pop$ -- 161
+int.to.str$ -- 35
+missing$ -- 39
+newline$ -- 178
+num.names$ -- 76
+pop$ -- 243
 preamble$ -- 1
-purify$ -- 105
+purify$ -- 162
 quote$ -- 0
-skip$ -- 320
+skip$ -- 491
 stack$ -- 0
-substring$ -- 673
-swap$ -- 157
-text.length$ -- 17
+substring$ -- 1039
+swap$ -- 238
+text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 84
+type$ -- 132
 warning$ -- 0
-while$ -- 96
-width$ -- 25
-write$ -- 264
+while$ -- 149
+width$ -- 37
+write$ -- 400
+(There were 10 error messages)

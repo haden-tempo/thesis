@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 NOV 2016 23:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 NOV 2016 23:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -881,8 +881,8 @@ n input line 75.
 (pdftex.def)             Requested size: 344.96487pt x 158.99219pt.
  [6 <./plots/pareto_objective_fin-eps-converted-to.pdf>]
 
-LaTeX Warning: Citation `Jennings95agent-basedmeeting' on page 7 undefined on i
-nput line 93.
+LaTeX Warning: Citation `Jennings95agent' on page 7 undefined on input line 93.
+
 
 
 LaTeX Warning: Citation `sen1998formal' on page 7 undefined on input line 93.
@@ -902,8 +902,7 @@ LaTeX Warning: Citation `crawford2005learning' on page 7 undefined on input lin
 e 95.
 
 
-LaTeX Warning: Citation `Cowling-hyperheuristic' on page 7 undefined on input l
-ine 95.
+LaTeX Warning: Citation `Cowling' on page 7 undefined on input line 95.
 
 
 LaTeX Warning: Citation `chia1998coordinating' on page 7 undefined on input lin
@@ -923,8 +922,7 @@ t line 95.
 
 [7]
 
-LaTeX Warning: Citation `franzin-preferences' on page 8 undefined on input line
- 98.
+LaTeX Warning: Citation `franzin04' on page 8 undefined on input line 98.
 
 
 LaTeX Warning: Citation `garrido1996multi' on page 8 undefined on input line 98
@@ -994,7 +992,7 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  5077 strings out of 493014
- 73085 string characters out of 6133351
+ 73047 string characters out of 6133351
  141782 words of memory out of 5000000
  8366 multiletter control sequences out of 15000+600000
  76255 words of font info for 167 fonts, out of 8000000 for 9000
