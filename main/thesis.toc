@@ -2,7 +2,6 @@
 \contentsline {chapter}{Acknowledgments}{vi}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Organization of the Thesis}{2}
-\contentsline {section}{\numberline {1.2}Preliminaries and Notation}{3}
 \contentsline {chapter}{\numberline {2}Batched Doodle Problem}{4}
 \contentsline {section}{\numberline {2.1}Notation and Definitions}{7}
 \contentsline {subsection}{\numberline {2.1.1}Problem Setting}{7}
