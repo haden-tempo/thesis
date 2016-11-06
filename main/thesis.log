@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 NOV 2016 23:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 NOV 2016 23:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -881,11 +881,11 @@ n input line 75.
 (pdftex.def)             Requested size: 344.96487pt x 158.99219pt.
  [6 <./plots/pareto_objective_fin-eps-converted-to.pdf>] [7]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 111.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 110.
  [8] [9] [10] [11] [12] [13] [14] [15]
 [16] [17] [18] [19] [20]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 446.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 445.
  [21]) [22]
 Chapter 3.
 (./300_Matrix.tex [23
@@ -940,10 +940,10 @@ Chapter 7.
 
 ] [93] [94]) [95] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 5077 strings out of 493014
- 73047 string characters out of 6133351
- 141834 words of memory out of 5000000
- 8366 multiletter control sequences out of 15000+600000
+ 5078 strings out of 493014
+ 73068 string characters out of 6133351
+ 141844 words of memory out of 5000000
+ 8367 multiletter control sequences out of 15000+600000
  76255 words of font info for 167 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1999b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -961,7 +961,7 @@ local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (105 pages, 447029 bytes).
+Output written on thesis.pdf (105 pages, 446968 bytes).
 PDF statistics:
  408 PDF objects out of 1000 (max. 8388607)
  281 compressed objects within 3 object streams

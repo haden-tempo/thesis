@@ -3,17 +3,18 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Organization of the Thesis}{2}
 \contentsline {chapter}{\numberline {2}Batched Doodle Problem}{4}
-\contentsline {paragraph}{Related Work.}{7}
-\contentsline {section}{\numberline {2.1}Notation and Definitions}{8}
-\contentsline {subsection}{\numberline {2.1.1}Problem Setting}{8}
-\contentsline {subsection}{\numberline {2.1.2}Technical Assumptions}{11}
-\contentsline {section}{\numberline {2.2}Main Algorithm for the Batched Doodle Problem}{13}
-\contentsline {section}{\numberline {2.3}Experimental Results}{17}
-\contentsline {subsection}{\numberline {2.3.1}Linear Cost Functions}{18}
-\contentsline {subsection}{\numberline {2.3.2}Other Cost Functions}{20}
-\contentsline {subsection}{\numberline {2.3.3}Summary of Experiments}{21}
-\contentsline {section}{\numberline {2.4}Discussion}{21}
+\contentsline {section}{\numberline {2.1}Related Work}{7}
+\contentsline {section}{\numberline {2.2}Notation and Definitions}{8}
+\contentsline {subsection}{\numberline {2.2.1}Problem Setting}{8}
+\contentsline {subsection}{\numberline {2.2.2}Technical Assumptions}{11}
+\contentsline {section}{\numberline {2.3}Main Algorithm for the Batched Doodle Problem}{13}
+\contentsline {section}{\numberline {2.4}Experimental Results}{17}
+\contentsline {subsection}{\numberline {2.4.1}Linear Cost Functions}{18}
+\contentsline {subsection}{\numberline {2.4.2}Other Cost Functions}{20}
+\contentsline {subsection}{\numberline {2.4.3}Summary of Experiments}{21}
+\contentsline {section}{\numberline {2.5}Discussion}{21}
 \contentsline {chapter}{\numberline {3}Probabilistic Matrix Inspection Problem}{23}
+\contentsline {paragraph}{Related Work.}{24}
 \contentsline {section}{\numberline {3.1}Formal Model}{24}
 \contentsline {subsection}{\numberline {3.1.1}Notation and Definitions}{24}
 \contentsline {subsection}{\numberline {3.1.2}Example}{26}
