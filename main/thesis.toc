@@ -3,64 +3,65 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Organization of the Thesis}{2}
 \contentsline {chapter}{\numberline {2}Batched Doodle Problem}{4}
-\contentsline {section}{\numberline {2.1}Notation and Definitions}{7}
-\contentsline {subsection}{\numberline {2.1.1}Problem Setting}{7}
-\contentsline {subsection}{\numberline {2.1.2}Technical Assumptions}{10}
-\contentsline {section}{\numberline {2.2}Main Algorithm for the Batched Doodle Problem}{12}
-\contentsline {section}{\numberline {2.3}Experimental Results}{16}
-\contentsline {subsection}{\numberline {2.3.1}Linear Cost Functions}{17}
-\contentsline {subsection}{\numberline {2.3.2}Other Cost Functions}{19}
-\contentsline {subsection}{\numberline {2.3.3}Summary of Experiments}{20}
-\contentsline {section}{\numberline {2.4}Discussion}{20}
-\contentsline {chapter}{\numberline {3}Probabilistic Matrix Inspection Problem}{22}
-\contentsline {section}{\numberline {3.1}Formal Model}{23}
-\contentsline {subsection}{\numberline {3.1.1}Notation and Definitions}{23}
-\contentsline {subsection}{\numberline {3.1.2}Example}{25}
-\contentsline {section}{\numberline {3.2}Technical Results and Algorithm}{26}
-\contentsline {subsection}{\numberline {3.2.1}1-Row Matrix and 1-Column Matrix}{26}
-\contentsline {subsection}{\numberline {3.2.2}Inspection of Entire Column}{27}
-\contentsline {subsection}{\numberline {3.2.3}Optimal Ordering within Column}{29}
-\contentsline {subsection}{\numberline {3.2.4}Main Result and Algorithm}{31}
-\contentsline {section}{\numberline {3.3}Discussion}{33}
-\contentsline {chapter}{\numberline {4}Group Activity Selection Problem}{35}
-\contentsline {paragraph}{Related Work.}{37}
-\contentsline {section}{\numberline {4.1}Definitions and Known Results}{38}
-\contentsline {section}{\numberline {4.2}Parameterized Complexity}{41}
-\contentsline {subsection}{\numberline {4.2.1}$k$-IR-GASP: Finding Individually Rational Assignments in GASP}{41}
-\contentsline {subsection}{\numberline {4.2.2}$k$-Stable-GASP: Finding Stable Assignments}{43}
-\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{43}
-\contentsline {paragraph}{Proof of equivalence between instances.}{44}
-\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{46}
-\contentsline {paragraph}{Proof of equivalence between instances.}{46}
-\contentsline {paragraph}{Proof of completeness.}{47}
-\contentsline {paragraph}{Preliminaries.}{47}
-\contentsline {paragraph}{FPT Algorithm.}{47}
-\contentsline {paragraph}{Preliminaries.}{50}
-\contentsline {paragraph}{FPT Algorithm.}{51}
-\contentsline {subsection}{\numberline {4.2.3}$k$-EF-GASP: Finding Envy-free Assignments}{52}
-\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{52}
-\contentsline {paragraph}{Proof of equivalence between instances.}{53}
-\contentsline {paragraph}{Proof of completeness.}{53}
-\contentsline {paragraph}{Preliminaries.}{55}
-\contentsline {paragraph}{FPT algorithm.}{55}
-\contentsline {subsection}{\numberline {4.2.4}$k$-Perfect-GASP: Finding Perfect Assignments}{56}
-\contentsline {section}{\numberline {4.3}Discussion}{57}
-\contentsline {chapter}{\numberline {5}Stable Invitations Problem}{59}
-\contentsline {section}{\numberline {5.1}Definitions and Notation}{60}
-\contentsline {section}{\numberline {5.2}Classical Complexity}{61}
-\contentsline {subsection}{\numberline {5.2.1}$k$-IR-Invitation}{62}
-\contentsline {subsection}{\numberline {5.2.2}$k$-IR-Stable}{63}
-\contentsline {section}{\numberline {5.3}Parameterized Complexity}{63}
-\contentsline {subsection}{\numberline {5.3.1}$k$-IR-Invitation}{64}
-\contentsline {subsection}{\numberline {5.3.2}$k$-Stable-Invitation}{66}
-\contentsline {section}{\numberline {5.4}Symmetric Social Relationship}{71}
-\contentsline {subsection}{\numberline {5.4.1}Symmetric $k$-IR-Invitations}{72}
-\contentsline {subsection}{\numberline {5.4.2}Symmetric $k$-Stable-Invitations}{75}
-\contentsline {section}{\numberline {5.5}Discussion}{78}
-\contentsline {chapter}{\numberline {6}Strategic Agents and Mechanisms}{79}
-\contentsline {section}{\numberline {6.1}Definitions and Notation}{80}
-\contentsline {section}{\numberline {6.2}Mechanisms and Strategic Agents}{82}
-\contentsline {subsection}{\numberline {6.2.1}Randomized Mechanisms}{88}
-\contentsline {section}{\numberline {6.3}Discussion}{88}
-\contentsline {chapter}{\numberline {7}Open Problems}{90}
-\contentsline {chapter}{Bibliography}{91}
+\contentsline {paragraph}{Related Work.}{7}
+\contentsline {section}{\numberline {2.1}Notation and Definitions}{8}
+\contentsline {subsection}{\numberline {2.1.1}Problem Setting}{8}
+\contentsline {subsection}{\numberline {2.1.2}Technical Assumptions}{11}
+\contentsline {section}{\numberline {2.2}Main Algorithm for the Batched Doodle Problem}{13}
+\contentsline {section}{\numberline {2.3}Experimental Results}{17}
+\contentsline {subsection}{\numberline {2.3.1}Linear Cost Functions}{18}
+\contentsline {subsection}{\numberline {2.3.2}Other Cost Functions}{20}
+\contentsline {subsection}{\numberline {2.3.3}Summary of Experiments}{21}
+\contentsline {section}{\numberline {2.4}Discussion}{21}
+\contentsline {chapter}{\numberline {3}Probabilistic Matrix Inspection Problem}{23}
+\contentsline {section}{\numberline {3.1}Formal Model}{24}
+\contentsline {subsection}{\numberline {3.1.1}Notation and Definitions}{24}
+\contentsline {subsection}{\numberline {3.1.2}Example}{26}
+\contentsline {section}{\numberline {3.2}Technical Results and Algorithm}{27}
+\contentsline {subsection}{\numberline {3.2.1}1-Row Matrix and 1-Column Matrix}{27}
+\contentsline {subsection}{\numberline {3.2.2}Inspection of Entire Column}{28}
+\contentsline {subsection}{\numberline {3.2.3}Optimal Ordering within Column}{30}
+\contentsline {subsection}{\numberline {3.2.4}Main Result and Algorithm}{32}
+\contentsline {section}{\numberline {3.3}Discussion}{34}
+\contentsline {chapter}{\numberline {4}Group Activity Selection Problem}{36}
+\contentsline {paragraph}{Related Work.}{38}
+\contentsline {section}{\numberline {4.1}Definitions and Known Results}{39}
+\contentsline {section}{\numberline {4.2}Parameterized Complexity}{42}
+\contentsline {subsection}{\numberline {4.2.1}$k$-IR-GASP: Finding Individually Rational Assignments in GASP}{42}
+\contentsline {subsection}{\numberline {4.2.2}$k$-Stable-GASP: Finding Stable Assignments}{44}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{44}
+\contentsline {paragraph}{Proof of equivalence between instances.}{45}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{47}
+\contentsline {paragraph}{Proof of equivalence between instances.}{47}
+\contentsline {paragraph}{Proof of completeness.}{48}
+\contentsline {paragraph}{Preliminaries.}{48}
+\contentsline {paragraph}{FPT Algorithm.}{48}
+\contentsline {paragraph}{Preliminaries.}{51}
+\contentsline {paragraph}{FPT Algorithm.}{52}
+\contentsline {subsection}{\numberline {4.2.3}$k$-EF-GASP: Finding Envy-free Assignments}{53}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{53}
+\contentsline {paragraph}{Proof of equivalence between instances.}{54}
+\contentsline {paragraph}{Proof of completeness.}{54}
+\contentsline {paragraph}{Preliminaries.}{56}
+\contentsline {paragraph}{FPT algorithm.}{56}
+\contentsline {subsection}{\numberline {4.2.4}$k$-Perfect-GASP: Finding Perfect Assignments}{57}
+\contentsline {section}{\numberline {4.3}Discussion}{58}
+\contentsline {chapter}{\numberline {5}Stable Invitations Problem}{60}
+\contentsline {section}{\numberline {5.1}Definitions and Notation}{61}
+\contentsline {section}{\numberline {5.2}Classical Complexity}{62}
+\contentsline {subsection}{\numberline {5.2.1}$k$-IR-Invitation}{63}
+\contentsline {subsection}{\numberline {5.2.2}$k$-IR-Stable}{64}
+\contentsline {section}{\numberline {5.3}Parameterized Complexity}{64}
+\contentsline {subsection}{\numberline {5.3.1}$k$-IR-Invitation}{65}
+\contentsline {subsection}{\numberline {5.3.2}$k$-Stable-Invitation}{67}
+\contentsline {section}{\numberline {5.4}Symmetric Social Relationship}{72}
+\contentsline {subsection}{\numberline {5.4.1}Symmetric $k$-IR-Invitations}{73}
+\contentsline {subsection}{\numberline {5.4.2}Symmetric $k$-Stable-Invitations}{76}
+\contentsline {section}{\numberline {5.5}Discussion}{79}
+\contentsline {chapter}{\numberline {6}Strategic Agents and Mechanisms}{80}
+\contentsline {section}{\numberline {6.1}Definitions and Notation}{81}
+\contentsline {section}{\numberline {6.2}Mechanisms and Strategic Agents}{83}
+\contentsline {subsection}{\numberline {6.2.1}Randomized Mechanisms}{89}
+\contentsline {section}{\numberline {6.3}Discussion}{89}
+\contentsline {chapter}{\numberline {7}Open Problems}{91}
+\contentsline {chapter}{Bibliography}{92}
