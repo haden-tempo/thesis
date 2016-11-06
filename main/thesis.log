@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 NOV 2016 23:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 NOV 2016 23:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -925,14 +925,14 @@ Overfull \hbox (5.29604pt too wide) in paragraph at lines 293--294
 Chapter 6.
 (./600_GT.tex [81
 
-] [82] [83] [84] [85] [86] [87] [88] [89]
-Overfull \hbox (8.12442pt too wide) in paragraph at lines 226--228
+] [82] [83] [84] [85] [86] [87] [88] [89] [90]
+Overfull \hbox (8.12442pt too wide) in paragraph at lines 233--235
 \OT1/ptm/m/n/10.95 from ob-tain-ing strategy-proof mech-a-nisms. The-o-rem 36[]
  shows that agents not hav-ing \OT1/cmss/m/n/10.95 INC\OT1/ptm/m/n/10.95 -prefe
 rences
  []
 
-[90]) [91]
+) [91]
 Chapter 7.
 (./700_Discussion.tex) (./thesis.bbl [92
 
@@ -961,7 +961,7 @@ local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (106 pages, 449010 bytes).
+Output written on thesis.pdf (106 pages, 449188 bytes).
 PDF statistics:
  411 PDF objects out of 1000 (max. 8388607)
  283 compressed objects within 3 object streams

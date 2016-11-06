@@ -61,6 +61,7 @@
 \contentsline {subsection}{\numberline {5.4.2}Symmetric $k$-Stable-Invitations}{77}
 \contentsline {section}{\numberline {5.5}Discussion}{79}
 \contentsline {chapter}{\numberline {6}Strategic Agents and Mechanisms}{81}
+\contentsline {paragraph}{Related Work.}{82}
 \contentsline {section}{\numberline {6.1}Definitions and Notation}{82}
 \contentsline {section}{\numberline {6.2}Mechanisms and Strategic Agents}{84}
 \contentsline {subsection}{\numberline {6.2.1}Randomized Mechanisms}{90}
