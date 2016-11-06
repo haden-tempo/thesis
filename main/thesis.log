@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 NOV 2016 23:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 NOV 2016 23:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -885,48 +885,11 @@ LaTeX Warning: Citation `Jennings95agent' on page 7 undefined on input line 93.
 
 
 
-LaTeX Warning: Citation `sen1998formal' on page 7 undefined on input line 93.
-
-
-LaTeX Warning: Citation `ephrati1994non' on page 7 undefined on input line 93.
-
-
-LaTeX Warning: Citation `mitchell1994experience' on page 7 undefined on input l
-ine 95.
-
-
-LaTeX Warning: Citation `maes1994agents' on page 7 undefined on input line 95.
-
-
-LaTeX Warning: Citation `crawford2005learning' on page 7 undefined on input lin
-e 95.
-
-
 LaTeX Warning: Citation `Cowling' on page 7 undefined on input line 95.
-
-
-LaTeX Warning: Citation `chia1998coordinating' on page 7 undefined on input lin
-e 95.
-
-
-LaTeX Warning: Citation `neiman1994exploiting' on page 7 undefined on input lin
-e 95.
-
-
-LaTeX Warning: Citation `decker1998coordinated' on page 7 undefined on input li
-ne 95.
-
-
-LaTeX Warning: Citation `hannebauer2001distributed' on page 7 undefined on inpu
-t line 95.
 
 [7]
 
 LaTeX Warning: Citation `franzin04' on page 8 undefined on input line 98.
-
-
-LaTeX Warning: Citation `garrido1996multi' on page 8 undefined on input line 98
-.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 111.
@@ -985,15 +948,18 @@ Chapter 7.
 
 ] [92
 
-] [93]) [94] (./thesis.aux)
+] [93] [94]) [95] (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
  5077 strings out of 493014
  73047 string characters out of 6133351
- 141782 words of memory out of 5000000
+ 141822 words of memory out of 5000000
  8366 multiletter control sequences out of 15000+600000
  76255 words of font info for 167 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1012,10 +978,10 @@ nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on thesis.pdf (104 pages, 444870 bytes).
+Output written on thesis.pdf (105 pages, 446941 bytes).
 PDF statistics:
- 405 PDF objects out of 1000 (max. 8388607)
- 279 compressed objects within 3 object streams
+ 408 PDF objects out of 1000 (max. 8388607)
+ 281 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
