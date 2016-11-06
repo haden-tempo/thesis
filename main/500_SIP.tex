@@ -27,25 +27,17 @@ Not surprisingly, complexity of \SIPs depends highly on the cardinality of frien
 In this chapter we provide a complete analysis of complexity results on \SIP; we consider individual rationality (IR) and Nash stability as we did for \GASP, and we also consider both asymmetric and symmetric friends-and-enemmies relation. 
 
 \paragraph{Related Work.}
-As we discussed in Chapter~\ref{GASP:chapter}, the Group Activity Selection Problem is most relevant to the work we present in this chapter. The Stable Invitations Problem is also 
-The Stable Invitations Problems (both \ASIP\ and \GSIP) are closely related 
-to hedonic games. In a hedonic game each agent has preferences over coalitions 
-that she can be a member of (usually given by a weak order over all coalitions).
-If each agent is indifferent among all coalitions of the same size that includes her, 
-then a given hedonic game is said to be anonymous.
-Much work has been devoted to analyzing solution concepts in hedonic coalition games such as stability and Pareto-optimality~\cite{BogomolnaiaJackson,DrezeGreenberg,AzizBrandl}.
-In this work we take a solution concept of (Nash) stability for granted, and focus on 
-analyzing complexity of finding stable solutions. In particular, we are 
-interested in finding Nash-stable invitations and individually rational 
-invitations (we provide formal definitions in Section~\ref{sec:ASIP}). 
+As we discussed in Chapter~\ref{GASP:chapter}, the Group Activity Selection Problem is most relevant to the work we present in this chapter. Similar to \GASP, the Stable Invitations Problem is also closely related to hedonic games. In a hedonic game each agent has preferences over coalitions that she can be a member of (usually given by a weak order over all coalitions). If each agent is indifferent among all coalitions of the same size that includes her, then a given hedonic game is said to be anonymous. Much work has been devoted to analyzing solution concepts in hedonic coalition games such as stability and Pareto-optimality~\cite{BogomolnaiaJackson,DrezeGreenberg,AzizBrandl}.
+In this work we take a solution concept of (Nash) stability for granted, and focus on analyzing complexity of finding stable solutions. In particular, we are interested in finding Nash-stable invitations and individually rational 
+invitations. 
 
 Ballester~\shortcite{NP_hedonic} provides a number of computational complexity 
 results (in fact, hardness results) for finding a core-stable, Nash-stable, or 
 individually rational outcome in hedonic games and anonymous hedonic games.  
-These hardness results do not imply similar hardness results for \GSIP\ for two reasons. 
+These hardness results do not imply similar hardness results for \GSIPs for two reasons. 
 First, the hardness results on anonymous hedonic games do not hold for \GSIP\ 
-because \GSIP\ is not equivalent to anonymous hedonic games. Second, one can 
-transform an instance of \GSIP\ into a (non-anonymous) hedonic game 
+because \GSIPs is not equivalent to anonymous hedonic games. Second, one can 
+transform an instance of \GSIPs into a (non-anonymous) hedonic game 
 in a na\"{i}ve manner by listing all possible coalitions, but this increases 
 the size of input exponentially. Therefore our results discussed in this work 
 are original and should not be considered as a derivative of the work 
