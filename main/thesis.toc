@@ -3,16 +3,16 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Organization of the Thesis}{2}
 \contentsline {chapter}{\numberline {2}Batched Doodle Problem}{4}
-\contentsline {section}{\numberline {2.1}Related Work}{7}
-\contentsline {section}{\numberline {2.2}Notation and Definitions}{8}
-\contentsline {subsection}{\numberline {2.2.1}Problem Setting}{8}
-\contentsline {subsection}{\numberline {2.2.2}Technical Assumptions}{11}
-\contentsline {section}{\numberline {2.3}Main Algorithm for the Batched Doodle Problem}{13}
-\contentsline {section}{\numberline {2.4}Experimental Results}{17}
-\contentsline {subsection}{\numberline {2.4.1}Linear Cost Functions}{18}
-\contentsline {subsection}{\numberline {2.4.2}Other Cost Functions}{20}
-\contentsline {subsection}{\numberline {2.4.3}Summary of Experiments}{21}
-\contentsline {section}{\numberline {2.5}Discussion}{21}
+\contentsline {paragraph}{Related Work.}{7}
+\contentsline {section}{\numberline {2.1}Notation and Definitions}{8}
+\contentsline {subsection}{\numberline {2.1.1}Problem Setting}{8}
+\contentsline {subsection}{\numberline {2.1.2}Technical Assumptions}{11}
+\contentsline {section}{\numberline {2.2}Main Algorithm for the Batched Doodle Problem}{13}
+\contentsline {section}{\numberline {2.3}Experimental Results}{17}
+\contentsline {subsection}{\numberline {2.3.1}Linear Cost Functions}{18}
+\contentsline {subsection}{\numberline {2.3.2}Other Cost Functions}{20}
+\contentsline {subsection}{\numberline {2.3.3}Summary of Experiments}{21}
+\contentsline {section}{\numberline {2.4}Discussion}{21}
 \contentsline {chapter}{\numberline {3}Probabilistic Matrix Inspection Problem}{23}
 \contentsline {paragraph}{Related Work.}{24}
 \contentsline {section}{\numberline {3.1}Formal Model}{24}
@@ -25,28 +25,28 @@
 \contentsline {subsection}{\numberline {3.2.4}Main Result and Algorithm}{32}
 \contentsline {section}{\numberline {3.3}Discussion}{34}
 \contentsline {chapter}{\numberline {4}Group Activity Selection Problem}{36}
-\contentsline {section}{\numberline {4.1}Related Work}{38}
-\contentsline {section}{\numberline {4.2}Definitions and Known Results}{39}
-\contentsline {section}{\numberline {4.3}Parameterized Complexity}{42}
-\contentsline {subsection}{\numberline {4.3.1}$k$-IR-GASP: Finding Individually Rational Assignments in GASP}{42}
-\contentsline {subsection}{\numberline {4.3.2}$k$-Stable-GASP: Finding Stable Assignments}{44}
+\contentsline {paragraph}{Related Work.}{38}
+\contentsline {section}{\numberline {4.1}Definitions and Known Results}{39}
+\contentsline {section}{\numberline {4.2}Parameterized Complexity}{42}
+\contentsline {subsection}{\numberline {4.2.1}$k$-IR-GASP: Finding Individually Rational Assignments in GASP}{42}
+\contentsline {subsection}{\numberline {4.2.2}$k$-Stable-GASP: Finding Stable Assignments}{44}
 \contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{44}
 \contentsline {paragraph}{Proof of equivalence between instances.}{45}
 \contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{47}
 \contentsline {paragraph}{Proof of equivalence between instances.}{47}
 \contentsline {paragraph}{Proof of completeness.}{48}
 \contentsline {paragraph}{Preliminaries.}{48}
-\contentsline {paragraph}{FPT Algorithm.}{49}
+\contentsline {paragraph}{FPT Algorithm.}{48}
 \contentsline {paragraph}{Preliminaries.}{51}
 \contentsline {paragraph}{FPT Algorithm.}{52}
-\contentsline {subsection}{\numberline {4.3.3}$k$-EF-GASP: Finding Envy-free Assignments}{53}
+\contentsline {subsection}{\numberline {4.2.3}$k$-EF-GASP: Finding Envy-free Assignments}{53}
 \contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{53}
 \contentsline {paragraph}{Proof of equivalence between instances.}{54}
 \contentsline {paragraph}{Proof of completeness.}{54}
 \contentsline {paragraph}{Preliminaries.}{56}
 \contentsline {paragraph}{FPT algorithm.}{56}
-\contentsline {subsection}{\numberline {4.3.4}$k$-Perfect-GASP: Finding Perfect Assignments}{57}
-\contentsline {section}{\numberline {4.4}Discussion}{58}
+\contentsline {subsection}{\numberline {4.2.4}$k$-Perfect-GASP: Finding Perfect Assignments}{57}
+\contentsline {section}{\numberline {4.3}Discussion}{58}
 \contentsline {chapter}{\numberline {5}Stable Invitations Problem}{60}
 \contentsline {section}{\numberline {5.1}Definitions and Notation}{61}
 \contentsline {section}{\numberline {5.2}Classical Complexity}{62}
