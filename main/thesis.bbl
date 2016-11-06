@@ -33,6 +33,13 @@ M.H. Chia, D.E. Neiman, and V.R. Lesser.
 \newblock In {\em Proceedings of the Third International Conference on
   Multi-Agent Systems (ICMAS'98)}, 1998.
 
+\bibitem{Cowling}
+Peter Cowling, Graham Kendall, and Eric Soubeiga.
+\newblock A hyperheuristic approach to scheduling a sales summit.
+\newblock In Edmund Burke and Wilhelm Erben, editors, {\em Practice and Theory
+  of Automated Timetabling III}, volume 2079 of {\em Lecture Notes in Computer
+  Science}, pages 176--190. Springer Berlin Heidelberg, 2001.
+
 \bibitem{crawford2005learning}
 E.~Crawford and M.~Veloso.
 \newblock Learning to select negotiation strategies in multi-agent meeting
@@ -76,6 +83,12 @@ E.~Ephrati, G.~Zlotkin, and J.S. Rosenschein.
 \newblock In {\em Proceedings of the 13th international workshop on distributed
   artificial intelligence}, pages 105--125, 1994.
 
+\bibitem{franzin04}
+M.~S. Franzin, F.~Rossi, E.~C. Freuder, and R.~Wallace.
+\newblock Multi-agent constraint systems with preferences: Efficiency, solution
+  quality, and privacy loss.
+\newblock {\em Computational Intelligence}, 20(2):264--286, 2004.
+
 \bibitem{Garey_Max_Is_Cubic}
 Michael~R. Garey, David~S. Johnson, and Larry Stockmeyer.
 \newblock Some simplified np-complete graph problems.
@@ -105,6 +118,10 @@ Russell Impagliazzo and Ramamohan Paturi.
 \newblock Complexity of k-sat.
 \newblock In {\em Computational Complexity, 1999. Proceedings. Fourteenth
   Annual IEEE Conference on}, pages 237--240. IEEE, 1999.
+
+\bibitem{Jennings95agent}
+N.~R. Jennings, A.~J. Jackson, and London~E Ns.
+\newblock Agent-based meeting scheduling: A design and implementation, 1995.
 
 \bibitem{lee2014algorithmic}
 Hooyeon Lee.
