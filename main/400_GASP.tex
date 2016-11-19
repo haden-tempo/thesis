@@ -59,7 +59,7 @@ Similarly to the work of \cite{GASP12WINE}, in this work we assume that each age
 \end{example}
 
 
-Let us define what constitutes a solution to \GASP, and define four solution concepts. 
+Let us define what constitutes a solution to \GASP.
 
 \begin{definition}
 	Let $A = A^* \cup \{\void\}$.
@@ -70,21 +70,27 @@ Let us define the size of an assignment, denoted by $|\pi|$, as the number of ag
 
 Note that $\pi$ induces an outcome for each agent: If $\pi(i) = \void$, then agent $i$ does not participate in any non-void activity (and thus outcome $\void$ is induced), and if $\pi(i) = a_j \in A^*$, then $(a_j, |\pi^j|)$ is the induced outcome for agent $i$.
 
-The objective in \GASPs is to find a ``good'' assignment of maximum size thereby assigning as many agents to activities as possible. We define four solution concepts which require different levels of rationality/stability in an assignment.
+The objective in \GASPs is to find a ``good'' assignment of maximum size thereby assigning as many agents to activities as possible. We define solution concepts which require different levels of rationality/stability in an assignment.
 
 \begin{definition}
-	An assignment $\pi : N \rightarrow A$ is said to be {\em individually rational} (IR) if for every $j \in [p]$ and every agent $i \in \pi^j$ it holds that $(a_j, |\pi^j|) \in S_i$. 
+	Let $\pi$ be any assignment in \GASP.
+
+	$\pi$ is {\em individually rational} (IR) if $\forall j \in [p]$ and $\forall i \in \pi^j$, it holds that $(a_j, |\pi^j|) \in S_i$.
 	
-	An assignment $\pi : N \rightarrow A$ is said to be {\em (Nash) stable} if it is individually rational and for every agent $i \in N$ such that $\pi(i) = \void$ and every $a_j \in A^*$ it holds that $(a_j, |\pi^j| + 1) \not\in S_i$. 
-	
-	An assignment $\pi : N \rightarrow A$ is said to be {\em envy-free} (EF) if it is individually rational and for every agent $i \in N$ such that $\pi(i) = \void$ and every agent agent $i' \in N$ such that $\pi(i') = a_j\in A^*$, it holds that $(\pi(i'), |\pi^j|) \not\in S_i$.
-	
-	An assignment $\pi : N \rightarrow A$ is said to be {\em perfect} if it is individually rational and $\pi(i) \neq \void$ for all $i\in N$.
+$\pi$ is {\em (Nash) stable} if it is IR, and $\forall i \in N$ such that $\pi(i) = \void$ and $\forall a_j \in A^*$ it holds that $(a_j, |\pi^j| + 1) \not\in S_i$. 
+
+$\pi$ is {\em envy-free} (EF) if it is IR, and $\forall i \in N$ such that $\pi(i) = \void$ and $\forall i' \in N$ such that $\pi(i') = a_j\in A^*$, it holds that $(\pi(i'), |\pi^j|) \not\in S_i$.
+
+$\pi$ is {\em stable-EF} if it is both stable and envy-free.
+
+$\pi$ is {\em perfect} if it is IR and $\pi(i) \neq \void$ for all $i\in N$.
 \end{definition}
-Individual rationality requires that every agent who's assigned to a non-void activity is willing to participate because participation is preferred to non-participation. Therefore everyone who is assigned has no incentive to deviate from the assignment. 
-Stability further requires that every agent who is assigned to the void activity is also unwilling to deviate (unilaterally, without permission of other agents) from the given assignment. 
-Envy-freeness requires that every agent who is assigned to the void activity is not envious of someone else who is assigned to a non-void activity.\footnote{While one can naturally define another solution concept which requires both stability and envy-freeness, it is not considered in this work.}
-Lastly, a perfect assignment is the strongest solution concept which implies individual rationality, stability and envy-free by definition. 
+IR requires every agent assigned to an activity be unwilling to deviate.
+Stability further requires that every unassigned agent be unwilling to deviate (unilaterally, without permission of other agents).
+EF requires that every unassigned agent be not envious of someone else assigned to an activity.
+Stability and EF together define a stronger solution concept than the two.
+Lastly, a perfect assignment is the strongest solution concept which implies all others.
+
 
 As Darmann et al. showed in their work~\cite{GASP12WINE}, finding a solution in \GASPs is NP-hard even under various restrictions on inputs. Yet we shall see that some of such restrictions make the problem less complex under parameterization. First we define two natural restricted domains of preferences of agents, called {\em increasing} and {\em decreasing} preferences. 
 \begin{definition}
@@ -114,7 +120,7 @@ Here we mention the most relevant results of theirs to this work.
 	even if all agents have decreasing preferences for all activities,
 	or even if all activities are equivalent (Theorems 4.1, 4.2, 4.3, and 4.4 of \cite{GASP12WINE}).
 \end{theorem}
-As corollaries, the following four problems are also NP-hard under any of the three restrictions mentioned in Theorem~\ref{GASP:thm:nphard}. Note that the first three problems parameterize the size of an assignment while the last problem parameterizes the number of used activities in a perfect assignment.
+As corollaries, the following problems are also NP-hard under any of the three restrictions mentioned in Theorem~\ref{GASP:thm:nphard}. Note that the first three problems parameterize the size of an assignment while the last problem parameterizes the number of used activities in a perfect assignment.
 \begin{itemize}
 	\item $k$-IR-GASP: Does there exist an individually rational assignment of size $k$?
 	\item $k$-Stable-GASP: Does there exist a stable assignment of size $k$?
@@ -129,7 +135,7 @@ In what follows, we show that the parameterized complexity of $k$-GASP varies wi
 
 \section{Parameterized Complexity} \label{GASP:sec:results}
 
-In this section, we provide parameterized complexity of the four problems mentioned in previous section: $k$-IR-GASP, $k$-Stable-GASP, $k$-EF-GASP, and $k$-Perfect-GASP.
+In this section, we provide parameterized complexity of the problems mentioned in previous section: $k$-IR-GASP, $k$-Stable-GASP, $k$-EF-GASP, and $k$-Perfect-GASP.
 Our main contributions are summarized in Table~\ref{GASP:tbl:summary}.
 Note that all problems considered in this work are known to be NP-hard (and NP-complete) due to Darmann et al.~\cite{GASP12WINE}.
 The ``general case'' refers to the case where approval set of each agent can be any set of outcomes (i.e., no restrictions on preferences of agents). 
