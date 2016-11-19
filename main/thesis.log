@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 NOV 2016 13:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 NOV 2016 13:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -895,8 +895,39 @@ Chapter 3.
 Chapter 4.
 (./400_GASP.tex [36
 
-] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47]
-[48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58]) [59]
+] [37]
+
+LaTeX Warning: Citation `xia2014fixed' on page 38 undefined on input line 29.
+
+
+LaTeX Warning: Citation `liu2016parameterized' on page 38 undefined on input li
+ne 29.
+
+
+LaTeX Warning: Citation `betzler2010parameterized' on page 38 undefined on inpu
+t line 29.
+
+
+LaTeX Warning: Citation `erdelyi2010parameterized' on page 38 undefined on inpu
+t line 29.
+
+
+LaTeX Warning: Citation `hemaspaandra2013schulze' on page 38 undefined on input
+ line 29.
+
+
+LaTeX Warning: Citation `endriss2015parameterized' on page 38 undefined on inpu
+t line 29.
+
+
+LaTeX Warning: Citation `shrot2009easy' on page 38 undefined on input line 29.
+
+
+LaTeX Warning: Citation `chitnis2011parameterized' on page 38 undefined on inpu
+t line 29.
+
+[38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52]
+[53] [54] [55] [56] [57] [58]) [59]
 Chapter 5.
 (./500_SIP.tex [60
 
@@ -940,14 +971,14 @@ Chapter 7.
 
 ] [94] [95]) [96] (./thesis.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5078 strings out of 493014
- 73056 string characters out of 6133351
+ 5086 strings out of 493014
+ 73236 string characters out of 6133351
  144834 words of memory out of 5000000
- 8367 multiletter control sequences out of 15000+600000
+ 8375 multiletter control sequences out of 15000+600000
  76255 words of font info for 167 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1999b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -965,7 +996,7 @@ nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on thesis.pdf (106 pages, 449034 bytes).
+Output written on thesis.pdf (106 pages, 449844 bytes).
 PDF statistics:
  411 PDF objects out of 1000 (max. 8388607)
  283 compressed objects within 3 object streams
