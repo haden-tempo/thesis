@@ -243,7 +243,7 @@ Unless the Exponential Time Hypothesis (ETH) fails, $k$-Stable-GASP cannot be so
 \end{corollary}
 
 We now consider $k$-Stable-GASP with the restriction that all agents have increasing preferences for all activities. 
-\begin{theorem}
+\begin{theorem} \label{GASP:thm:stable_w1_inc}
 $k$-Stable-GASP is $W[1]$-complete when all agents have increasing preferences for all activities.
 \end{theorem}
 \begin{proof} 
@@ -281,7 +281,7 @@ $k$-Stable-GASP is $W[1]$-complete when all agents have increasing preferences f
 
 Unlike the case of increasing preferences, if all agents have decreasing preferences the problem admits an FPT algorithm. 
 
-\begin{theorem}
+\begin{theorem} \label{GASP:thm:stable_fpt_dec}
 $k$-Stable-GASP is in FPT when all agents have decreasing preferences for all activities.
 \end{theorem}
 \begin{proof}
@@ -329,7 +329,7 @@ While we omit the details, it is straightforward to verify that our algorithm wo
 
 Lastly, we consider another special case of \GASPs when all activities are (pairwise) equivalent.
 In this case, the problem of finding a stable assignment becomes the problem of partitioning agents into groups where only group sizes matter (as all of the activities are identical to every agent). This restriction allows the problem for an FPT algorithm
-\begin{theorem}
+\begin{theorem} \label{GASP:thm:stable_fpt_equiv}
 $k$-Stable-GASP is in FPT if all (non-void) activities are equivalent.
 %
 %only one $p$-copyable activity in $A^*$ (where $p = |A^*|$).
