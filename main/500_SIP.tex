@@ -80,6 +80,9 @@ Lastly, we will consider a special case of \SIPs where agents have symmetric soc
 	Given an instance of \SIP, we say that agents have {\em symmetric social relationships} if $j\in F_i$ if and only if $i\in F_j$ and $l \in E_i$ if and only if $i \in E_l$ for every $i$. 
 \end{definition}
 
+Symmetric relationships are present in many settings. In the political world, countries are either allies or enemies or neutral, and this relationship is symmetric. Another example is alliances of airlines -- airlines that serve similar regions are competing directly with each other while wish to partner with airlines from other regions to complement their routes. When a new alliance is being formed, some members only want to be in an alliance if they are together and others would not want to join if their enemies are there. Furthermore, the symmetric relationships can model settings with quite versatile structure. For instance, friendship and enemy relationships are not transitive: a friend of a friend can be a friend or an enemy (Hawaiian Airlines is a partner with American, Delta, and United Airlines, which are direct competitors of one another) and an enemy of an enemy can be an enemy or a friend (American is an enemy of Delta which is an enemy of United but American is not a friend of United). 
+
+
 Theorem~\ref{SIP:thm:nphard} summarizes the most relevant results of Darmann et al.~\cite{GASP12WINE} and Lee and Shoham~\cite{LEE15AAAI} on complexity of \SIPs.\footnote{
 Darmann et al.~\cite{GASP12WINE} showed easiness when $\alpha=\beta=0$, while Lee and Shoham~\cite{LEE15AAAI} proved easiness and hardness in all other cases.}
 \begin{theorem} \label{SIP:thm:nphard} [Lee and Shoham~\cite{LEE15AAAI} and Darmann et al.~\cite{GASP12WINE}]
@@ -209,7 +212,7 @@ We then present hardness results by showing that $k$-IR-Invitation is W[1]-hard 
 	$k$-IR-Invitation is in W[1].
 \end{theorem} 
 \begin{proof}
-	We reduce $k$-IR-Invitation to the weighted circuit SAT~\footnote{For details the WCSAT problem see the work by Creignou and Vollmer~\shortcite{creignou2015parameterized}.} of constant depth and of weft at most 1. 
+	We reduce $k$-IR-Invitation to the weighted circuit SAT~\footnote{For details the WCSAT problem see \cite{creignou2015parameterized}.} of constant depth and of weft at most 1. 
 	
 	Details of the proof can be found in proof of Theorem~\ref{SIP:thm:stable_W2} which appears later in this chapter.
 \end{proof}

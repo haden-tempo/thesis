@@ -58,6 +58,12 @@ E.~Crawford and M.~Veloso.
   scheduling.
 \newblock {\em Progress in Artificial Intelligence}, pages 584--595, 2005.
 
+\bibitem{creignou2015parameterized}
+Nadia Creignou and Heribert Vollmer.
+\newblock Parameterized complexity of weighted satisfiability problems:
+  Decision, enumeration, counting.
+\newblock {\em Fundamenta Informaticae}, 136(4):297--316, 2015.
+
 \bibitem{DARMANN15ADT}
 Andreas Darmann.
 \newblock Group activity selection from ordinal preferences.
