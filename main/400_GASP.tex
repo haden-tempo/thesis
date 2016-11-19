@@ -61,7 +61,7 @@ Similarly to the work of \cite{GASP12WINE}, in this work we assume that each age
 
 Let us define what constitutes a solution to \GASP.
 
-\begin{definition}
+\begin{definition} \label{GASP:def:assignment}
 	Let $A = A^* \cup \{\void\}$.
 An assignment in \GASPs is a mapping $\pi: N \rightarrow A$ where $\pi(i) = \void$ means that agent $i$ is not assigned to any non-void activity. 
 Each assignment naturally partitions the agents into at most $|A|$ groups. We define $\pi^0 = \{i : \pi(i) = \void \}$ and $\pi^j = \{i : \pi(i) = a_j\}$ for $j = 1, \dots p$, so that $|\pi^j|$ refers to the number of agents assigned by $\pi$ to a specific activity (including the void activity).
@@ -202,7 +202,8 @@ Stability is a stronger solution concept than individual rationality, and the pr
 
 \begin{theorem}
 $k$-Stable-GASP is $W[1]$-hard.
-The problem remains to be $W[1]$-hard even if each agent approves at most one size per activity (i.e., $|S_i(a_j)| \leq 1$ for all $i\in N$ and $a_j\in A^*$).
+The problem remains to be $W[1]$-hard even if each agent approves at most one size per activity.
+Moreover, assuming the ETH, $k$-Stable-GASP cannot be solved in time $(np)^{o(\sqrt{k})}$.
 \end{theorem}
 \begin{proof} 
 	The $k$-Clique problem is known to be $W[1]$-hard, and we reduce the $k$-clique problem to $k$-Stable-GASP. 
