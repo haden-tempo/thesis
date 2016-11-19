@@ -21,6 +21,12 @@ Coralio Ballester.
 \newblock Np-completeness in hedonic games.
 \newblock {\em Games and Economic Behavior}, 49(1):1--30, 2004.
 
+\bibitem{betzler2010parameterized}
+Nadja Betzler, Jiong Guo, and Rolf Niedermeier.
+\newblock Parameterized computational complexity of dodgson and young
+  elections.
+\newblock {\em Information and Computation}, 208(2):165--177, 2010.
+
 \bibitem{BogomolnaiaJackson}
 Anna Bogomolnaia and Matthew~O. Jackson.
 \newblock The stability of hedonic coalition structures.
@@ -32,6 +38,12 @@ M.H. Chia, D.E. Neiman, and V.R. Lesser.
   scheduling system.
 \newblock In {\em Proceedings of the Third International Conference on
   Multi-Agent Systems (ICMAS'98)}, 1998.
+
+\bibitem{chitnis2011parameterized}
+Rajesh~Hemant Chitnis, MohammadTaghi Hajiaghayi, and Vahid Liaghat.
+\newblock Parameterized complexity of problems in coalitional resource games.
+\newblock In {\em Twenty-Fifth AAAI Conference on Artificial Intelligence},
+  2011.
 
 \bibitem{Cowling}
 Peter Cowling, Graham Kendall, and Eric Soubeiga.
@@ -77,11 +89,27 @@ Jacques~H. Dreze and Joseph Greenberg.
 \newblock Hedonic coalitions: Optimality and stability.
 \newblock {\em Journal of the Econometric Society}, pages 987--1003, 1980.
 
+\bibitem{endriss2015parameterized}
+Ulle Endriss, Ronald De~Haan, and Stefan Szeider.
+\newblock Parameterized complexity results for agenda safety in judgment
+  aggregation.
+\newblock In {\em Proceedings of the 2015 International Conference on
+  Autonomous Agents and Multiagent Systems}, pages 127--136. International
+  Foundation for Autonomous Agents and Multiagent Systems, 2015.
+
 \bibitem{ephrati1994non}
 E.~Ephrati, G.~Zlotkin, and J.S. Rosenschein.
 \newblock A non-manipulable meeting scheduling system.
 \newblock In {\em Proceedings of the 13th international workshop on distributed
   artificial intelligence}, pages 105--125, 1994.
+
+\bibitem{erdelyi2010parameterized}
+G{\'a}bor Erd{\'e}lyi and M~Fellows.
+\newblock Parameterized control complexity in bucklin voting and in fallback
+  voting.
+\newblock In {\em Proceedings of the 3rd International Workshop on
+  Computational Social Choice}, pages 163--174. Universit{\"a}t D{\"u}sseldorf,
+  2010.
 
 \bibitem{franzin04}
 M.~S. Franzin, F.~Rossi, E.~C. Freuder, and R.~Wallace.
@@ -112,6 +140,14 @@ M.~Hannebauer and S.~M{\"u}ller.
   scheduling.
 \newblock In {\em Proceedings of the fifth international conference on
   Autonomous agents}, pages 139--140. ACM, 2001.
+
+\bibitem{hemaspaandra2013schulze}
+Lane~A Hemaspaandra, Rahman Lavaee, and Curtis Menton.
+\newblock Schulze and ranked-pairs voting are fixed-parameter tractable to
+  bribe, manipulate, and control.
+\newblock In {\em Proceedings of the 2013 international conference on
+  Autonomous agents and multi-agent systems}, pages 1345--1346. International
+  Foundation for Autonomous Agents and Multiagent Systems, 2013.
 
 \bibitem{impagl}
 Russell Impagliazzo and Ramamohan Paturi.
@@ -157,6 +193,14 @@ Hooyeon Lee and Yoav Shoham.
 \newblock In {\em Proceedings of the Twenty-Ninth {AAAI} Conference on
   Artificial Intelligence, January 25-30, 2015, Austin, Texas, {USA.}}, pages
   965--971, 2015.
+
+\bibitem{liu2016parameterized}
+Hong Liu and Jiong Guo.
+\newblock Parameterized complexity of winner determination in minimax committee
+  elections.
+\newblock In {\em Proceedings of the 2016 International Conference on
+  Autonomous Agents \& Multiagent Systems}, pages 341--349. International
+  Foundation for Autonomous Agents and Multiagent Systems, 2016.
 
 \bibitem{maes1994agents}
 P.~Maes.
@@ -205,10 +249,25 @@ S.~Sen and E.H. Durfee.
 \newblock A formal study of distributed meeting scheduling.
 \newblock {\em Group Decision and Negotiation}, 7(3):265--289, 1998.
 
+\bibitem{shrot2009easy}
+Tammar Shrot, Yonatan Aumann, and Sarit Kraus.
+\newblock Easy and hard coalition resource game formation problems: a
+  parameterized complexity analysis.
+\newblock In {\em Proceedings of The 8th International Conference on Autonomous
+  Agents and Multiagent Systems-Volume 1}, pages 433--440. International
+  Foundation for Autonomous Agents and Multiagent Systems, 2009.
+
 \bibitem{von1947theory}
 John Von~Neumann and Oskar. Morgenstern.
 \newblock {\em The Theory of Games and Economic Behavior}.
 \newblock Princeton University Press, 1947.
+
+\bibitem{xia2014fixed}
+Lirong Xia.
+\newblock Fixed-parameter tractability of integer generalized scoring rules.
+\newblock In {\em Proceedings of the 2014 international conference on
+  Autonomous agents and multi-agent systems}, pages 1599--1600. International
+  Foundation for Autonomous Agents and Multiagent Systems, 2014.
 
 \bibitem{zou2015strategic}
 James Zou, Reshef Meir, and David Parkes.
