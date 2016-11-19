@@ -541,13 +541,17 @@ For $k$-Perfect-GASP, finding a perfect assignment using {\em at most} $k$ activ
 
 
 \section{Discussion} \label{GASP:sec:discussion}
-In this work we investigated the parameterized complexity of the Group Activity Selection Problem (\GASP) when parameterized by the size of the solution,  different solution concepts and under various restrictions on inputs. 
-Despite the fact that all problems being considered are NP-hard, we showed that some special cases of the problem admit efficient FPT algorithms.
-Our results indicate that the computational complexity of \GASPs varies when its input is restricted (imposed by special preferences of agents or uniformity of activities) or the solution concept changes, which is not distinguishable under the classic complexity.
+
+
+
+
+
+We investigated parameterized complexity of the Group Activity Selection Problem (\GASP) when parameterized by the size of the solution for various solution concepts and restrictions on inputs.
+Our results indicate that the computational complexity of \GASPs varies when its input is restricted (due to preferences of agents or uniformity of activities) or the solution concept changes, which is not distinguishable under the classic complexity. In particular, decreasing preferences of agents make the problems less complex (both for Stable-GASP and Stable-EF-GASP), but increasing preferences do not. This is intriguing because in Chapter~\ref{GT:chapter}, on the other hand, we show that increasing preferences lead to a strategy-proof, optimal mechanism but decreasing preferences lead to an impossibility result, under strategic settings with just one activity.
+
 Our work leaves a few interesting open problems for future work. 
 First, we do not know the exact complexity of $k$-Perfect-GASP with equivalent activities besides its NP-completeness. It would be intriguing if the problem is FPT.
-Second, the focus in this chapter is to exhibit any FPT algorithm; we have not tried hard to optimize the dependence on $k$. It would be interesting to do this and to show conditional lower bounds on how the runtime should depend on $k$, especially in the case of $k$-IR-GASP. 
-Lastly, one can consider a different setting where agents have a strict ordering over the set of outcomes, instead of having approved outcomes that are equally preferred. Darmann recently proved several easiness and hardness results under this setting~\cite{DARMANN15ADT}, but no parameterized complexity results are known yet.
-
-
+Second, the focus in this paper is to exhibit any FPT algorithm; we have not tried hard to optimize the dependence on $k$. It would be interesting to do this and to show conditional lower bounds on how the runtime should depend on $k$, especially in the case of $k$-IR-GASP. 
+Third, obtaining completeness results to match our W[1]- and W[2]-hardness results is a natural follow-up problem.
+Lastly, one can consider a different setting where agents have a strict ordering over the set of outcomes, instead of having approved outcomes that are equally preferred. Darmann~\cite{DARMANN15ADT} recently proved several easiness and hardness results under this setting, but parameterized complexity is unknown.
 
