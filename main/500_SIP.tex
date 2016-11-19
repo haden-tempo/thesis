@@ -85,7 +85,7 @@ Symmetric relationships are present in many settings. In the political world, co
 
 Theorem~\ref{SIP:thm:nphard} summarizes the most relevant results of Darmann et al.~\cite{GASP12WINE} and Lee and Shoham~\cite{LEE15AAAI} on complexity of \SIPs.\footnote{
 Darmann et al.~\cite{GASP12WINE} showed easiness when $\alpha=\beta=0$, while Lee and Shoham~\cite{LEE15AAAI} proved easiness and hardness in all other cases.}
-\begin{theorem} \label{SIP:thm:nphard} [Lee and Shoham~\cite{LEE15AAAI} and Darmann et al.~\cite{GASP12WINE}]
+\begin{theorem} \label{SIP:thm:nphard} 
 	$k$-IR-Invitation and $k$-Stable-Invitation can be solved in polynomial time if $(\max_{i \in N} |F_i|) + (\max_{i \in N} |E_i|) \leq 1$ (i.e., $\alpha + \beta \leq 1$). In other cases, both problems are NP-hard.
 \end{theorem}
 Note that $k$-IR-Invitation and $k$-Stable-Invitation are of the same classical complexity, even though stability is a stronger solution concept. Under parameterization, however, these two problems are contained in different complexity classes in the W-hierarchy (see Table~\ref{SIP:tbl:summary}).
@@ -420,7 +420,7 @@ Under symmetric social relationships, both $k$-IR-Invitation and $k$-Stable-Invi
 
 When we compare results in Table~\ref{SIP:tbl:summary} and Table~\ref{SIP:tbl:summary_symmetric}, two interesting observations can be made.
 First, $k$-IR-Invitations and $k$-Stable-Invitations have the same classical complexity even under symmetric social relationships. Second, both problems now admit efficient FPT algorithms for broader domains of inputs -- as long as $\beta$ is bounded.
-Note that our classical complexity results are original (i.e., not implied by Theorem~\ref{SIP:thm:nphard}) because Lee and Shoham~\cite{LEE15AAAI} did not consider the special case of symmetric social relationships. 
+Note that our classical complexity results are not implied by Theorem~\ref{SIP:thm:nphard}) because Lee and Shoham~\cite{LEE15AAAI} did not consider the special case of symmetric social relationships. 
 
 We shall utilize ``friend graph'' and ``enemy graph'' in our reductions throughout this section. In a friend (enemy) graph, nodes represent agents and there is an edge between nodes if they are friends (enemies).
 

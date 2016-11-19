@@ -52,7 +52,7 @@
 \contentsline {chapter}{\numberline {5}Stable Invitations Problem}{61}
 \contentsline {paragraph}{Related Work.}{62}
 \contentsline {section}{\numberline {5.1}Definitions and Notation}{62}
-\contentsline {section}{\numberline {5.2}Classical Complexity}{65}
+\contentsline {section}{\numberline {5.2}Classical Complexity}{64}
 \contentsline {subsection}{\numberline {5.2.1}$k$-IR-Invitation}{65}
 \contentsline {subsection}{\numberline {5.2.2}$k$-IR-Stable}{66}
 \contentsline {section}{\numberline {5.3}Parameterized Complexity}{66}

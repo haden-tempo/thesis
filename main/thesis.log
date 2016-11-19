@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 NOV 2016 14:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 NOV 2016 14:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -907,18 +907,15 @@ Dar-mann et al. [[]] and Lee and Shoham [[]]
  []
 
 
-Overfull \hbox (7.05106pt too wide) in paragraph at lines 88--90
-\OT1/ptm/b/n/10.95 Theorem 21. \OT1/ptm/m/it/10.95 [Lee and Shoham [[]] and Dar
--mann et al. [[]]] $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/it/10.95 -IR-Invitation 
-and $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/it/10.95 -Stable-Invitation
+Overfull \hbox (15.54364pt too wide) in paragraph at lines 89--90
+\OT1/ptm/b/n/10.95 Theorem 21. $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/it/10.95 -IR
+-Invitation and $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/it/10.95 -Stable-Invitation
+ can be solved in poly-no-mial time if $\OT1/ztmcm/m/n/10.95 ([][] \OMS/ztmcm/m
+/n/10.95 j\OML/ztmcm/m/it/10.95 F[]\OMS/ztmcm/m/n/10.95 j\OT1/ztmcm/m/n/10.95 )
+ +
  []
 
-[64] [65] [66]
-
-LaTeX Warning: Citation `creignou2015parameterized' on page 67 undefined on inp
-ut line 215.
-
-[67] [68] [69]
+[64] [65] [66] [67] [68]
 Overfull \hbox (5.29604pt too wide) in paragraph at lines 294--295
 []\OT1/ptm/m/n/10.95 Assume un-bounded $\OML/ztmcm/m/it/10.95 $ \OT1/ptm/m/n/1
 0.95 and $\OML/ztmcm/m/it/10.95 ^^L$\OT1/ptm/m/n/10.95 , and let us re-duce the
@@ -926,7 +923,7 @@ Overfull \hbox (5.29604pt too wide) in paragraph at lines 294--295
  weighted
  []
 
-[70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80]) [81]
+[69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80]) [81]
 Chapter 6.
 (./600_GT.tex [82
 
@@ -946,15 +943,15 @@ Chapter 7.
 ] [95] [96] [97]) [98]
 (./thesis.aux)
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 5098 strings out of 493014
- 73500 string characters out of 6133351
- 142944 words of memory out of 5000000
+ 5097 strings out of 493014
+ 73494 string characters out of 6133351
+ 141948 words of memory out of 5000000
  8386 multiletter control sequences out of 15000+600000
- 77362 words of font info for 168 fonts, out of 8000000 for 9000
+ 76255 words of font info for 167 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1999b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -971,7 +968,7 @@ nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on thesis.pdf (108 pages, 457488 bytes).
+Output written on thesis.pdf (108 pages, 456747 bytes).
 PDF statistics:
  417 PDF objects out of 1000 (max. 8388607)
  287 compressed objects within 3 object streams
