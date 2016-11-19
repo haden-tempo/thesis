@@ -517,6 +517,33 @@ Under this parameterization, \GASPs is W[2]-hard as the following theorem shows.
 It is not surprising that $k$-Perfect-GASP is the most complex problem being considered, as it pertains to the strongest solution concept. We do not know the exact complexity of $k$-Perfect-GASP when all activities are equivalent, and it remains to be an open problem (yet the problem is known to be NP-complete by Darmann et al.~\cite{GASP12WINE}).
 
 
+
+%%% =============================================================== At least
+\subsection{Solutions of size at least or at most $k$}
+We have only considered finding a solution of size exactly $k$.
+Yet one may wish to find a solution of size at least $k$ (for maximization problems like $k$-GASP under IR, stable, EF, or stable-EF) or at most $k$ (for minimization problems like $k$-Perfect-GASP).
+Unlike for most studied maximization problems (e.g. Clique, $k$-Path, etc.) the existence of an IR, stable, or EF assignment of size $k$ {\em does not} guarantee existence of a solution of size $k-1$ or smaller (whereas e.g. a clique of size $k$ always contains cliques of smaller sizes).
+Because of this, we are essentially solving a different problem when we seek a solution of size at least $k$ for these three solution concepts. 
+
+For $k$-IR-GASP, finding a solution of size at least $k$ is also in FPT.
+\begin{theorem} \label{GASP:thm:k_IR_GASP_FPT_atleast}
+At-least-$k$-IR-GASP is in FPT. 
+\end{theorem}
+\vspace{-1em}\begin{proof}
+	For readability, we write a ``solution'' to refer to an IR assignment of size at least $k$.
+	Among all solutions, first suppose that there is some $\pi$ such that $|\pi^j| \geq k$ for some $j \in [1,p]$ (recall the notation from Definition~\ref{GASP:def:assignment}). Let $\pi'$ be an assignment such that it assigns all agents in $\pi^j$ to $a_j$ while all other agents to $\void$; clearly, $\pi'$ is also a solution. We can find in $O(n^2p)$ time this kind of solutions as follows: For each integer $x\in [k, n]$ and activity $a_j$, we count the number of agents approving $(a_j, x)$, and if this number exceeds $x$, then assigning any $x$ agents of them to $a_j$ results in an IR assignment of size at least $k$.
+	Now suppose instead that such solutions do not exist, an every solution $\pi$ satisfies that $\forall j\in [1, p]$, $|\pi^j| < k$. We claim that, then, a solution of size between $k$ and $2k-1$ (inclusive) exists. If this claim is true, then we can use our FPT algorithm from Theorem~\ref{GASP:thm:k_IR_GASP_FPT} to find a solution of size $k, k+1, \dots, 2k-1$, which would run in FPT time overall. To see why the claim is true, suppose that $\pi$ is a solution of size at least $2k$ and let $j \in [1,p]$ be any index such that $|\pi^j| > 0$. If $\pi'$ is the same as $\pi$ except that $\pi'$ assigns all agents in $\pi^j$ to $\void$ (while other agents are assigned in the same manner as $\pi$), then $\pi'$ is also a solution whose size is exactly $|\pi^j|$ smaller than the size of $\pi$. As we keep applying this process, we eventually end up with a solution of size at most $2k-1$. Hence, in all cases, we can find a solution in FPT time. 
+\end{proof}\vspace{-.5em}
+
+
+For $k$-Stable-GASP, Darmann et al.~\cite{GASP12WINE} show that finding a perfect assignment can be reduced to finding a stable assignment of size at least one (i.e., $k=1$), which rules out FPT algorithms for ``at least $k$''-Stable-GASP unless P=NP. The same reduction also applies for $k$-Stable-EF-GASP.
+For $k$-EF-GASP, we conjecture that a similar reduction may exist, and leave it as an open problem.
+For $k$-Perfect-GASP, finding a perfect assignment using {\em at most} $k$ activities remains to be W[2]-hard: a solution using $k$ activities implies the existence of a solution using at most $k+1$ activities.
+
+
+
+
+
 \section{Discussion} \label{GASP:sec:discussion}
 In this work we investigated the parameterized complexity of the Group Activity Selection Problem (\GASP) when parameterized by the size of the solution,  different solution concepts and under various restrictions on inputs. 
 Despite the fact that all problems being considered are NP-hard, we showed that some special cases of the problem admit efficient FPT algorithms.
