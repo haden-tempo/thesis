@@ -1,4 +1,3 @@
-%TODO: 'm' refers to the numbebr of batches and 's' refers to the number of options. Must not mix up!
 \label{bdoodle:chapter}
 
 
@@ -130,8 +129,7 @@ Our objective is to find a B-Doodle mechanism that minimizes the expected cost o
 A cost function $c$ takes two integers $j$ and $b$ as arguments, and $c(j, b) > 0$ describes the aggregate cost of \Times and \Inconveniences that is incurred by sending out a batch of $b$ time slots during the $j$-th iteration. We assume that cost is additive so that the overall cost of executing the first $j$ iterations of ${B}_m = \langle S_1, S_2, \dots, S_m \rangle$ is simply the sum, $\sum_{k=1}^{j} c(k, b_k)$, which we denote by $C(j, {B}_m)$; recall that $b_k = |S_k|$. 
 A cost function $c$ is said to be $\theta$-\emph{simple} if there exists some constant $\theta>0$ such that $c(j, b) = \theta \cdot c(j-1, b)$ for all $j > 1$ and for all $b \geq 1$. We often drop $\theta$ and just state that a cost function is \emph{simple}, for brevity.
 \end{definition}
-It is reasonable to assume that cost is additive (with respect to iterations) because an additional iteration adds the time spent and inconvenience caused for the agents.
-
+It is reasonable to assume that cost is additive (with respect to iterations) because the time spent and inconvenience caused for the agents all add up.
 Note that $C(j, B_{m})$ is strictly increasing in $j$ for any fixed $B_{m}$ because $c(j, b) > 0$ for any $j$ and $b$. While the class of simple cost functions may seem too restrictive, we present a few natural choices of cost functions that belong to the class of simple cost functions. In this chapter we assume that the underlying cost function is simple; further we assume that $c(j, b)$ for all $1 \leq j, b \leq s$ can be computed in polynomial time with respect to $s$.
 
 $\theta$-simple cost functions form a broad class of cost functions, and can model many different settings. 
