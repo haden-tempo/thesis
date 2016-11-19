@@ -26,32 +26,15 @@ The restrictions on preferences that we consider are quite natural -- we conside
 We also consider the special case of \GASPs in which all activities are equivalent. Here the preferences of the agents can vary but for each particular agent the preferences are the same for all copies of the activity. This special case is natural and captures many applications. We show that even though the problem is still NP-hard in this case~\cite{GASP12WINE}, all parameterized versions of it (except possibly perfection) are FPT. 
 
 \paragraph{Related Work.}
-Computational social choice is an interdisciplinary research area involving economics, social science, and computer science including artificial intelligence and multi-agent systems. Much work has been devoted to investigating both classical and parameterized complexity of social choice problems that range from winner determination~\cite{xia2014fixed,liu2016parameterized,betzler2010parameterized}, control problems in voting rule~\cite{erdelyi2010parameterized,hemaspaandra2013schulze,endriss2015parameterized}, coalition games~\cite{shrot2009easy,chitnis2011parameterized}, and more. This work studies parameterized complexity of a social choice problem under five different solution concepts and restrictions on inputs. 
+Computational social choice is an interdisciplinary research area involving economics, social science, and computer science including artificial intelligence and multi-agent systems. Much work has been devoted to investigating both classical and parameterized complexity of social choice problems that range from winner determination~\cite{xia2014fixed,liu2016parameterized,betzler2010parameterized}, control problems in voting rule~\cite{erdelyi2010parameterized,hemaspaandra2013schulze,endriss2015parameterized}, coalition games~\cite{shrot2009easy,chitnis2011parameterized}, and more. This chapter studies parameterized complexity of a social choice problem under five different solution concepts and restrictions on inputs. 
 
-Most closely related work to ours is that of Darmann et al.~\cite{GASP12WINE}, in which the authors defined \GASP, and provided a number of classical complexity results for individual rationality, stability, and perfection.
-In this work, we adopt their definitions, but we also consider the new solution concept of envy-freeness. It is worth noting that \GASPs is closely related to Hedonic Games (see Section 2.2 of \cite{GASP12WINE} and Section 2 of \cite{LEE15AAAI} for more details); in fact, \GASPs can be viewed as a class of hedonic coalition games with concise representation of preferences of agents.
+Most closely related work is that of Darmann et al.~\cite{GASP12WINE}, in which the authors defined \GASP, and provided a number of classical complexity results for individual rationality, stability, and perfection.
+In this chapter, we adopt their definitions, but we also consider the new solution concept of envy-freeness. It is worth noting that \GASPs is closely related to Hedonic Games (see Section 2.2 of \cite{GASP12WINE} and Section 2 of \cite{LEE15AAAI} for more details); in fact, \GASPs can be viewed as a class of hedonic coalition games with concise representation of preferences of agents.
 Ballester~\cite{NP_hedonic} provides a number of computational complexity 
 results (in fact, hardness results) for finding a core-stable, Nash-stable, or 
 individually rational outcome in hedonic games and anonymous hedonic games, but these results do not apply to \GASPs because of the concise representation of an input to \GASP. Others have studied various solution concepts in hedonic coalition games such as stability and Pareto-optimality~\cite{BogomolnaiaJackson,DrezeGreenberg,AzizBrandl}.
-Recently, Darmann~\cite{DARMANN15ADT} considered a different setting of \GASPs where agents are assumed to have strict, ordinal preferences over the outcomes, whereas both our work and \cite{GASP12WINE} assume that agents are indifferent among all outcomes that they approve of. It is an interesting future problem to consider how our results in this work can be extended to the ordinal setting that Darmann~\cite{DARMANN15ADT} considered. 
-Lastly, Lee and Shoham~\cite{LEE15AAAI} showed that incentive compatibility and solution concepts being considered in this work are not compatible in \GASP, yet we do not consider strategic agents in this chapter (we consider strategic agents in Chapter~\ref{}).
-
-
-
-Darmann et al.~\cite{GASP12WINE} defined \GASP, and provided a number of computational complexity results -- mostly, NP-completeness results. We adopt their definitions of the problem and solution concepts, but we also consider the new solution concept of envy-freeness, while we analyze the parameterized complexity of the problem. 
-As Darmann et al. point out, it is worth noting that \GASPs is closely related to Hedonic Games (see Section 2.2 of \cite{GASP12WINE} and Section 2 of \cite{LEE15AAAI} for more details); in fact, \GASPs can be viewed as a class of hedonic coalition games with concise representation of preferences of agents (linear in the number of activities and players as opposed to all subsets of players in the general setting). 
-Much work has been devoted to analyzing solution concepts in hedonic coalition games such as stability and Pareto-optimality~\cite{BogomolnaiaJackson,DrezeGreenberg,AzizBrandl}.
-Ballester~\cite{NP_hedonic} provides a number of computational complexity 
-results (in fact, hardness results) for finding a core-stable, Nash-stable, or 
-individually rational outcome in hedonic games and anonymous hedonic games.  
-These hardness results do not imply similar hardness results for \GASP, however, because of the concise representation of an input to \GASP. 
-Lastly, Darmann~\cite{DARMANN15ADT} considered a different setting of \GASPs where agents are assumed to have strict, ordinal preferences over the outcomes, whereas both our work and the work of Darmann et al.~\cite{GASP12WINE} assumes that agents have a dichotomic preference over outcomes (an outcome is either approve or not approved). It is an interesting future problem to consider how our results in this work can be extended to the ordinal setting.
-
-% The rest of this chapter is structured as follows.
-% In Section~\ref{GASP:sec:prelim} we formally define \GASP, and summarize the known complexity results.
-% In Section~\ref{GASP:sec:results} we provide our main technical results.
-% In Section~\ref{GASP:sec:discussion} we summarize our findings, and describe several open problems.
- 
+Recently, Darmann~\cite{DARMANN15ADT} considered a different setting of \GASPs where agents are assumed to have strict, ordinal preferences over the outcomes, whereas both this work and \cite{GASP12WINE} assume that agents are indifferent among all outcomes that they approve of. It is an interesting future problem to consider how our results in this chapter can be extended to the ordinal setting that Darmann~\cite{DARMANN15ADT} considered. 
+Lastly, Lee and Shoham~\cite{LEE15AAAI} showed that incentive compatibility and solution concepts being considered in this work are not compatible in \GASP, yet we do not consider strategic agents in this chapter (we consider strategic agents in Chapter~\ref{GT:chapter}).
  
  
  
