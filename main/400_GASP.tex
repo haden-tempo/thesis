@@ -125,6 +125,7 @@ As corollaries, the following problems are also NP-hard under any of the three r
 	\item $k$-IR-GASP: Does there exist an individually rational assignment of size $k$?
 	\item $k$-Stable-GASP: Does there exist a stable assignment of size $k$?
 	\item $k$-EF-GASP: Does there exist an envy-free assignment of size $k$?
+	\item $k$-Stable-EF-GASP: Does there exist a stable, envy-free assignment of size $k$?
 	\item $k$-Perfect-GASP: Does there exist a perfect assignment using $k$ non-void activities?
 \end{itemize}
 In what follows, we show that the parameterized complexity of $k$-GASP varies with different solution concepts and under different restrictions on inputs to \GASP.
@@ -146,9 +147,9 @@ The ``general case'' refers to the case where approval set of each agent can be 
 	\centering
 \begin{tabular}{|*{5}{c|}}\hline
 	 					& $k$-IR-GASP & $k$-Stable-GASP & $k$-EF-GASP & $k$-Perfect-GASP \\ \hline
-General case 			& FPT 		  & $W[1]$-hard 	& $W[1]$-complete & $W[2]$-hard \\ \hline
-Increasing preferences 	& FPT 		  & $W[1]$-complete & $W[1]$-complete & $W[2]$-hard \\ \hline
-Decreasing 	preferences	& FPT		  & FPT				& $W[1]$-complete & $W[2]$-hard \\ \hline
+General case 			& FPT 		  & $W[1]$-hard 	& $W[1]$-C & $W[2]$-hard \\ \hline
+Increasing preferences 	& FPT 		  & $W[1]$-C & $W[1]$-C & $W[2]$-hard \\ \hline
+Decreasing 	preferences	& FPT		  & FPT				& $W[1]$-C & $W[2]$-hard \\ \hline
 Equivalent activities 	& FPT		  & FPT				& FPT 		  & Unknown \\ \hline
 \end{tabular}
 \caption{Summary of results on parameterized complexity of \GASP.} 
@@ -185,7 +186,7 @@ $k$-IR-GASP is in FPT, and can be solved in time $2^{O(k)}(np \log n)$ where $n=
 	Specifically, if we have a list of colorings of agents $N$ such that for every subset $N' \subseteq N$ of size $|N'| = k$ there exists a coloring in the list that gives each agent in $N'$ a distinct color, then we can simply enumerate over this list of colorings. This is precisely what a $k$-perfect family of hash functions from $N$ to $[k]$ is, and it is known that the size of the family can be specified using $2^{O(k)}\log n$ bits (for details please see~\cite{ColorCoding}). Therefore we can obtain a deterministic algorithm whose runtime is bounded by $2^{O(k)}(np \log n)$, and conclude that $k$-IR-GASP is in FPT. 
 \end{proof}
 
-Individual rationality is the weakest solution concept among the four we consider, and naturally $k$-IR-GASP is the least complex problem. On the other hand, we will show that other problems are $W[1]$- or $W[2]$-hard unless additional restrictions are assumed. Note that Theorem~\ref{GASP:thm:k_IR_GASP_FPT} proves an easiness result, and therefore it is implied that $k$-IR-GASP is in FPT under any of the three restrictions on inputs we consider (see the $k$-IR-GASP column in Table~\ref{GASP:tbl:summary}).
+Individual rationality is the weakest solution concept we consider, and naturally $k$-IR-GASP is the least complex problem. On the other hand, we will show that other problems are $W[1]$- or $W[2]$-hard unless additional restrictions are assumed. Note that Theorem~\ref{GASP:thm:k_IR_GASP_FPT} proves an easiness result, and therefore it is implied that $k$-IR-GASP is in FPT under any of the three restrictions on inputs we consider (see the $k$-IR-GASP column in Table~\ref{GASP:tbl:summary}).
 
 
 %%% =============================================================== Stable
@@ -488,7 +489,7 @@ It is not surprising that $k$-Perfect-GASP is the most complex problem being con
 
 
 \section{Discussion} \label{GASP:sec:discussion}
-In this work we investigated the parameterized complexity of the Group Activity Selection Problem (\GASP) when parameterized by the size of the solution, for four different solution concepts and under various restrictions on inputs. 
+In this work we investigated the parameterized complexity of the Group Activity Selection Problem (\GASP) when parameterized by the size of the solution,  different solution concepts and under various restrictions on inputs. 
 Despite the fact that all problems being considered are NP-hard, we showed that some special cases of the problem admit efficient FPT algorithms.
 Our results indicate that the computational complexity of \GASPs varies when its input is restricted (imposed by special preferences of agents or uniformity of activities) or the solution concept changes, which is not distinguishable under the classic complexity.
 Our work leaves a few interesting open problems for future work. 
