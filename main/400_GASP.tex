@@ -469,6 +469,29 @@ Let us now prove that if there is at least one EF assignment that is compatible 
 We have shown that if we begin with a coloring $c$ (together with $l$ and $k_d$'s) that is compatible with at least one EF assignment, then our algorithm would find an EF assignment compatible with the coloring and that if no such assignment exists the coloring would be rejected. This is a Monte Carlo algorithm with probability of success at least $(1/k)^k$ and runtime bounded by $O((k^k)nk)$ (as our algorithm must enumerate all possible values of $l$ and $k_d$'s), which is polynomial in $n$ but exponential only in $k$. 
 \end{proof}
 
+
+
+
+
+%%% =========================================================== Stable-EF
+\subsection{$k$-Stable-EF-GASP: Finding Stable, Envy-free Assignments}
+Stability and envy-freeness are not the same, but they are not exclusive, either. They together define another solution concept that is stronger than the two.
+$k$-Stable-EF-GASP is $W[1]$-hard under increasing preferences, but it is in FPT under decreasing preferences or equivalent activities. 
+Due to space we omit proofs, but the following theorems can be proved in a similar way we proved Theorems~\ref{thm:stable_w1_inc}, \ref{thm:stable_fpt_dec} and \ref{thm:stable_fpt_equiv}, respectively in this order, with some modifications.
+
+\begin{theorem} \label{thm:stable_ef_gasp_w1}
+$k$-Stable-EF-GASP is $W[1]$-hard even if all agents have increasing preferences for all activities.
+\end{theorem}
+
+\begin{theorem} \label{thm:stable_ef_dec_fpt}
+$k$-Stable-EF-GASP is in FPT if all agents have decreasing preferences for all activities. 
+\end{theorem}
+
+\begin{theorem} \label{thm:stable_ef_equiv_fpt}
+$k$-Stable-EF-GASP is in FPT if all activities are equivalent.
+\end{theorem}
+
+
 %%% =============================================================== Perfect
 \subsection{$k$-Perfect-GASP: Finding Perfect Assignments}
 Recall that $k$-Perfect-GASP is the problem of finding a perfect assignment that uses $k$ activities out of $p$ activities. 
