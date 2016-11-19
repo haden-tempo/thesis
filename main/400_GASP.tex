@@ -144,17 +144,22 @@ The ``general case'' refers to the case where approval set of each agent can be 
 ``Equivalent activities'' refer to the case where all activities are (pairwise) equivalent (i.e., they are copies of one kind of an activity). 
 
 \begin{table}[h!]
+	\small
 	\centering
-\begin{tabular}{|*{5}{c|}}\hline
-	 					& $k$-IR-GASP & $k$-Stable-GASP & $k$-EF-GASP & $k$-Perfect-GASP \\ \hline
-General case 			& FPT 		  & $W[1]$-hard 	& $W[1]$-C & $W[2]$-hard \\ \hline
-Increasing preferences 	& FPT 		  & $W[1]$-C & $W[1]$-C & $W[2]$-hard \\ \hline
-Decreasing 	preferences	& FPT		  & FPT				& $W[1]$-C & $W[2]$-hard \\ \hline
-Equivalent activities 	& FPT		  & FPT				& FPT 		  & Unknown \\ \hline
+\begin{tabular}{|{c}||*{5}{c|}}\hline
+	\multirow{2}*{Input} &
+	\multicolumn{5}{c|}{$k$-GASP Solution Concepts} \\  \cline{2-6}
+	 					& IR & \!Stable\! & EF & \!Stable \& EF\! & \!Perfect\!\\  \hline  
+General 			& FPT 		  & $W[1]$-hard 	& $W[1]$-complete & $W[1]$-hard & $W[2]$-hard \\ \hline
+Increasing 	& FPT 		  & $W[1]$-complete & $W[1]$-complete & $W[1]$-hard &  $W[2]$-hard \\ \hline
+Decreasing	& FPT		  & FPT				& $W[1]$-complete & FPT &  $W[2]$-hard \\ \hline
+Equivalent & FPT		  & FPT				& FPT 		  & FPT & Unknown \\ \hline
 \end{tabular}
-\caption{Summary of results on parameterized complexity of \GASP.} 
+\caption{\small Complexity of the Group Activity Selection Problem. } 
 \label{GASP:tbl:summary}
 \end{table}
+
+
 
 \subsection{$k$-IR-GASP: Finding Individually Rational Assignments in GASP}
 
