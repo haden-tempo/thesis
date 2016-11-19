@@ -207,9 +207,9 @@ The problem remains to be $W[1]$-hard even if each agent approves at most one si
  	For each node-agent $v_i$, we set its approval set $S_{v_i} = \{(a_j, 1) : 1 \leq j \leq k\} \cup \{(e_{i,j}, 3) : i \neq j\}$. 
  	For each neighbor-agent $w_{i, x}$, we set its approval set $S_{w_{i,x}} = \{(e_{i,j}, 2) : (v_i, v_j) \in E\}$.
  	Finally	we set the parameter $k'$ of \GASPs (to distinguish from $k$ in the Clique problem) to $k'=k+2\binom{k}{2}$.
-	This is a valid fpt-reduction as $k'$ depends only on $k$ but not on $n$, and the size of our instance of \GASPs is bounded by $O(nk^3)$ as there are $O(nk)$ agents and $O(k^2)$ activities in the instance.
+	This is a valid FPT-reduction as $k'$ depends only on $k$ but not on $n$, and the size of our instance of \GASPs is bounded by $O(nk^3)$ as there are $O(nk)$ agents and $O(k^2)$ activities in the instance.
 
-	Let us first describe how a clique in the original instance and a stable assiggnment in the \GASPs instance we created are related. A node-agent is assigned to a clique-activity if and only if its corresponding node belongs to a (corresponding) clique. For each node-agent, there exists $k-1$ neighbor-agents, and these neighbor-agents must be assigned properly to edge-activities in order to ensure that the resulting set of nodes is indeed a clique. 		 
+	Let us first describe how a clique in the original instance and a stable assignment in the \GASPs instance we created are related. A node-agent is assigned to a clique-activity if and only if its corresponding node belongs to a (corresponding) clique. For each node-agent, there exists $k-1$ neighbor-agents, and these neighbor-agents must be assigned properly to edge-activities in order to ensure that the resulting set of nodes is indeed a clique. 		 
 	We claim that there exists a clique of size $k$ in the original instance if and only if there exists a stable assignment of size $k'$ in the \GASPs instance we constructed. 
  	
 	\paragraph{Proof of equivalence between instances.}	
