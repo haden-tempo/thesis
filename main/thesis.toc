@@ -45,8 +45,9 @@
 \contentsline {paragraph}{Proof of completeness.}{54}
 \contentsline {paragraph}{Preliminaries.}{56}
 \contentsline {paragraph}{FPT algorithm.}{56}
-\contentsline {subsection}{\numberline {4.2.4}$k$-Perfect-GASP: Finding Perfect Assignments}{57}
-\contentsline {section}{\numberline {4.3}Discussion}{58}
+\contentsline {subsection}{\numberline {4.2.4}$k$-Stable-EF-GASP: Finding Stable, Envy-free Assignments}{57}
+\contentsline {subsection}{\numberline {4.2.5}$k$-Perfect-GASP: Finding Perfect Assignments}{58}
+\contentsline {section}{\numberline {4.3}Discussion}{59}
 \contentsline {chapter}{\numberline {5}Stable Invitations Problem}{60}
 \contentsline {paragraph}{Related Work.}{61}
 \contentsline {section}{\numberline {5.1}Definitions and Notation}{61}
