@@ -515,9 +515,7 @@ Easiness of $k$-Stable-EF-GASP with equivalent activities can be shown similarly
 $k$-Stable-EF-GASP is in FPT if all activities are equivalent.
 \end{theorem} %TODO 02
 \begin{proof}
-
-	
-	Let $p = |A^*|$ be the number of non-void activities which we assume are all equivalent.
+	Let $p = |A^*|$ be the number of non-void activities which we assume are all equivalent. As we argued in proof of Theorem~\ref{GASP:thm:stable_fpt_equiv}
 	We use Color Coding to design a randomized FPT algorithm, which can easily be de-randomized using a family of $k$-perfect hash functions as shown in the work~\cite{ColorCoding}. 
 
 	We can assume that $p \leq k+1$ because $k$ agents can be assigned to at most $k$ copies and having more than one extra copy to which no agents is assigned does not change the problem (this is because we are seeking a solution of size exactly $k$). For brevity, we only prove the claim when $p = k+1$ in this work, but it can be easily extended to the cases when $p < k+1$. 
