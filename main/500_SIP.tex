@@ -118,6 +118,7 @@ Earlier we mentioned that both $k$-IR-Invitation and $k$-Stable-Invitation are N
 
 \subsection{Hardness Results}
 
+We prove NP-hardness of $k$-IR-Invitation and $k$-Stable-Invitation. Their NP-completeness follows from the fact that both problems are in NP.
 
 \begin{theorem} \label{SIP:thm:nphard_a0_b2}
 	Both $k$-IR-Invitation and $k$-Stable-Invitation are NP-complete when $\alpha = 0$ and $\beta \geq 2$. 
@@ -149,9 +150,12 @@ Using the Lov{\'a}sz local lemma we can show that it is always possible to assig
 \begin{proof}
 	We modify the reduction we used in proof of Theorem~\ref{SIP:thm:nphard_a0_b2}. 
 	Given the instance with $\alpha = 0$ and $\beta = 2$ in our reduction (called the original instance), we create an instance with $\alpha = 1$ and $\beta = 1$ (called the new instance) as follows.
-	For each agent $i$ in the original instance, we create two agents $i'$ and $i''$ who are friends of each other ($F_{i'} = \{i''\}$ and $F_{i''} = \{i'\}$). We define $E_{i'}$ and $E_{i''}$ by splitting the agents in $E_i$ into the two sets; if $E_i$ contains fewer than two agents, then we simply define $E_{i'} = E_i$ and $E_{i''} = \emptyset$. All agents in the new instance approve size $2k$ but no other sizes. The new instance with $2n$ agents has the following property: An IR invitation must be of an even size (because every agents of the form $i'$ and $i''$ must both be included or both be excluded in a solution), and it has a one-to-one correspondence to an IR invitation in the original instance. Due to their approval sets, 
-	
-\end{pro}
+	For each agent $i$ in the original instance, we create two agents $i'$ and $i''$ who are friends of each other ($F_{i'} = \{i''\}$ and $F_{i''} = \{i'\}$). We define $E_{i'}$ and $E_{i''}$ by splitting the agents in $E_i$ into the two sets; if $E_i$ contains fewer than two agents, then we simply define $E_{i'} = E_i$ and $E_{i''} = \emptyset$. All agents in the new instance approve size $2k$ but no other sizes. The new instance with $2n$ agents has the following property: An IR invitation must be of an even size (because every agents of the form $i'$ and $i''$ must both be included or both be excluded in a solution), and it has a one-to-one correspondence to an IR invitation in the original instance. Due to their approval sets, any IR invitation of size $2k$ is necessarily a stable invitation of size $2k$. 
+\end{proof}
+
+\begin{theorem} \label{SIP:thm:nphard_a2_b0}
+	Both $k$-IR-Invitation and $k$-Stable-Invitation are NP-complete when $\alpha \geq 2$ and $\beta \geq 0$. 
+\end{theorem} 
 
 \subsection{$k$-IR-Invitation}
 
