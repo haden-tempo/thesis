@@ -164,53 +164,8 @@ For any (integral) flow $f$ from $s$ to $t$, we interpret the flow as follows. E
 
 
 \paragraph{When $\alpha = 1$ and $\beta \geq 1$.}
-To show NP-hardness, we reduce the well-known MAX-2-SAT problem to a $(1,1)$-instance of \GSIP. 
+%TODO: AAAI'15 appendix has a proof from max-2-sat. Too long?
 
-Suppose that we are given an instance of the MAX-2-SAT problem that consists of $n$ boolean variables ($\{x_1, x_2, \dots, x_n\}$), $m$ clauses ($\{C_1, C_2, \dots, C_m\}$), and a parameter $k$. In the MAX-2-SAT problem, each clause contains two variables and the objective is to assign \true~or \false~to each literal, $x_i$, such that the assignment satisfies precisely $k$ clauses ($k \geq 1$).\footnote{Technically, the objective in the MAX-2-SAT is to find a boolean assignment that satisfies at least $k$ clauses ($k \geq 1$), but we use `precisely $k$' instead of `at least $k$' to shorten our proofs.  Trivially, if one can solve the precise-MAX-2-SAT in poly-time, then it can be used to solve the at-least-MAX-2-SAT in poly-time, and therefore this does not affect our technical results.}
-
-For each boolean variable $x_i$, we create two literal-agents, $a_i$ and $a_{-i}$, which correspond to the assignment of \true~and \false~to $x_i$, respectively. We set the acceptance sets of these agents to be empty. The rejection set of $a_i$ (denoted by $R_{i}$), contains $a_{-i}$ and the rejection set of $a_{-i}$ (denoted by $R_{-i}$) contains $a_{i}$. A natural interpretation of this is that an invitation can contain at most one of the two literal-agents, $a_{i}$ and $a_{-i}$, for each $i$ because they are in each other's rejection set (and this ensures that a stable invitation never contains both). 
-
-For each clause $C_j$ in the form of $C_j = (x_p \lor x_q)$, we create five clause-agents: $\{b_{j}^{TT}, b_j^{TF}, b_j^{FT}, b_j^{FF}, b_{j}^{C}\}$ (we use $b$ instead of $a$ to distinguish from the literal agents). The first four agents correspond to the four possible boolean assignments to the two literals contained in $C_j$, and their superscripts indicate these assignments. For example, inviting $b_j^{TF}$ is interpreted as the case where $x_p$ is assigned \true~and $x_q$ is assigned \false. Finally, $b_j^C$ corresponds to the case where the clause $C_j$ is satisfied. We set acceptance sets and rejection sets of these five clause-agents as shown below. If $C_j$ is in a different form such as $(\neg x_p \lor x_q)$ and $(\neg x_p \lor \neg x_q)$, one can easily set its acceptance sets and rejection sets analogous to the ones we listed (we omit the details due to space).
-\begin{eqnarray*}
-&& 
-F_j^{TT} = \{a_p\},~ F_{j}^{TF} = \{a_p\},~ F_{j}^{FT} = \{a_{-p}\},~ F_{j}^{FF} = \{a_{-p}\},~ F_{j}^{C} = \emptyset, \\ 
-&&
-R_j^{TT} = \{a_{-q}\},~ R_{j}^{TF} = \{a_{q}\},~ R_{j}^{FT} = \{a_{-q}\},~ R_{j}^{FF} = \{a_{q}\},~ R_{j}^{C} = \{b_j^{FF}\}
-\end{eqnarray*}
-
-We have so far created $2n$ literal-agents and $5m$ clause-agents such that each agent contains at most one agent in her acceptance set and at most one agent in her rejection set. Therefore the instance we created is a $(1,1)$-instance of \GSIP.  Recall that all agents have simple preferences, and in this proof we do not need to specify exact preference orderings of agents. This completes the construction part of our proof. 
-
-Using this construction, we now show that our $(1,1)$-instance of \GSIP\ is a yes-instance if and only if the original MAX-2-SAT instance is a yes-instance.  Recall that the MAX-2-SAT instance contains a parameter $k$.
-
-To show for one direction (from \GSIP\ to MAX-2-SAT): 
-	Suppose that the $(1,1)$-instance of \GSIP\ that we constructed admits a stable invitation $S^*$ of size $(n+m+k)$.  We show that using $S^*$, we can find a boolean assignment that satisfies precisely $k$ clauses in the original MAX-2-SAT instance. 
-
-	We first show that $S^*$ contains either $a_i$ or $a_{-i}$, but not both, for all $i$.
-	It is easy to see that $S^*$ never contains both $a_i$ and $a_{-i}$ for any $i$ because of their rejection sets (due to individual rationality).
-	Now suppose that $S^*$ contains neither $a_i$ nor $a_{-i}$ for some $i$. Then $S^*$ is not envy-free with respect to $a_i$ (because $R_i = \{a_{-i}\}$ and clearly $a_{-i}\not\in S^*$); this is a contradiction because we assumed $S^*$ is stable.  Therefore we can assume that $S^*$ contains exactly one of $a_i$ and $a_{-i}$ for all $i$ (this is important because we must ensure that we can convert $S^*$ into a valid boolean assignment in the original SAT problem). Since we can infer the assignment of booleans to literals based on the membership of $a_i$ and $a_{-i}$ in $S^*$, let us call this the induced assignment of booleans to the literals, $\{x_i\}$. 
-
-	Next consider a clause $C_j = (x_p \lor x_q)$ and the five clause-agents we created. Note that what we have shown earlier implies that either $a_p\in S^*$ or $a_{-p}\in S^*$ and that either $a_q \in S^*$ or $a_{-q}\in S^*$. First, consider the case where $\{a_p,a_q\} \subset S^*$. In this case, it holds that $\{b_j^{TF}, b_j^{FT}, b_j^{FF}\} \cap S^* = \emptyset$ because it is not individually rational for those clause-agents to be in $S^*$, while $S^*$ must contain $b_j^{TT}$ because it is not envy-free otherwise. Finally, $S^*$ must also contain $b_j^{C}$ because we know that $b_j^{FF}\not\in S^*$, and thus it is not envy-free if $b_j^{C} \not\in S^*$. One can examine the other three cases analogously, and we summarize this case-by-case analysis below.
-	\begin{eqnarray*}
-	&& \left(\{a_p,a_q\} \subset S^* \right) \Rightarrow 
-		(\{b_j^{TT}, b_j^{TF}, b_j^{FT}, b_j^{FF}, b_j^C\} \cap S^* = \{b_j^{TT}, b_j^C\}), \\
-	&&
-		\left(\{a_p,a_{-q}\} \subset S^* \right) \Rightarrow 
-		\left(\{b_j^{TT}, b_j^{TF}, b_j^{FT}, b_j^{FF}, b_j^C\} \cap S^* = \{b_j^{TF}, b_j^C\}\right), \\
-	&& \left(\{a_{-p},a_q\} \subset S^*\right) \Rightarrow 
-		\left(\{b_j^{TT}, b_j^{TF}, b_j^{FT}, b_j^{FF}, b_j^C\} \cap S^* = \{b_j^{FT}, b_j^C\}\right), \\
-	&& \left(\{a_{-p},a_{-q}\} \subset S^*\right) \Rightarrow 
-		\left(\{b_j^{TT}, b_j^{TF}, b_j^{FT}, b_j^{FF}, b_j^C\} \cap S^* = \{b_j^{FF}\}\right)
-	\end{eqnarray*}
-
-	The last case is subtle; it is clear that $\{b_j^{TT}, b_j^{TF}, b_j^{FT}\} \cap S^* = \emptyset$ due to individual rationality, but $S^*$ may contain either $b_j^C$ or $b_j^{FF}$; however if it contains $b_j^C$, then it is not envy-free with respect to $b_j^{FF}$ while $S^*$ cannot contain both, and therefore we conclude that $S^*$ contains $b_j^{FF}$ in this case.
-	In summary, we have shown that if the clause $C_j$ is satisfied by the induced assignment of booleans to literals, then $S^*$ contains exactly two clause-agents (out of five), and if it is not satisfied then $S^*$ contains exactly one clause-agent. 
-
-	We have shown that $S^*$ contains exactly $n$ literal agents (either $a_i$ or $a_{-i}$ for each $i$) and $(m + k)$ clause-agents where $k$ is the number of clauses that are satisfied by the induced assignment of booleans to the literals; that is, $S^*$ found by the assumed black-box algorithm is of size $n + (m + k)$.  Notice that $n$ and $m$ are fixed in the sum.  This shows that if the assumed black-box algorithm can find a stable invitation of size $(n+m+k)$, then it is a proof that there exists a valid assignment in the original MAX-2-SAT instance such that it satisfies precisely $k$ clauses. This completes the proof of our reduction in one direction. 
-
-To show for the other direction (from MAX-2-SAT to \GSIP):
-Suppose that there exists a valid assignment of booleans in the original MAX-2-SAT instance such that it satisfies precisely $k$ clauses. Using this assignment, we construct an invitation $S$ as follows. First, if $x_i$ is assigned \true~(\false, respectively), then $S$ contains $a_i$ ($a_{-i}$, respectively). Next, if clause $C_j$ is not satisfied, then $S$ contains $b_j^{FF}$ but none of $\{b_j^{TT}, b_j^{TF},b_j^{FT},b_j^{C}\}$. If $C_j$ is satisfied, then $S$ contains $b_j^C$; in addition, $S$ contains one of $\{b_j^{TT}, b_j^{TF},b_j^{FT}\}$ depending on whether the two literals in the clause are assigned to true or false (e.g., if $C_j = (x_p \lor x_q)$ and $x_p$ is true and $x_q$ is false, then $S$ contains $b_j^{TF}$). Notice that $S$ contains precisely $(n + m + k)$ agents. One can easily verify that $S$ is indeed stable by checking the acceptance sets and rejection sets of the agents we created.  This shows that if there is a valid assignment in the original instance that satisfies $k$ clauses, then the assumed black-box algorithm is able to find a stable invitation of size $(n + (m+k))$.  
-
-We have shown that the decision problem of finding a stable invitation of size $k$ in $(1,1)$-instance of \GSIP\ is equivalent to the MAX-2-SAT problem. This implies NP-hardness of $(1,1)$-\GSIP.
 
 
 \paragraph{When $\alpha = 2$ and $\beta \geq 0$.}
