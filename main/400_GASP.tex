@@ -482,16 +482,12 @@ $k$-Stable-EF-GASP is $W[1]$-hard even if all agents have increasing preferences
 	We prove W[1]-hardness of $k$-Stable-EF-GASP when all agents have increasing preferences. This immediately imply W[1]-hardness of the problem with no assumption on preferences of agents.
 	
 	\paragraph{Construction of \GASPs instance.}
-	Let $G = (V, E)$ be a graph instance of the $k$-Clique problem.
-	For each vertex $v_i \in V$, we create $k^2$ copies of $v_i$ as agents (call them copies of $v_i$) and create an activity $a_i$; this creates $k^2|V|$ agents and $|V|$ activities.
-	For each edge $e_{i,j} = (v_i, v_j) \in E$, we create two copies of $e_{i,j}$ as agents (call them copies of $e_{i,j}$) and create an activity $w_{i,j}$; this creates $2|E|$ agents and $|E|$ activities. 
-	Let $k' = k^3 + k^2 - k$, and we create $k'+1$ copies of dummy agents (call them copies of $z$).
-	For each of the $k^2$ copies of $v_i$ agents, we set its approval set such that $l_{v_i}(a_i) = k^2$ (i.e., approves any outcome with $a_i$ and size $k^2$ or larger) and $l_{v_i}(w_{i,j}) = 3$ if $(v_i, v_j) \in E$ and $l_{v_i}(\cdot) = n+1$ for all other activities (where $n = k^2|V| + 2|E| + k' + 1$ is the total number of agents we create).
-	For each of the two copies of $e_{i,j}$ agents, we set its approval set such that $l_{e_{i,j}}(w_{i,j}) = 2$.
-	For each of the $k'+1$ copies of $z$ agents, we set its approval set such that $l_{z}(w_{i,j}) = 4$ for all $(i,j)$ where $(v_i, v_j) \in E$.
-	We claim that a clique of size $k$ exists in $G$ if and only if a stable assignment of size $k'$ exists in the \GASPs instance we created. 
+	
+	We use the same reduction that we used in proof of Theorem~\ref{GASP:thm:stable_w1_inc}.
 
 	\paragraph{Proof of equivalence between instances.}	
+	
+	
 	First, suppose that $C = \{v_1, v_2, \dots, v_k\}$ is a clique of size $k$ in $G$. We can construct a stable assignment of size $k'$ as follows: (a) For $k^2$ copies of $v_i$, we assign them to $a_i$ if $v_i\in C$ and to $\void$ otherwise, (b) for two copies of $e_{i,j}$, we assign them to $w_{i,j}$ if $v_i\in C$ and $v_j\in C$ and to $\void$ otherwise, and (c) copies of $z$ are assigned to $\void$. Note that this assignment assigns exactly $k^3 + 2\binom{k}{2} = k^3 + k(k-1) = k'$ agents to non-void activities. It is easy to verify that $\pi$ is IR and stable, proof of which is created to due space. 
 	
 	Conversely, now suppose that $\pi$ is a stable assignment of size $k'$, and we show that there exists a clique of size $k$ in $G$. 
