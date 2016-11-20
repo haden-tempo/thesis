@@ -499,10 +499,6 @@ $k$-Stable-EF-GASP is $W[1]$-hard even if all agents have increasing preferences
 	As we argued in our proof of Theorem~\ref{GASP:thm:stable_w1_inc}, $\pi$ must assign $k^2$ copies of each of $v_1, v_2, \dots, v_k$ (without loss of generality) to $a_1, a_2, \dots, a_k$, respectively, and $2\binom{k}{2}$ edge-agents of the form $e_{i,j}$ with $1\leq i < j \leq k$ to $w_{i,j}$, respectively. Consider some copy of $v_l$ agent with $l > k$. $v_l$ is not envious of any copy of $v_1, v_2, \dots, v_k$ as $v_l$ does not approve any of $a_1, a_2, \dots, a_k$; $v_l$ is also not envious of any agent $w_{i,j}$ as $v_l$ does not approve $e_{i,j}$ when $1 \leq i < j \leq k$ (because $i\neq l$ and $j\neq l$). Now consider some edge agent $e_{l, l'}$. $e_{l, l'}$ is not envious of any copy of $v_1, v_2, \dots, v_k$ as $e_{l, l'}$ does not approve any of $a_1, a_2, \dots, a_k$ and also not envious of any edge agent $e_{i,j}$ because $e_{l, l'}$ does not approve $w_{i,j}$ when $1 \leq i < j \leq k$. Finally, dummy agents only approve $w_{i,j}$'s of size $4$ or larger, and therefore they are not envious of edge agents. This complements our proof for Theorem~\ref{GASP:thm:stable_w1_inc}, and shows that $k$-Stable-EF-GASP is $W[1]$-hard even if all agents have increasing preferences for all activities. 
 \end{proof}
 
-
-W[1]-hardness of $k$-Stable-EF-GASP can be shown using the same reduction we used in Theorems~\ref{GASP:thm:stable_w1_inc} to prove W[1]-hardness of $k$-Stable-GASP with increasing preferences.
-
-
 % The following theorems can be proved in a similar way we proved Theorems~\ref{GASP:thm:stable_w1_inc}, \ref{GASP:thm:stable_fpt_dec} and \ref{GASP:thm:stable_fpt_equiv}, respectively in this order, with some modifications.
 
 
@@ -511,7 +507,10 @@ W[1]-hardness of $k$-Stable-EF-GASP can be shown using the same reduction we use
 $k$-Stable-EF-GASP is in FPT if all agents have decreasing preferences for all activities. 
 \end{theorem} %TODO 01
 
-GASP:thm:ef_fpt_equiv
+
+
+Easiness of $k$-Stable-EF-GASP with equivalent activities can be shown similarly to how we proved easiness of $k$-Stable-GASP and $k$-EF-GASP in Theorems~\ref{GASP:thm:stable_fpt_equiv} and \ref{GASP:thm:ef_fpt_equiv}.
+
 \begin{theorem} \label{GASP:thm:stable_ef_equiv_fpt}
 $k$-Stable-EF-GASP is in FPT if all activities are equivalent.
 \end{theorem} %TODO 02
