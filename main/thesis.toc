@@ -35,38 +35,38 @@
 \contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{47}
 \contentsline {paragraph}{Proof of equivalence between instances.}{47}
 \contentsline {paragraph}{Proof of completeness.}{48}
-\contentsline {paragraph}{Preliminaries.}{48}
-\contentsline {paragraph}{FPT Algorithm.}{48}
-\contentsline {paragraph}{Preliminaries.}{51}
+\contentsline {paragraph}{Preliminaries.}{49}
+\contentsline {paragraph}{FPT Algorithm.}{49}
+\contentsline {paragraph}{Preliminaries.}{52}
 \contentsline {paragraph}{FPT Algorithm.}{52}
-\contentsline {subsection}{\numberline {4.2.3}$k$-EF-GASP: Finding Envy-free Assignments}{53}
-\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{53}
+\contentsline {subsection}{\numberline {4.2.3}$k$-EF-GASP: Finding Envy-free Assignments}{54}
+\contentsline {paragraph}{Construction of {\normalfont \texttt {GASP}}\nobreakspace {}instance.}{54}
 \contentsline {paragraph}{Proof of equivalence between instances.}{54}
-\contentsline {paragraph}{Proof of completeness.}{54}
-\contentsline {paragraph}{Preliminaries.}{56}
+\contentsline {paragraph}{Proof of completeness.}{55}
+\contentsline {paragraph}{Preliminaries.}{57}
 \contentsline {paragraph}{FPT algorithm.}{57}
-\contentsline {subsection}{\numberline {4.2.4}$k$-Stable-EF-GASP: Finding Stable, Envy-free Assignments}{58}
+\contentsline {subsection}{\numberline {4.2.4}$k$-Stable-EF-GASP: Finding Stable, Envy-free Assignments}{59}
 \contentsline {subsection}{\numberline {4.2.5}$k$-Perfect-GASP: Finding Perfect Assignments}{59}
 \contentsline {subsection}{\numberline {4.2.6}Solutions of size at least or at most $k$}{60}
 \contentsline {section}{\numberline {4.3}Discussion}{61}
-\contentsline {chapter}{\numberline {5}Stable Invitations Problem}{62}
-\contentsline {paragraph}{Related Work.}{63}
-\contentsline {section}{\numberline {5.1}Definitions and Notation}{63}
-\contentsline {section}{\numberline {5.2}Classical Complexity}{65}
-\contentsline {subsection}{\numberline {5.2.1}Easiness Results}{66}
-\contentsline {subsection}{\numberline {5.2.2}Hardness Results}{68}
-\contentsline {section}{\numberline {5.3}Parameterized Complexity}{70}
-\contentsline {subsection}{\numberline {5.3.1}$k$-IR-Invitation}{71}
-\contentsline {subsection}{\numberline {5.3.2}$k$-Stable-Invitation}{73}
-\contentsline {section}{\numberline {5.4}Symmetric Social Relationship}{78}
-\contentsline {subsection}{\numberline {5.4.1}Symmetric $k$-IR-Invitations}{79}
-\contentsline {subsection}{\numberline {5.4.2}Symmetric $k$-Stable-Invitations}{82}
-\contentsline {section}{\numberline {5.5}Discussion}{85}
-\contentsline {chapter}{\numberline {6}Strategic Agents and Mechanisms}{86}
-\contentsline {paragraph}{Related Work.}{87}
-\contentsline {section}{\numberline {6.1}Definitions and Notation}{87}
-\contentsline {section}{\numberline {6.2}Mechanisms and Strategic Agents}{89}
-\contentsline {subsection}{\numberline {6.2.1}Randomized Mechanisms}{95}
-\contentsline {section}{\numberline {6.3}Discussion}{96}
-\contentsline {chapter}{\numberline {7}Open Problems}{98}
-\contentsline {chapter}{Bibliography}{100}
+\contentsline {chapter}{\numberline {5}Stable Invitations Problem}{63}
+\contentsline {paragraph}{Related Work.}{64}
+\contentsline {section}{\numberline {5.1}Definitions and Notation}{64}
+\contentsline {section}{\numberline {5.2}Classical Complexity}{66}
+\contentsline {subsection}{\numberline {5.2.1}Easiness Results}{67}
+\contentsline {subsection}{\numberline {5.2.2}Hardness Results}{69}
+\contentsline {section}{\numberline {5.3}Parameterized Complexity}{71}
+\contentsline {subsection}{\numberline {5.3.1}$k$-IR-Invitation}{72}
+\contentsline {subsection}{\numberline {5.3.2}$k$-Stable-Invitation}{74}
+\contentsline {section}{\numberline {5.4}Symmetric Social Relationship}{79}
+\contentsline {subsection}{\numberline {5.4.1}Symmetric $k$-IR-Invitations}{80}
+\contentsline {subsection}{\numberline {5.4.2}Symmetric $k$-Stable-Invitations}{83}
+\contentsline {section}{\numberline {5.5}Discussion}{86}
+\contentsline {chapter}{\numberline {6}Strategic Agents and Mechanisms}{87}
+\contentsline {paragraph}{Related Work.}{88}
+\contentsline {section}{\numberline {6.1}Definitions and Notation}{88}
+\contentsline {section}{\numberline {6.2}Mechanisms and Strategic Agents}{90}
+\contentsline {subsection}{\numberline {6.2.1}Randomized Mechanisms}{96}
+\contentsline {section}{\numberline {6.3}Discussion}{97}
+\contentsline {chapter}{\numberline {7}Open Problems}{99}
+\contentsline {chapter}{Bibliography}{101}
