@@ -270,16 +270,13 @@ $k$-Stable-GASP is $W[1]$-complete when all agents have increasing preferences f
 	That is, $C = \{v_1, v_2, \dots, v_k\}$ is a clique in the original instance. 
 	This completes the proof of W[1]-hardness of the problem.
 
-	\paragraph{Proof of completeness.} %TODO 01
+	\paragraph{Proof of completeness.} 
 	Let us reduce $k$-Stable-GASP with increasing preferences to the colored $k$-Clique problem.
 	
 	 We first enumerate $l$ over $[1, k]$, and then $k_1, k_2, \dots, k_l$ over positive integers such that $\sum_{d \in [1,l]} k_d = k$. Note that there are $O(k^k)$ enumerations which only depends on $k$. Once we fixed these values, we randomly color agents and activities using $l$ colors, uniformly and independently at random. We seek a stable assignment of size $k$ which assigns exactly $k_d$ agents of color $d$ to one of the activities of color $d$ for every $d\in [1, l]$. As discussed earlier, using a $k$-perfect family of hash functions, we can enumerate over a list of colorings to ensure that we would color agents and activities correctly if there exists a solution (here, coloring correctly means that with respect to some stable assignment of size $k$, we color agents and activities used in the assignment with the same color while others do not matter). Therefore, as we shall show in this reduction, if we can solve colored $k$-Clique in FPT time, then we can also solve $k$-Stable-GASP with increasing preferences in FPT time, which proves completeness. 
 	
 	Let $A_d$ be the set of activities of color $d$ and $N_d$ be the set of agents of color $d$. We will now formulate the problem of finding an invitation as the problem of finding an $l$-clique where colored activities are represented by colored nodes, and edges shall be created as follows.	
-	For every $d$ and every activity $a_j \in A_d$, let $N_d(j)$ be the set of agents in $N_d$ who approve the outcome $(a_j, k_d)$. If $|N_d(j)| < k_d$ (or $|N_d(j)| > k_d$), then we cannot assign $k_d$ agents of color $d$ to $a_j$ without violating IR (or stability). Hence, in our solution, $a_j$ cannot be chosen (in an $l$-clique or an invitation). Therefore, we create an edge between $a_j$ and every other activity of color $d'\neq d$. Now consider some $a_j\in A_d$ with $|N_d(j)| = k_d$. If we choose to include $a_j$, then we must ensure that every agent $i\in N_d \setminus N_d(j)$ is satisfied. If some agent $i\in N_d \setminus N_d(j)$ has $l_i(a_{j'}) = 1$ for some $a_{j'}\in A_{d'}$ with $d' \neq d$, then choosing $a_j$ must be accompanied by choosing $a_{j'}$; therefore we create edges between $a_j$ and all activities in $A_{d'} \setminus \{a_{j'}\}$. If $i$ has $l_i(a_{j'}) = 1$ for some $a_{j'}\in A_d$, then $a_j$ cannot be chosen, and thus we create edges between $a_j$ and every other activity of color $d'\neq d$. If $i$ has $l_i(a_{j'}) \leq k_{d'}$ for some $a_{j'} \in A_{d'}$, then we create an edge between 
-	
-	
-
+	For every $d$ and every activity $a_j \in A_d$, let $N_d(j)$ be the set of agents in $N_d$ who approve the outcome $(a_j, k_d)$. If $|N_d(j)| < k_d$ (or $|N_d(j)| > k_d$), then we cannot assign $k_d$ agents of color $d$ to $a_j$ without violating IR (or stability). Hence, in our solution, $a_j$ cannot be chosen (in an $l$-clique or an invitation). Therefore, we create an edge between $a_j$ and every other activity of color $d'\neq d$. Now consider some $a_j\in A_d$ with $|N_d(j)| = k_d$. If we choose to include $a_j$, then we must ensure that every agent $i\in N_d \setminus N_d(j)$ is satisfied. If some agent $i\in N_d \setminus N_d(j)$ has $l_i(a_{j'}) = 1$ for some $a_{j'}\in A_{d'}$ with $d' \neq d$, then choosing $a_j$ must be accompanied by choosing $a_{j'}$; therefore we create edges between $a_j$ and all activities in $A_{d'} \setminus \{a_{j'}\}$. If $i$ has $l_i(a_{j'}) = 1$ for some $a_{j'}\in A_d$, then $a_j$ cannot be chosen, and thus we create edges between $a_j$ and every other activity of color $d'\neq d$. If $i$ has $l_i(a_{j'}) \leq k_{d'}$ for some $a_{j'} \in A_{d'}$, then we create an edge between $a_j$ and $a_{j'}$ because $a_{j'}$ cannot be chosen if $a_j$ is chosen. After we create these edges by enumerating and checking conditions for every activity and every agent, we are left with a colored $l$-clique instance. If we can solve this in FPT time, then we can also solve $k$-Stable-GASP with increasing preferences in FPT time, which proves completeness. 
 \end{proof}
 
 Unlike the case of increasing preferences, if all agents have decreasing preferences the problem admits an FPT algorithm. 
@@ -503,11 +500,11 @@ $k$-Stable-EF-GASP is $W[1]$-hard even if all agents have increasing preferences
 
 \begin{theorem} \label{GASP:thm:stable_ef_dec_fpt}
 $k$-Stable-EF-GASP is in FPT if all agents have decreasing preferences for all activities. 
-\end{theorem} %TODO 03
+\end{theorem} %TODO 01
 
 \begin{theorem} \label{GASP:thm:stable_ef_equiv_fpt}
 $k$-Stable-EF-GASP is in FPT if all activities are equivalent.
-\end{theorem} %TODO 04
+\end{theorem} %TODO 02
 
 
 %%% =============================================================== Perfect

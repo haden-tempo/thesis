@@ -44,11 +44,11 @@
 \contentsline {paragraph}{Proof of equivalence between instances.}{54}
 \contentsline {paragraph}{Proof of completeness.}{55}
 \contentsline {paragraph}{Preliminaries.}{57}
-\contentsline {paragraph}{FPT algorithm.}{57}
+\contentsline {paragraph}{FPT algorithm.}{58}
 \contentsline {subsection}{\numberline {4.2.4}$k$-Stable-EF-GASP: Finding Stable, Envy-free Assignments}{59}
-\contentsline {subsection}{\numberline {4.2.5}$k$-Perfect-GASP: Finding Perfect Assignments}{59}
-\contentsline {subsection}{\numberline {4.2.6}Solutions of size at least or at most $k$}{60}
-\contentsline {section}{\numberline {4.3}Discussion}{61}
+\contentsline {subsection}{\numberline {4.2.5}$k$-Perfect-GASP: Finding Perfect Assignments}{60}
+\contentsline {subsection}{\numberline {4.2.6}Solutions of size at least or at most $k$}{61}
+\contentsline {section}{\numberline {4.3}Discussion}{62}
 \contentsline {chapter}{\numberline {5}Stable Invitations Problem}{63}
 \contentsline {paragraph}{Related Work.}{64}
 \contentsline {section}{\numberline {5.1}Definitions and Notation}{64}
