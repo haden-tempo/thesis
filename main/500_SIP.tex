@@ -147,14 +147,14 @@ Without loss of generality, we can assume that every agent approves size $k$. Ot
 \begin{theorem} \label{SIP:thm:easiness_IR_a0_b1}
 	$k$-IR-Invitation can be solved in polynomial time when $\alpha =0$ and $\beta = 1$.
 \end{theorem} 
-\begin{proof} %TODO 2
-	We construct an enemy graph in which nodes represent agents and there is an edge between two nodes $v_i$ and $v_j$ if either $i \in E_j$ or $j\in E_i$ holds. Because each node contributes at most one edge, the resulting graph contains at most one cycle per connected component (when the direction of edges are ignored). An independent set of size $k$ in this graph has one-to-one correspondence to an IR invitation in the original instance. Finding an independent set of a certain size in a tree can be done in linear time using dynamic programming algorithm. If a component contains a cycle, then we can pick any two adjacent nodes (call them $v_i$ and $v_j$) in the cycle, and consider three cases: (a) we include $v_i$ but not $v_j$, (b) we include $v_j$ but not $v_i$, or (c) we include neither. For all three cases, if we remove $v_i$ and $v_j$ from the component, we get a forest on which we can find an independent set of a certain size.
+\begin{proof}
+	We construct an enemy graph in which nodes represent agents and there is an edge between two nodes $v_i$ and $v_j$ if either $i \in E_j$ or $j\in E_i$ holds. Because each node contributes at most one edge, the resulting graph contains at most one cycle per connected component (when the direction of edges are ignored). An independent set of size $k$ in this graph has one-to-one correspondence to an IR invitation in the original instance. Finding an independent set of a certain size in a tree can be done in linear time using dynamic programming algorithm. If a component contains a cycle, then we can pick any two adjacent nodes (call them $v_i$ and $v_j$) in the cycle, and consider three cases: (a) we include $v_i$ but not $v_j$, (b) we include $v_j$ but not $v_i$, or (c) we include neither. For all three cases, if we remove $v_i$ and $v_j$ from the component, we get a forest on which we can find an independent set of a certain size. After we determine what size of independent sets we can get from each connected component, we can use a knapsack algorithm to determine whether we can find an independent set of size $k$ in the whole graph. This algorithm overall runs in linear time.
 \end{proof}
 
 \begin{theorem} \label{SIP:thm:easiness_stable_a0_b1}
 	$k$-Stable-Invitation can be solved in polynomial time when $\alpha =0$ and $\beta = 1$.
 \end{theorem} 
-\begin{proof} %TODO 3
+\begin{proof} %TODO 2
 	.
 \end{proof}
 
