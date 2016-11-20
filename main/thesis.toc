@@ -48,9 +48,9 @@
 \contentsline {subsection}{\numberline {4.2.4}$k$-Stable-EF-GASP: Finding Stable, Envy-free Assignments}{59}
 \contentsline {paragraph}{Preliminaries.}{60}
 \contentsline {paragraph}{FPT Algorithm.}{60}
-\contentsline {subsection}{\numberline {4.2.5}$k$-Perfect-GASP: Finding Perfect Assignments}{62}
-\contentsline {subsection}{\numberline {4.2.6}Solutions of size at least or at most $k$}{63}
-\contentsline {section}{\numberline {4.3}Discussion}{64}
+\contentsline {subsection}{\numberline {4.2.5}$k$-Perfect-GASP: Finding Perfect Assignments}{61}
+\contentsline {subsection}{\numberline {4.2.6}Solutions of size at least or at most $k$}{62}
+\contentsline {section}{\numberline {4.3}Discussion}{63}
 \contentsline {chapter}{\numberline {5}Stable Invitations Problem}{65}
 \contentsline {paragraph}{Related Work.}{66}
 \contentsline {section}{\numberline {5.1}Definitions and Notation}{66}

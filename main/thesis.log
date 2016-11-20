@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 NOV 2016 07:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 NOV 2016 08:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -942,34 +942,30 @@ Chapter 7.
 ]) (./thesis.bbl [102] [103
 
 ] [104] [105] [106])
-[107] (./thesis.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[107] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 5108 strings out of 493014
- 73665 string characters out of 6133351
- 145019 words of memory out of 5000000
- 8396 multiletter control sequences out of 15000+600000
+ 5109 strings out of 493014
+ 73688 string characters out of 6133351
+ 144030 words of memory out of 5000000
+ 8397 multiletter control sequences out of 15000+600000
  76855 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1999b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
-urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/
-utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pf
-b>
-Output written on thesis.pdf (117 pages, 491523 bytes).
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/
+8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
+0.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pf
+b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fo
+nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
+urw/times/utmri8a.pfb>
+Output written on thesis.pdf (117 pages, 490792 bytes).
 PDF statistics:
  448 PDF objects out of 1000 (max. 8388607)
  308 compressed objects within 4 object streams
