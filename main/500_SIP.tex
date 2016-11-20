@@ -138,11 +138,11 @@ TODO: To be added.
 \end{theorem} 
 \begin{proof} %TODO 02
 
-We prove for three different cases: $(\alpha,\beta) \in\{(0,2), (1,1), (2,0)\}$. 
+We prove NP-hardness for three different cases: $(\alpha,\beta) \in\{(0,2), (1,1), (2,0)\}$. NP-hardness of all other cases then follow immediately. 
 	
 \paragraph{When $\alpha = 0$ and $\beta \geq 2$.}
 	
-	We reduce from the Maximum-Independent-Set problem in (undirected) cubic graphs in which each node has a degree of three. Finding the maximum independent set in cubic graphs was shown to be NP-complete by Garey, et al.~\shortcite{Garey_Max_Is_Cubic}. 
+	We reduce from the Maximum-Independent-Set problem in (undirected) cubic graphs in which each node has a degree of three. Finding the maximum independent set in cubic graphs was shown to be NP-complete by Garey, et al.~\cite{Garey_Max_Is_Cubic}. 
 	
 	We first reduce the MAX-Independent-Set problem in cubic graphs to $k$-IR-Invitation with $\alpha=0$ and $\beta=3$. Given a cubic graph with $n$ nodes, we first create $n$ agents. For each node $v_i$, we create agent $i$, and construct the rejection set $E_i$ of agent $i$ such that $E_i$ contains the three agents that correspond to the three nodes adjacent to $v_i$.  Note that $|E_i| = 3$ for all $i$, and therefore this instance satisfies $\alpha = 0$ and $\beta = 3$. Lastly, all agents approve the size $k$ but no other sizes.\footnote{For our reduction to work, all agents must approve the size $k$, but other sizes do not matter.}	
 	It is easy to verify that finding an independent set in the original cubic graph is equivalent to finding an IR invitation of the same size in our instsance. 

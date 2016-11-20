@@ -3,9 +3,11 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: plain.bst
 Database file #1: thesis.bib
+Warning--I didn't find a database entry for "lovasz_local_lemma"
+Warning--I didn't find a database entry for "EdmondsKarp"
 You've used 45 entries,
             2118 wiz_defined-function locations,
-            772 strings with 12378 characters,
+            775 strings with 12418 characters,
 and the built_in function-call counts, 18733 in all, are:
 = -- 1940
 > -- 738
@@ -44,3 +46,4 @@ warning$ -- 0
 while$ -- 191
 width$ -- 47
 write$ -- 512
+(There were 2 warnings)
