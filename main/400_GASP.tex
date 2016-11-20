@@ -271,7 +271,14 @@ $k$-Stable-GASP is $W[1]$-complete when all agents have increasing preferences f
 	This completes the proof of W[1]-hardness of the problem.
 
 	\paragraph{Proof of completeness.} %TODO 01
-	Let us reduce $k$-Stable-GASP with increasing preferences to the $k$-Clique problem.
+	Let us reduce $k$-Stable-GASP with increasing preferences to the colored $k$-Clique problem.
+	
+	 We first enumerate $l$ over $[1, k]$, and then $k_1, k_2, \dots, k_l$ over positive integers such that $\sum_{d \in [1,l]} k_d = k$. Note that there are $O(k^k)$ enumerations which only depends on $k$. Once we fixed these values, we randomly color agents and activities using $l$ colors, uniformly and independently at random. We seek an EF assignment of size $k$ which assigns exactly $k_d$ agents of color $d$ to one of the activities of color $d$ for every $d\in [1, l]$. As discussed earlier, using a $k$-perfect family of hash functions, we can enumerate over a list of colorings to ensure that we would color agents and activities correctly if there exists a solution (here, coloring correctly means that with respect to some EF assignment of size $k$, we color agents and activities used in the assignment with the same color while others do not matter). Therefore, as we shall show in this reduction, if we can solve colored $k$-Clique in FPT time, then we can also solve $k$-EF-GASP in FPT time, which proves completeness. 
+	
+	Let $A_d$ be the set of activities of color $d$ and $N_d$ be the set of agents of color $d$. For every $d$ and every activity $a_j \in A_d$, let $N_d(j)$ be the set of agents in $N_d$ who approve the outcome $(a_j, k_d)$. If $|N_d(j)| < k_d$ (or $|N_d(j)| > k_d$), then we cannot assign $k_d$ agents of color $d$ to $a_j$ without violating IR (or envy-freeness) -- we remove $a_j$ from the instance. After removal of such activities from all colors, if any $A_d$ is empty, we reject the coloring. Now, for every $a_j\in A_d$, $|N_d(j)| = k_d$ so that the problem of finding an assignment becomes choosing one activity from each color -- this is exactly the colored clique problem. We are now going to view each activity as a colored node, and we will create edges between them. 	
+	 Consider any $a_j\in A_d$ for some $d$. If we choose to include $a_j$ in our solution, then for every agent $i \in N_d \setminus N_d(j)$, $i$ must not be envious of any agent of some other color than $d$. In particular, if agent $i$ approves some outcome $(a_{j'}, k_{d'})$ for some $a_{j'} \in A_{d'}$ with $d'\neq d$, then including $a_j$ in our solution must be accompanied by including $a_{j'}$ in our solution; in other words, when such agent exists, we would create an edge between $a_j$ and all activities in $A_{d'} \setminus \{a_{j'}\}$. Now a colored $l$-clique in this graph corresponds to an envy-free assignment of size $k$ (using $l$ activities). This proves completeness.
+	
+	
 
 \end{proof}
 
