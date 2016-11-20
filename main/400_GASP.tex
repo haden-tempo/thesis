@@ -483,6 +483,9 @@ We have shown that if we begin with a coloring $c$ (together with $l$ and $k_d$'
 \subsection{$k$-Stable-EF-GASP: Finding Stable, Envy-free Assignments}
 Stability and envy-freeness are not the same, but they are not exclusive, either. They together define another solution concept that is stronger than the two.
 $k$-Stable-EF-GASP is $W[1]$-hard under increasing preferences, but it is in FPT under decreasing preferences or equivalent activities.
+Proofs for the following theorems are very similar to our proofs for previous theroems. 
+
+
 The following theorems can be proved in a similar way we proved Theorems~\ref{GASP:thm:stable_w1_inc}, \ref{GASP:thm:stable_fpt_dec} and \ref{GASP:thm:stable_fpt_equiv}, respectively in this order, with some modifications.
 
 \begin{theorem} \label{GASP:thm:stable_ef_gasp_w1}
@@ -502,10 +505,13 @@ $k$-Stable-EF-GASP is $W[1]$-hard even if all agents have increasing preferences
 $k$-Stable-EF-GASP is in FPT if all agents have decreasing preferences for all activities. 
 \end{theorem} %TODO 01
 
+GASP:thm:ef_fpt_equiv
 \begin{theorem} \label{GASP:thm:stable_ef_equiv_fpt}
 $k$-Stable-EF-GASP is in FPT if all activities are equivalent.
 \end{theorem} %TODO 02
 \begin{proof}
+
+	
 	Let $p = |A^*|$ be the number of non-void activities which we assume are all equivalent.
 	We use Color Coding to design a randomized FPT algorithm, which can easily be de-randomized using a family of $k$-perfect hash functions as shown in the work~\cite{ColorCoding}. 
 
