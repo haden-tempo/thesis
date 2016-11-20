@@ -518,12 +518,9 @@ $k$-Stable-EF-GASP is in FPT if all activities are equivalent.
 	Let $p = |A^*|$ be the number of non-void activities which we assume are all equivalent. As we argued in proof of Theorem~\ref{GASP:thm:stable_fpt_equiv}, we can assume that $p \leq k+1$. For breviy, we only prove the claim when $p = k+1$ in this work, but it can be easily extended to the case when $p < k + 1$.
 
 	\paragraph{Preliminaries.}
-	As before, 
-	Let $N = \{1, 2, \dots, n\}$ be the set of $n$ agents and $A^* = \{a_1, a_2, \dots, a_p\}$ be the set of $p$ copies of the only activity when $p = k+1$. Recall that by definition of equivalent activities, every agent $i$ has $S_i(a_j) = S_i(a_{j'})$ for all $j,j'$.
-	We first fix $l$ (the number of copies of the activity to be used by a stable assignment) which must be between $1$ and $k$, and $k_1, k_2, \dots, k_l$ which is the number of agents assigned to each of the $l$ copies; for convenience we define $k_{l+1} = 0$ as there is at least one extra copy that would not be used by the assignment.
-	The total number of possible values for $l$ and $k_d$'s are bounded above by $O(k^k)$, which is exponential only in $k$.
+	As before, we fix $l$ (the number of copies of the activity to be used by a solution) along with $k_1, k_2, \dots, k_l$ which is the number of agents to be assigned to each of the $l$ copies, and for convenience we define $k_{l+1}=0$.
 	After we fix $l$, we color all agents uniformly and independently at random using colors $1$ through $l$; let $c(\cdot)$ be this coloring scheme and $c(i)$ denote the color of agent $i$. 
-	We say that coloring $c$ (together with $l$ and $k_d$'s) and a stable assignment $\pi$ of size $k$ are {\em compatible} if $\pi$ assigns exactly $k_d$ agents of color $d$ to activity $a_d$ for $d\in [1, l]$.
+	We say that coloring $c$ (together with $l$ and $k_d$'s) and a stable, envy-free assignment $\pi$ of size $k$ are {\em compatible} if $\pi$ assigns exactly $k_d$ agents of color $d$ to activity $a_d$ for $d\in [1, l]$.
 
 	\paragraph{FPT Algorithm.}
 	Our algorithm will find a stable assignment compatible with $c$ or determine that no such stable assignment exists. 
