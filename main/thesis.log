@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 NOV 2016 18:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 NOV 2016 18:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -916,62 +916,58 @@ Overfull \hbox (15.54364pt too wide) in paragraph at lines 89--90
  []
 
 [64] [65] [66] [67] [68] [69] [70] [71]
-Overfull \hbox (5.29604pt too wide) in paragraph at lines 319--320
+Overfull \hbox (5.29604pt too wide) in paragraph at lines 316--317
 []\OT1/ptm/m/n/10.95 Assume un-bounded $\OML/ztmcm/m/it/10.95 $ \OT1/ptm/m/n/1
 0.95 and $\OML/ztmcm/m/it/10.95 ^^L$\OT1/ptm/m/n/10.95 , and let us re-duce the
  $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/n/10.95 -Stable-Invitation prob-lem to the
  weighted
  []
 
-[72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82]) [83]
+[72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83]) [84]
 Chapter 6.
-(./600_GT.tex [84
+(./600_GT.tex [85
 
-] [85] [86] [87] [88] [89] [90] [91] [92] [93]
+] [86] [87] [88] [89] [90] [91] [92] [93] [94]
 Overfull \hbox (8.12442pt too wide) in paragraph at lines 235--237
-\OT1/ptm/m/n/10.95 from ob-tain-ing strategy-proof mech-a-nisms. The-o-rem 41[]
+\OT1/ptm/m/n/10.95 from ob-tain-ing strategy-proof mech-a-nisms. The-o-rem 42[]
  shows that agents not hav-ing \OT1/cmss/m/n/10.95 INC\OT1/ptm/m/n/10.95 -prefe
 rences
  []
 
-[94]) [95]
+[95]) [96]
 Chapter 7.
-(./700_Discussion.tex) (./thesis.bbl [96
+(./700_Discussion.tex) (./thesis.bbl [97
 
-] [97
+] [98
 
-] [98] [99] [100]) [101]
-(./thesis.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] [99] [100] [101]) [102]
+(./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 5108 strings out of 493014
- 73661 string characters out of 6133351
- 142989 words of memory out of 5000000
- 8396 multiletter control sequences out of 15000+600000
+ 5106 strings out of 493014
+ 73607 string characters out of 6133351
+ 144999 words of memory out of 5000000
+ 8394 multiletter control sequences out of 15000+600000
  76855 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1999b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
-urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/
-utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pf
-b>
-Output written on thesis.pdf (111 pages, 467486 bytes).
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc
+}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
+mes/utmri8a.pfb>
+Output written on thesis.pdf (112 pages, 469306 bytes).
 PDF statistics:
- 428 PDF objects out of 1000 (max. 8388607)
- 295 compressed objects within 3 object streams
+ 431 PDF objects out of 1000 (max. 8388607)
+ 297 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
