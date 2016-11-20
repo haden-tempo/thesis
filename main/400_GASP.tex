@@ -396,7 +396,8 @@ The problem remains to be $W[1]$-complete even if each agent approves at most on
 	Note that in our reduction each agent approves at most one size per activity, proving the second statement in the theorem.
 
 	\paragraph{Proof of completeness.} %TODO 02
-	We now show completeness by reducing $k$-EF-GASP to the colored $k$-clique problem. We first enumerate $l$ over $[1, k]$, and then $k_1, k_2, \dots, k_l$ over positive integers such that $\sum_{d \in [1,l]} k_d = k$. For every fixed $l$ and $k_1, k_2, \dots, k_l$, we seek an EF assignment of size $k$ which assigns $k$ agents to $l$ activities such that the number of agents assigned to those activities is equal to $k_1, k_2, \dots, k_l$. Note that there are $O(k^k)$
+	We now show completeness by reducing $k$-EF-GASP to the colored $k$-clique problem. We first enumerate $l$ over $[1, k]$, and then $k_1, k_2, \dots, k_l$ over positive integers such that $\sum_{d \in [1,l]} k_d = k$. For every fixed $l$ and $k_1, k_2, \dots, k_l$, we seek an EF assignment of size $k$ which assigns $k$ agents to $l$ activities such that the number of agents assigned to those activities is equal to $k_1, k_2, \dots, k_l$. Note that there are $O(k^k)$ enumerations which only depends on $k$. Once we fixed these values, we randomly color agents and activities using $l$ colors, uniformly and independently at random. As discussed earlier, using a $k$-perfect family of hash functions, we can enumerate over a list of colorings to ensure that 
+	
 	
 	
 \end{proof}
