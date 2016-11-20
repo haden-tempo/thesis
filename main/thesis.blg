@@ -3,47 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: plain.bst
 Database file #1: thesis.bib
-Warning--I didn't find a database entry for "lovasz_local_lemma"
-Warning--I didn't find a database entry for "EdmondsKarp"
-You've used 45 entries,
+You've used 47 entries,
             2118 wiz_defined-function locations,
-            775 strings with 12418 characters,
-and the built_in function-call counts, 18733 in all, are:
-= -- 1940
-> -- 738
+            785 strings with 12605 characters,
+and the built_in function-call counts, 19363 in all, are:
+= -- 2007
+> -- 758
 < -- 31
-+ -- 292
-- -- 242
-* -- 1204
-:= -- 2821
-add.period$ -- 153
-call.type$ -- 45
-change.case$ -- 248
++ -- 300
+- -- 248
+* -- 1252
+:= -- 2925
+add.period$ -- 159
+call.type$ -- 47
+change.case$ -- 257
 chr.to.int$ -- 0
-cite$ -- 45
-duplicate$ -- 814
-empty$ -- 1537
-format.name$ -- 242
-if$ -- 4186
+cite$ -- 47
+duplicate$ -- 836
+empty$ -- 1591
+format.name$ -- 248
+if$ -- 4315
 int.to.chr$ -- 0
-int.to.str$ -- 45
-missing$ -- 48
-newline$ -- 227
-num.names$ -- 96
-pop$ -- 321
+int.to.str$ -- 47
+missing$ -- 50
+newline$ -- 237
+num.names$ -- 100
+pop$ -- 326
 preamble$ -- 1
-purify$ -- 207
+purify$ -- 214
 quote$ -- 0
-skip$ -- 637
+skip$ -- 652
 stack$ -- 0
-substring$ -- 1347
-swap$ -- 313
+substring$ -- 1407
+swap$ -- 315
 text.length$ -- 31
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 172
+type$ -- 180
 warning$ -- 0
-while$ -- 191
-width$ -- 47
-write$ -- 512
-(There were 2 warnings)
+while$ -- 199
+width$ -- 49
+write$ -- 534

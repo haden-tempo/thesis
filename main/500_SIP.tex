@@ -162,6 +162,12 @@ We have created $(1 + n + m + 1)$ nodes and $(n + 2m + m)$ edges in the flow net
 
 For any (integral) flow $f$ from $s$ to $t$, we interpret the flow as follows. Each $v_i$ has precisely $f(s, v_i)$ out-going edges, which are precisely the set of edges $\{e_j : f(v_i, e_j) = 1\}$. Each edge $e_j = (v_i, v_l)$ is assigned to the direction from $v_i$ to $v_l$ if $f(v_i, e_j) = 1$ and from $v_l$ to $v_i$ if $f(v_l, e_j) = 1$. Finally if $f(e_j, t) = 1$ then the edge has been assigned a direction. Conversely, if there is an assignment of directions to edges in the original graph such that no node has three outgoing edges, then we can find a flow whose value if $m$: for each edge $e_j = (v_i, v_l)$, we add a unit flow from $s$ to $v_i$ to $e_j$ to $t$ (if the direction is from $v_i$ to $v_l$) and a unit flow from $s$ to $v_l$ to $e_j$ to $t$ (if the direction is from $v_l$ to $v_i$). Therefore if there exists a flow $f$ in this network whose value is $m$, then we can assign directions to all edges such that each node has at most two out-going edges.  We have shown earlier that such assignment is possible (using the Lov{\'a}sz local lemma), which implies that the max-flow in this network has the value $m$; indeed the min-cut in this flow network is the cut between the single-sink node and the rest, giving the cut value of $m$.  One can find such max-flow in polynomial time by using the Edmonds-Karp algorithm~\cite{EdmondsKarp}.
 
+
+\paragraph{When $\alpha = 0$ and $\beta \geq 2$.}
+
+
+\paragraph{When $\alpha = 0$ and $\beta \geq 2$.}
+
 \end{proof}
 
 

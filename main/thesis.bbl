@@ -95,6 +95,12 @@ Jacques~H. Dreze and Joseph Greenberg.
 \newblock Hedonic coalitions: Optimality and stability.
 \newblock {\em Journal of the Econometric Society}, pages 987--1003, 1980.
 
+\bibitem{EdmondsKarp}
+Jack Edmonds and Richard~M. Karp.
+\newblock Theoretical improvements in algorithmic efficiency for network flow
+  problems.
+\newblock {\em Journal of the ACM}, 19(2):248--264, 1972.
+
 \bibitem{endriss2015parameterized}
 Ulle Endriss, Ronald De~Haan, and Stefan Szeider.
 \newblock Parameterized complexity results for agenda safety in judgment
@@ -254,6 +260,11 @@ Mark~Allen Satterthwaite.
 S.~Sen and E.H. Durfee.
 \newblock A formal study of distributed meeting scheduling.
 \newblock {\em Group Decision and Negotiation}, 7(3):265--289, 1998.
+
+\bibitem{lovasz_local_lemma}
+James~B. Shearer.
+\newblock On a problem of spencer.
+\newblock {\em Combinatorica}, 5(3):241--245, 1985.
 
 \bibitem{shrot2009easy}
 Tammar Shrot, Yonatan Aumann, and Sarit Kraus.
