@@ -114,14 +114,58 @@ Earlier we mentioned that both $k$-IR-Invitation and $k$-Stable-Invitation are N
 
 \subsection{Easiness Results}
 
-%TODO
+\begin{theorem} \label{SIP:thm:IR_invitation_P}
+	$k$-IR-Invitation can be solved in polynomial time when $\alpha + \beta \leq 1$.
+\end{theorem} 
+\begin{proof}
+We know from the work of Darmann et al.~\cite{GASP12WINE} that $k$-IR-Invitation is solvable in polynomial time when $\alpha = \beta = 0$.
+	
+	Let us first consider $(1, 0)$-instances of $k$-IR-Invitation in which all agents have at most one friend and all agents have no enemies. Without loss of generality, we can assume that every agent approves size $k$. Otherwise, such agents cannot be included in the solution without violating IR conditions. If we remove an agent who does not approve size $k$, then all agents who consider this agent as friends must also be removed as they cannot be included in the solution. This removal process can be done in polynomial time (in fact, in time $O(n)$), and we assume all agents approve size $k$ from here on. 
+	
+	Let us construct a (directed) ``friend graph'' ($G_f$) in which nodes represent agents and edges represent (directed) friend relationship such that there is an edge from node $i$ to node $j$ if and only if $j \in F_i$. Clearly, there is a one-to-one correspondence between an invitation and a subset of nodes -- we shall interchangeably refer to a subset of agents or a subset of nodes as an IR invitation. Because individual rationaliy requires that all friends of every invited agent are also invited, it is clear that every strongly connected component in $G_f$ must all or none be included in an IR invitation. Hence, we can construct a directed acyclic (weighted) graph $G'$ in which each node corresponds to a strongly connected component of $G_f$ and the weight of the node is equal to the number of ndoes in the component. The problem of finding an IR invitation of size $k$ is now equivalent to finding a subset of weighted nodes in $G'$ whose sum of weights is equal to $k$ and there is no outgoing edge from the subset. 
+
+%TODO 01
+
+\end{proof}
+
+
+
+\begin{theorem} \label{SIP:thm:stable_invitation_NPC}
+	$k$-Stable-Invitation is NP-complete when $\alpha + \beta > 1$.
+\end{theorem} 
+\begin{proof} 
+We prove NP-hardness for three different cases: $(\alpha,\beta) \in\{(0,2), (1,1), (2,0)\}$. NP-hardness of all other cases then follow immediately. 
+
+\paragraph{When $\alpha = 0$ and $\beta \geq 2$.} 
+The reduction we used in proof of Theorem~\ref{SIP:thm:IR_invitation_NPC} can be used to prove NP-hardness of $k$-Stable-Invitation in this case. As all agents approve size $k$ but not $k+1$, any IR invitation of size $k$ is necessarily stable.
+
+
+\paragraph{When $\alpha = 1$ and $\beta \geq 1$.} %TODO 05
+b
+c
+b
+
+\paragraph{When $\alpha = 2$ and $\beta \geq 0$.} %TODO 06
+cd
+a
+af
+e
+
+
+\end{proof}
+
+
+
+
+
+
 
 \subsection{Hardness Results}
 
 We prove NP-hardness of $k$-IR-Invitation and $k$-Stable-Invitation. Their NP-completeness follows from the fact that both problems are in NP.
 
 \begin{theorem} \label{SIP:thm:nphard_a0_b2}
-	Both $k$-IR-Invitation and $k$-Stable-Invitation are NP-complete when $\alpha = 0$ and $\beta \geq 2$. 
+	Both $k$-IR-Invitation and $k$-Stable-Invitation are NP-complete when $\alpha \geq 0$ and $\beta \geq 2$. 
 \end{theorem} 
 \begin{proof}
 Consider the Independent-Set problem (undirected) cubic graphs in which each node has a degree of three. Finding the maximum independent set in cubic graphs was shown to be NP-complete by Garey, et al.~\cite{Garey_Max_Is_Cubic}. 
@@ -156,104 +200,10 @@ Using the Lov{\'a}sz local lemma we can show that it is always possible to assig
 \begin{theorem} \label{SIP:thm:nphard_a2_b0}
 	Both $k$-IR-Invitation and $k$-Stable-Invitation are NP-complete when $\alpha \geq 2$ and $\beta \geq 0$. 
 \end{theorem} 
-
-\subsection{$k$-IR-Invitation}
-
-Let us present easiness results when $\alpha + \beta \leq 1$, followed by hardness results when $\alpha + \beta > 1$. 
-
-\begin{theorem} \label{SIP:thm:IR_invitation_P}
-	$k$-IR-Invitation can be solved in polynomial time when $\alpha + \beta \leq 1$.
-\end{theorem} 
-\begin{proof}
-We know from the work of Darmann et al.~\cite{GASP12WINE} that $k$-IR-Invitation is solvable in polynomial time when $\alpha = \beta = 0$.
-	
-	Let us first consider $(1, 0)$-instances of $k$-IR-Invitation in which all agents have at most one friend and all agents have no enemies. Without loss of generality, we can assume that every agent approves size $k$. Otherwise, such agents cannot be included in the solution without violating IR conditions. If we remove an agent who does not approve size $k$, then all agents who consider this agent as friends must also be removed as they cannot be included in the solution. This removal process can be done in polynomial time (in fact, in time $O(n)$), and we assume all agents approve size $k$ from here on. 
-	
-	Let us construct a (directed) ``friend graph'' ($G_f$) in which nodes represent agents and edges represent (directed) friend relationship such that there is an edge from node $i$ to node $j$ if and only if $j \in F_i$. Clearly, there is a one-to-one correspondence between an invitation and a subset of nodes -- we shall interchangeably refer to a subset of agents or a subset of nodes as an IR invitation. Because individual rationaliy requires that all friends of every invited agent are also invited, it is clear that every strongly connected component in $G_f$ must all or none be included in an IR invitation. Hence, we can construct a directed acyclic (weighted) graph $G'$ in which each node corresponds to a strongly connected component of $G_f$ and the weight of the node is equal to the number of ndoes in the component. The problem of finding an IR invitation of size $k$ is now equivalent to finding a subset of weighted nodes in $G'$ whose sum of weights is equal to $k$ and there is no outgoing edge from the subset. 
-
-%TODO 01
+\begin{proof} %TODO
 
 \end{proof}
-
-
-
-
-\begin{theorem} \label{SIP:thm:IR_invitation_NPC}
-	$k$-IR-Invitation is NP-complete when $\alpha + \beta > 1$.
-\end{theorem} 
-\begin{proof} 
-
-We prove NP-hardness for three different cases: $(\alpha,\beta) \in\{(0,2), (1,1), (2,0)\}$. NP-hardness of all other cases then follow immediately. 
 	
-\paragraph{When $\alpha = 0$ and $\beta \geq 2$.}
-	
-	We reduce from the Maximum-Independent-Set problem in (undirected) cubic graphs in which each node has a degree of three. Finding the maximum independent set in cubic graphs was shown to be NP-complete by Garey, et al.~\cite{Garey_Max_Is_Cubic}. 
-	
-	We first reduce the MAX-Independent-Set problem in cubic graphs to $k$-IR-Invitation with $\alpha=0$ and $\beta=3$. Given a cubic graph with $n$ nodes, we first create $n$ agents. For each node $v_i$, we create agent $i$, and construct the rejection set $E_i$ of agent $i$ such that $E_i$ contains the three agents that correspond to the three nodes adjacent to $v_i$.  Note that $|E_i| = 3$ for all $i$, and therefore this instance satisfies $\alpha = 0$ and $\beta = 3$. Lastly, all agents approve the size $k$ but no other sizes.\footnote{For our reduction to work, all agents must approve the size $k$, but other sizes do not matter.}	
-	It is easy to verify that finding an independent set in the original cubic graph is equivalent to finding an IR invitation of the same size in our instsance. 
-	
-	To prove for the case where $\alpha=0$ and $\beta=2$, we need to modify our reduction because each agent can only have two other agents in their rejection set.  We resolve this issue by assigning either of the two possible directions to each edge such that each node has at most two outgoing edges. Given this modified (directed) cubic graph, we can create an agent for each node $v$ and set her rejection set to be the nodes that $v$ points to. Since there are at most two outgoing edges (after our assignment of directions), this ensures that each agent's rejection set is of size at most two. It is easy to verify that finding a maximum independent set in the original (undirected) graph is equivalent to finding a maximum individually rational invitation in the instance we created. It is important to note that since we only care about individual rationality but not envy-freeness, the direction of an edge does not play an important role other than limiting the size of each rejection set.  The main question is then whether such assignment of directions to edges is always possible, and if it is, whether one can find it in polynomial time. 
-
-	Using the Lov{\'a}sz local lemma we can show that it is always possible to assign directions to edges in a cubic graph such that each node has at most two outgoing edges. Lov{\'a}sz local lemma states that given a series of events $X_1, X_2, \dots, X_n$ such that each event occurs with probability at most $p$ and such that each event is independent of all the other events except for at most $d$ of them, then there is a nonzero probability that none of the events occurs if $d \geq 2$ and $p < \frac{(d-1)^{d-1}}{d^d}$ (see Theorem 2 in the work by Shearer~\cite{lovasz_local_lemma}).
-
-	Let $V = \{v_1, v_2, \dots, v_n\}$ denote the set of vertices in a given cubic graph and $E = \{e_1, e_2, \dots, e_m\}$ be the set of edges in the graph. Note that $m = (3/2)n$ for any given cubic graph. Suppose that we assign either of the two possible directions to each edge with equal probability, $1/2$, identically and independently distributed across all edges. 
-	Let $X_1, X_2, \dots, X_n$ be the events such that $X_i$ is the event that $v_i$ has three outgoing edges.
-	Each event $X_i$ occurs with probability $1/8$ (because the probability that all three edges of $v_i$ are going out of $v_i$ is $1/8$) and $X_i$ is independent of all the other events except for the three of them (which are precisely $X_a, X_b, X_c$ where $\{v_a,v_b,v_c\}$ are the neighboring vertices of $v_i$). Therefore the Lov{\'a}sz local lemma is applicable with $p = 1/8$ and $d = 3$, which implies that it is always possible to assign directions to the edges such that no vertex has three outgoing edges. 
-
-	To find such assignment, one can use a max-flow algorithm that runs in polynomial time. We create a single-source (labeled as $s$), single-sink (labeled as $t$) flow network given a cubic graph as follows. We create $n$ nodes that correspond to the vertices in the original graph (label them as $\{v_1, v_2, \dots, v_n\}$) and create an edge from the source-node, $s$, to each $v_i$ with capacity two. This ensures that each node is going to have at most two out-going edges.
-	We then create $m$ nodes that correspond to the edges in the original graph (label them $\{e_1, e_2, \dots, e_m\}$) and create an edge from each $e_j$ to the sink-node $t$ with capacity one. If there is a (unit) flow from $e_j$ to $t$, then it is interpreted as $e_j$ has been assigned a direction to it.  
-Finally, if the original graph has an edge $e_j$ with its end-points $v_i$ and $v_l$, then we create an edge from $v_i$ to $e_j$ and another from $v_l$ to $e_j$, both with capacity one. This is interpreted as the edge $e_j$ is going to have a direction either towards $v_i$ or towards $v_j$. 
-We have created $(1 + n + m + 1)$ nodes and $(n + 2m + m)$ edges in the flow network, and thus our construction can be done in polynomial time.  
-
-For any (integral) flow $f$ from $s$ to $t$, we interpret the flow as follows. Each $v_i$ has precisely $f(s, v_i)$ out-going edges, which are precisely the set of edges $\{e_j : f(v_i, e_j) = 1\}$. Each edge $e_j = (v_i, v_l)$ is assigned to the direction from $v_i$ to $v_l$ if $f(v_i, e_j) = 1$ and from $v_l$ to $v_i$ if $f(v_l, e_j) = 1$. Finally if $f(e_j, t) = 1$ then the edge has been assigned a direction. Conversely, if there is an assignment of directions to edges in the original graph such that no node has three outgoing edges, then we can find a flow whose value if $m$: for each edge $e_j = (v_i, v_l)$, we add a unit flow from $s$ to $v_i$ to $e_j$ to $t$ (if the direction is from $v_i$ to $v_l$) and a unit flow from $s$ to $v_l$ to $e_j$ to $t$ (if the direction is from $v_l$ to $v_i$). Therefore if there exists a flow $f$ in this network whose value is $m$, then we can assign directions to all edges such that each node has at most two out-going edges.  We have shown earlier that such assignment is possible (using the Lov{\'a}sz local lemma), which implies that the max-flow in this network has the value $m$; indeed the min-cut in this flow network is the cut between the single-sink node and the rest, giving the cut value of $m$.  One can find such max-flow in polynomial time by using the Edmonds-Karp algorithm~\cite{EdmondsKarp}.
-
-
-\paragraph{When $\alpha = 1$ and $\beta \geq 1$.}
-%TODO 02: AAAI'15 appendix has a proof from max-2-sat. Too long?
-aa
-
-\paragraph{When $\alpha = 2$ and $\beta \geq 0$.}
-%TODO 03: finding max is easy, but finding size k is not. 
-bb
-
-\end{proof}
-
-
-\subsection{$k$-IR-Stable}
-
-Let us present easiness results when $\alpha + \beta \leq 1$, followed by hardness results when $\alpha + \beta > 1$. 
-
-\begin{theorem} \label{SIP:thm:stable_invitation_P}
-	$k$-Stable-Invitation can be solved in polynomial time when $\alpha + \beta \leq 1$.
-\end{theorem} 
-\begin{proof} %TODO 04
-	To be added.
-\end{proof}
-
-\begin{theorem} \label{SIP:thm:stable_invitation_NPC}
-	$k$-Stable-Invitation is NP-complete when $\alpha + \beta > 1$.
-\end{theorem} 
-\begin{proof} 
-We prove NP-hardness for three different cases: $(\alpha,\beta) \in\{(0,2), (1,1), (2,0)\}$. NP-hardness of all other cases then follow immediately. 
-
-\paragraph{When $\alpha = 0$ and $\beta \geq 2$.} 
-The reduction we used in proof of Theorem~\ref{SIP:thm:IR_invitation_NPC} can be used to prove NP-hardness of $k$-Stable-Invitation in this case. As all agents approve size $k$ but not $k+1$, any IR invitation of size $k$ is necessarily stable.
-
-
-\paragraph{When $\alpha = 1$ and $\beta \geq 1$.} %TODO 05
-b
-c
-b
-
-\paragraph{When $\alpha = 2$ and $\beta \geq 0$.} %TODO 06
-cd
-a
-af
-e
-
-
-\end{proof}
-
 It is interesting that, even though individual rationality is a much weaker solution concept than stability, classical complexity results are identical under all cases we considered in this work (summarized in Table~\ref{SIP:tbl:prelim}). However, we shall see in Section~\ref{SIP:sec:results} that the two solution concepts differ in many cases when we consider parameterized complexity. 
 
 
