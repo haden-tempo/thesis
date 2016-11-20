@@ -149,7 +149,7 @@ Using the Lov{\'a}sz local lemma we can show that it is always possible to assig
 \begin{proof}
 	We modify the reduction we used in proof of Theorem~\ref{SIP:thm:nphard_a0_b2}. 
 	Given the instance with $\alpha = 0$ and $\beta = 2$ in our reduction (called the original instance), we create an instance with $\alpha = 1$ and $\beta = 1$ (called the new instance) as follows.
-	For each agent $i$ in the original instance, we create two agents $i'$ and $i''$ who are friends of each other. We define $E_{i'}$ and $E_{i''}$ by splitting the agents in $E_i$ into the two sets; if $E_i$ contains only one or no agents, then we can 
+	For each agent $i$ in the original instance, we create two agents $i'$ and $i''$ who are friends of each other ($F_{i'} = \{i''\}$ and $F_{i''} = \{i'\}$). We define $E_{i'}$ and $E_{i''}$ by splitting the agents in $E_i$ into the two sets; if $E_i$ contains fewer than two agents, then we simply define $E_{i'} = E_i$ and $E_{i''} = \emptyset$. All agents in the new instance approve size $2k$ but no other sizes. The new instance with $2n$ agents 
 	
 \end{pro}
 
