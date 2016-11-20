@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 NOV 2016 18:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 NOV 2016 18:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -916,7 +916,7 @@ Overfull \hbox (15.54364pt too wide) in paragraph at lines 89--90
  []
 
 [64] [65] [66] [67] [68] [69] [70] [71]
-Overfull \hbox (5.29604pt too wide) in paragraph at lines 316--317
+Overfull \hbox (5.29604pt too wide) in paragraph at lines 328--329
 []\OT1/ptm/m/n/10.95 Assume un-bounded $\OML/ztmcm/m/it/10.95 $ \OT1/ptm/m/n/1
 0.95 and $\OML/ztmcm/m/it/10.95 ^^L$\OT1/ptm/m/n/10.95 , and let us re-duce the
  $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/n/10.95 -Stable-Invitation prob-lem to the
@@ -929,7 +929,7 @@ Chapter 6.
 
 ] [86] [87] [88] [89] [90] [91] [92] [93] [94]
 Overfull \hbox (8.12442pt too wide) in paragraph at lines 235--237
-\OT1/ptm/m/n/10.95 from ob-tain-ing strategy-proof mech-a-nisms. The-o-rem 42[]
+\OT1/ptm/m/n/10.95 from ob-tain-ing strategy-proof mech-a-nisms. The-o-rem 44[]
  shows that agents not hav-ing \OT1/cmss/m/n/10.95 INC\OT1/ptm/m/n/10.95 -prefe
 rences
  []
@@ -943,10 +943,10 @@ Chapter 7.
 ] [99] [100] [101]) [102]
 (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 5106 strings out of 493014
- 73607 string characters out of 6133351
- 144999 words of memory out of 5000000
- 8394 multiletter control sequences out of 15000+600000
+ 5108 strings out of 493014
+ 73665 string characters out of 6133351
+ 143019 words of memory out of 5000000
+ 8396 multiletter control sequences out of 15000+600000
  76855 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,1999b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -964,7 +964,7 @@ exlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016
 t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on thesis.pdf (112 pages, 469306 bytes).
+Output written on thesis.pdf (112 pages, 469312 bytes).
 PDF statistics:
  431 PDF objects out of 1000 (max. 8388607)
  297 compressed objects within 3 object streams
