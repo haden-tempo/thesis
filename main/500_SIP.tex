@@ -144,8 +144,9 @@ Without loss of generality, we can assume that every agent approves size $k$. Ot
 Let us partition the set of agents $N$ into four subsets as follows:
 $N_A = \{i \in N: k \in S_i \land k+1\in S_i\}$, 
 $N_B = \{i \in N: k \not\in S_i \land k+1\in S_i\}$,
+$N_C = \{i \in N: k \in S_i \land k+1 \not\in S_i\}$, and
+$N_D = \{i \in N: k \not\in S_i \land k+1 \not\in S_i\}$. These four subsets of agents distinguish agents who approve or do not approve sizes $k$ and $k+1$, respectively. We want to choose exactly $k$ agents from $N_A \cup N_C$ such that they form a stable invitation 
 
-.
 \end{proof}
 
 \begin{theorem} \label{SIP:thm:easiness_IR_a0_b1}
