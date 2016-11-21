@@ -147,9 +147,7 @@ $N_B = \{i \in N: k \not\in S_i \land k+1\in S_i\}$,
 $N_C = \{i \in N: k \in S_i \land k+1 \not\in S_i\}$, and
 $N_D = \{i \in N: k \not\in S_i \land k+1 \not\in S_i\}$. These four subsets of agents distinguish agents who approve or do not approve sizes $k$ and $k+1$, respectively. We want to choose exactly $k$ agents from $N_A \cup N_C$ such that they form a stable invitation (agents in $N_B \cup N_D$ do not approve size $k$ and therefore will violate IR).
 
-If there is some agent $i\in N_B$ with $F_i = \emptyset$, we conclude that no stable invitation of size $k$ exists beacuse agent $i$ cannot be invited but agent $i$ will block any invitation of size $k$ as the agent approves size $k+1$ but has no friends.  Now assuming that all agents in $N_B$ have one friend each (because $\alpha = 1$), let $F_B = \{\}$
-
-All agents in $N_B$ do not approve size $k$ but they approve size $k+1$, and therefore we must ensure that friends of agents in $N_B$ must also be not invited. 
+If there is some agent $i\in N_B$ with $F_i = \emptyset$, we conclude that no stable invitation of size $k$ exists beacuse agent $i$ cannot be invited but agent $i$ will block any invitation of size $k$ as the agent approves size $k+1$ but has no friends.  Now assuming that all agents in $N_B$ have one friend each (because $\alpha = 1$), let $F_B = \{i \in N_B : j \in F_i\}$ denote the set of friends of all agents in $N_B$. Any stable invitation of size $k$ must not include any agent in $F_B$. 
 
 \end{proof}
 
