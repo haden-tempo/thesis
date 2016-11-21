@@ -153,7 +153,7 @@ First, if there is some agent $i\in N_B$ with $F_i = \emptyset$, we conclude tha
 
 Second, if there is some agent $i\in N_B$ where $F_i = \{j\}$ with $j\in N_A$ or $N_C$, then we change the approval set of $j$ as if $j$ does not approve size $k$ because agent $j$ cannot be included in a stable invitation of size $k$ (otherwise agent $i$ would violate stability). This effectively moves $j$ from $N_A$ to $N_B$ or from $N_C$ to $N_D$.
 
-Third, if there is some agent $i\in N_A$ 
+Third, if there is some agent $i\in N_A$ where $F_i = \{j\}$ with $j\in N_B$ or $j\in N_D$, then we change the approval set of $i$ as if $i$ does not approve size $k$ because agent $i$ cannot be included in our solution because its sole friend cannot be included either. 
 
 Now assuming that all agents in $N_B$ have one friend each (because $\alpha = 1$), let $F_B = \cup_{i\in N_B} F_i$ denote the set of friends of all agents in $N_B$. Any stable invitation of size $k$ must not include any agent in $F_B$. For any agent $j \in F_B$, if $j\in N_A$ or $j\in N_C$, then agent $j$ approves size $k$, but we cannot include agent $j$ in our solution; therefore we can change the input instance such that agent $j$ no longer approves size $k$ (effectively, this implies that agent $j$ now belongs to $N_B$ or $N_D$ instead of $N_A$ or $N_C$, respectively, in the new instance).
 
