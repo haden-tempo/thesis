@@ -157,7 +157,7 @@ Third, if there is some agent $i\in N_A \cup N_C$ where $F_i = \{j\}$ with $j\in
 
 Note that we only move agents from $N_A$ to $N_B$ or from $N_C$ to $N_D$, and therefore each agent is moved at most once, and the change of membership occurs at most $O(n)$ times; as we move agents, we must re-check whether the conditions above are met or not again, which can be done in $O(n)$ time by looking up each agent's membership and preference. Overall, in $O(n^2)$ time, we end up with a partition that no longer needs change of membership. In particular, every agent in $N_B$ has exactly one friend who belongs to either $N_B$ or $N_D$, every agent in $N_A \cup N_C$ either has no friend or has a friend who belongs to either $N_A$ or $N_C$. Now we can ignore all agents in $N_B$ and $N_D$ because they cannot block any stable invitation of size $k$ that is a subset of $N_A$ and $N_C$ and because agents in $N_A$ and $N_C$ have friends only in $N_A$ and $N_C$. 
 
-Now consider agents $i\in N_A$ and $j\in N_C$ with $F_i = \{j\}$; 
+Now consider agents $i\in N_A$ and $j\in N_C$ with $F_i = \{j\}$; we must include both agents in our solution or exclude both agens in our solution to satsify stability. Therefore, we can change the instance 
 
 
 \end{proof}
