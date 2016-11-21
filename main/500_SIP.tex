@@ -572,8 +572,7 @@ We first present classical complexity results for $k$-Stable-Invitations under s
 	Therefore, every connected component in the enemy graph is either a path or a cycle.
 	For each connected component and every integer $x$ between $0$ and $k$, we check if it is possible to choose exactly $x$ nodes from the component such that inviting their corresponding agents and not inviting other agents (in the same component) do not violate stability conditions. This is similar to finding an independent set on a path or a cycle, but with extra conditions: the nodes not being chosen must still satisfy the stability requirements (by not approving size $k+1$ or by having one of its neighbors included in the set). We omit the details, but mention that this can be solved by a dynamic programming algorithm in polytime. After this step, we can solve the main problem using a knapsack algorithm in a straightforward manner. 
 	
-	Our reductions for $k$-IR-Invitations in proof of Theorem~\ref{SIP:thm:symmetric_IR_p_npc} show NP-hardness for $k$-Stable-Invitations as well, because agents only approve invitations of size $k$ in our reduction; it ensures that any uninvited agent would be unwilling to attend due to the size of an invitation.
-	
+	Our reductions for $k$-IR-Invitations in proof of Theorem~\ref{SIP:thm:symmetric_IR_p_npc} show NP-hardness for $k$-Stable-Invitations as well, because agents only approve invitations of size $k$ in our reduction -- essentially, in these instances, an IR invitation of size $k$ is necessarily stable.
 \end{proof}
 
 
