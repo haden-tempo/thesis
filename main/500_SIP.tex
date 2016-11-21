@@ -147,7 +147,7 @@ $N_B = \{i \in N: k \not\in S_i \land k+1\in S_i\}$,
 $N_C = \{i \in N: k \in S_i \land k+1 \not\in S_i\}$, and
 $N_D = \{i \in N: k \not\in S_i \land k+1 \not\in S_i\}$. These four subsets of agents distinguish agents who approve or do not approve sizes $k$ and $k+1$, respectively. We want to choose exactly $k$ agents from $N_A \cup N_C$ such that they form a stable invitation (agents in $N_B \cup N_D$ do not approve size $k$ and therefore will violate IR).
 
-All agents in $N_B$ do not approve size $k$ but they approve size $k+1$, and therefore we must ensure that friends of agents in $N_B$ must also be not invited. If there is some agent $i\in N_B$ with $F_i = \emptyset$, we 
+All agents in $N_B$ do not approve size $k$ but they approve size $k+1$, and therefore we must ensure that friends of agents in $N_B$ must also be not invited. If there is some agent $i\in N_B$ with $F_i = \emptyset$, we conclude that no stable invitation of size $k$ exists. 
 
 \end{proof}
 
