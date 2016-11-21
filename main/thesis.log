@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 NOV 2016 08:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  21 NOV 2016 08:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -916,7 +916,14 @@ Overfull \hbox (15.54364pt too wide) in paragraph at lines 89--90
  +
  []
 
-[68] [69] [70] [71] [72] [73] [74] [75] [76]
+[68] [69] [70] [71] [72]
+Overfull \hbox (3.94798pt too wide) in paragraph at lines 205--206
+[]\OT1/ptm/m/n/10.95 Later we show that $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/n/1
+0.95 -IR-Invitation is W[1]-hard (see The-o-rem 33[]) and that $\OML/ztmcm/m/it
+/10.95 k$\OT1/ptm/m/n/10.95 -Stable-Invitation
+ []
+
+[73] [74] [75] [76]
 Overfull \hbox (5.29604pt too wide) in paragraph at lines 329--330
 []\OT1/ptm/m/n/10.95 Assume un-bounded $\OML/ztmcm/m/it/10.95 $ \OT1/ptm/m/n/1
 0.95 and $\OML/ztmcm/m/it/10.95 ^^L$\OT1/ptm/m/n/10.95 , and let us re-duce the
@@ -965,7 +972,7 @@ e/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on thesis.pdf (117 pages, 490571 bytes).
+Output written on thesis.pdf (117 pages, 490671 bytes).
 PDF statistics:
  448 PDF objects out of 1000 (max. 8388607)
  308 compressed objects within 4 object streams
