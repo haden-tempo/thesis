@@ -511,7 +511,7 @@ $k$-Stable-EF-GASP is in FPT if all agents have decreasing preferences for all a
 We modify our proof for Theorem~\ref{GASP:thm:stable_fpt_dec} slightly.
 First, recall the notion of a ``popular activity'' after we color agents and activities. If a popular activity (call it $a_j$) exists for any color $d\in [1,l]$ we must reject the coloring -- whether we assign agents to $a_j$ or not for color $d$, at least one agent from $N(a_j)$ is not assigned to any activity, while the agent approves $a_j$ for size both $1$ and $k_d$ (due to decreasing preferences), which would violate stability or envy-freeness. Hence, for every activity, $|N(a_j)| \leq k_{c(a_j)}$ must hold. 
 
-Now fix some color $d\in [1,l]$ and let $a_j$ be some activity in $A^*_d$ with $|N(a_j)| = k_d$ (if no such $a_j$ exists, we reject the coloring). If $a_{j'}$ is another activity in $A^*_d$, then $N(a_{j'}) \subset N(a_j)$ must hold; in particular, if $|N(a_{j'})| = k_d$ then $N(a_{j}) = N(a_j)$ must hold. In other words, 
+Now fix some color $d\in [1,l]$ and let $a_j$ be some activity in $A^*_d$ with $|N(a_j)| = k_d$ (if no such $a_j$ exists, we reject the coloring). If $a_{j'}$ is another activity in $A^*_d$, then $N(a_{j'}) \subset N(a_j)$ must hold; in particular, if $|N(a_{j'})| = k_d$ then $N(a_{j}) = N(a_j)$ must hold. In other words, from each color we are to choose an activity, but the set of agents to be assigned to the chosen activity is the same (per color) regardless of which activity we choose. 
 	
 	
 \end{proof}
