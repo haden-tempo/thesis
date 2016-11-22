@@ -173,7 +173,7 @@ Let us now construct a friendship graph in which nodes correspond to agents in $
 \begin{proof} 
 	We construct an enemy graph in which nodes represent agents and a directed edge from $i$ to $j$ is created if $j \in R_i$. Each node contributes at most one edge, and therefore the resulting graph has the following property: In each (weakly) connected component, the component is either a rooted tree (possibly just a single node) or contains a cycle such that if the edges of the cycle are removed from the component, then each node on the cycle is the root of a tree in this component. In particular, each component contains at most one cycle. 
 
-For each connected component, we determine whether it is possible to include exactly $x$ agents in our solution (where $x\in [0,k]$) such that those $x$ agents would satisfy stability conditions (provided that we choose $k-x$ agents from other components). 
+For each connected component, we determine whether it is possible to include exactly $x$ agents in our solution (where $x\in [0,k]$) such that those $x$ agents would satisfy stability conditions (provided that we choose $k-x$ agents from other components). First assume that the component is a rooted tree. For each node $v$ in this tree, we recursive solve the following problem: Whether we can choose exactly $y \in [0,k]$ agents from the subtree rooted at $v$ such that they satisfy stability conditions when we include $v$ in our solution and when we exclude $v$ in our solution. 
 
 
 \end{proof}
