@@ -175,13 +175,15 @@ Let us partition the set of agents $N$ into four subsets as follows:
 $N_A = \{i \in N: k \in S_i \land k+1\in S_i\}$, 
 $N_B = \{i \in N: k \not\in S_i \land k+1\in S_i\}$,
 $N_C = \{i \in N: k \in S_i \land k+1 \not\in S_i\}$, and
-$N_D = \{i \in N: k \not\in S_i \land k+1 \not\in S_i\}$. These four subsets of agents distinguish agents who approve or do not approve sizes $k$ and $k+1$, respectively. We want to choose exactly $k$ agents from $N_A \cup N_C$ such that they form a stable invitation (agents in $N_B \cup N_D$ do not approve size $k$ and therefore will violate IR).
+$N_D = \{i \in N: k \not\in S_i \land k+1 \not\in S_i\}$. These four subsets of agents distinguish agents who approve or do not approve sizes $k$ and $k+1$, respectively. We want to choose exactly $k$ agents from $N_A \cup N_C$ such that they form a stable invitation (agents in $N_B \cup N_D$ do not approve size $k$ and therefore will violate IR). 
 
 We are going to change the membership of agents by modifying the input instance if certain conditions are met. 
 
-First, if there is some agent $i\in N_B$ with $R_i = \emptyset$, we conclude that no stable invitation of size $k$ exists because agent $i$ cannot be invited but agent $i$ will block any invitation of size $k$ as the agent approves size $k+1$ but has no friends. As we move agents from other subsets to $N_B$ in this algorithm, we will check this condition again for the new agents.
+First, if there is some agent $i\in N_B$ with $R_i = \emptyset$ or $R_i \subset N_D$, we conclude that no stable invitation of size $k$ exists because agent $i$ cannot be invited but agent $i$ will block any invitation of size $k$ as the agent approves size $k+1$ but has no enemy. As we move agents from other subsets to $N_B$ in this algorithm, we will check this condition again for the new agents.
 
-Second, if there is some agent $i\in N_B$ where $F_i = \{j\}$ with $j\in N_A$ or $N_C$, then we change the approval set of $j$ as if $j$ does not approve size $k$ because agent $j$ cannot be included in a stable invitation of size $k$ (otherwise agent $i$ would violate stability). This effectively moves $j$ from $N_A$ to $N_B$ or from $N_C$ to $N_D$.
+Second, if there is some agent $i\in N_B$ where $R_i = \{j\}$ with $j\in N_A \cup N_C$, then we must include $i$ in our solution. 
+
+change the approval set of $j$ as if $j$ does not approve size $k$ because agent $j$ cannot be included in a stable invitation of size $k$ (otherwise agent $i$ would violate stability). This effectively moves $j$ from $N_A$ to $N_B$ or from $N_C$ to $N_D$.
 
 Third, if there is some agent $i\in N_A \cup N_C$ where $F_i = \{j\}$ with $j\in N_B$ or $j\in N_D$, then we change the approval set of $i$ as if $i$ does not approve size $k$ because agent $i$ cannot be included in our solution because its sole friend cannot be included either. This effectively moves $i$ from $N_A$ to $N_B$ or from $N_C$ to $N_D$. 
 
