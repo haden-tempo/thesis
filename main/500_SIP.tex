@@ -171,7 +171,8 @@ Let us now construct a friendship graph in which nodes correspond to agents in $
 	$k$-Stable-Invitation can be solved in polynomial time when $\alpha =0$ and $\beta = 1$.
 \end{theorem} 
 \begin{proof} 
-	We construct an enemy graph in which nodes represent agents and a directed edge from $i$ to $j$ is created if $j \in R_i$. Each node contributes at most one edge, and therefore the resulting graph has the following property: In each (weakly) connected component, 
+	We construct an enemy graph in which nodes represent agents and a directed edge from $i$ to $j$ is created if $j \in R_i$. Each node contributes at most one edge, and therefore the resulting graph has the following property: In each (weakly) connected component, the component is either a rooted tree (possibly just a single node) or contains a cycle such that if the edges of the cycle are removed from the component, then each node on the cycle is the root of a tree in this component. In particular, each component contains at most one cycle. 
+
 
 
 
