@@ -170,26 +170,8 @@ Let us now construct a friendship graph in which nodes correspond to agents in $
 \begin{theorem} \label{SIP:thm:easiness_stable_a0_b1}
 	$k$-Stable-Invitation can be solved in polynomial time when $\alpha =0$ and $\beta = 1$.
 \end{theorem} 
-\begin{proof} %TODO
-Let us partition the set of agents $N$ into four subsets as follows:
-$N_A = \{i \in N: k \in S_i \land k+1\in S_i\}$, 
-$N_B = \{i \in N: k \not\in S_i \land k+1\in S_i\}$,
-$N_C = \{i \in N: k \in S_i \land k+1 \not\in S_i\}$, and
-$N_D = \{i \in N: k \not\in S_i \land k+1 \not\in S_i\}$. These four subsets of agents distinguish agents who approve or do not approve sizes $k$ and $k+1$, respectively. We want to choose exactly $k$ agents from $N_A \cup N_C$ such that they form a stable invitation (agents in $N_B \cup N_D$ do not approve size $k$ and therefore will violate IR). Lastly, we will keep another subset of agents (initially empty), $N_E$ which must be included in any stable invitation of size $k$.
-
-We are going to change the membership of agents by modifying the input instance if certain conditions are met. 
-
-First, if there is some agent $i\in N_B$ with $R_i = \emptyset$ or $R_i \subset N_D$, we conclude that no stable invitation of size $k$ exists because agent $i$ cannot be invited but agent $i$ will block any invitation of size $k$ as the agent approves size $k+1$ but has no enemy. As we move agents from other subsets to $N_B$ in this algorithm, we will check this condition again for the new agents.
-
-Second, if there is some agent $i\in N_B$ where $R_i = \{j\}$ with $j\in N_A \cup N_C$, then we must include $j$ in our solution (or $i$ will block), so we move $j$ to $N_E$ by removing it from $N_A$ or $N_C$. 
-
-Third, if there is some agent 
-
-change the approval set of $j$ as if $j$ does not approve size $k$ because agent $j$ cannot be included in a stable invitation of size $k$ (otherwise agent $i$ would violate stability). This effectively moves $j$ from $N_A$ to $N_B$ or from $N_C$ to $N_D$.
-
-Third, if there is some agent $i\in N_A \cup N_C$ where $F_i = \{j\}$ with $j\in N_B$ or $j\in N_D$, then we change the approval set of $i$ as if $i$ does not approve size $k$ because agent $i$ cannot be included in our solution because its sole friend cannot be included either. This effectively moves $i$ from $N_A$ to $N_B$ or from $N_C$ to $N_D$. 
-
-Note that we only move agents from $N_A$ to $N_B$ or from $N_C$ to $N_D$, and therefore each agent is moved at most once, and the change of membership occurs at most $O(n)$ times; as we move agents, we must re-check whether the conditions above are met or not again, which can be done in $O(n)$ time by looking up each agent's membership and preference. Overall, in $O(n^2)$ time, we end up with a partition that no longer needs change of membership. In particular, every agent in $N_B$ has exactly one friend who belongs to either $N_B$ or $N_D$, every agent in $N_A \cup N_C$ either has no friend or has a friend who belongs to either $N_A$ or $N_C$. Now we can ignore all agents in $N_B$ and $N_D$ because they cannot block any stable invitation of size $k$ that is a subset of $N_A$ and $N_C$ and because agents in $N_A$ and $N_C$ have friends only in $N_A$ and $N_C$. 
+\begin{proof} 
+	We construct an enemy graph in which nodes represent agents and a directed edge from $i$ to $j$ is created if $j \in R_i$. Each node contributes at most one edge, and therefore the resulting graph has the following property: In each (weakly) connected component, 
 
 
 
