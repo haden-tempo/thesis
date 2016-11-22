@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  21 NOV 2016 22:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  21 NOV 2016 23:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -793,16 +793,16 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (./000_abstract.tex [4
 
 
-]) [5] (./001_ack.tex) [6
+]) [5] (./001_ack.tex [6
 
-] (./thesis.toc [7
+]) [7] (./thesis.toc [8
 
 ])
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- [8]
-(./thesis.lot
+
+[9] (./thesis.lot
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -811,13 +811,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 \tf@lot=\write4
 \openout4 = `thesis.lot'.
 
- [9
+ [10
 
 ] (./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [10
+ [11
 
 ]
 Chapter 1.
@@ -852,7 +852,7 @@ ps-converted-to.pdf plots/pareto_scatter_fin.eps>
 (epstopdf)             \includegraphics on input line 57.
 Package epstopdf Info: Output file is already uptodate.
 
-<plots/pareto_scatter_fin-eps-converted-to.pdf, id=56, 718.685pt x 331.2375pt>
+<plots/pareto_scatter_fin-eps-converted-to.pdf, id=85, 718.685pt x 331.2375pt>
 File: plots/pareto_scatter_fin-eps-converted-to.pdf Graphic file (type pdf)
 
 <use plots/pareto_scatter_fin-eps-converted-to.pdf>
@@ -872,7 +872,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 74.
 Package epstopdf Info: Output file is already uptodate.
 
-<plots/pareto_objective_fin-eps-converted-to.pdf, id=65, 718.685pt x 331.2375pt
+<plots/pareto_objective_fin-eps-converted-to.pdf, id=94, 718.685pt x 331.2375pt
 >
 File: plots/pareto_objective_fin-eps-converted-to.pdf Graphic file (type pdf)
  <use plots/pareto_objective_fin-eps-converted-to.pdf>
@@ -951,11 +951,11 @@ Chapter 7.
 ] [107] [108] [109])
 [110] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 5109 strings out of 493014
- 73688 string characters out of 6133351
+ 5162 strings out of 493014
+ 74593 string characters out of 6133351
  144033 words of memory out of 5000000
- 8397 multiletter control sequences out of 15000+600000
- 76855 words of font info for 169 fonts, out of 8000000 for 9000
+ 8424 multiletter control sequences out of 15000+600000
+ 84339 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,2080b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/
@@ -966,16 +966,42 @@ fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pf
 b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
-urw/times/utmri8a.pfb>
-Output written on thesis.pdf (120 pages, 501479 bytes).
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/nanumtype1/nanummjma
+c.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/nanumtype1/nanummj
+mad.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/nanumtype1/nanum
+mjmae.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/nanumtype1/nan
+ummjmb0.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/nanumtype1/n
+anummjmb1.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/nanumtype1
+/nanummjmb2.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/nanumtyp
+e1/nanummjmb3.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/nanumt
+ype1/nanummjmb4.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/nanu
+mtype1/nanummjmb5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/na
+numtype1/nanummjmb7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
+nanumtype1/nanummjmb8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
+c/nanumtype1/nanummjmb9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
+lic/nanumtype1/nanummjmba.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
+ublic/nanumtype1/nanummjmbc.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
+/public/nanumtype1/nanummjmc0.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
+e1/public/nanumtype1/nanummjmc1.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
+ype1/public/nanumtype1/nanummjmc2.pfb></usr/local/texlive/2016/texmf-dist/fonts
+/type1/public/nanumtype1/nanummjmc3.pfb></usr/local/texlive/2016/texmf-dist/fon
+ts/type1/public/nanumtype1/nanummjmc5.pfb></usr/local/texlive/2016/texmf-dist/f
+onts/type1/public/nanumtype1/nanummjmc6.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/public/nanumtype1/nanummjmc7.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/nanumtype1/nanummjmc8.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/nanumtype1/nanummjmc9.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/nanumtype1/nanummjmd5.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/nanumtype1/nanummjmd7.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
+e1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/tim
+es/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (121 pages, 1679456 bytes).
 PDF statistics:
- 457 PDF objects out of 1000 (max. 8388607)
- 314 compressed objects within 4 object streams
+ 565 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
