@@ -56,19 +56,19 @@
 \contentsline {section}{\numberline {5.1}Definitions and Notation}{66}
 \contentsline {section}{\numberline {5.2}Classical Complexity}{68}
 \contentsline {subsection}{\numberline {5.2.1}Easiness Results}{69}
-\contentsline {subsection}{\numberline {5.2.2}Hardness Results}{71}
-\contentsline {section}{\numberline {5.3}Parameterized Complexity}{74}
-\contentsline {subsection}{\numberline {5.3.1}$k$-IR-Invitation}{74}
-\contentsline {subsection}{\numberline {5.3.2}$k$-Stable-Invitation}{77}
-\contentsline {section}{\numberline {5.4}Symmetric Social Relationship}{81}
-\contentsline {subsection}{\numberline {5.4.1}Symmetric $k$-IR-Invitations}{82}
-\contentsline {subsection}{\numberline {5.4.2}Symmetric $k$-Stable-Invitations}{85}
-\contentsline {section}{\numberline {5.5}Discussion}{88}
-\contentsline {chapter}{\numberline {6}Strategic Agents and Mechanisms}{90}
-\contentsline {paragraph}{Related Work.}{91}
-\contentsline {section}{\numberline {6.1}Definitions and Notation}{91}
-\contentsline {section}{\numberline {6.2}Mechanisms and Strategic Agents}{93}
-\contentsline {subsection}{\numberline {6.2.1}Randomized Mechanisms}{99}
-\contentsline {section}{\numberline {6.3}Discussion}{100}
-\contentsline {chapter}{\numberline {7}Open Problems}{102}
-\contentsline {chapter}{Bibliography}{104}
+\contentsline {subsection}{\numberline {5.2.2}Hardness Results}{72}
+\contentsline {section}{\numberline {5.3}Parameterized Complexity}{75}
+\contentsline {subsection}{\numberline {5.3.1}$k$-IR-Invitation}{75}
+\contentsline {subsection}{\numberline {5.3.2}$k$-Stable-Invitation}{78}
+\contentsline {section}{\numberline {5.4}Symmetric Social Relationship}{83}
+\contentsline {subsection}{\numberline {5.4.1}Symmetric $k$-IR-Invitations}{83}
+\contentsline {subsection}{\numberline {5.4.2}Symmetric $k$-Stable-Invitations}{87}
+\contentsline {section}{\numberline {5.5}Discussion}{89}
+\contentsline {chapter}{\numberline {6}Strategic Agents and Mechanisms}{91}
+\contentsline {paragraph}{Related Work.}{92}
+\contentsline {section}{\numberline {6.1}Definitions and Notation}{92}
+\contentsline {section}{\numberline {6.2}Mechanisms and Strategic Agents}{94}
+\contentsline {subsection}{\numberline {6.2.1}Randomized Mechanisms}{100}
+\contentsline {section}{\numberline {6.3}Discussion}{101}
+\contentsline {chapter}{\numberline {7}Open Problems}{103}
+\contentsline {chapter}{Bibliography}{105}
