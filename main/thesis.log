@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  21 NOV 2016 19:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  21 NOV 2016 22:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -897,11 +897,11 @@ Chapter 4.
 
 ] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47]
 [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62]
-[63]) [64]
+[63] [64]) [65]
 Chapter 5.
-(./500_SIP.tex [65
+(./500_SIP.tex [66
 
-] [66] [67]
+] [67] [68]
 Overfull \hbox (6.27542pt too wide) in paragraph at lines 86--88
 []\OT1/ptm/m/n/10.95 Theorem 21[] sum-ma-rizes the most rel-e-vant re-sults of 
 Dar-mann et al. [[]] and Lee and Shoham [[]]
@@ -916,14 +916,14 @@ Overfull \hbox (15.54364pt too wide) in paragraph at lines 89--90
  +
  []
 
-[68] [69] [70] [71] [72] [73] [74]
+[69] [70] [71] [72] [73] [74] [75]
 Overfull \hbox (3.94798pt too wide) in paragraph at lines 225--226
 []\OT1/ptm/m/n/10.95 Later we show that $\OML/ztmcm/m/it/10.95 k$\OT1/ptm/m/n/1
 0.95 -IR-Invitation is W[1]-hard (see The-o-rem 33[]) and that $\OML/ztmcm/m/it
 /10.95 k$\OT1/ptm/m/n/10.95 -Stable-Invitation
  []
 
-[75] [76] [77] [78]
+[76] [77] [78] [79]
 Overfull \hbox (5.29604pt too wide) in paragraph at lines 349--350
 []\OT1/ptm/m/n/10.95 Assume un-bounded $\OML/ztmcm/m/it/10.95 $ \OT1/ptm/m/n/1
 0.95 and $\OML/ztmcm/m/it/10.95 ^^L$\OT1/ptm/m/n/10.95 , and let us re-duce the
@@ -931,29 +931,29 @@ Overfull \hbox (5.29604pt too wide) in paragraph at lines 349--350
  weighted
  []
 
-[79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89]) [90]
+[80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90]) [91]
 Chapter 6.
-(./600_GT.tex [91
+(./600_GT.tex [92
 
-] [92] [93] [94] [95] [96] [97] [98] [99] [100]
+] [93] [94] [95] [96] [97] [98] [99] [100] [101]
 Overfull \hbox (8.12442pt too wide) in paragraph at lines 234--236
 \OT1/ptm/m/n/10.95 from ob-tain-ing strategy-proof mech-a-nisms. The-o-rem 44[]
  shows that agents not hav-ing \OT1/cmss/m/n/10.95 INC\OT1/ptm/m/n/10.95 -prefe
 rences
  []
 
-[101]) [102]
+[102]) [103]
 Chapter 7.
-(./700_Discussion.tex [103
+(./700_Discussion.tex [104
 
-]) (./thesis.bbl [104] [105
+]) (./thesis.bbl [105] [106
 
-] [106] [107] [108])
-[109] (./thesis.aux) ) 
+] [107] [108] [109])
+[110] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
  5109 strings out of 493014
  73688 string characters out of 6133351
- 144032 words of memory out of 5000000
+ 144033 words of memory out of 5000000
  8397 multiletter control sequences out of 15000+600000
  76855 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -972,10 +972,10 @@ e/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on thesis.pdf (119 pages, 498285 bytes).
+Output written on thesis.pdf (120 pages, 501511 bytes).
 PDF statistics:
- 454 PDF objects out of 1000 (max. 8388607)
- 312 compressed objects within 4 object streams
+ 457 PDF objects out of 1000 (max. 8388607)
+ 314 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
