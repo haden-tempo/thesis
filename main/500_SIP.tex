@@ -27,16 +27,7 @@ In this chapter we provide a complete analysis of complexity results on \SIP; we
 \paragraph{Related Work.}
 As we discussed in Chapter~\ref{GASP:chapter}, the Group Activity Selection Problem is most relevant to the work we present in this chapter. Similarly to \GASP, the Stable Invitations Problem is also closely related to hedonic games. In a hedonic game each agent has preferences over coalitions that she can be a member of (usually given by a weak order over all coalitions). If each agent is indifferent among all coalitions of the same size that includes her, then a given hedonic game is said to be anonymous. Much work has been devoted to analyzing solution concepts in hedonic coalition games such as stability and Pareto-optimality~\cite{BogomolnaiaJackson,DrezeGreenberg,AzizBrandl}.
 In this work we take a solution concept of (Nash) stability for granted, and focus on analyzing the complexity of finding stable solutions. In particular, we are interested in finding Nash-stable invitations and individually rational 
-invitations. Ballester~\cite{NP_hedonic} provides a number of computational complexity results (in fact, NP-hardness results) for finding a core-stable, Nash-stable, or individually rational outcome in hedonic games and anonymous hedonic games. However, these hardness results do not imply similar hardness results for \SIP. In hedonic games, preferences of an agent enlist subsets of agents, which may contain up to $2^{n-1}$ subsets if there are $n$ agets, and therefore the input size is not a polynomial function of $n$, while the input size of \SIPs is linear in $n$. In anonymous hedonic games, each agent only cares about the size of a coalition (or the number of participants in the same activity), and the goal is to partition agents into coalitions. In \SIP, agents do have preferences over sizes as well as constraints imposed by friends and enemies, and the goal is to choose a subset of agents (but not partition them). These two are essentially different problems, and therefore complexity results of one problem do not necessarily imply the same of the other. Lastly, we consider natural paremterization of \SIPs while 
-
-Therefore, while both hedonic games and anonymous hedonic games are 
-
-. Second, one can transform an instance of \SIPs into a (non-anonymous) hedonic game 
-in a na\"{i}ve manner by listing all possible coalitions, but this increases 
-the input size exponentially. Therefore our results discussed in this work 
-are original and should not be considered as a derivative of the work 
-by Darmann et al. or Ballester. 
-%TODO A question about hedonic games and SIP: you say that the prior hardness results don't apply to SIP since SIP is not equivalent to anonymous hedonic games: could you be more specific? Is SIP simpler in some way? Give an example maybe.
+invitations. Ballester~\cite{NP_hedonic} provides a number of computational complexity results (in fact, NP-hardness results) for finding a core-stable, Nash-stable, or individually rational outcome in hedonic games and anonymous hedonic games. However, these hardness results do not imply similar hardness results for \SIP. In hedonic games, preferences of an agent enlist subsets of agents, which may contain up to $2^{n-1}$ subsets if there are $n$ agents, and therefore the input size is not a polynomial function of $n$, while the input size of \SIPs is linear in $n$. In anonymous hedonic games, each agent only cares about the size of a coalition (or the number of participants in the same activity), and the goal is to partition agents into coalitions. In \SIP, agents do have preferences over sizes as well as constraints imposed by friends and enemies, and the goal is to choose a subset of agents (but not partition them). These two are essentially different problems, and therefore complexity results of one problem do not necessarily imply the same of the other. 
 
 
 
@@ -75,7 +66,7 @@ First, we consider inputs in which the sizes of largest friend sets and enemy se
 We first consider restrictions on inputs by limiting the size of largest friend-sets and enemy-sets, respectively. 
 For integer constants $\alpha$ and $\beta$, if an instance of \SIPs satisfies $|F_i| \leq \alpha$ and $|E_i| \leq \beta$ for all $i\in N$, we call it an $(\alpha,\beta)$-instance of \SIP.
 We show that that \SIPs can be solved in polytime only if $\alpha$ and $\beta$ are small enough, but the problems are NP-hard in general (this is summarized in Table~\ref{SIP:tbl:prelim}).
-We then investigate parameterized complexity of the problem under the same restrictions when the size of a solution is parameterzed. 
+We then investigate parameterized complexity of the problem under the same restrictions when the size of a solution is parameterized. 
 Lastly, we will consider a special case of \SIPs where agents have symmetric social relationships.
 \begin{definition} \label{SIP:def:symmetric_social}
 	Given an instance of \SIP, we say that agents have {\em symmetric social relationships} if $j\in F_i$ if and only if $i\in F_j$ and $l \in E_i$ if and only if $i \in E_l$ for every $i$. 
