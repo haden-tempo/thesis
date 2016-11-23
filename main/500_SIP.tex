@@ -3,7 +3,7 @@
 In Chapter~\ref{GASP:chapter} we considered the setting where an event organizer is to assign agents to multiple activities that take place concurrently. In this chapter, we consider a slightly different setting in which there is only one activity -- and thus the organizer is to choose a subset of agents to be ``invited'' to participate in the activity, while agents may exhibit friend or enemy relationships. 
 On the one hand, this is a special case of the Group Activity Selection Problem in that there is only one activity. On the other hand, it is a generalization of this specical case in that agents now have non-anonymous preferences -- they do not only care about the number of participants in the activity, but they also care about who those participants are.
 
-Let us consider a concrete example to understand the setting. Suppose that  an event organizer trying to convene an event -- for example, a fundraiser. We assume that the time and venue for the event are fixed,
+Let us consider a concrete example to understand the setting. Suppose that an event organizer is trying to convene an event -- for example, a fundraiser. We assume that the time and venue for the event are fixed,
 and that the only remaining decision for the organizer to make is whom
 to invite among a set of agents.
 An \emph{invitation} is simply defined to be a subset of agents.
@@ -21,7 +21,7 @@ We call this the Stable Invitations Problem (\SIP), in which each agent
 can specify a set of friends and a set of enemies (in addition to her preference over sizes as in \GASP).
 An agent is willing to attend only if all of her friends attend, none of her enemies attends, and  the number of attendees is acceptable to her. 
 
-Not surprisingly, complexity of \SIPs depends highly on the cardinality of friend-sets and enemy-sets, as friends-and-enemies relationship introduces combinatoric complexity in the problem of finding a good solution. 
+Not surprisingly, the complexity of \SIPs depends highly on the cardinality of friend-sets and enemy-sets, as friends-and-enemies relationship introduces combinatoric complexity in the problem of finding a good solution. 
 In this chapter we provide a complete analysis of complexity results on \SIP; we consider individual rationality (IR) and Nash stability as we did for \GASP, and we also consider both asymmetric and symmetric friends-and-enemmies relation. 
 
 \paragraph{Related Work.}
