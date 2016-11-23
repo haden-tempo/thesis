@@ -70,5 +70,5 @@
 \contentsline {section}{\numberline {6.2}Mechanisms and Strategic Agents}{95}
 \contentsline {subsection}{\numberline {6.2.1}Randomized Mechanisms}{101}
 \contentsline {section}{\numberline {6.3}Discussion}{102}
-\contentsline {chapter}{\numberline {7}Open Problems}{104}
+\contentsline {chapter}{\numberline {7}Conclusion}{104}
 \contentsline {chapter}{Bibliography}{106}
