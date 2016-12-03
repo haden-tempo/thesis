@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  3 DEC 2016 09:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  3 DEC 2016 09:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -897,7 +897,7 @@ Chapter 4.
 
 ] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47]
 [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62]
-[63] [64]) [65]
+[63]) [64] [65]
 Chapter 5.
 (./500_SIP.tex [66
 
@@ -951,10 +951,10 @@ Chapter 7.
 ] [108] [109] [110])
 [111] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 5157 strings out of 493014
- 74516 string characters out of 6133351
- 145034 words of memory out of 5000000
- 8421 multiletter control sequences out of 15000+600000
+ 5158 strings out of 493014
+ 74535 string characters out of 6133351
+ 145038 words of memory out of 5000000
+ 8422 multiletter control sequences out of 15000+600000
  83753 words of font info for 193 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,24p,2080b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -996,7 +996,7 @@ nts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/u
 rw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (122 pages, 1539831 bytes).
+Output written on thesis.pdf (122 pages, 1540159 bytes).
 PDF statistics:
  560 PDF objects out of 1000 (max. 8388607)
  391 compressed objects within 4 object streams

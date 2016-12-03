@@ -279,6 +279,12 @@ John Von~Neumann and Oskar. Morgenstern.
 \newblock {\em The Theory of Games and Economic Behavior}.
 \newblock Princeton University Press, 1947.
 
+\bibitem{woeginger2013core}
+Gerhard~J Woeginger.
+\newblock Core stability in hedonic coalition formation.
+\newblock In {\em International Conference on Current Trends in Theory and
+  Practice of Computer Science}, pages 33--50. Springer, 2013.
+
 \bibitem{xia2014fixed}
 Lirong Xia.
 \newblock Fixed-parameter tractability of integer generalized scoring rules.
