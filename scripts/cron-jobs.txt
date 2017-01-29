@@ -1,0 +1,4 @@
+#* * * * * /Users/haden/stanford/git_thesis_commit.sh >> /Users/haden/stanford/thesis_commit.log 2>&1
+#*/10 * * * * /Users/haden/stanford/git_thesis_push.sh >> /Users/haden/stanford/thesis_push.log 2>&1
+#*/30 * * * * /Users/haden/stanford/git_thesis_dropbox.sh >> /Users/haden/stanford/thesis_dropbox.log 2>&1
+
